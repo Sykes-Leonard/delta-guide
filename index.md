@@ -29,6 +29,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 
 ## Operational Playbooks & Runbooks
 
+* [Knowledge-Driven Engineering & Spec-Driven Development](/playbooks/knowledge-driven-engineering.md) - Comprehensive operational playbook for integrating the knowledge base into sprint planning, coding, AI pair programming, pull request compliance reviews, and living documentation graduation.
 * [Developer & Contributor Onboarding Guide](/playbooks/onboarding-guide.md) - Step-by-step instructions for engineers and AI agents to set up local environments, verify builds, and run tests.
 
 ## Field Research & User Interviews
@@ -37,6 +38,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 
 ## Agent Skills & Automation Capabilities
 
+* [Knowledge Base Advisor (/ask-kb)](/skills/ask-kb/SKILL.md) - Provides instant, authoritative domain and architectural consulting across production systems, external ecosystems, and product concepts. Use when developers or AI agents need domain context, schema contracts, or compliance guidance.
 * [Ingest URL Content into Knowledge Base](/skills/ingest/SKILL.md) - Downloads external web content from a URL, analyzes its relevance to the organization, asks the user for placement confirmation, and synthesizes it into an OKF v0.2 knowledge document.
 * [Article or Policy Title](/skills/ingest/templates/ingested-source-template.md) - Single-sentence executive summary of the ingested document and its organizational relevance.
 * [Manage Knowledge Base (OKF v0.2)](/skills/manage-knowledge-base/SKILL.md) - Navigate, read, author, update, and validate the markdown knowledge base according to Google OKF v0.2.
@@ -62,5 +64,6 @@ Knowledge in this bundle is organized with clear demarcation between:
 
 ## General Documents
 
+* [AI Agent Guidelines & Operating Contract](/AGENTS.md) - Repository-level operating rules and architectural constraints for AI agents interacting with this codebase and knowledge base.
 * [Knowledge Guide Starter Template (Google OKF v0.2)](/README.md) - A turnkey, self-contained, and self-maintaining knowledge base template for engineering, product, and operational teams.
 * [Knowledge Guide Setup & Onboarding Guide (Human & AI Agent Instructions)](/SETUP.md) - Idempotent, step-by-step instructions for humans and autonomous AI agents to clone, configure, personalize, and verify the OKF v0.2 knowledge base.

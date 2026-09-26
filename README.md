@@ -33,7 +33,9 @@ This template solves that by implementing the **Open Knowledge Format (OKF v0.2)
    * **"What Could Be"**: Future feature proposals and architectural RFCs (`/concepts/`) with `status: draft`.
    * **"How To" & Provenance**: Operational runbooks (`/playbooks/`), customer research (`/research/`), and standards (`/references/`).
 4. **Progressive Disclosure**: Built for LLM context efficiency. Agents read [`index.md`](file:///index.md) first to scan categorized one-line summaries before traversing deep files.
-5. **Turnkey AI Agent Skills**: Ships with built-in agent capabilities:
+5. **Living Agent Operating Contract**: Includes [`AGENTS.md`](file:///AGENTS.md) at repository root to govern autonomous AI agent interactions, non-negotiable compliance rules, and ground truth resolution.
+6. **Turnkey AI Agent Skills**: Ships with built-in agent capabilities:
+   * **`ask-kb`**: Instant architectural and domain consulting (`/ask-kb <query>` or CLI `python3 scripts/query_kb.py "<query>"`).
    * **`manage-knowledge-base`**: Standardized protocols for AI agents to navigate, author, update, and audit knowledge.
    * **`ingest`**: Command any AI agent to `ingest <URL>`—it fetches the page, consults with you on placement, formats an OKF v0.2 document, and validates the bundle.
 
@@ -69,6 +71,7 @@ Installs Git presubmit hooks, verifies permissions, registers agent discovery, a
 knowledge-guide/
 ├── index.md                 # Root OKF index (progressive disclosure entry point)
 ├── log.md                   # Chronological update history (ISO 8601 YYYY-MM-DD)
+├── AGENTS.md                # AI Agent Guidelines & Operating Contract
 ├── knowledge.config.json    # Organization name, title, and category mappings
 ├── init.sh                  # Interactive organization customizer
 ├── setup.sh                 # Environment setup and Git presubmit hook installer
@@ -84,7 +87,8 @@ knowledge-guide/
 │   └── future-initiative.md
 │
 ├── 📋 playbooks/            # Operational Runbooks, Setup Guides & SOPs
-│   └── onboarding-guide.md
+│   ├── onboarding-guide.md
+│   └── knowledge-driven-engineering.md
 │
 ├── 🎙️ research/             # Customer Interviews, Field Observations & User Research
 │   └── user-interview-example.md
@@ -97,9 +101,13 @@ knowledge-guide/
 │   ├── init_repo.py         # Org customizer / parameterizer
 │   ├── presubmit.py         # Pre-commit & pre-push hook gatekeeper
 │   ├── update_index.py      # Dynamic category-aware index generator
+│   ├── query_kb.py          # Fast CLI keyword & relevance search tool
 │   └── validate.py          # OKF v0.2 schema, link & trust tier validator
 │
 ├── 🤖 skills/               # Reusable AI Agent Skills (.agents/skills)
+│   ├── ask-kb/
+│   │   ├── SKILL.md         # /ask-kb instant domain & architectural consulting
+│   │   └── scripts/         # query_kb.py search tool
 │   ├── manage-knowledge-base/
 │   │   ├── SKILL.md         # Instructions for AI agents managing the repository
 │   │   ├── references/      # OKF quick-reference cheat sheet
@@ -130,13 +138,16 @@ All tools are standalone and require only standard Python 3.8+:
 # 1. Run Presubmit Gatekeeper (auto-repairs frontmatter/links, rebuilds index, validates)
 ./scripts/presubmit.py
 
-# 2. Run Validator directly (with --fix to auto-repair issues)
+# 2. Search Knowledge Base via CLI
+python3 scripts/query_kb.py "caching architecture"
+
+# 3. Run Validator directly (with --fix to auto-repair issues)
 python3 scripts/validate.py --fix
 
-# 3. Synchronize Root index.md from all concept files
+# 4. Synchronize Root index.md from all concept files
 python3 scripts/update_index.py
 
-# 4. Ingest external documentation via AI agent
+# 5. Ingest external documentation via AI agent
 # In chat: "ingest https://example.com/api-spec"
 ```
 

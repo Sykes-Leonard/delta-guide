@@ -154,7 +154,8 @@ if $PYTHON_BIN scripts/presubmit.py; then
     echo -e "  • Personalize / Brand: ${BOLD}./init.sh --org \"My Org\"${NC}"
     echo -e "  • Presubmit Check:     ${BOLD}./scripts/presubmit.py${NC} (auto-fix + validate)"
     echo -e "  • Validate Bundle:     ${BOLD}./scripts/validate.py${NC} (or ${BOLD}./scripts/validate.py --fix${NC})"
-    echo -e "  • Refresh Index:       ${BOLD}./scripts/update_index.py${NC}\n"
+    echo -e "  • Refresh Index:       ${BOLD}./scripts/update_index.py${NC}"
+    echo -e "  • Search Knowledge:    ${BOLD}./scripts/query_kb.py \"<query>\"${NC}\n"
     exit 0
 else
     echo -e "\n${BOLD}${RED}Validation Failed. Please review errors above.${NC}\n"
