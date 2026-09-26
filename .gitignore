@@ -1,0 +1,25 @@
+# Operating System
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Obsidian local user workspace
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo

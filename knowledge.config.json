@@ -1,0 +1,56 @@
+{
+  "org_name": "Example Organization",
+  "kb_title": "Organization Knowledge Base",
+  "kb_description": "Canonical Open Knowledge Format (OKF v0.2) repository: separating operational & system reality ('What Is') from proposed product innovations ('What Could Be').",
+  "okf_version": "0.2",
+  "categories": [
+    {
+      "id": "systems",
+      "title": "Production Systems & Architecture ('What Is')",
+      "path_prefix": "systems/",
+      "description": "Active production software, backend services, client apps, data stores, and internal workflows."
+    },
+    {
+      "id": "ecosystem",
+      "title": "External Ecosystem & Industry Reality ('What Is')",
+      "path_prefix": "ecosystem/",
+      "description": "External regulatory environment, industry standards, third-party APIs, and partner rails."
+    },
+    {
+      "id": "concepts",
+      "title": "Product Concepts & Explorations ('What Could Be')",
+      "path_prefix": "concepts/",
+      "description": "Proposed features, architectural RFCs, exploratory initiatives, and future innovations."
+    },
+    {
+      "id": "playbooks",
+      "title": "Operational Playbooks & Runbooks",
+      "path_prefix": "playbooks/",
+      "description": "Standard operating procedures, incident guides, and team runbooks."
+    },
+    {
+      "id": "research",
+      "title": "Field Research & User Interviews",
+      "path_prefix": "research/",
+      "description": "Customer interviews, field observations, survey data, and qualitative provenance."
+    },
+    {
+      "id": "skills",
+      "title": "Agent Skills & Automation Capabilities",
+      "path_prefix": "skills/",
+      "description": "Reusable AI agent capabilities, maintenance tools, and automation workflows."
+    },
+    {
+      "id": "references",
+      "title": "Standards, Specifications & References",
+      "path_prefix": "references/",
+      "description": "Format specifications, schemas, data contracts, and knowledge base audit logs."
+    },
+    {
+      "id": "templates",
+      "title": "Knowledge Document Starter Templates",
+      "path_prefix": "templates/",
+      "description": "Standardized templates for creating new concepts, systems, playbooks, and research notes."
+    }
+  ]
+}
