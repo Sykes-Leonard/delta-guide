@@ -17,6 +17,11 @@
   * [Stanford Institute for Human-Centered AI (HAI)](/ecosystem/institutions/stanford-hai.md): Human augmentation charter, foundation model transparency (HELM, AI Index), and educational cognitive agency.
   * [Anthropic Safeguards & Alignment](/ecosystem/institutions/anthropic-alignment.md): Public Benefit Corporation charter, Constitutional AI, mechanistic interpretability (scaling monosemanticity), and Responsible Scaling Policy (RSP).
   * [UNESCO AI Ethics Sector](/ecosystem/institutions/unesco-ai-ethics.md): 193-nation Recommendation on the Ethics of AI, Readiness Assessment Methodology (RAM), and Global South capacity building.
+  * [Leverhulme Centre for the Future of Intelligence](/ecosystem/institutions/cambridge-cfi.md): Cambridge research on pragmatic utopianism (Stephen Cave), AI narratives, and long-term civilizational futures.
+  * [Center for Human-Compatible AI (CHAI)](/ecosystem/institutions/berkeley-chai.md): UC Berkeley research on provably beneficial AI (Stuart Russell), Assistance Games, the Off-Switch Game, and autonomous weapon bans.
+  * [European AI Office](/ecosystem/institutions/european-ai-office.md): European Commission statutory regulator enforcing the EU AI Act (Regulation 2024/1689), GPAI codes of practice, and prohibited practices.
+  * [OECD.AI Policy Observatory](/ecosystem/institutions/oecd-ai.md): Directorate for Science, Technology & Innovation; revised 2024 AI Principles on inclusive growth, well-being, and trustworthy AI.
+  * [Institute for Human Flourishing (IHF)](/ecosystem/institutions/institute-for-human-flourishing.md): Rockefeller and Schmidt backed research-action lab on labor-using AI, frontline worker agency, and agrarian data sovereignty.
 * **Template Cleanup**: Removed obsolete starter template files (`concepts/future-initiative.md`, `systems/core-architecture.md`, `ecosystem/industry-landscape.md`), personalized `knowledge.config.json` for St. Francis High School's AI Initiative, and retained `research/user-interview-example.md` as an exemplar for Human-Centered Design (HCD) research.
 
 ## 2026-09-26
