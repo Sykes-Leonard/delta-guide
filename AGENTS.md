@@ -64,6 +64,7 @@ When interacting with the user or executing complex tasks, use these registered 
 * `/ask-kb <query>`: Instant architectural, statutory, and domain consulting.
 * `/manage-knowledge-base`: Validate, author, or update the OKF bundle.
 * `/ingest <url>`: Ingest external web content, specifications, or policies into OKF format.
+* `/generate-storyboards`: Author multi-panel visual storyboards and product concept specifications.
 
 ---
 

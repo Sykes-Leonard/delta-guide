@@ -1,5 +1,8 @@
 # Knowledge Base Changelog
 
+## 2026-09-30
+* **Storyboarding Skill**: Added [`/generate-storyboards`](/skills/generate-storyboards/SKILL.md) skill, [`templates/storyboard-template.md`](/templates/storyboard-template.md), and [`playbooks/generating-product-storyboards.md`](/playbooks/generating-product-storyboards.md) for authoring sequential visual storyboards and product concept specifications.
+
 ## 2026-09-26
 * **Agent Guidelines**: Added [`AGENTS.md`](/AGENTS.md) repository-wide operating contract for autonomous AI agents.
 * **Knowledge Advisor Skill**: Added [`/ask-kb`](/skills/ask-kb/SKILL.md) and [`scripts/query_kb.py`](/scripts/query_kb.py) CLI & programmatic search tool.

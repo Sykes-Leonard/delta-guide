@@ -88,7 +88,8 @@ knowledge-guide/
 │
 ├── 📋 playbooks/            # Operational Runbooks, Setup Guides & SOPs
 │   ├── onboarding-guide.md
-│   └── knowledge-driven-engineering.md
+│   ├── knowledge-driven-engineering.md
+│   └── generating-product-storyboards.md
 │
 ├── 🎙️ research/             # Customer Interviews, Field Observations & User Research
 │   └── user-interview-example.md
@@ -112,10 +113,14 @@ knowledge-guide/
 │   │   ├── SKILL.md         # Instructions for AI agents managing the repository
 │   │   ├── references/      # OKF quick-reference cheat sheet
 │   │   └── templates/       # Skill templates
-│   └── ingest/
-│       ├── SKILL.md         # Instructions for ingesting external URLs
-│       ├── scripts/         # Lightweight urllib/html.parser fetcher
-│       └── templates/       # Ingested source template
+│   ├── ingest/
+│   │   ├── SKILL.md         # Instructions for ingesting external URLs
+│   │   ├── scripts/         # Lightweight urllib/html.parser fetcher
+│   │   └── templates/       # Ingested source template
+│   └── generate-storyboards/
+│       ├── SKILL.md         # Visual narrative storyboards for product concepts
+│       ├── scripts/         # DOCX & HTML export script
+│       └── templates/       # Storyboard document template
 │
 ├── 🧩 templates/            # Authoring starter templates
 │   ├── concept-template.md
@@ -123,6 +128,7 @@ knowledge-guide/
 │   ├── playbook-template.md
 │   ├── reference-template.md
 │   ├── research-template.md
+│   ├── storyboard-template.md
 │   └── system-template.md
 │
 └── 🔮 .obsidian/            # Pre-configured Obsidian vault settings (Graph view)

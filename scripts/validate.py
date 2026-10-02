@@ -116,6 +116,7 @@ def infer_doc_type(rel_path: Path) -> str:
             "systems": "System Component",
             "ecosystem": "Ecosystem Context",
             "concepts": "Concept",
+            "storyboards": "Product Storyboard",
             "playbooks": "Playbook",
             "research": "Research Notes",
             "interviews": "Interview Notes",

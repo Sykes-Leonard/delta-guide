@@ -23,6 +23,12 @@
       "description": "Proposed features, architectural RFCs, exploratory initiatives, and future innovations."
     },
     {
+      "id": "storyboards",
+      "title": "Visual Storyboards & User Journeys ('What Could Be')",
+      "path_prefix": "storyboards/",
+      "description": "Sequential visual narrative storyboards illustrating product features, user journeys, and partner integrations."
+    },
+    {
       "id": "playbooks",
       "title": "Operational Playbooks & Runbooks",
       "path_prefix": "playbooks/",
