@@ -9,9 +9,6 @@ generated:
   at: 2026-10-01T20:00:00Z
 verified: []
 sources:
-  - id: source:harvard-flourishing-ai
-    resource: https://doi.org/10.3390/info17010025
-    title: "Flourishing Considerations for AI (VanderWeele & Teubner, 2026)"
   - id: source:notre-dame-delta-resources
     resource: https://delta.nd.edu/resources/
     title: "DELTA Resources: Pedagogical Tools (Notre Dame)"
@@ -65,7 +62,7 @@ Reductionism"]
 
 ## 3. Theoretical & Institutional Grounding
 
-* **[Harvard Human Flourishing Program](/ecosystem/institutions/harvard-human-flourishing.md)**: VanderWeele & Teubner (2026) document how chronic reliance on cognitive shortcuts impairs executive function, memory consolidation, and moral character in young adults.
+* ****Harvard Human Flourishing Program****: VanderWeele & Teubner (2026) document how chronic reliance on cognitive shortcuts impairs executive function, memory consolidation, and moral character in young adults.
 * **[The DELTA Framework (Notre Dame)](/ecosystem/delta-framework.md)**: Warns that outsourcing intellectual and moral discernment produces "cognitive passivity and ethical alienation."
 * **[DeepMind Institute Macroeconomics Program](/ecosystem/institutions/deepmind-institute.md)**: Jacobs & Imas demonstrate that widespread cognitive deskilling among displaced workers leads to deep crises of purpose and mental health decline, even when financial income is replaced via basic income.
 

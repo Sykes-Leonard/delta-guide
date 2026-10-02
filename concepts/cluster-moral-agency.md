@@ -105,7 +105,7 @@ This cluster encompasses five foundational concepts:
 
 * **[Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)**: Pope Leo XIV dedicates Chapter 4 to the dignity of work and the preservation of human freedom, warning against digital slavery and algorithmic displacement of human vocations.
 * **[The DELTA Framework](/ecosystem/delta-framework.md)**: The **A (Agency)** pillar insists that human beings must remain active moral agents rather than passive consumers of machine-generated recommendations.
-* **[Council of Europe Committee on AI (CAI)](/ecosystem/institutions/council-of-europe-ai.md)**: CETS No. 225 establishes binding procedural remedies guaranteeing citizens the right to contest automated decisions before a human judge.
+* ****Council of Europe Committee on AI (CAI)****: CETS No. 225 establishes binding procedural remedies guaranteeing citizens the right to contest automated decisions before a human judge.
 * **[DeepMind Institute Macroeconomics Program](/ecosystem/institutions/deepmind-institute.md)**: Jacobs and Imas analyze how unconditional transfers without labor agency degrade civic purpose, advocating for labor subsidies.
 
 ---
@@ -123,7 +123,7 @@ This cluster encompasses five foundational concepts:
 ### Internal Knowledge Base Links
 * [The DELTA Framework: Faith-Informed Virtue Ethics](/ecosystem/delta-framework.md)
 * [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)
-* [Council of Europe Framework Convention Dossier](/ecosystem/institutions/council-of-europe-ai.md)
+* **Council of Europe Framework Convention Dossier**
 * [Knowledge-Driven Engineering Playbook](/playbooks/knowledge-driven-engineering.md)
 
 ### External Primary Literature

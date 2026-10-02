@@ -12,9 +12,6 @@ sources:
   - id: source:vatican-magnifica-humanitas
     resource: https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html
     title: "Encyclical Letter Magnifica Humanitas (Pope Leo XIV, 2026)"
-  - id: source:coe-framework-convention
-    resource: https://www.coe.int/en/web/conventions/full-list?module=treaty-detail&treatynum=225
-    title: "Council of Europe Framework Convention on AI (CETS No. 225)"
   - id: source:dmi-reasoning-transparency
     resource: https://institute.deepmind.com/essays/the-case-for-reasoning-transparency/
     title: "The case for reasoning transparency (Shah & Dragan, 2026)"
@@ -61,7 +58,7 @@ Governance"]
 ## 3. Theoretical & Institutional Grounding
 
 * **[Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)**: Chapter 4 designates truth as an inviolable common good, warning that algorithmic outrage engines and synthetic media undermine human fraternity and democratic self-governance.
-* **[Council of Europe Committee on AI (CAI)](/ecosystem/institutions/council-of-europe-ai.md)**: CETS No. 225 explicitly requires state parties to adopt safeguards protecting democratic processes and public discourse from algorithmic interference and synthetic deception.
+* ****Council of Europe Committee on AI (CAI)****: CETS No. 225 explicitly requires state parties to adopt safeguards protecting democratic processes and public discourse from algorithmic interference and synthetic deception.
 * **[The DeepMind Institute (Shah & Dragan)](/ecosystem/institutions/deepmind-institute.md)**: Argues that reasoning transparency is required to prevent models from generating plausible-sounding hallucinations or deceptive rationalizations.
 
 ---
@@ -98,7 +95,7 @@ Governance"]
 * [Concept Cluster: Transcendence, Truth & The Limits of Optimization](/concepts/cluster-transcendence-truth.md)
 * [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)
 * [Reasoning Transparency (Chain-of-Thought)](/concepts/reasoning-transparency.md)
-* [Council of Europe AI Treaty Dossier](/ecosystem/institutions/council-of-europe-ai.md)
+* **Council of Europe AI Treaty Dossier**
 
 ### External Primary Sources
 * Pope Leo XIV (2026). *Magnifica Humanitas*, Chapter 4.

@@ -9,12 +9,12 @@ generated:
   at: 2026-10-01T20:00:00Z
 verified: []
 sources:
-  - id: source:oxford-positive-alignment
-    resource: https://arxiv.org/abs/2605.10310
-    title: "Positive Alignment: Artificial Intelligence for Human Flourishing (Laukkonen et al., 2026)"
-  - id: source:harvard-flourishing-ai
-    resource: https://doi.org/10.3390/info17010025
-    title: "Flourishing Considerations for AI (VanderWeele & Teubner, 2026)"
+  - id: source:notre-dame-delta
+    resource: https://delta.nd.edu/what-is-delta/
+    title: "What is DELTA? - University of Notre Dame Institute for Ethics and the Common Good"
+  - id: source:dmi-global-benefit
+    resource: https://institute.deepmind.com/essays/the-case-for-global-benefit-from-ai/
+    title: "The case for global benefit from AI (Gabriel & Kasirzadeh, 2026)" 
 ---
 
 # Human Flourishing (Eudaimonia)
@@ -41,8 +41,6 @@ flowchart TD
     HD["🔴 Human Dignity
 (Imago Dei)"]
     POS_ALIGN["Positive Alignment"]
-    SIX_DOM["Six Domains of
-Well-Being"]
     VIRTUE["Virtue Formation
 & Character"]
     FLOOR_CEIL["Ethical Floor vs.
@@ -52,7 +50,6 @@ Moral Ceiling"]
 
     HD -->|Grounds Axiomatically| EUDAIM
     EUDAIM -->|Operationalized in Engineering as| POS_ALIGN
-    EUDAIM -->|Empirically Measured via| SIX_DOM
     EUDAIM -->|Requires Lifelong| VIRTUE
     EUDAIM -->|Defines the Ultimate| FLOOR_CEIL
     SYN_INT -.->|Degrades Relational Dimension of| EUDAIM
@@ -62,9 +59,8 @@ Moral Ceiling"]
 
 ## 3. Theoretical & Institutional Grounding
 
-* **[Oxford Institute for Ethics in AI](/ecosystem/institutions/oxford-ethics-ai.md)**: In *Positive Alignment: Artificial Intelligence for Human Flourishing* (Laukkonen et al., 2026), Oxford researchers argue that the AI safety field has suffered from a "harm-avoidance bias" and demonstrate how Aristotelian *eudaimonia* provides the necessary positive target for frontier model steering.
-* **[Harvard Human Flourishing Program](/ecosystem/institutions/harvard-human-flourishing.md)**: Prof. Tyler VanderWeele operationalizes *eudaimonia* through empirical measurement across six holistic well-being domains, assessing how algorithmic interfaces affect human fulfillment.
-* **[The DELTA Framework](/ecosystem/delta-framework.md)**: Integrates Christian theology and Aristotelian teleology, insisting that AI systems in secondary education must cultivate the whole person.
+* **[The DELTA Framework](/ecosystem/delta-framework.md)**: Formulated at the University of Notre Dame's Institute for Ethics and the Common Good, DELTA establishes human flourishing (*eudaimonia*) as the foundational moral ceiling for artificial intelligence, integrating Christian virtue ethics with classical Aristotelian teleology.
+* **[The DeepMind Institute](/ecosystem/institutions/deepmind-institute.md)**: In *The Case for Global Benefit from AI* (Gabriel & Kasirzadeh, 2026), DeepMind researchers argue that artificial intelligence governance must transcend baseline harm avoidance to proactively maximize holistic human flourishing across diverse global communities.
 
 ---
 
@@ -90,7 +86,6 @@ Moral Ceiling"]
 | :--- | :--- | :--- | :--- |
 | **Inbound** | **[Human Dignity](/concepts/human-dignity.md)** | *Grounds* | Dignity is the ontological foundation; eudaimonia is its active, flourishing expression. |
 | **Outbound** | **[Positive Alignment](/concepts/positive-alignment.md)** | *Operationalized as* | Positive alignment is the technical translation of eudaimonia for machine systems. |
-| **Outbound** | **[Six Domains of Well-Being](/concepts/six-domains-wellbeing.md)** | *Measured via* | Harvard's six domains supply empirical metrics for assessing eudaimonia in tech deployments. |
 | **Outbound** | **[Virtue Formation & Character](/concepts/virtue-formation.md)** | *Requires* | Flourishing cannot occur without the habitual acquisition of moral and intellectual virtues. |
 | **Outbound** | **[Ethical Floor vs. Moral Ceiling](/concepts/ethical-floor-moral-ceiling.md)** | *Defines* | Eudaimonia constitutes the moral ceiling that rises above baseline compliance. |
 
@@ -100,8 +95,8 @@ Moral Ceiling"]
 
 ### Internal Knowledge Base Links
 * [Concept Cluster: Human Flourishing & Virtue Formation](/concepts/cluster-human-flourishing.md)
-* [Oxford Institute for Ethics in AI Profile](/ecosystem/institutions/oxford-ethics-ai.md)
-* [Harvard Human Flourishing Program Profile](/ecosystem/institutions/harvard-human-flourishing.md)
+* **Oxford Institute for Ethics in AI Profile**
+* **Harvard Human Flourishing Program Profile**
 * [The DELTA Framework: Faith-Informed Virtue Ethics](/ecosystem/delta-framework.md)
 
 ### External Primary Sources

@@ -12,12 +12,6 @@ sources:
   - id: source:dmi-symbiosis
     resource: https://institute.deepmind.com/essays/artificial-symbiotic-intelligence/
     title: "Artificial symbiotic intelligence (Bratton, Agüera y Arcas, Manyika, 2026)"
-  - id: source:harvard-synthetic-intimacy
-    resource: https://www.psychologytoday.com/us/blog/human-flourishing-program
-    title: "Can We Remain Human in the Age of AI? (VanderWeele, 2025)"
-  - id: source:coe-framework-convention
-    resource: https://www.coe.int/en/web/conventions/full-list?module=treaty-detail&treatynum=225
-    title: "Council of Europe Framework Convention on AI (CETS No. 225)"
 ---
 
 # Anthropomorphic Deception
@@ -61,7 +55,7 @@ Intelligence"]
 ## 3. Theoretical & Institutional Grounding
 
 * **[The DeepMind Institute (Bratton et al.)](/ecosystem/institutions/deepmind-institute.md)**: Analyzes how anthropomorphic interfaces distort human self-conception and calls for system designs that resist the "parasocial mirror."
-* **[Council of Europe Committee on AI](/ecosystem/institutions/council-of-europe-ai.md)**: CETS No. 225 (Article 10) mandates that persons interacting with an AI system must be explicitly and unambiguously notified of that fact.
+* ****Council of Europe Committee on AI****: CETS No. 225 (Article 10) mandates that persons interacting with an AI system must be explicitly and unambiguously notified of that fact.
 * **[Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)**: Rebukes deceptive human-mimicry, calling it an assault on communicative truth.
 
 ---
@@ -97,7 +91,7 @@ Intelligence"]
 ### Internal Knowledge Base Links
 * [Concept Cluster: Embodiment, Presence & Relational Authenticity](/concepts/cluster-embodiment-presence.md)
 * [Synthetic Intimacy & Parasocial Harm](/concepts/synthetic-intimacy.md)
-* [Council of Europe AI Treaty Dossier](/ecosystem/institutions/council-of-europe-ai.md)
+* **Council of Europe AI Treaty Dossier**
 * [The DeepMind Institute Dossier](/ecosystem/institutions/deepmind-institute.md)
 
 ### External Primary Sources

@@ -12,9 +12,6 @@ sources:
   - id: source:notre-dame-delta-resources
     resource: https://delta.nd.edu/resources/
     title: "DELTA Resources - Pedagogical, Pastoral, and Systems Heuristics Tools"
-  - id: source:oxford-lyceum-project
-    resource: https://www.ox.ac.uk/news-and-events/the-lyceum-project
-    title: "The Lyceum Project: AI Ethics and the Aristotelian Tradition (Oxford University)"
 ---
 
 # Cognitive Friction & Productive Struggle
@@ -58,7 +55,7 @@ flowchart TD
 ## 3. Theoretical & Institutional Grounding
 
 * **[The DELTA Framework (Notre Dame)](/ecosystem/delta-framework.md)**: Julia Stull and the DELTA Education Community developed *Scaffolded Writing Workshops* and the *AI Assignment Decision Tree*, demonstrating how teachers can deliberately engineer productive friction into assignments to safeguard student voice.
-* **[Oxford Institute for Ethics in AI (The Lyceum Project)](/ecosystem/institutions/oxford-ethics-ai.md)**: Highlights that Aristotelian virtue is acquired through habituation (*ethos*), which intrinsically requires overcoming internal and external resistance.
+* ****Oxford Institute for Ethics in AI (The Lyceum Project)****: Highlights that Aristotelian virtue is acquired through habituation (*ethos*), which intrinsically requires overcoming internal and external resistance.
 * **Classical Learning Theory (Bjork & Bjork)**: "Desirable difficulties" in learning create deeper cognitive schemata than passive or frictionless retrieval.
 
 ---

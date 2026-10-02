@@ -12,9 +12,6 @@ sources:
   - id: source:dmi-economic-policy
     resource: https://institute.deepmind.com/essays/economic-policy-for-agi/
     title: "Economic policy for AGI (Jacobs & Imas, 2026)"
-  - id: source:un-governing-ai-humanity
-    resource: https://www.un.org/sites/un2.un.org/files/governing_ai_for_humanity_final_report_en.pdf
-    title: "Governing AI for Humanity - UN High-Level Advisory Body on AI (2024)"
   - id: source:vatican-magnifica-humanitas
     resource: https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html
     title: "Encyclical Letter Magnifica Humanitas (Pope Leo XIV, 2026)"
@@ -65,7 +62,7 @@ Dominance"]
 ## 3. Theoretical & Institutional Grounding
 
 * **[The DeepMind Institute (Jacobs & Imas)](/ecosystem/institutions/deepmind-institute.md)**: Essay 6 establishes the taxonomy of 11 interventions and conducts the comparative feasibility and agency impact study.
-* **[UN High-Level Advisory Body on AI](/ecosystem/institutions/un-ai-advisory-body.md)**: Recommends the establishment of a **Global Fund for AI** to finance compute commons and capacity development networks for excluded nations.
+* ****UN High-Level Advisory Body on AI****: Recommends the establishment of a **Global Fund for AI** to finance compute commons and capacity development networks for excluded nations.
 * **[Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)**: Affirms that digital infrastructure and computational capital fall under the *universal destination of goods*, condemning monopolistic economic rent capture.
 
 ---

@@ -9,15 +9,12 @@ generated:
   at: 2026-10-01T20:00:00Z
 verified: []
 sources:
-  - id: source:oxford-lyceum-project
-    resource: https://www.ox.ac.uk/news-and-events/the-lyceum-project
-    title: "The Lyceum Project: AI Ethics and the Aristotelian Tradition (Oxford University)"
-  - id: source:oxford-positive-alignment
-    resource: https://arxiv.org/abs/2605.10310
-    title: "Positive Alignment: Artificial Intelligence for Human Flourishing (Laukkonen et al., 2026)"
   - id: source:notre-dame-delta
     resource: https://delta.nd.edu/what-is-delta/
     title: "The DELTA Framework - University of Notre Dame"
+  - id: source:vatican-magnifica-humanitas
+    resource: https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html
+    title: "Encyclical Letter Magnifica Humanitas (Pope Leo XIV, 2026)"
 ---
 
 # Phronesis (Practical Wisdom)
@@ -63,7 +60,7 @@ flowchart TD
 
 ## 3. Theoretical & Institutional Grounding
 
-* **[Oxford Institute for Ethics in AI](/ecosystem/institutions/oxford-ethics-ai.md)**: Coordinates *The Lyceum Project*, led by Prof. John Tasioulas and Prof. Philipp Koralus, bringing Aristotelian *phronesis* into direct conversation with computer science and software interface design.
+* ****Oxford Institute for Ethics in AI****: Coordinates *The Lyceum Project*, led by Prof. John Tasioulas and Prof. Philipp Koralus, bringing Aristotelian *phronesis* into direct conversation with computer science and software interface design.
 * **[The DELTA Framework (Notre Dame)](/ecosystem/delta-framework.md)**: The **A (Agency)** pillar insists that moral discernment is an exercise of human conscience that cannot be offloaded to machine heuristics without surrendering human dignity.
 * **[Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)**: Pope Leo XIV warns against substituting algorithmic calculation for the discernment of the human heart, noting that machines lack moral conscience.
 
@@ -100,11 +97,13 @@ flowchart TD
 
 ### Internal Knowledge Base Links
 * [Concept Cluster: Human Flourishing & Virtue Formation](/concepts/cluster-human-flourishing.md)
-* [Oxford Institute for Ethics in AI Profile](/ecosystem/institutions/oxford-ethics-ai.md)
+* [The DELTA Framework (Notre Dame)](/ecosystem/delta-framework.md)
+* [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)
 * [Virtue Formation & Character](/concepts/virtue-formation.md)
 * [Human-in-the-Loop (Conscience in the Loop)](/concepts/human-in-the-loop.md)
 
 ### External Primary Sources
 * Aristotle. *Nicomachean Ethics*, Book VI.
+* Pope Leo XIV. (2026). *Encyclical Letter Magnifica Humanitas*. Dicastery for the Doctrine of the Faith.
 * Tasioulas, J. (2024). *The Lyceum Project: AI Ethics and the Aristotelian Tradition*. Oxford University.
 * Laukkonen, R. et al. (2026). *Positive Alignment: Artificial Intelligence for Human Flourishing*. arXiv:2605.10310.

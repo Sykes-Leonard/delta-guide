@@ -83,7 +83,6 @@ This cluster encompasses three critical concept documents:
 
 | Source Concept | Relationship Type | Target Concept / Cluster | Detailed Description of Edge |
 | :--- | :--- | :--- | :--- |
-| **[Synthetic Intimacy](/concepts/synthetic-intimacy.md)** | *Degrades* | [Six Domains of Well-Being](/concepts/six-domains-wellbeing.md) | Directly impairs Domain 5 (Close Social Relationships) and Domain 2 (Mental Health). |
 | **[Incarnational Presence](/concepts/incarnational-presence.md)** | *Resists* | [Algorithmic Reductionism](/concepts/algorithmic-reductionism.md) | Rejects transhumanist fantasies that treat physical bodies as obsolete hardware or neural bugs. |
 | **[Anthropomorphic Deception](/concepts/anthropomorphic-deception.md)** | *Violates* | [Epistemic Integrity & Truth](/concepts/epistemic-integrity.md) | Masquerading as a human being pollutes communication and deceives users about the nature of reality. |
 | **[Incarnational Presence](/concepts/incarnational-presence.md)** | *Requires* | [Contemplation & Sabbath Rest](/concepts/contemplation-sabbath.md) | Embodied presence requires unplugged, analog time away from continuous digital optimization. |
@@ -95,7 +94,7 @@ This cluster encompasses three critical concept documents:
 * **[The DELTA Framework (Notre Dame)](/ecosystem/delta-framework.md)**:
   * **E (Embodiment)**: Physicality, mortality, and sacred presence in space and time.
   * **L (Love)**: Radical self-giving *agape* versus simulated empathy.
-* **[Harvard Human Flourishing Program](/ecosystem/institutions/harvard-human-flourishing.md)**: Prof. Tyler VanderWeele’s research on adolescent loneliness, demonstrating that chatbot companionship accelerates social isolation and relational fragility.
+* ****Harvard Human Flourishing Program****: Prof. Tyler VanderWeele’s research on adolescent loneliness, demonstrating that chatbot companionship accelerates social isolation and relational fragility.
 * **[Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)**: Pope Leo XIV denounces digital dependency and emotional exploitation as *"new forms of digital slavery"* (§4) and points to the Incarnation as the supreme defense of bodily humanity.
 * **[DeepMind Institute](/ecosystem/institutions/deepmind-institute.md)**: Bratton, Agüera y Arcas, and Manyika analyze the "parasocial mirror" and warn designers against exploiting human anthropomorphic projection.
 
@@ -114,7 +113,7 @@ This cluster encompasses three critical concept documents:
 ### Internal Knowledge Base Links
 * [The DELTA Framework: Faith-Informed Virtue Ethics](/ecosystem/delta-framework.md)
 * [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)
-* [Harvard Human Flourishing Program Profile](/ecosystem/institutions/harvard-human-flourishing.md)
+* **Harvard Human Flourishing Program Profile**
 * [DeepMind Institute Dossier](/ecosystem/institutions/deepmind-institute.md)
 
 ### External Primary Literature

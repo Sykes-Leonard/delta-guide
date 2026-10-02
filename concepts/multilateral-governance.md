@@ -9,12 +9,6 @@ generated:
   at: 2026-10-01T20:00:00Z
 verified: []
 sources:
-  - id: source:un-governing-ai-humanity
-    resource: https://www.un.org/sites/un2.un.org/files/governing_ai_for_humanity_final_report_en.pdf
-    title: "Governing AI for Humanity - UN High-Level Advisory Body on AI (2024)"
-  - id: source:coe-framework-convention
-    resource: https://www.coe.int/en/web/conventions/full-list?module=treaty-detail&treatynum=225
-    title: "Council of Europe Framework Convention on AI (CETS No. 225)"
   - id: source:dmi-frontier-framework
     resource: https://institute.deepmind.com/essays/a-framework-for-frontier-ai-and-the-dawning-of-a-new-age/
     title: "A framework for frontier AI and the dawning of a new age (Demis Hassabis, 2026)"
@@ -64,8 +58,8 @@ Autonomous Weapons"]
 
 ## 3. Theoretical & Institutional Grounding
 
-* **[United Nations High-Level Advisory Body on AI](/ecosystem/institutions/un-ai-advisory-body.md)**: Issued seven actionable governance recommendations in *Governing AI for Humanity*, establishing an International Scientific Panel, Global AI Standards Exchange, and an AI Office within the UN Secretariat.
-* **[Council of Europe Committee on AI (CAI)](/ecosystem/institutions/council-of-europe-ai.md)**: Promulgated CETS No. 225, the world's first legally binding international AI treaty, signed by European states alongside the US, UK, Canada, Japan, and Israel.
+* ****United Nations High-Level Advisory Body on AI****: Issued seven actionable governance recommendations in *Governing AI for Humanity*, establishing an International Scientific Panel, Global AI Standards Exchange, and an AI Office within the UN Secretariat.
+* ****Council of Europe Committee on AI (CAI)****: Promulgated CETS No. 225, the world's first legally binding international AI treaty, signed by European states alongside the US, UK, Canada, Japan, and Israel.
 * **[DeepMind Institute (Demis Hassabis)](/ecosystem/institutions/deepmind-institute.md)**: Proposes an international frontier AI standards body conducting pre-deployment evaluations against autonomous self-replication, CBRN weaponization, and cyberwarfare.
 
 ---
@@ -101,8 +95,8 @@ Autonomous Weapons"]
 
 ### Internal Knowledge Base Links
 * [Concept Cluster: Power Concentration, Governance & Distributive Justice](/concepts/cluster-power-governance.md)
-* [UN AI Advisory Body Profile](/ecosystem/institutions/un-ai-advisory-body.md)
-* [Council of Europe Framework Convention Dossier](/ecosystem/institutions/council-of-europe-ai.md)
+* **UN AI Advisory Body Profile**
+* **Council of Europe Framework Convention Dossier**
 * [The DeepMind Institute Dossier](/ecosystem/institutions/deepmind-institute.md)
 
 ### External Primary Sources

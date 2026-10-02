@@ -15,9 +15,6 @@ sources:
   - id: source:vatican-magnifica-humanitas
     resource: https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html
     title: "Encyclical Letter Magnifica Humanitas (Pope Leo XIV, 2026)"
-  - id: source:un-governing-ai-humanity
-    resource: https://www.un.org/sites/un2.un.org/files/governing_ai_for_humanity_final_report_en.pdf
-    title: "Governing AI for Humanity - UN High-Level Advisory Body on AI (2024)"
 ---
 
 # Global Benefit & Distributive Justice
@@ -71,7 +68,7 @@ Governance"]
 
 * **[The DeepMind Institute (Gabriel & Kasirzadeh)](/ecosystem/institutions/deepmind-institute.md)**: Establishes the four philosophical pillars of global benefit, articulating clear institutional duties for frontier labs.
 * **[Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)**: Chapter 2 invokes the *universal destination of goods*, affirming that compute clusters, training datasets, and scientific breakthroughs are goods intended for all.
-* **[UN High-Level Advisory Body on AI](/ecosystem/institutions/un-ai-advisory-body.md)**: Proposes a **Global Fund for AI** and a Capacity Development Network to pool resources, compute, and training sets for the Global South.
+* ****UN High-Level Advisory Body on AI****: Proposes a **Global Fund for AI** and a Capacity Development Network to pool resources, compute, and training sets for the Global South.
 
 ---
 
@@ -107,7 +104,7 @@ Governance"]
 ### Internal Knowledge Base Links
 * [Concept Cluster: Power Concentration, Governance & Distributive Justice](/concepts/cluster-power-governance.md)
 * [The DeepMind Institute Dossier](/ecosystem/institutions/deepmind-institute.md)
-* [UN AI Advisory Body Profile](/ecosystem/institutions/un-ai-advisory-body.md)
+* **UN AI Advisory Body Profile**
 * [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)
 
 ### External Primary Sources

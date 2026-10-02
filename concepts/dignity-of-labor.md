@@ -15,9 +15,6 @@ sources:
   - id: source:dmi-economic-policy
     resource: https://institute.deepmind.com/essays/economic-policy-for-agi/
     title: "Economic policy for AGI (Jacobs & Imas, 2026)"
-  - id: source:un-governing-ai-humanity
-    resource: https://www.un.org/sites/un2.un.org/files/governing_ai_for_humanity_final_report_en.pdf
-    title: "Governing AI for Humanity - UN High-Level Advisory Body on AI (2024)"
 ---
 
 # Dignity of Labor & Meaningful Work
@@ -65,7 +62,7 @@ Dominance"]
 
 * **[Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)**: Dedicated to the 135th anniversary of *Rerum Novarum*, Chapter 4 condemns reckless automation strategies that discard workers to inflate shareholder dividends, warning of profound psychological despair and social collapse.
 * **[The DeepMind Institute (Jacobs & Imas)](/ecosystem/institutions/deepmind-institute.md)**: In *Economic Policy for AGI*, the authors demonstrate that pure income redistribution (cash transfers) fails the test of human agency. They propose **wage subsidies**, **employee equity sharing**, and **shortened workweeks** to keep human labor central and competitive.
-* **[UN High-Level Advisory Body on AI](/ecosystem/institutions/un-ai-advisory-body.md)**: Exposes the hidden human exploitation in the global AI supply chain, such as data annotators working in traumatic, low-wage content moderation sweatshops in the Global South.
+* ****UN High-Level Advisory Body on AI****: Exposes the hidden human exploitation in the global AI supply chain, such as data annotators working in traumatic, low-wage content moderation sweatshops in the Global South.
 
 ---
 

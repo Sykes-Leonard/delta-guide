@@ -15,9 +15,6 @@ sources:
   - id: source:vatican-magnifica-humanitas
     resource: https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html
     title: "Encyclical Letter Magnifica Humanitas (Pope Leo XIV, 2026)"
-  - id: source:coe-framework-convention
-    resource: https://www.coe.int/en/web/conventions/full-list?module=treaty-detail&treatynum=225
-    title: "Council of Europe Framework Convention on AI (CETS No. 225)"
 ---
 
 # Ethical Floor vs. Moral Ceiling
@@ -73,7 +70,7 @@ Governance"]
 
 * **[The DELTA Framework (Univ. of Notre Dame)](/ecosystem/delta-framework.md)**: Articulates this explicit contrast: *"As artificial intelligence becomes more powerful, Christian institutions must look beyond an 'ethical floor' of safety, privacy, and transparency toward a deeper, faith-informed approach rooted in enduring Christian values."*
 * **[Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)**: Pope Leo XIV insists that legal prohibitions against autonomous weapons or data exploitation are essential baselines, but the Church's true mission is building a *"civilization of love"* rather than a sterile digital bureaucracy.
-* **[Oxford Institute for Ethics in AI](/ecosystem/institutions/oxford-ethics-ai.md)**: Mirrors this distinction in the *Positive Alignment* agenda, moving from defensive risk mitigation to active scaffolding of human goods.
+* ****Oxford Institute for Ethics in AI****: Mirrors this distinction in the *Positive Alignment* agenda, moving from defensive risk mitigation to active scaffolding of human goods.
 
 ---
 
@@ -110,7 +107,7 @@ Governance"]
 * [Concept Cluster: Human Flourishing & Virtue Formation](/concepts/cluster-human-flourishing.md)
 * [The DELTA Framework: Faith-Informed Virtue Ethics](/ecosystem/delta-framework.md)
 * [Positive Alignment (AI for Human Flourishing)](/concepts/positive-alignment.md)
-* [Council of Europe Framework Convention Dossier](/ecosystem/institutions/council-of-europe-ai.md)
+* **Council of Europe Framework Convention Dossier**
 
 ### External Primary Sources
 * Sullivan, M. & Kronk, A. (2026). *DELTA: Educating for Character in the Age of AI*. University of Notre Dame.

@@ -111,7 +111,7 @@ This cluster encompasses eight pivotal concepts:
 
 ## 5. Institutional & Theoretical Grounding
 
-* **[United Nations High-Level Advisory Body on AI](/ecosystem/institutions/un-ai-advisory-body.md)**: Formulated the landmark 2024 report *Governing AI for Humanity*, proposing a Global Fund for AI, International Scientific Panel, and standards interoperability.
+* ****United Nations High-Level Advisory Body on AI****: Formulated the landmark 2024 report *Governing AI for Humanity*, proposing a Global Fund for AI, International Scientific Panel, and standards interoperability.
 * **[The DeepMind Institute](/ecosystem/institutions/deepmind-institute.md)**: Advanced multi-agent institutionalism (Essay 2), symbiotic intelligence (Essay 3), global benefit ethics (Essay 4), reasoning transparency (Essay 5), and macroeconomic taxation/public compute proposals (Essay 6).
 * **[The Holy See / Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)**: Warns that private concentration of technological power threatens democratic sovereignty and calls for the *universal destination of goods*.
 * **[Rome Call Interfaith Coalition](/ecosystem/institutions/rome-call-hiroshima.md)**: Defined the global paradigm of *algor-ethics* signed by tech titans, universities, and world religions.
@@ -130,7 +130,7 @@ This cluster encompasses eight pivotal concepts:
 
 ### Internal Knowledge Base Links
 * [The DeepMind Institute Dossier](/ecosystem/institutions/deepmind-institute.md)
-* [UN AI Advisory Body Profile](/ecosystem/institutions/un-ai-advisory-body.md)
+* **UN AI Advisory Body Profile**
 * [Rome Call for AI Ethics Profile](/ecosystem/institutions/rome-call-hiroshima.md)
 * [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)
 

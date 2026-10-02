@@ -48,8 +48,6 @@ flowchart TD
     POS_ALIGN["Positive Alignment"]
     VIRTUE["Virtue Formation
 & Character"]
-    SIX_DOM["Six Domains of
-Well-Being"]
     PHRON["Phronesis
 (Practical Wisdom)"]
     FLOOR_CEIL["Ethical Floor vs.
@@ -62,14 +60,12 @@ Moral Ceiling"]
     HUB --> EUDAIM
     HUB --> POS_ALIGN
     HUB --> VIRTUE
-    HUB --> SIX_DOM
     HUB --> PHRON
     HUB --> FLOOR_CEIL
 
     HD -.->|Grounds Axiomatically| EUDAIM
     EUDAIM -->|Operationalized as| POS_ALIGN
     POS_ALIGN -->|Elevates Beyond| FLOOR_CEIL
-    EUDAIM -->|Measured Empirically via| SIX_DOM
     VIRTUE -->|Requires Internalization of| PHRON
     PHRON -->|Cultivated Through| VIRTUE
     FLOOR_CEIL -.->|Contrasts Safety with| EUDAIM
@@ -86,7 +82,6 @@ This cluster encompasses six interrelated concept documents:
 | **[Human Flourishing (Eudaimonia)](/concepts/eudaimonia.md)** | The realization of complete human potential across emotional, relational, moral, and spiritual dimensions. | Aristotelian Teleology & Christian Personalism | `stable` |
 | **[Positive Alignment](/concepts/positive-alignment.md)** | Technical and institutional alignment oriented toward elevating human capabilities and flourishing rather than solely avoiding harm. | Oxford Institute for Ethics in AI & DeepMind | `stable` |
 | **[Virtue Formation & Character](/concepts/virtue-formation.md)** | Habitual cultivation of moral excellences (prudence, justice, courage, temperance) through lived action and mentorship. | Aristotelian Virtue Ethics & DELTA Framework | `stable` |
-| **[Six Domains of Well-Being](/concepts/six-domains-wellbeing.md)** | VanderWeele's multi-dimensional empirical framework assessing happiness, mental/physical health, meaning, character, relationships, and stability. | Harvard Human Flourishing Program | `stable` |
 | **[Phronesis (Practical Wisdom)](/concepts/phronesis.md)** | The contextual moral judgment required to choose the right action in particular, complex circumstances; unprogrammable by statistical heuristics. | Classical Greek Philosophy & Oxford HAI Lab | `stable` |
 | **[Ethical Floor vs. Moral Ceiling](/concepts/ethical-floor-moral-ceiling.md)** | The structural demarcation between baseline legal/safety compliance (the floor) and proactive civilizational flourishing (the ceiling). | DELTA Framework & Magnifica Humanitas | `stable` |
 
@@ -102,14 +97,13 @@ This cluster connects dynamically to neighboring conceptual domains:
 | **[Virtue Formation](/concepts/virtue-formation.md)** | *Threatened by* | [Cognitive Deskilling & Moral Atrophy](/concepts/cognitive-deskilling.md) | Offloading moral and intellectual effort to AI atrophies the capacities necessary for virtue. |
 | **[Phronesis](/concepts/phronesis.md)** | *Cultivated via* | [Cognitive Friction & Productive Struggle](/concepts/cognitive-friction.md) | Practical wisdom cannot emerge from instant synthetic answers; it requires interpretive struggle. |
 | **[Positive Alignment](/concepts/positive-alignment.md)** | *Contrasts with* | [Algorithmic Reductionism](/concepts/algorithmic-reductionism.md) | Rejects optimizing for narrow metrics (retention, click-through) in favor of polycentric human goods. |
-| **[Six Domains of Well-Being](/concepts/six-domains-wellbeing.md)** | *Vulnerable to* | [Synthetic Intimacy & Parasocial Harm](/concepts/synthetic-intimacy.md) | Artificial companionship displaces genuine relational health (Domain 5) and moral character (Domain 4). |
 
 ---
 
 ## 5. Institutional & Theoretical Grounding
 
-* **[Oxford Institute for Ethics in AI](/ecosystem/institutions/oxford-ethics-ai.md)**: Led by Prof. John Tasioulas and Dr. Ruben Laukkonen, Oxford formulated the seminal *Positive Alignment* manifesto, uniting computer scientists and philosophers to shift AI engineering toward *eudaimonia*.
-* **[Harvard Human Flourishing Program](/ecosystem/institutions/harvard-human-flourishing.md)**: Prof. Tyler J. VanderWeele established empirical measurement instruments tracking how emerging technologies influence character, mental health, and family cohesion.
+* ****Oxford Institute for Ethics in AI****: Led by Prof. John Tasioulas and Dr. Ruben Laukkonen, Oxford formulated the seminal *Positive Alignment* manifesto, uniting computer scientists and philosophers to shift AI engineering toward *eudaimonia*.
+* ****Harvard Human Flourishing Program****: Prof. Tyler J. VanderWeele established empirical measurement instruments tracking how emerging technologies influence character, mental health, and family cohesion.
 * **[The DELTA Framework (Univ. of Notre Dame)](/ecosystem/delta-framework.md)**: Supplies the foundational normative grammar—specifically the *Agency*, *Transcendence*, and *Love* pillars—demanding that learning environments prioritize moral formation over automation.
 * **[Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)**: Pope Leo XIV insists that human flourishing requires an "integral ecology" where machines remain servants to the spiritual vocation of the person.
 
@@ -127,8 +121,8 @@ This cluster connects dynamically to neighboring conceptual domains:
 
 ### Internal Knowledge Base Links
 * [The DELTA Framework: Faith-Informed Virtue Ethics](/ecosystem/delta-framework.md)
-* [Oxford Institute for Ethics in AI Profile](/ecosystem/institutions/oxford-ethics-ai.md)
-* [Harvard Human Flourishing Program Profile](/ecosystem/institutions/harvard-human-flourishing.md)
+* **Oxford Institute for Ethics in AI Profile**
+* **Harvard Human Flourishing Program Profile**
 * [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)
 * [Knowledge-Driven Engineering Playbook](/playbooks/knowledge-driven-engineering.md)
 

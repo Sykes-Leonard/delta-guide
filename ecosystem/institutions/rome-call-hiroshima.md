@@ -95,5 +95,5 @@ Target Horizon:   Planetary Peace, Human Dignity, Algor-Ethics & Autonomous Weap
 * [Global AI Institutions & Research Labs Observatory](/ecosystem/institutions/overview.md) — Canonical matrix tracking global AI labs, institutes, and regulators.
 * [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md) — Pope Leo XIV's papal encyclical on artificial intelligence and human dignity.
 * [The DELTA Framework: Faith-Informed Virtue Ethics for AI](/ecosystem/delta-framework.md) — Five normative pillars for human flourishing.
-* [Council of Europe AI Framework Convention](/ecosystem/institutions/council-of-europe-ai.md) — The world's first legally binding international treaty on AI and human rights.
+* **Council of Europe AI Framework Convention** — The world's first legally binding international treaty on AI and human rights.
 * [Knowledge-Driven Engineering Playbook](/playbooks/knowledge-driven-engineering.md) — Operational integration of institutional constraints into engineering sprints.

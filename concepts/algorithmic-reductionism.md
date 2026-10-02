@@ -59,7 +59,7 @@ Presence"]
 
 * **[Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)**: Chapter 3 critiques the technocratic paradigm and transhumanism, affirming the limit, the heart, and the transcendent soul of the person.
 * **[The DELTA Framework (Notre Dame)](/ecosystem/delta-framework.md)**: The **D (Dignity)** pillar was forged explicitly as an antidote to algorithmic reductionism: human value is never contingent on computational speed or utility.
-* **[Oxford Institute for Ethics in AI](/ecosystem/institutions/oxford-ethics-ai.md)**: John Tasioulas critiques the reduction of human rights to algorithmic risk assessments.
+* ****Oxford Institute for Ethics in AI****: John Tasioulas critiques the reduction of human rights to algorithmic risk assessments.
 
 ---
 

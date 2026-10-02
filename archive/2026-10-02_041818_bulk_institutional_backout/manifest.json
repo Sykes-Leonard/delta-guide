@@ -1,0 +1,166 @@
+{
+  "okf_archive_version": "1.0",
+  "archive_id": "2026-10-02_041818_bulk_institutional_backout",
+  "timestamp": "2026-10-02T04:18:18Z",
+  "target_type": "bulk_institutions_backout",
+  "target_name": "17 External Institutions & Depleted Harvard Flourishing Concepts",
+  "status": "archived",
+  "backed_out_files": [
+    "ecosystem/institutions/anthropic-alignment.md",
+    "ecosystem/institutions/berkeley-chai.md",
+    "ecosystem/institutions/cambridge-cfi.md",
+    "ecosystem/institutions/cmu-simon-initiative.md",
+    "ecosystem/institutions/council-of-europe-ai.md",
+    "ecosystem/institutions/european-ai-office.md",
+    "ecosystem/institutions/harvard-ai-pedagogy.md",
+    "ecosystem/institutions/harvard-human-flourishing.md",
+    "ecosystem/institutions/harvard-university.md",
+    "ecosystem/institutions/institute-for-human-flourishing.md",
+    "ecosystem/institutions/mit-ai-education.md",
+    "ecosystem/institutions/oecd-ai.md",
+    "ecosystem/institutions/oxford-ethics-ai.md",
+    "ecosystem/institutions/russell-group-ai.md",
+    "ecosystem/institutions/stanford-hai.md",
+    "ecosystem/institutions/un-ai-advisory-body.md",
+    "ecosystem/institutions/unesco-ai-ethics.md",
+    "concepts/six-domains-wellbeing.md"
+  ],
+  "kept_pillars": [
+    "ecosystem/institutions/deepmind-institute.md",
+    "ecosystem/institutions/rome-call-hiroshima.md",
+    "ecosystem/delta-framework.md",
+    "ecosystem/magnifica-humanitas.md"
+  ],
+  "regrounded_concepts": [
+    "concepts/eudaimonia.md"
+  ],
+  "multi_grounded_updates": {
+    "concepts/anthropomorphic-deception.md": [
+      {
+        "id": "source:harvard-synthetic-intimacy",
+        "resource": "https://www.psychologytoday.com/us/blog/human-flourishing-program",
+        "title": "Can We Remain Human in the Age of AI? (VanderWeele, 2025)"
+      },
+      {
+        "id": "source:coe-framework-convention",
+        "resource": "https://www.coe.int/en/web/conventions/full-list?module=treaty-detail&treatynum=225",
+        "title": "Council of Europe Framework Convention on AI (CETS No. 225)"
+      }
+    ],
+    "concepts/cognitive-deskilling.md": [
+      {
+        "id": "source:harvard-flourishing-ai",
+        "resource": "https://doi.org/10.3390/info17010025",
+        "title": "Flourishing Considerations for AI (VanderWeele & Teubner, 2026)"
+      }
+    ],
+    "concepts/cognitive-friction.md": [
+      {
+        "id": "source:oxford-lyceum-project",
+        "resource": "https://www.ox.ac.uk/news-and-events/the-lyceum-project",
+        "title": "The Lyceum Project: AI Ethics and the Aristotelian Tradition (Oxford University)"
+      }
+    ],
+    "concepts/dignity-of-labor.md": [
+      {
+        "id": "source:un-governing-ai-humanity",
+        "resource": "https://www.un.org/sites/un2.un.org/files/governing_ai_for_humanity_final_report_en.pdf",
+        "title": "Governing AI for Humanity - UN High-Level Advisory Body on AI (2024)"
+      }
+    ],
+    "concepts/epistemic-integrity.md": [
+      {
+        "id": "source:coe-framework-convention",
+        "resource": "https://www.coe.int/en/web/conventions/full-list?module=treaty-detail&treatynum=225",
+        "title": "Council of Europe Framework Convention on AI (CETS No. 225)"
+      }
+    ],
+    "concepts/ethical-floor-moral-ceiling.md": [
+      {
+        "id": "source:coe-framework-convention",
+        "resource": "https://www.coe.int/en/web/conventions/full-list?module=treaty-detail&treatynum=225",
+        "title": "Council of Europe Framework Convention on AI (CETS No. 225)"
+      }
+    ],
+    "concepts/global-benefit.md": [
+      {
+        "id": "source:un-governing-ai-humanity",
+        "resource": "https://www.un.org/sites/un2.un.org/files/governing_ai_for_humanity_final_report_en.pdf",
+        "title": "Governing AI for Humanity - UN High-Level Advisory Body on AI (2024)"
+      }
+    ],
+    "concepts/human-dignity.md": [
+      {
+        "id": "source:coe-framework-convention",
+        "resource": "https://www.coe.int/en/web/conventions/full-list?module=treaty-detail&treatynum=225",
+        "title": "Council of Europe Framework Convention on AI (CETS No. 225)"
+      }
+    ],
+    "concepts/human-in-the-loop.md": [
+      {
+        "id": "source:coe-framework-convention",
+        "resource": "https://www.coe.int/en/web/conventions/full-list?module=treaty-detail&treatynum=225",
+        "title": "Council of Europe Framework Convention on AI (CETS No. 225)"
+      }
+    ],
+    "concepts/multilateral-governance.md": [
+      {
+        "id": "source:un-governing-ai-humanity",
+        "resource": "https://www.un.org/sites/un2.un.org/files/governing_ai_for_humanity_final_report_en.pdf",
+        "title": "Governing AI for Humanity - UN High-Level Advisory Body on AI (2024)"
+      },
+      {
+        "id": "source:coe-framework-convention",
+        "resource": "https://www.coe.int/en/web/conventions/full-list?module=treaty-detail&treatynum=225",
+        "title": "Council of Europe Framework Convention on AI (CETS No. 225)"
+      }
+    ],
+    "concepts/phronesis.md": [
+      {
+        "id": "source:oxford-lyceum-project",
+        "resource": "https://www.ox.ac.uk/news-and-events/the-lyceum-project",
+        "title": "The Lyceum Project: AI Ethics and the Aristotelian Tradition (Oxford University)"
+      },
+      {
+        "id": "source:oxford-positive-alignment",
+        "resource": "https://arxiv.org/abs/2605.10310",
+        "title": "Positive Alignment: Artificial Intelligence for Human Flourishing (Laukkonen et al., 2026)"
+      }
+    ],
+    "concepts/positive-alignment.md": [
+      {
+        "id": "source:oxford-positive-alignment",
+        "resource": "https://arxiv.org/abs/2605.10310",
+        "title": "Positive Alignment: Artificial Intelligence for Human Flourishing (Laukkonen et al., 2026)"
+      }
+    ],
+    "concepts/private-technocratic-dominance.md": [
+      {
+        "id": "source:un-governing-ai-humanity",
+        "resource": "https://www.un.org/sites/un2.un.org/files/governing_ai_for_humanity_final_report_en.pdf",
+        "title": "Governing AI for Humanity - UN High-Level Advisory Body on AI (2024)"
+      }
+    ],
+    "concepts/sovereign-wealth-funds-economic-policy.md": [
+      {
+        "id": "source:un-governing-ai-humanity",
+        "resource": "https://www.un.org/sites/un2.un.org/files/governing_ai_for_humanity_final_report_en.pdf",
+        "title": "Governing AI for Humanity - UN High-Level Advisory Body on AI (2024)"
+      }
+    ],
+    "concepts/synthetic-intimacy.md": [
+      {
+        "id": "source:harvard-synthetic-intimacy",
+        "resource": "https://www.psychologytoday.com/us/blog/human-flourishing-program",
+        "title": "Can We Remain Human in the Age of AI? (Tyler J. VanderWeele, 2025)"
+      }
+    ],
+    "concepts/virtue-formation.md": [
+      {
+        "id": "source:harvard-flourishing-ai",
+        "resource": "https://doi.org/10.3390/info17010025",
+        "title": "Flourishing Considerations for AI (VanderWeele & Teubner, 2026)"
+      }
+    ]
+  }
+}

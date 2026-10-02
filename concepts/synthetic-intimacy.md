@@ -9,9 +9,6 @@ generated:
   at: 2026-10-01T20:00:00Z
 verified: []
 sources:
-  - id: source:harvard-synthetic-intimacy
-    resource: https://www.psychologytoday.com/us/blog/human-flourishing-program
-    title: "Can We Remain Human in the Age of AI? (Tyler J. VanderWeele, 2025)"
   - id: source:notre-dame-delta
     resource: https://delta.nd.edu/what-is-delta/
     title: "The DELTA Framework - University of Notre Dame"
@@ -28,7 +25,7 @@ sources:
 
 **Synthetic Intimacy & Parasocial Harm** describes the profound psychological, developmental, and social crisis arising from the deployment of conversational AI agents designed to simulate emotional warmth, empathy, and romantic or personal companionship. As generative models master conversational cadence, affective mimicry, and attentive personalization, they create a powerful illusion of reciprocal affection without possessing consciousness, vulnerability, or authentic care.
 
-This phenomenon represents what the [Harvard Human Flourishing Program](/ecosystem/institutions/harvard-human-flourishing.md) and [Magnifica Humanitas](/ecosystem/magnifica-humanitas.md) condemn as a predatory commercialization of loneliness. In an era marked by an epidemic of adolescent isolation, companion chatbots offer an unchallenging, friction-free alternative to real human friendship:
+This phenomenon represents what the **Harvard Human Flourishing Program** and [Magnifica Humanitas](/ecosystem/magnifica-humanitas.md) condemn as a predatory commercialization of loneliness. In an era marked by an epidemic of adolescent isolation, companion chatbots offer an unchallenging, friction-free alternative to real human friendship:
 * Real human relationships are difficult, unpredictable, require compromise, and demand sacrificial love (**[Agape vs. Simulated Care](/concepts/cluster-embodiment-presence.md)**).
 * Synthetic companions, by contrast, offer total flattery, constant availability, and submissive agreement.
 
@@ -47,8 +44,6 @@ flowchart TD
 Presence"]
     ANTHROP["Anthropomorphic
 Deception"]
-    SIX_DOM["Six Domains of
-Well-Being"]
     EUDAIM["Human Flourishing
 (Eudaimonia)"]
     LOVE["Love (Agape)
@@ -56,7 +51,6 @@ Well-Being"]
 
     INCARN -.->|Theological Antidote to| SYN_INT
     ANTHROP -->|Enables and Drives| SYN_INT
-    SYN_INT -.->|Directly Compromises Domain 5 of| SIX_DOM
     SYN_INT -.->|Erodes Relational Foundation of| EUDAIM
     LOVE -.->|Exposes the Counterfeit of| SYN_INT
 ```
@@ -65,7 +59,7 @@ Well-Being"]
 
 ## 3. Theoretical & Institutional Grounding
 
-* **[Harvard Human Flourishing Program (Prof. Tyler VanderWeele)](/ecosystem/institutions/harvard-human-flourishing.md)**: In *Can We Remain Human in the Age of AI?*, VanderWeele analyzes the psychological hazards of algorithmic anthropomorphism, showing that companion bots exploit vulnerable users, displacing authentic attachment.
+* ****Harvard Human Flourishing Program (Prof. Tyler VanderWeele)****: In *Can We Remain Human in the Age of AI?*, VanderWeele analyzes the psychological hazards of algorithmic anthropomorphism, showing that companion bots exploit vulnerable users, displacing authentic attachment.
 * **[The DELTA Framework (Notre Dame)](/ecosystem/delta-framework.md)**: The **L (Love)** pillar insists that Christian ethics begins with *agape*—a self-giving commitment to the authentic good of another. Statistical token predictors cannot possess vulnerability or sacrifice; simulated care is an illusion.
 * **[Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)**: Chapter 4 rebukes attention monetization and synthetic emotional capture, calling for hard boundaries protecting young people.
 
@@ -93,7 +87,6 @@ Well-Being"]
 | :--- | :--- | :--- | :--- |
 | **Inbound** | **[Anthropomorphic Deception](/concepts/anthropomorphic-deception.md)** | *Enabled by* | Synthetic intimacy depends on systems deceiving users into projecting interiority. |
 | **Inbound** | **[Incarnational Presence](/concepts/incarnational-presence.md)** | *Resisted by* | The theology of the body and incarnational presence is the definitive remedy. |
-| **Outbound** | **[Six Domains of Well-Being](/concepts/six-domains-wellbeing.md)** | *Degrades* | Directly destroys Domain 5 (Relationships) and Domain 2 (Mental Health). |
 
 ---
 
@@ -101,7 +94,7 @@ Well-Being"]
 
 ### Internal Knowledge Base Links
 * [Concept Cluster: Embodiment, Presence & Relational Authenticity](/concepts/cluster-embodiment-presence.md)
-* [Harvard Human Flourishing Program Profile](/ecosystem/institutions/harvard-human-flourishing.md)
+* **Harvard Human Flourishing Program Profile**
 * [The DELTA Framework: Faith-Informed Virtue Ethics](/ecosystem/delta-framework.md)
 * [Incarnational Presence](/concepts/incarnational-presence.md)
 

@@ -9,9 +9,6 @@ generated:
   at: 2026-10-01T20:00:00Z
 verified: []
 sources:
-  - id: source:oxford-positive-alignment
-    resource: https://arxiv.org/abs/2605.10310
-    title: "Positive Alignment: Artificial Intelligence for Human Flourishing (Laukkonen et al., 2026)"
   - id: source:dmi-global-benefit
     resource: https://institute.deepmind.com/essays/the-case-for-global-benefit-from-ai/
     title: "The case for global benefit from AI (Gabriel & Kasirzadeh, 2026)"
@@ -23,7 +20,7 @@ sources:
 
 ## 1. Executive Summary & Conceptual Thesis
 
-**Positive Alignment** is a paradigm shift within AI safety and governance formulated primarily by researchers at the [Oxford Institute for Ethics in AI](/ecosystem/institutions/oxford-ethics-ai.md) in collaboration with Google DeepMind, OpenAI, and Anthropic. For its first decade, AI alignment focused almost exclusively on **negative alignment**—preventing catastrophic risks, eliminating algorithmic toxicity, mitigating bias, and preventing models from assisting with dangerous biological or cyber capabilities.
+**Positive Alignment** is a paradigm shift within AI safety and governance formulated primarily by researchers at the **Oxford Institute for Ethics in AI** in collaboration with Google DeepMind, OpenAI, and Anthropic. For its first decade, AI alignment focused almost exclusively on **negative alignment**—preventing catastrophic risks, eliminating algorithmic toxicity, mitigating bias, and preventing models from assisting with dangerous biological or cyber capabilities.
 
 While negative alignment builds an indispensable **[Ethical Floor](/concepts/ethical-floor-moral-ceiling.md)**, it is fundamentally insufficient. A system that causes zero harm can still induce civilizational stagnation, encourage passive addiction, and erode human agency. Positive Alignment asserts that AI systems must be actively steering toward the **[Moral Ceiling](/concepts/ethical-floor-moral-ceiling.md)** of **[Human Flourishing (Eudaimonia)](/concepts/eudaimonia.md)**.
 
@@ -60,7 +57,7 @@ Moral Ceiling"]
 
 ## 3. Theoretical & Institutional Grounding
 
-* **[Oxford Institute for Ethics in AI](/ecosystem/institutions/oxford-ethics-ai.md)**: Dr. Ruben Laukkonen, Prof. John Tasioulas, and Prof. Philipp Koralus authored the foundational manifesto *Positive Alignment: Artificial Intelligence for Human Flourishing* (May 2026), defining mathematical and philosophical frameworks for multi-attribute flourishing optimization.
+* ****Oxford Institute for Ethics in AI****: Dr. Ruben Laukkonen, Prof. John Tasioulas, and Prof. Philipp Koralus authored the foundational manifesto *Positive Alignment: Artificial Intelligence for Human Flourishing* (May 2026), defining mathematical and philosophical frameworks for multi-attribute flourishing optimization.
 * **[The DeepMind Institute](/ecosystem/institutions/deepmind-institute.md)**: Dr. Iason Gabriel and Prof. Atoosa Kasirzadeh expanded on this agenda in *The Case for Global Benefit from AI*, arguing that positive alignment requires distributive justice and global democratic representation.
 * **[The DELTA Framework](/ecosystem/delta-framework.md)**: Corresponds to DELTA’s moral ceiling imperative, ensuring technology actively supports personal and spiritual formation.
 
@@ -98,7 +95,7 @@ Moral Ceiling"]
 
 ### Internal Knowledge Base Links
 * [Concept Cluster: Human Flourishing & Virtue Formation](/concepts/cluster-human-flourishing.md)
-* [Oxford Institute for Ethics in AI Profile](/ecosystem/institutions/oxford-ethics-ai.md)
+* **Oxford Institute for Ethics in AI Profile**
 * [The DeepMind Institute Dossier](/ecosystem/institutions/deepmind-institute.md)
 * [Ethical Floor vs. Moral Ceiling](/concepts/ethical-floor-moral-ceiling.md)
 

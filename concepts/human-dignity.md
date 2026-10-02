@@ -15,9 +15,6 @@ sources:
   - id: source:notre-dame-delta
     resource: https://delta.nd.edu/what-is-delta/
     title: "The DELTA Framework - University of Notre Dame"
-  - id: source:coe-framework-convention
-    resource: https://www.coe.int/en/web/conventions/full-list?module=treaty-detail&treatynum=225
-    title: "Council of Europe Framework Convention on AI (CETS No. 225)"
 ---
 
 # Human Dignity (Imago Dei & Inalienable Worth)
@@ -70,7 +67,7 @@ Autonomous Weapons"]
 
 * **[The DELTA Framework (Notre Dame)](/ecosystem/delta-framework.md)**: The **D (Dignity)** pillar emphasizes that dignity protects vulnerable individuals—specifically learners undergoing cognitive formation and workers vulnerable to displacement—from being bench-marked against machine throughput.
 * **[Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)**: Pope Leo XIV grounds human dignity in the Incarnation, rebuking transhumanist ideologies that treat the human body as an engineering defect to be overcome through synthetic augmentation.
-* **[Council of Europe Framework Convention (CETS No. 225)](/ecosystem/institutions/council-of-europe-ai.md)**: Establishes dignity as a binding statutory norm under international human rights law, guaranteeing that persons must never be treated as passive algorithmic objects.
+* ****Council of Europe Framework Convention (CETS No. 225)****: Establishes dignity as a binding statutory norm under international human rights law, guaranteeing that persons must never be treated as passive algorithmic objects.
 * **[Rome Call for AI Ethics & Hiroshima Appeal](/ecosystem/institutions/rome-call-hiroshima.md)**: Unites world religions around the principle that computational intelligence can never possess spiritual personhood or replace human sacredness.
 
 ---
@@ -109,7 +106,7 @@ Autonomous Weapons"]
 * [Concept Cluster: Human Flourishing & Virtue Formation](/concepts/cluster-human-flourishing.md)
 * [The DELTA Framework: Faith-Informed Virtue Ethics](/ecosystem/delta-framework.md)
 * [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)
-* [Council of Europe AI Treaty Dossier](/ecosystem/institutions/council-of-europe-ai.md)
+* **Council of Europe AI Treaty Dossier**
 
 ### External Primary Sources
 * Pope Leo XIV (2026). *Magnifica Humanitas*, Holy See.

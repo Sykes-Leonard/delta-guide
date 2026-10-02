@@ -9,9 +9,6 @@ generated:
   at: 2026-10-01T20:00:00Z
 verified: []
 sources:
-  - id: source:coe-framework-convention
-    resource: https://www.coe.int/en/web/conventions/full-list?module=treaty-detail&treatynum=225
-    title: "Council of Europe Framework Convention on AI (CETS No. 225)"
   - id: source:vatican-magnifica-humanitas
     resource: https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html
     title: "Encyclical Letter Magnifica Humanitas (Pope Leo XIV, 2026)"
@@ -63,7 +60,7 @@ Transparency (CoT)"]
 
 ## 3. Theoretical & Institutional Grounding
 
-* **[Council of Europe Committee on AI (CAI)](/ecosystem/institutions/council-of-europe-ai.md)**: CETS No. 225 (Articles 14 & 15) establishes procedural safeguards guaranteeing that automated decisions affecting human rights must be contestable before a human reviewer.
+* ****Council of Europe Committee on AI (CAI)****: CETS No. 225 (Articles 14 & 15) establishes procedural safeguards guaranteeing that automated decisions affecting human rights must be contestable before a human reviewer.
 * **[Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)**: Pope Leo XIV emphasizes that human moral conscience can never be automated; in judicial sentencing, medical diagnosis, pastoral care, and warfare, software must strictly remain advisory.
 * **[The Rome Call for AI Ethics](/ecosystem/institutions/rome-call-hiroshima.md)**: Identifies "Responsibility" as one of its six core algor-ethics pillars, insisting that human operators always retain legal and ethical liability.
 
@@ -100,7 +97,7 @@ Transparency (CoT)"]
 
 ### Internal Knowledge Base Links
 * [Concept Cluster: Moral Agency, Conscience & The Dignity of Work](/concepts/cluster-moral-agency.md)
-* [Council of Europe AI Treaty Dossier](/ecosystem/institutions/council-of-europe-ai.md)
+* **Council of Europe AI Treaty Dossier**
 * [Moral Agency & Conscience](/concepts/moral-agency.md)
 * [Reasoning Transparency (Chain-of-Thought)](/concepts/reasoning-transparency.md)
 

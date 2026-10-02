@@ -12,9 +12,6 @@ sources:
   - id: source:notre-dame-delta-resources
     resource: https://delta.nd.edu/resources/
     title: "DELTA Resources - Pedagogical, Pastoral, and Systems Heuristics Tools"
-  - id: source:harvard-flourishing-ai
-    resource: https://doi.org/10.3390/info17010025
-    title: "Flourishing Considerations for AI (VanderWeele & Teubner, 2026)"
 ---
 
 # Virtue Formation & Character
@@ -61,8 +58,8 @@ flowchart TD
 ## 3. Theoretical & Institutional Grounding
 
 * **[The DELTA Framework (Univ. of Notre Dame)](/ecosystem/delta-framework.md)**: Develops practical diagnostic tools—including the *Teacher's Examen*, *AI Assignment Decision Tree*, and *Scaffolded Writing Workshops*—explicitly designed to protect student character acquisition from automated shortcutting.
-* **[Harvard Human Flourishing Program](/ecosystem/institutions/harvard-human-flourishing.md)**: Identifies Character and Virtue as the 4th canonical domain of human well-being, empirically demonstrating that individuals with cultivated moral habits exhibit significantly greater resilience and social cohesion.
-* **[Oxford Institute for Ethics in AI (The Lyceum Project)](/ecosystem/institutions/oxford-ethics-ai.md)**: Translates classical Aristotelian virtue ethics into computer interface guidelines that prompt users toward reflective deliberation rather than impulsive reaction.
+* ****Harvard Human Flourishing Program****: Identifies Character and Virtue as the 4th canonical domain of human well-being, empirically demonstrating that individuals with cultivated moral habits exhibit significantly greater resilience and social cohesion.
+* ****Oxford Institute for Ethics in AI (The Lyceum Project)****: Translates classical Aristotelian virtue ethics into computer interface guidelines that prompt users toward reflective deliberation rather than impulsive reaction.
 
 ---
 

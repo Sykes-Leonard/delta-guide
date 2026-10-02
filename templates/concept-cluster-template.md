@@ -89,12 +89,12 @@ Analyze how this cluster interacts with neighboring conceptual domains:
 Map the intellectual provenance of this cluster across external institutions and canonical literature:
 
 * **Academic Research Centers**:
-  * [Oxford Institute for Ethics in AI](/ecosystem/institutions/oxford-ethics-ai.md) — *Positive Alignment* and Aristotelian virtue ethics.
-  * [Harvard Human Flourishing Program](/ecosystem/institutions/harvard-human-flourishing.md) — Empirical well-being indices and relational psychology.
+  * **Oxford Institute for Ethics in AI** — *Positive Alignment* and Aristotelian virtue ethics.
+  * **Harvard Human Flourishing Program** — Empirical well-being indices and relational psychology.
   * [University of Notre Dame (ECG)](/ecosystem/delta-framework.md) — The DELTA Framework (*Dignity, Embodiment, Love, Transcendence, Agency*).
 * **Moral & Statutory Authorities**:
   * [The Holy See / Vatican](/ecosystem/magnifica-humanitas.md) — Encyclical *Magnifica Humanitas* on technocratic power and labor dignity.
-  * [Council of Europe](/ecosystem/institutions/council-of-europe-ai.md) — Framework Convention on AI (CETS No. 225).
+  * **Council of Europe** — Framework Convention on AI (CETS No. 225).
   * [Rome Call Interfaith Alliance](/ecosystem/institutions/rome-call-hiroshima.md) — Algor-ethics and the Hiroshima Appeal.
 * **Frontier Industry Institutes**:
   * [The DeepMind Institute](/ecosystem/institutions/deepmind-institute.md) — Sociotechnical governance, symbiotic intelligence, and reasoning transparency.

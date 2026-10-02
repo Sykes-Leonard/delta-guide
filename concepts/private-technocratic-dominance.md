@@ -12,9 +12,6 @@ sources:
   - id: source:vatican-magnifica-humanitas
     resource: https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html
     title: "Encyclical Letter Magnifica Humanitas (Pope Leo XIV, 2026)"
-  - id: source:un-governing-ai-humanity
-    resource: https://www.un.org/sites/un2.un.org/files/governing_ai_for_humanity_final_report_en.pdf
-    title: "Governing AI for Humanity - UN High-Level Advisory Body on AI (2024)"
   - id: source:deepmind-institute-intro
     resource: https://institute.deepmind.com/essays/introducing-the-deepmind-institute/
     title: "Introducing the DeepMind Institute (Legg, Manyika, Hassabis, 2026)"
@@ -64,7 +61,7 @@ Governance"]
 ## 3. Theoretical & Institutional Grounding
 
 * **[Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)**: Highlights the private nature of 21st-century technological power and warns that corporate monopolies treat training data and computational power as private windfalls rather than the common heritage of humanity.
-* **[UN High-Level Advisory Body on AI](/ecosystem/institutions/un-ai-advisory-body.md)**: Points out that 118 nations have no representation in current AI governance architectures, leaving the global South completely dependent on private tech oligarchs.
+* ****UN High-Level Advisory Body on AI****: Points out that 118 nations have no representation in current AI governance architectures, leaving the global South completely dependent on private tech oligarchs.
 * **[The DeepMind Institute Founding Charter](/ecosystem/institutions/deepmind-institute.md)**: Co-founders Shane Legg, James Manyika, and Demis Hassabis openly acknowledge that AGI development cannot remain a closed corporate initiative and must transition toward open societal partnership.
 
 ---
@@ -101,7 +98,7 @@ Governance"]
 ### Internal Knowledge Base Links
 * [Concept Cluster: Power Concentration, Governance & Distributive Justice](/concepts/cluster-power-governance.md)
 * [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)
-* [UN AI Advisory Body Profile](/ecosystem/institutions/un-ai-advisory-body.md)
+* **UN AI Advisory Body Profile**
 * [Babel vs. Jerusalem](/concepts/babel-vs-jerusalem.md)
 
 ### External Primary Sources
