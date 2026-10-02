@@ -39,6 +39,7 @@ The knowledge bundle organizes information with a clean architectural demarcatio
 ├── knowledge.config.json    # Org metadata and categorized section configuration
 │
 ├── ecosystem/               # "WHAT IS" - External Reality & Regulatory Infrastructure
+│   ├── institutions/        # External research institutes, frontier labs & moral authorities
 │   └── ...                  # Partner APIs, external laws, industry standards
 │
 ├── systems/                 # "WHAT IS" - Current Production Systems & Workflows
@@ -76,6 +77,7 @@ The knowledge bundle organizes information with a clean architectural demarcatio
 ### Procedure B: Authoring a New Concept vs. System Fact
 1. **Choose the appropriate subdirectory**:
    * **Is it "What Is"?**
+     * External research institutes, frontier AI labs, or moral authorities $\rightarrow$ `ecosystem/institutions/` (`status: stable`; register in [`/ecosystem/institutions/overview.md`](/ecosystem/institutions/overview.md))
      * External environment, statutory regulations, or partner platforms $\rightarrow$ `ecosystem/` (`status: stable`)
      * Existing production software, APIs, or database schemas $\rightarrow$ `systems/` (`status: stable`)
      * Operational runbook or incident response guide $\rightarrow$ `playbooks/` (`status: stable`)

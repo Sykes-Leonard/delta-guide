@@ -26,6 +26,8 @@ The single source of truth for all architectural, statutory, and operational req
 * **Domain & Architecture Questions**: Always consult the knowledge base or invoke the `/ask-kb` skill before making assumptions about system architecture or business constraints:
   * DELTA Framework & Virtue Ethics: [`/ecosystem/delta-framework.md`](/ecosystem/delta-framework.md)
   * Papal AI Doctrine & Human Dignity: [`/ecosystem/magnifica-humanitas.md`](/ecosystem/magnifica-humanitas.md)
+  * DeepMind Institute & Frontier Governance: [`/ecosystem/institutions/deepmind-institute.md`](/ecosystem/institutions/deepmind-institute.md)
+  * Global AI Institutions Observatory: [`/ecosystem/institutions/overview.md`](/ecosystem/institutions/overview.md)
   * Engineering lifecycle & SDD process: [`/playbooks/knowledge-driven-engineering.md`](/playbooks/knowledge-driven-engineering.md)
 
 ---
@@ -47,7 +49,7 @@ The single source of truth for all architectural, statutory, and operational req
 
 * `index.md`: Root progressive disclosure index listing all categorized documents.
 * `systems/`: "What Is" — Active production software, services, schemas, and workflows.
-* `ecosystem/`: "What Is" — External regulatory environment, standards, partner rails.
+* `ecosystem/`: "What Is" — External regulatory environment, key institutions (`ecosystem/institutions/`), standards, partner rails.
 * `concepts/`: "What Could Be" — Feature proposals, product RFCs, architectural explorations.
 * `playbooks/`: Operational runbooks, developer setup guides, team SOPs.
 * `research/`: Customer discovery interviews, user observations, qualitative feedback.

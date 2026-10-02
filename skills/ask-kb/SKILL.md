@@ -60,7 +60,7 @@ When a query is received, consult the authoritative OKF documents across the rep
 | Domain Area | Key Questions Addressed | Authoritative KB Categories |
 | :--- | :--- | :--- |
 | **Production Systems** | Active services, schemas, tech stack, APIs, datastores | [`/systems/`](/systems/) |
-| **External Ecosystem** | Regulatory frameworks, partner APIs, statutory mandates | [`/ecosystem/`](/ecosystem/) |
+| **External Ecosystem & Institutions** | Regulatory frameworks, partner APIs, statutory mandates, frontier labs, research institutes, moral authorities | [`/ecosystem/`](/ecosystem/), [`/ecosystem/institutions/`](/ecosystem/institutions/overview.md) |
 | **Product Concepts** | Proposed features, architectural RFCs, exploratory initiatives | [`/concepts/`](/concepts/) |
 | **Operational SOPs** | Onboarding, incident runbooks, engineering workflows | [`/playbooks/`](/playbooks/) |
 | **Field Research** | Customer interviews, qualitative observations, pain points | [`/research/`](/research/) |

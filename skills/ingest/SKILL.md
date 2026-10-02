@@ -61,6 +61,7 @@ Evaluate the content against the knowledge base taxonomy:
 
 | Destination Category | Scope & Criteria | Typical Document Types |
 | :--- | :--- | :--- |
+| **`ecosystem/institutions/`** | **"What Is" (External Institutions)**: Key external research institutes, frontier AI labs, university centers, and moral authorities. | Institutional profiles, governance charters, multi-essay dossiers, lab roadmaps. |
 | **`ecosystem/`** | **"What Is" (External Reality)**: External laws, statutory regulations, partner platforms, payment rails, industry standards. | Government policies, partner API releases, compliance regulations. |
 | **`systems/`** | **"What Is" (Internal Reality)**: Active production architecture, codebases, data models, or service documentation. | Service specs, API endpoints, schema definitions, internal workflows. |
 | **`concepts/`** | **"What Could Be" (Innovation)**: Proposed features, architectural RFCs, exploratory prototypes. | Product RFCs, new feature proposals, feasibility studies. |
@@ -98,6 +99,23 @@ Formulate an interactive multiple-choice question using `ask_question`:
   "toolAction": "Asking user for content placement"
 }
 ```
+
+---
+
+### Step 3b: Special Workflow — Ingesting Institutional Portals & Publication Hubs
+When ingesting an institution's public portal or research hub (e.g. `institute.deepmind.com/#essays`, or university ethics repositories):
+
+1. **Child Publication Discovery**:
+   * Inspect the hub page for linked articles, papers, or essays.
+   * Extract key metadata (titles, authors, dates, abstracts, and canonical URLs) across the entire series.
+2. **Interactive Structural Choice**:
+   * Use `ask_question` to offer the user a clear structural choice:
+     * **Unified Institutional Dossier** (`ecosystem/institutions/<slug>.md`): A comprehensive document capturing the institutional profile, leadership, mission, and synthesizing the entire publication series with dedicated essay subsections.
+     * **Subfolder Structure** (`ecosystem/institutions/<slug>/`): Dedicated subfolder containing an overview file plus individual standalone markdown files for each essay.
+3. **Comparative Alignment Analysis**:
+   * Include a comparative synthesis section relating the institution's stances to existing foundational anchors (e.g. [DELTA Framework](/ecosystem/delta-framework.md) and [Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)).
+4. **Mandatory Observatory Registration**:
+   * Always register or update the institution in the **Global AI Institutions Observatory** ([`ecosystem/institutions/overview.md`](/ecosystem/institutions/overview.md)) table.
 
 ---
 
@@ -144,7 +162,9 @@ Once the document is saved:
    ```markdown
    * **Ingestion**: Ingested [<Title>](/<relative-path>) from [<Source Title>](<URL>) covering [topic].
    ```
-3. **Run Presubmit Gatekeeper**:
+3. **Register in Observatory** (if ingesting an institution):
+   Add or update the institution row in [`ecosystem/institutions/overview.md`](/ecosystem/institutions/overview.md).
+4. **Run Presubmit Gatekeeper**:
    ```bash
    python3 scripts/presubmit.py
    ```
