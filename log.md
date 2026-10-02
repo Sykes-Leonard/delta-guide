@@ -1,5 +1,10 @@
 # Knowledge Base Changelog
 
+## 2026-10-01
+* **Ingestion**: Ingested [The DELTA Framework: Faith-Informed Virtue Ethics for Artificial Intelligence](/ecosystem/delta-framework.md) from [What is DELTA?](https://delta.nd.edu/what-is-delta/) and [DELTA Resources](https://delta.nd.edu/resources/) covering Notre Dame's virtue-ethics framework (Dignity, Embodiment, Love, Transcendence, Agency) and pedagogical/pastoral toolkits.
+* **Ingestion**: Ingested [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md) from [The Holy See](https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html) covering Pope Leo XIV's magisterial teaching on artificial intelligence, technocratic dominance, the dignity of labor, and the ban on autonomous weapons.
+* **Template Cleanup**: Removed obsolete starter template files (`concepts/future-initiative.md`, `systems/core-architecture.md`, `ecosystem/industry-landscape.md`), personalized `knowledge.config.json` for St. Francis High School's AI Initiative, and retained `research/user-interview-example.md` as an exemplar for Human-Centered Design (HCD) research.
+
 ## 2026-09-26
 * **Agent Guidelines**: Added [`AGENTS.md`](/AGENTS.md) repository-wide operating contract for autonomous AI agents.
 * **Knowledge Advisor Skill**: Added [`/ask-kb`](/skills/ask-kb/SKILL.md) and [`scripts/query_kb.py`](/scripts/query_kb.py) CLI & programmatic search tool.

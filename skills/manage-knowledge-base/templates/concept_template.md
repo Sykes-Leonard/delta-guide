@@ -34,4 +34,4 @@ Interface details and schema tables.
 ---
 
 ## Related Documents
-* [Core Architecture](/systems/core-architecture.md)
+* [The DELTA Framework](/ecosystem/delta-framework.md)

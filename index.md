@@ -1,12 +1,12 @@
 ---
 okf_version: "0.2"
-title: "Organization Knowledge Base"
-description: "Canonical Open Knowledge Format (OKF v0.2) repository: separating operational & system reality ('What Is') from proposed product innovations ('What Could Be')."
+title: "St. Francis High School AI Initiative Knowledge Base"
+description: "Canonical Open Knowledge Format (OKF v0.2) knowledge base for the St. Francis High School AI Initiative, integrating the DELTA Framework, Magnifica Humanitas, and Human-Centered Design (HCD) research."
 ---
 
-# Organization Knowledge Base
+# St. Francis High School AI Initiative Knowledge Base
 
-Canonical Open Knowledge Format (OKF v0.2) repository: separating operational & system reality ('What Is') from proposed product innovations ('What Could Be').
+Canonical Open Knowledge Format (OKF v0.2) knowledge base for the St. Francis High School AI Initiative, integrating the DELTA Framework, Magnifica Humanitas, and Human-Centered Design (HCD) research.
 
 Knowledge in this bundle is organized with clear demarcation between:
 1. **"What Is"**: Operational realities, external ecosystem context (`/ecosystem/`), and active production systems (`/systems/`).
@@ -15,17 +15,10 @@ Knowledge in this bundle is organized with clear demarcation between:
 
 ---
 
-## Production Systems & Architecture ('What Is')
-
-* [Core System Architecture Overview](/systems/core-architecture.md) - High-level production architecture, backend services, client interfaces, and datastore topologies ('What Is').
-
 ## External Ecosystem & Industry Reality ('What Is')
 
-* [External Ecosystem & Industry Landscape](/ecosystem/industry-landscape.md) - Canonical reference for external regulatory standards, third-party payment/data rails, and partner interfaces ('What Is').
-
-## Product Concepts & Explorations ('What Could Be')
-
-* [Next-Generation Intelligent Queue & Auto-Routing](/concepts/future-initiative.md) - Proposed product RFC for real-time automated workflow routing, predictive wait times, and smart dispatching ('What Could Be').
+* [The DELTA Framework: Faith-Informed Virtue Ethics for Artificial Intelligence](/ecosystem/delta-framework.md) - Notre Dame's virtue-ethics framework establishing five core normative pillars—Dignity, Embodiment, Love, Transcendence, and Agency—and practical tools for human formation in the AI era.
+* [Encyclical Letter Magnifica Humanitas: Safeguarding the Human Person in the Time of Artificial Intelligence](/ecosystem/magnifica-humanitas.md) - Pope Leo XIV's landmark 2026 social encyclical on artificial intelligence, addressing private technocratic dominance, algorithmic reductionism, the dignity of labor, and autonomous warfare.
 
 ## Operational Playbooks & Runbooks
 

@@ -48,5 +48,5 @@ Define the data structures, schemas, or API signatures associated with this prop
 ---
 
 ## 5. Related Knowledge Base Documents
-* [Core Architecture](/systems/core-architecture.md) - Active production system dependencies.
-* [Industry Landscape](/ecosystem/industry-landscape.md) - External market and regulatory context.
+* [The DELTA Framework](/ecosystem/delta-framework.md) - Ethical alignment and human dignity principles.
+* [Customer Discovery & Workflow Observations](/research/user-interview-example.md) - Qualitative research and HCD findings.

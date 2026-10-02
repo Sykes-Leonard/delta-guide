@@ -24,8 +24,8 @@ The single source of truth for all architectural, statutory, and operational req
 
 * **Start Here**: Read [`index.md`](file:///index.md) for progressive disclosure of concepts, production systems, and ecosystem realities.
 * **Domain & Architecture Questions**: Always consult the knowledge base or invoke the `/ask-kb` skill before making assumptions about system architecture or business constraints:
-  * Production systems & active architecture: [`/systems/core-architecture.md`](/systems/core-architecture.md)
-  * External regulations & partner rails: [`/ecosystem/industry-landscape.md`](/ecosystem/industry-landscape.md)
+  * DELTA Framework & Virtue Ethics: [`/ecosystem/delta-framework.md`](/ecosystem/delta-framework.md)
+  * Papal AI Doctrine & Human Dignity: [`/ecosystem/magnifica-humanitas.md`](/ecosystem/magnifica-humanitas.md)
   * Engineering lifecycle & SDD process: [`/playbooks/knowledge-driven-engineering.md`](/playbooks/knowledge-driven-engineering.md)
 
 ---

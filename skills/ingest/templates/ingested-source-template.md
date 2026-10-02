@@ -48,5 +48,5 @@ Analysis of how this knowledge impacts our product strategy, system architecture
 ---
 
 ## 5. Related Knowledge Base Documents
-* [Industry Landscape](/ecosystem/industry-landscape.md) - Related external market context.
-* [Core Architecture](/systems/core-architecture.md) - Systems impacted by these findings.
+* [The DELTA Framework](/ecosystem/delta-framework.md) - Virtue ethics framework alignment.
+* [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md) - Magisterial AI governance context.

@@ -63,7 +63,7 @@ The knowledge bundle organizes information with a clean architectural demarcatio
    * Do NOT read all files in the repository.
    * Read `index.md` first to inspect the one-line summaries of each document.
 2. **Follow bundle-relative links**:
-   * Links starting with `/` (e.g., `[Core Architecture](/systems/core-architecture.md)`) are bundle-relative, anchored to the repository root.
+   * Links starting with `/` (e.g., `[DELTA Framework](/ecosystem/delta-framework.md)`) are bundle-relative, anchored to the repository root.
 3. **Distinguish "What Is" vs "What Could Be"**:
    * `/ecosystem/` and `/systems/`: Represents current reality (`status: stable`).
    * `/concepts/`: Represents future product proposals and exploratory features (`status: draft`).
@@ -106,7 +106,7 @@ The knowledge bundle organizes information with a clean architectural demarcatio
 3. **Format the Markdown Body**:
    * Use structured headings (`## 1. Overview`, `## 2. Architecture`, etc.).
    * Favor tables, bulleted lists, and Mermaid diagrams over dense prose.
-   * Cite internal bundle links using bundle-relative paths (e.g. `/systems/core-architecture.md`).
+   * Cite internal bundle links using bundle-relative paths (e.g. `/ecosystem/delta-framework.md`).
 
 ---
 

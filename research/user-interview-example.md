@@ -34,6 +34,7 @@ verified:
 
 ---
 
-## 4. Product Recommendations
-* Author architectural RFC for automated intake triage: [Next-Gen Intelligent Queue Concept](/concepts/future-initiative.md).
-* Add priority indicators to front-desk dashboard: [Core Architecture Overview](/systems/core-architecture.md).
+## 4. Design Recommendations & Next Steps
+* **Human-Centered Design (HCD) Alignment**: Synthesize observational notes into empathy maps and persona journey frameworks for students and faculty.
+* **DELTA Framework Review**: Evaluate proposed automated triage or scheduling tools against the [DELTA Framework](/ecosystem/delta-framework.md) to preserve human dignity, agency, and embodied presence.
+* **Ethics and Governance**: Review governance safeguards against [Magnifica Humanitas](/ecosystem/magnifica-humanitas.md) to ensure human discretion remains non-negotiable.

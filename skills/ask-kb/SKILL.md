@@ -89,7 +89,7 @@ When responding to developer queries, always follow this **4-part structured res
   * Statutory compliance or audit logging obligations.
 
 ### Part 4: Knowledge Base Provenance Links
-* Always cite clickable links to the relevant OKF documents in the knowledge base using bundle-relative paths (e.g. [`/systems/core-architecture.md`](/systems/core-architecture.md)).
+* Always cite clickable links to the relevant OKF documents in the knowledge base using bundle-relative paths (e.g. [`/ecosystem/delta-framework.md`](/ecosystem/delta-framework.md)).
 
 ---
 
@@ -98,6 +98,6 @@ When responding to developer queries, always follow this **4-part structured res
 To test this skill:
 1. Run a sample query using the helper script:
    ```bash
-   python3 scripts/query_kb.py "core architecture"
+   python3 scripts/query_kb.py "delta framework"
    ```
-2. Verify that output matches the authoritative documents in `systems/` and `ecosystem/`.
+2. Verify that output matches the authoritative documents in `ecosystem/`.

@@ -1,7 +1,7 @@
 {
-  "org_name": "Example Organization",
-  "kb_title": "Organization Knowledge Base",
-  "kb_description": "Canonical Open Knowledge Format (OKF v0.2) repository: separating operational & system reality ('What Is') from proposed product innovations ('What Could Be').",
+  "org_name": "St. Francis High School",
+  "kb_title": "St. Francis High School AI Initiative Knowledge Base",
+  "kb_description": "Canonical Open Knowledge Format (OKF v0.2) knowledge base for the St. Francis High School AI Initiative, integrating the DELTA Framework, Magnifica Humanitas, and Human-Centered Design (HCD) research.",
   "okf_version": "0.2",
   "categories": [
     {

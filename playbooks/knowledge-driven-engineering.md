@@ -12,8 +12,8 @@ verified:
     at: 2026-09-26T00:00:00Z
 sources:
   - "/references/okf-specification.md"
-  - "/systems/core-architecture.md"
-  - "/ecosystem/industry-landscape.md"
+  - "/ecosystem/delta-framework.md"
+  - "/ecosystem/magnifica-humanitas.md"
 ---
 
 # Knowledge-Driven Engineering & Spec-Driven Development
@@ -61,10 +61,10 @@ flowchart TD
    * Features begin as a concept proposal in [`concepts/`](/concepts/).
    * Every concept starts with `status: draft` and adheres to OKF v0.2 frontmatter.
 2. **Contract Definition**:
-   * Each feature document must define its **API data contract**, database persistence strategy, and third-party dependencies.
-   * Cross-reference [`/systems/core-architecture.md`](/systems/core-architecture.md) for shared service touchpoints.
+   * Each feature or research document must define its **ethical alignment**, functional scope, and third-party dependencies.
+   * Cross-reference [`/ecosystem/delta-framework.md`](/ecosystem/delta-framework.md) for virtue ethics and human dignity invariants.
 3. **Ticket Linking**:
-   * Issue tracker tickets (Jira, Linear, GitHub Issues) must link directly to the bundle-relative OKF document path (e.g. `OKF-Ref: /concepts/future-initiative.md`).
+   * Issue tracker tickets (Jira, Linear, GitHub Issues) must link directly to the bundle-relative OKF document path (e.g. `OKF-Ref: /concepts/<initiative>.md`).
 
 ---
 
