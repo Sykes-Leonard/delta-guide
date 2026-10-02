@@ -18,6 +18,8 @@ Knowledge in this bundle is organized with clear demarcation between:
 ## External Ecosystem & Industry Reality ('What Is')
 
 * [The DELTA Framework: Faith-Informed Virtue Ethics for Artificial Intelligence](/ecosystem/delta-framework.md) - Notre Dame's virtue-ethics framework establishing five core normative pillars—Dignity, Embodiment, Love, Transcendence, and Agency—and practical tools for human formation in the AI era.
+* [The DeepMind Institute: Foundational Research, AGI Governance & Inaugural Essays](/ecosystem/institutions/deepmind-institute.md) - Institutional profile of the DeepMind Institute, synthesizing its founding charter, governance model, and the eight inaugural essays on agent swarms, symbiotic intelligence, reasoning transparency, global benefit, and economic policy.
+* [Global AI Institutions & Research Labs Observatory](/ecosystem/institutions/overview.md) - Systematic observatory tracking key global research institutes, frontier AI labs, standards bodies, and moral authorities shaping AI governance, ethics, and capability frontiers.
 * [Encyclical Letter Magnifica Humanitas: Safeguarding the Human Person in the Time of Artificial Intelligence](/ecosystem/magnifica-humanitas.md) - Pope Leo XIV's landmark 2026 social encyclical on artificial intelligence, addressing private technocratic dominance, algorithmic reductionism, the dignity of labor, and autonomous warfare.
 
 ## Operational Playbooks & Runbooks
