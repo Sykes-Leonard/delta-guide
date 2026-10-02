@@ -151,8 +151,22 @@ Never do a raw copy-paste dump of the webpage text. Thoughtfully synthesize the 
 
 ---
 
-### Step 5: Synchronize Index, Log, and Validate
-Once the document is saved:
+### Step 5: Concept Graph Extraction & Mind Map Linkage
+After synthesizing the primary ecosystem or institution document:
+1. **Extract Core Concepts**:
+   * Identify 1–3 novel conceptual claims, philosophical frameworks, or governance tensions introduced by the source.
+2. **Cross-Link Existing Concepts**:
+   * Inspect [`/concepts/`](/concepts/) to see if related concepts already exist (e.g., `positive-alignment.md`, `multi-agent-swarms.md`).
+   * Add citations and cross-links from those existing concept documents back to the newly ingested source.
+3. **Author New Concept Nodes**:
+   * If the ingested material introduces a novel concept not yet captured in the mind map, author a new concept document under `/concepts/` using [`templates/concept-template.md`](/templates/concept-template.md).
+   * Assign the new concept to its appropriate thematic cluster in [`/concepts/`](/concepts/) and update the cluster's Constituent Concepts Matrix.
+   * Add inbound and outbound edges in the concept's `Relational Edge Index` table and Mermaid diagram.
+
+---
+
+### Step 6: Synchronize Index, Log, and Validate
+Once the document and concept linkages are saved:
 1. **Regenerate Index**:
    ```bash
    python3 scripts/update_index.py

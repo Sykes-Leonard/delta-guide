@@ -88,8 +88,14 @@ When responding to developer queries, always follow this **4-part structured res
   * Idempotency requirements on mutating endpoints.
   * Statutory compliance or audit logging obligations.
 
-### Part 4: Knowledge Base Provenance Links
-* Always cite clickable links to the relevant OKF documents in the knowledge base using bundle-relative paths (e.g. [`/ecosystem/delta-framework.md`](/ecosystem/delta-framework.md)).
+### Part 4: Conceptual Graph & Multi-Hop Traversal
+* When addressing ethical, pedagogical, or architectural questions, traverse the concept graph under [`/concepts/`](/concepts/):
+  * **Identify Anchor Node**: Locate the primary concept (e.g. [`human-in-the-loop.md`](/concepts/human-in-the-loop.md), [`cognitive-deskilling.md`](/concepts/cognitive-deskilling.md)).
+  * **Traverse Relational Edges**: Follow typed edges to related concepts (e.g. *Remedied by* $\rightarrow$ [`cognitive-friction.md`](/concepts/cognitive-friction.md), *Mandates* $\rightarrow$ [`autonomous-weapons-ban.md`](/concepts/autonomous-weapons-ban.md)).
+  * **Ground in Axioms**: Connect the design decision back to foundational anchors like [`human-dignity.md`](/concepts/human-dignity.md) and canonical frameworks like [`/ecosystem/delta-framework.md`](/ecosystem/delta-framework.md).
+
+### Part 5: Knowledge Base Provenance Links
+* Always cite clickable links to the relevant OKF documents in the knowledge base using bundle-relative paths (e.g. [`/concepts/human-in-the-loop.md`](/concepts/human-in-the-loop.md), [`/ecosystem/delta-framework.md`](/ecosystem/delta-framework.md)).
 
 ---
 

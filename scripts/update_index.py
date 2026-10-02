@@ -171,9 +171,33 @@ def generate_index(bundle_dir: Path):
             total_indexed += len(items)
             lines.append(f"## {cat_title}")
             lines.append("")
-            for it in items:
-                lines.append(it)
-            lines.append("")
+            if cat_id == "concepts":
+                clusters = [it for it in items if "/cluster-" in it]
+                core_hub = [it for it in items if "/human-dignity" in it]
+                nodes = [it for it in items if "/cluster-" not in it and "/human-dignity" not in it]
+                
+                if clusters:
+                    lines.append("### Thematic Concept Clusters & Mind Maps")
+                    lines.append("")
+                    for it in clusters:
+                        lines.append(it)
+                    lines.append("")
+                if core_hub:
+                    lines.append("### Central Gravitational Anchor")
+                    lines.append("")
+                    for it in core_hub:
+                        lines.append(it)
+                    lines.append("")
+                if nodes:
+                    lines.append("### Constituent Concept Nodes & Relational Edges")
+                    lines.append("")
+                    for it in nodes:
+                        lines.append(it)
+                    lines.append("")
+            else:
+                for it in items:
+                    lines.append(it)
+                lines.append("")
             
     if unmapped_items:
         total_indexed += len(unmapped_items)

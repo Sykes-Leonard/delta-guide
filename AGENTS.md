@@ -37,7 +37,7 @@ The single source of truth for all architectural, statutory, and operational req
 1. **Data Protection & Privacy**:
    * **Never** commit, log, or leak unmasked Personally Identifiable Information (PII), customer secrets, or credentials into client logs, telemetry, or unencrypted storage.
 2. **Reality vs. Proposals Demarcation**:
-   * Always differentiate active production systems (`/systems/`, `status: stable`) from future exploratory proposals (`/concepts/`, `status: draft`).
+   * Always differentiate active production systems (`/systems/`, `status: stable`) from theoretical frameworks (`/concepts/`) and emerging exploratory proposals (`/frontier/`, `status: draft`).
 3. **Resilience & Graceful Degradation**:
    * Client applications and prototypes must degrade gracefully during intermittent network connectivity, using optimistic updates and local caching.
 4. **Idempotency**:
@@ -50,7 +50,8 @@ The single source of truth for all architectural, statutory, and operational req
 * `index.md`: Root progressive disclosure index listing all categorized documents.
 * `systems/`: "What Is" — Active production software, services, schemas, and workflows.
 * `ecosystem/`: "What Is" — External regulatory environment, key institutions (`ecosystem/institutions/`), standards, partner rails.
-* `concepts/`: "What Could Be" — Feature proposals, product RFCs, architectural explorations.
+* `concepts/`: Theoretical ideas, ethical & philosophical constructs, thematic clusters, foundational models.
+* `frontier/`: "What Could Be" — Emerging ideas, horizon-scanning proposals, exploratory prototypes, and experimental initiatives.
 * `playbooks/`: Operational runbooks, developer setup guides, team SOPs.
 * `research/`: Customer discovery interviews, user observations, qualitative feedback.
 * `references/`: Format standards, schemas, data dictionaries, provenance guidelines.
@@ -72,5 +73,9 @@ When interacting with the user or executing complex tasks, use these registered 
 ## 5. Maintenance & Presubmit Gatekeeper
 
 Before completing tasks that modify markdown documentation:
-1. Run `./scripts/presubmit.py` to auto-fix frontmatter, repair links, and synchronize `index.md`.
-2. Ensure validation passes with 0 errors and 0 warnings.
+1. **Presubmit Validation**: Run `./scripts/presubmit.py` to auto-fix frontmatter, repair links, validate graph integrity, and synchronize `index.md`.
+2. **Concept Graph Conformance**:
+   * No orphan concepts: Every concept in `concepts/` must be registered in at least one `cluster-*.md` matrix.
+   * Typed relational edges: Concepts must maintain a `Relational Edge Index` table with canonical relationship verbs.
+   * Provenance: Stable concepts and institutions must declare external `sources:` with valid URLs.
+3. **Zero-Defect Gate**: Ensure validation passes with 0 errors and 0 warnings.

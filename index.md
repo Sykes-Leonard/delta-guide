@@ -40,18 +40,27 @@ Knowledge in this bundle is organized with clear demarcation between:
 * [UNESCO AI Ethics Sector: Institutional Profile, Governance & Research Agenda](/ecosystem/institutions/unesco-ai-ethics.md) - Institutional profile of UNESCO's Social and Human Sciences Sector, detailing its 193-nation Recommendation on the Ethics of AI, Readiness Assessment Methodology (RAM), cultural diversity mandates, and 5-point evaluation.
 * [Encyclical Letter Magnifica Humanitas: Safeguarding the Human Person in the Time of Artificial Intelligence](/ecosystem/magnifica-humanitas.md) - Pope Leo XIV's landmark 2026 social encyclical on artificial intelligence, addressing private technocratic dominance, algorithmic reductionism, the dignity of labor, and autonomous warfare.
 
-## Product Concepts & Explorations ('What Could Be')
+## Theoretical Concepts & Foundational Ideas
+
+### Thematic Concept Clusters & Mind Maps
+
+* [Concept Cluster: Embodiment, Presence & Relational Authenticity](/concepts/cluster-embodiment-presence.md) - Thematic cluster addressing synthetic intimacy, the theology of incarnational presence, and safeguards against anthropomorphic deception.
+* [Concept Cluster: Human Flourishing (Eudaimonia) & Virtue Formation](/concepts/cluster-human-flourishing.md) - Thematic cluster synthesizing Aristotelian eudaimonia, positive alignment, six-domain well-being, phronesis, and character formation in artificial intelligence.
+* [Concept Cluster: Moral Agency, Conscience & The Dignity of Work](/concepts/cluster-moral-agency.md) - Thematic cluster examining moral agency, non-delegable human conscience, cognitive deskilling, intentional friction, and the preservation of human labor.
+* [Concept Cluster: Power Concentration, Governance & Distributive Justice](/concepts/cluster-power-governance.md) - Thematic cluster analyzing private technocratic dominance, global public benefit, multi-agent swarms, institutional realism, and macroeconomic policy for frontier AI.
+* [Concept Cluster: Transcendence, Truth & The Limits of Optimization](/concepts/cluster-transcendence-truth.md) - Thematic cluster addressing contemplation, algorithmic reductionism, epistemic integrity, the Babel vs. Jerusalem archetypes, and the ban on autonomous weapons.
+
+### Central Gravitational Anchor
+
+* [Human Dignity (Imago Dei & Inalienable Worth)](/concepts/human-dignity.md) - The foundational moral axiom establishing that every human person possesses intrinsic, inalienable worth that can never be reduced to computational utility.
+
+### Constituent Concept Nodes & Relational Edges
 
 * [Algor-Ethics (Ethics by Design)](/concepts/algor-ethics.md) - The proactive embedding of ethical values into the mathematical architecture, objective functions, training pipelines, and deployment protocols of artificial intelligence.
 * [Algorithmic Reductionism](/concepts/algorithmic-reductionism.md) - The intellectual fallacy of reducing human persons, dignity, moral choices, and flourishing to measurable data tokens, statistical probabilities, and algorithmic utility.
 * [Anthropomorphic Deception](/concepts/anthropomorphic-deception.md) - The manipulative engineering design pattern where AI systems feign human interiority, emotional reciprocity, or consciousness to exploit natural human empathy.
 * [Categorical Ban on Autonomous Weapons (LAWS)](/concepts/autonomous-weapons-ban.md) - The absolute moral and legal prohibition against delegating the sovereign authority of lethal force to automated software or machines lacking moral conscience.
 * [Babel vs. Jerusalem (Technocracy vs. Discernment)](/concepts/babel-vs-jerusalem.md) - Pope Leo XIV's theological archetypes contrasting technocratic hubris and centralized monoculture (Babel) with humble communal discernment and distributed subsidiarity (Jerusalem).
-* [Concept Cluster: Embodiment, Presence & Relational Authenticity](/concepts/cluster-embodiment-presence.md) - Thematic cluster addressing synthetic intimacy, the theology of incarnational presence, and safeguards against anthropomorphic deception.
-* [Concept Cluster: Human Flourishing (Eudaimonia) & Virtue Formation](/concepts/cluster-human-flourishing.md) - Thematic cluster synthesizing Aristotelian eudaimonia, positive alignment, six-domain well-being, phronesis, and character formation in artificial intelligence.
-* [Concept Cluster: Moral Agency, Conscience & The Dignity of Work](/concepts/cluster-moral-agency.md) - Thematic cluster examining moral agency, non-delegable human conscience, cognitive deskilling, intentional friction, and the preservation of human labor.
-* [Concept Cluster: Power Concentration, Governance & Distributive Justice](/concepts/cluster-power-governance.md) - Thematic cluster analyzing private technocratic dominance, global public benefit, multi-agent swarms, institutional realism, and macroeconomic policy for frontier AI.
-* [Concept Cluster: Transcendence, Truth & The Limits of Optimization](/concepts/cluster-transcendence-truth.md) - Thematic cluster addressing contemplation, algorithmic reductionism, epistemic integrity, the Babel vs. Jerusalem archetypes, and the ban on autonomous weapons.
 * [Cognitive Deskilling & Moral Atrophy](/concepts/cognitive-deskilling.md) - The systemic degradation of human intellectual competence, reasoning stamina, and moral willpower resulting from chronic over-reliance on automated AI outputs.
 * [Cognitive Friction & Productive Struggle](/concepts/cognitive-friction.md) - The deliberate pedagogical and architectural preservation of intellectual difficulty, struggle, and resistance essential for authentic human learning and virtue acquisition.
 * [Contemplation & Sabbath Rest](/concepts/contemplation-sabbath.md) - The intentional preservation of non-digital, non-optimizable human spaces dedicated to silence, wonder, prayer, aesthetic beauty, and restful resistance to algorithmic capture.
@@ -60,7 +69,6 @@ Knowledge in this bundle is organized with clear demarcation between:
 * [Ethical Floor vs. Moral Ceiling](/concepts/ethical-floor-moral-ceiling.md) - The conceptual distinction between baseline legal and safety compliance (the ethical floor) and the proactive cultivation of virtue and human flourishing (the moral ceiling).
 * [Human Flourishing (Eudaimonia)](/concepts/eudaimonia.md) - The Aristotelian-Thomistic conception of holistic human flourishing, encompassing moral virtue, relational health, meaning, and full realization of human potential.
 * [Global Benefit & Distributive Justice](/concepts/global-benefit.md) - The moral imperative that transformative artificial intelligence must serve the common good of all humanity, founded on human rights, reciprocity, and Rawlsian justice.
-* [Human Dignity (Imago Dei & Inalienable Worth)](/concepts/human-dignity.md) - The foundational moral axiom establishing that every human person possesses intrinsic, inalienable worth that can never be reduced to computational utility.
 * [Human-in-the-Loop (Conscience in the Loop)](/concepts/human-in-the-loop.md) - The architectural and statutory invariant requiring non-delegable human judgment and sovereign veto power in all high-stakes moral, legal, and operational systems.
 * [Incarnational Presence](/concepts/incarnational-presence.md) - The theological and philosophical affirmation that human meaning, healing, moral communion, and sanctity unfold through physical, mortal bodies in shared space and time.
 * [Moral Agency & Conscience](/concepts/moral-agency.md) - The inalienable capacity and moral obligation of human persons to deliberate, seek truth, and freely choose the good, which can never be automated or delegated.
@@ -94,6 +102,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 * [Google OKF v0.2 Quick Reference Cheat Sheet](/skills/manage-knowledge-base/references/okf_cheat_sheet.md) - Reference cheat sheet for Open Knowledge Format frontmatter fields and conventions.
 * [Concept Cluster Template](/skills/manage-knowledge-base/templates/concept_cluster_template.md) - Starter template for organizing a thematic cluster of interrelated concepts, their constituent nodes, cross-cutting edges, and institutional groundings.
 * [Concept Template](/skills/manage-knowledge-base/templates/concept_template.md) - Starter template for proposing a new feature or architectural RFC.
+* [Frontier Idea Starter Template](/skills/manage-knowledge-base/templates/frontier_template.md) - Standardized starter template for authoring emerging ideas, exploratory prototypes, and horizon-scanning initiatives ('What Could Be').
 * [Institution Dossier Template](/skills/manage-knowledge-base/templates/institution_template.md) - Starter template for profiling external research institutes, frontier AI labs, university centers, and moral authorities ('What Is').
 * [Interview / Field Notes Template](/skills/manage-knowledge-base/templates/interview_template.md) - Starter template for recording qualitative customer research and provenance.
 * [Playbook Template](/skills/manage-knowledge-base/templates/playbook_template.md) - Starter template for an operational runbook or SOP.
@@ -109,6 +118,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 * [Concept Cluster Template](/templates/concept-cluster-template.md) - Starter template for organizing a thematic cluster of interrelated concepts, their constituent nodes, cross-cutting edges, and institutional groundings.
 * [Concept Template](/templates/concept-template.md) - Starter template for proposing a new product feature, architectural RFC, or exploratory innovation ('What Could Be').
 * [Ecosystem Context Template](/templates/ecosystem-template.md) - Starter template for documenting external infrastructure, regulatory requirements, partner platforms, and market realities ('What Is').
+* [Frontier Idea Starter Template](/templates/frontier-template.md) - Standardized starter template for authoring emerging ideas, exploratory prototypes, and horizon-scanning initiatives ('What Could Be').
 * [Institution Dossier Template](/templates/institution-template.md) - Starter template for profiling external research institutes, frontier AI labs, university centers, and moral authorities ('What Is').
 * [Playbook Template](/templates/playbook-template.md) - Starter template for standard operating procedures, developer setups, incident guides, and team runbooks.
 * [Technical Reference Template](/templates/reference-template.md) - Starter template for specifications, protocol data dictionaries, and architectural standards.

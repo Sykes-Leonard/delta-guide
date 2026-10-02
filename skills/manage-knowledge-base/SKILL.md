@@ -45,8 +45,11 @@ The knowledge bundle organizes information with a clean architectural demarcatio
 ├── systems/                 # "WHAT IS" - Current Production Systems & Workflows
 │   └── ...                  # Production services, databases, data models, APIs
 │
-├── concepts/                # "WHAT COULD BE" - Product Concepts, Proposals & Ideas
-│   └── ...                  # Future features, RFCs, and architectural explorations
+├── concepts/                # Theoretical Concepts, Ethical Frameworks & Clusters
+│   └── ...                  # Foundational models, virtue-ethics constructs, thematic clusters
+│
+├── frontier/                # "WHAT COULD BE" - Emerging Ideas, Prototypes & Horizon Scanning
+│   └── ...                  # Nascent initiatives, exploratory prototypes, and emerging proposals
 │
 ├── playbooks/               # Operational guides, developer setups, and runbooks
 ├── research/                # Raw field research notes, customer interviews & qualitative findings
@@ -82,13 +85,15 @@ The knowledge bundle organizes information with a clean architectural demarcatio
      * Existing production software, APIs, or database schemas $\rightarrow$ `systems/` (`status: stable`)
      * Operational runbook or incident response guide $\rightarrow$ `playbooks/` (`status: stable`)
      * Customer interview or observation transcript $\rightarrow$ `research/` (`status: stable`)
-   * **Is it "What Could Be"?**
-     * Product concept, proposed feature, or architectural RFC $\rightarrow$ `concepts/` (`status: draft`)
+   * **Theoretical Concept or Framework?**
+     * Foundational theoretical construct, ethical framework, or concept cluster $\rightarrow$ `concepts/` (`status: stable` or `draft`, must register in a thematic cluster)
+   * **Emerging New Idea or Prototype?**
+     * Emerging innovation, exploratory prototype, or horizon-scanning proposal $\rightarrow$ `frontier/` (`status: draft`, use [`templates/frontier-template.md`](/templates/frontier-template.md))
 2. **Add Strict OKF v0.2 Frontmatter**:
    Every concept document MUST begin with YAML frontmatter:
    ```yaml
    ---
-   type: <System Component | Ecosystem Context | Concept | Playbook | Research Notes | Reference>
+   type: <System Component | Ecosystem Context | Concept | Frontier Exploration | Playbook | Research Notes | Reference>
    title: "Display Title"
    description: "Single-sentence summary of the document."
    tags: [tag1, tag2]
@@ -128,7 +133,23 @@ Whenever a concept is added, updated, or deprecated:
 
 ---
 
-### Procedure D: Bundle Validation & Auto-Fixing
+### Procedure E: Managing Concept Clusters & Mind Map Edges
+When authoring or modifying documents under `/concepts/`:
+1. **Never Create Orphan Concepts**:
+   * Every new concept must be assigned to one of the 5 canonical concept clusters (`cluster-human-flourishing.md`, `cluster-moral-agency.md`, `cluster-power-governance.md`, `cluster-embodiment-presence.md`, `cluster-transcendence-truth.md`) or define a new cluster using [`templates/concept-cluster-template.md`](/templates/concept-cluster-template.md).
+   * Update the cluster's `## 3. Constituent Concepts Matrix` to register the new concept.
+2. **Build and Maintain Relational Edges**:
+   * Every concept document must include a `## 6. Relational Edge Index` with a Markdown table defining typed inbound/outbound relationships.
+   * Use canonical relationship verbs (*Grounds*, *Requires*, *Opposes*, *Operationalized as*, *Threatened by*, *Remedied by*, *Cultivated via*, *Mandates*, *Enforces*, *Bridges*, *Critiques*).
+   * When adding an edge from Concept A to Concept B, update *both* files' edge tables and Mermaid diagrams to maintain graph reciprocity.
+3. **Mandatory External Source Provenance**:
+   * In frontmatter, populate the `sources:` block with stable external identifiers (`id`, `resource` URL, `title`) citing foundational academic papers, official treaties, or papal encyclicals.
+4. **Preserve Mermaid Mind Map Syntax**:
+   * Keep the `## 2. Conceptual Mind Map & Relational Edges` Mermaid diagram synchronized with the edge index table.
+
+---
+
+### Procedure F: Bundle Validation & Auto-Fixing
 Before concluding any task that touches documentation, run the bundle's self-contained presubmit hook or validator:
 
 ```bash

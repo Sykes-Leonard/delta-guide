@@ -18,9 +18,15 @@
     },
     {
       "id": "concepts",
-      "title": "Product Concepts & Explorations ('What Could Be')",
+      "title": "Theoretical Concepts & Foundational Ideas",
       "path_prefix": "concepts/",
-      "description": "Proposed features, architectural RFCs, exploratory initiatives, and future innovations."
+      "description": "Philosophical constructs, ethical frameworks, thematic clusters, and foundational models."
+    },
+    {
+      "id": "frontier",
+      "title": "Frontier & Emerging Ideas ('What Could Be')",
+      "path_prefix": "frontier/",
+      "description": "Exploratory horizon-scanning initiatives, emerging prototypes, experimental ideas, and nascent proposals."
     },
     {
       "id": "playbooks",
