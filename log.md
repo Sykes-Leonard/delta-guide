@@ -13,6 +13,7 @@
   * [Council of Europe AI Framework Convention](/ecosystem/institutions/council-of-europe-ai.md): The world's first legally binding international treaty on AI (CETS No. 225) protecting human rights, democracy, and rule of law.
   * [Rome Call for AI Ethics & Hiroshima Appeal](/ecosystem/institutions/rome-call-hiroshima.md): July 2024 historic expansion of algor-ethics to Eastern religions and categorical moral ban on lethal autonomous weapons.
   * [Oxford Institute for Ethics in AI](/ecosystem/institutions/oxford-ethics-ai.md): Aristotelian virtue ethics, HAI Lab, and the landmark *Positive Alignment* research agenda for human flourishing.
+  * [MIT AI & Education Working Group](/ecosystem/institutions/mit-ai-education.md): August 2026 landmark report on cognitive surrender, assessment collapse, and preserving productive struggle.
 * **Template Cleanup**: Removed obsolete starter template files (`concepts/future-initiative.md`, `systems/core-architecture.md`, `ecosystem/industry-landscape.md`), personalized `knowledge.config.json` for St. Francis High School's AI Initiative, and retained `research/user-interview-example.md` as an exemplar for Human-Centered Design (HCD) research.
 
 ## 2026-09-26

@@ -1,12 +1,12 @@
 ---
 type: Ecosystem Context
-title: "The Rome Call for AI Ethics & The Hiroshima Appeal: Global Interfaith Algor-Ethics"
-description: "Institutional profile of the Rome Call for AI Ethics and the July 2024 Hiroshima Appeal, capturing the interfaith consensus across Western monotheisms and Eastern religions on algor-ethics and the ban on autonomous weapons."
-tags: [rome-call, hiroshima-appeal, interfaith, algor-ethics, pontifical-academy-for-life, vatican, buddhism, shinto, hinduism, autonomous-weapons, peace]
+title: "The Rome Call for AI Ethics & Hiroshima Appeal: Institutional Profile, Governance & Research Agenda"
+description: "Institutional profile of the Rome Call for AI Ethics and the July 2024 Hiroshima Appeal, capturing the interfaith consensus across Western monotheisms and Eastern religions on algor-ethics, 5-point evaluation, and the ban on autonomous weapons."
+tags: [rome-call, hiroshima-appeal, interfaith, algor-ethics, pontifical-academy-for-life, vatican, buddhism, shinto, hinduism, autonomous-weapons, peace, institution]
 status: stable
 generated:
   by: agent:ingest
-  at: 2026-10-01T19:43:00Z
+  at: 2026-10-01T19:45:00Z
 verified: []
 sources:
   - id: source:rome-call-portal
@@ -20,111 +20,80 @@ sources:
     title: "The Hiroshima Appeal for AI Ethics and Peace (Pontifical Academy for Life, July 2024)"
 ---
 
-# The Rome Call for AI Ethics & The Hiroshima Appeal: Global Interfaith Algor-Ethics
+# The Rome Call for AI Ethics & Hiroshima Appeal: Institutional Profile, Governance & Research Agenda
 
 ---
 
-## 1. Executive Summary
+## 1. Executive Summary & Institutional Charter
 
-Originally promulgated in February 2020 by the Holy See’s **[Pontifical Academy for Life](https://www.academyforlife.va/)** and the **[RenAIssance Foundation](https://www.romecall.org/)**, the **Rome Call for AI Ethics** established the foundational paradigm of **"algor-ethics"**—the systematic integration of ethical values into the design, mathematical objective functions, training protocols, and governance of artificial intelligence.
+Promulgated originally in February 2020 by the Holy See’s **[Pontifical Academy for Life](https://www.academyforlife.va/)** and coordinated through the **[RenAIssance Foundation](https://www.romecall.org/)**, the **Rome Call for AI Ethics** established the global paradigm of **"algor-ethics"**—the proactive embedding of ethical values into the mathematical architecture, objective functions, training pipelines, and deployment protocols of artificial intelligence.
 
-On **July 9–10, 2024**, at the Hiroshima Peace Memorial Park in Japan, the coalition achieved a historic interfaith milestone: the **"AI Ethics for Peace"** summit. In a deeply symbolic gathering at the site of the atomic bomb, leaders from the world’s major **Eastern spiritual traditions—including Buddhism, Hinduism, Shinto, Sikhism, Zoroastrianism, and the Bahá'í faith**—formally signed the Rome Call, joining Christian, Jewish, and Muslim leaders alongside global technology giants (Microsoft, IBM, Cisco).
-
-Together with the signing, the coalition issued the **[Hiroshima Appeal](https://www.romecall.org/)**, declaring that artificial intelligence must remain subservient to the sacred dignity of life, human fraternity, and planetary peace. The signatories issued a joint, categorical demand for an international treaty banning **Lethal Autonomous Weapons Systems (LAWS)**, declaring that no machine should ever possess the sovereign authority to extinguish human life.
+* **Mission & Scope**: The coalition fosters a cross-civilizational moral alliance uniting world religions, technology corporations, and international agencies to ensure AI serves human dignity, fraternity, and planetary stewardship rather than weaponization and dehumanization.
+* **Genesis & Affiliation**: Launched in Rome in 2020 with initial signatories Microsoft, IBM, the FAO, and the Italian Government; expanded to Abrahamic leaders (Christian, Jewish, and Muslim) in 2023; and culminated on **July 9–10, 2024** in Hiroshima, Japan, where leaders of **Eastern traditions (Buddhism, Hinduism, Shinto, Sikhism, Zoroastrianism, and Bahá'í)** formally signed the charter.
+* **Key Leadership & Fellows**: Led by **Archbishop Vincenzo Paglia** (President of the Pontifical Academy for Life), **Father Paolo Benanti, TOR** (Advisor to the Pope and UN AI Advisory Body member), alongside industry leadership including Brad Smith (Microsoft) and Darío Gil (IBM).
 
 ---
 
-## 2. Coalition Architecture, Leadership & Historical Evolution
+## 2. Institutional Architecture & Typology
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                 ROME CALL INTERFAITH ALLIANCE (2020–2026)                   │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ Foundational Sponsor: Pontifical Academy for Life & RenAIssance Foundation  │
-│ President:            Archbishop Vincenzo Paglia                            │
-│ Co-Organizers:        Religions for Peace Japan, Abu Dhabi Forum for Peace, │
-│                       Chief Rabbinate of Israel                             │
-│ Industry Signatories: Microsoft (Brad Smith), IBM (Darío Gil), Cisco        │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ Expansion Trajectory:                                                       │
-│  • February 2020: Initial Signing (Vatican, Microsoft, IBM, FAO, Italy)     │
-│  • January 2023:  Abrahamic Expansion (Christian, Jewish, & Muslim leaders) │
-│  • July 2024:     Hiroshima Expansion (Eastern Religions: Buddhism, Shinto, │
-│                   Hinduism, Sikhism, Zoroastrianism, Bahá'í)                │
-└─────────────────────────────────────────────────────────────────────────────┘
+Typology:         Global Interfaith Moral Authority & Multi-Stakeholder Alliance
+Governance Model: Multi-Religious Covenant & Corporate Ethics Partnership
+Target Horizon:   Planetary Peace, Human Dignity, Algor-Ethics & Autonomous Weapon Bans
 ```
 
-The Rome Call represents the broadest interreligious, cross-sectoral consensus on technology governance in history, demonstrating that human dignity and reverence for moral agency transcend theological and civilizational boundaries.
+### Core Research & Policy Pillars:
+* **Pillar 1: Algor-Ethics by Design**: Integrating six non-negotiable principles (Transparency, Inclusion, Responsibility, Impartiality, Reliability, Security/Privacy) directly into model training and loss functions.
+* **Pillar 2: Interfaith Consensus on Conscience**: Affirming that machines lack souls, consciousness, and moral discernment; life-and-death and high-stakes ethical judgments must remain in human hands.
+* **Pillar 3: Absolute Ban on Autonomous Weapons (LAWS)**: Organizing global civil society and diplomatic pressure to outlaw Lethal Autonomous Weapons Systems under the **Hiroshima Appeal**.
 
 ---
 
-## 3. The Six Core Algor-Ethics Principles
+## 3. Key Publications & Frameworks Matrix
 
-The Rome Call establishes six non-negotiable principles that must be embedded throughout the computational lifecycle:
-
-```mermaid
-flowchart TD
-    subgraph Algor_Ethics ["The Six Pillars of Algor-Ethics"]
-        AE1["1. Transparency<br/>(AI systems must be explainable and traceable)"]
-        AE2["2. Inclusion<br/>(Guaranteed access for all; non-discriminatory benefit)"]
-        AE3["3. Responsibility<br/>(Clear human moral accountability for machine outputs)"]
-        AE4["4. Impartiality<br/>(Active detection & elimination of algorithmic prejudice)"]
-        AE5["5. Reliability<br/>(Provable safety, robustness, and fault tolerance)"]
-        AE6["6. Security & Privacy<br/>(Uncompromising data dignity and confidential integrity)"]
-    end
-```
-
-### Detailed Principle Definitions:
-
-1. **Transparency**: In principle, AI systems must be understandable to users. Systems must disclose when decisions are machine-generated, and users have the right to inspect the reasoning behind automated evaluations.
-2. **Inclusion**: The needs of all human beings must be respected so that everyone may benefit and each individual can be offered the best possible conditions to express themselves and develop.
-3. **Responsibility**: Those who design, train, and deploy AI must proceed with responsibility and transparency, maintaining clear lines of human moral and legal accountability.
-4. **Impartiality**: Systems must not create or perpetuate bias; training data and optimization targets must be regularly audited to protect human dignity.
-5. **Reliability**: AI systems must be technically reliable, secure against adversarial exploits, and capable of graceful degradation in novel environments.
-6. **Security & Privacy**: AI systems must operate securely, respecting user privacy, data confidentiality, and rejecting manipulative behavioral tracking.
+| # | Title / Publication | Date | Primary Authors | Core Thesis & Technical Takeaways |
+| :- | :--- | :--- | :--- | :--- |
+| **1** | [The Rome Call for AI Ethics](https://www.romecall.org/) | 2020-02-28 | Pontifical Academy for Life, Microsoft, IBM, FAO | Articulates the foundational six principles of algor-ethics, establishing ethical requirements across the full digital lifecycle. |
+| **2** | [The Hiroshima Appeal for AI Ethics and Peace](https://www.vatican.va/roman_curia/pontifical_academies/acdlife/documents/rc_pont-acd_life_doc_20240710_hiroshima-appeal_en.html) | 2024-07-10 | Interfaith Coalition (Rome Call) | Formal interreligious declaration signed at Hiroshima Peace Park issuing a categorical moral demand for an international treaty banning lethal autonomous weapons. |
+| **3** | [AI Ethics: Abrahamic and Eastern Faith Perspectives](https://www.romecall.org/) | 2024-07-09 | RenAIssance Foundation | Comparative theological compendium demonstrating cross-cultural consensus on human dignity, non-instrumentalization, and spiritual transcendence. |
 
 ---
 
-## 4. The Absolute Ban on Lethal Autonomous Weapons (LAWS)
+## 4. Standardized 5-Point Observatory Evaluation
 
-The Hiroshima Appeal articulates an unequivocal moral red line regarding autonomous weapons systems:
-
-* **Absence of Moral Conscience**: Algorithms operate via pattern matching, statistical prediction, and loss minimization. They cannot experience guilt, weigh proportional justice, understand the sacredness of life, or exercise true mercy.
-* **Dehumanization of Warfare**: Delegating the targeting and killing of human beings to autonomous software reduces human beings to tactical data points, representing the ultimate triumph of technocratic reductionism.
-* **The Moral Invariant**: Both Pope Francis (at the 2024 G7 Summit) and Pope Leo XIV (in [*Magnifica Humanitas*](/ecosystem/magnifica-humanitas.md)) reiterated the joint interfaith consensus formulated at Hiroshima:
-
-> *"No machine should ever choose to take the life of a human being. The decision to take a human life requires a moral conscience that belongs exclusively to human beings made in the image of God. To delegate the power of lethal force to an algorithm is an abdication of human moral conscience and a grave regression of human civilization."*  
-> — **The Hiroshima Appeal on AI Ethics & Peace** (July 2024)
+| Evaluative Dimension | Institutional Posture | Analysis & Strategic Evidence |
+| :--- | :--- | :--- |
+| **1. Normative Grounding** | **Universal Spiritual Dignity & Algor-Ethics** | Synthesizes Catholic Social Teaching (*Imago Dei*) with Eastern concepts of cosmic balance (*Dharma*) and universal compassion (*Karuṇā*). |
+| **2. Capability vs. Safety Stance** | **Moral Conscience & Ethics-by-Design Setter** | Insists that technical capability must never outpace moral reflection; technology must be constrained by ethics prior to deployment. |
+| **3. Governance & Enforcement Model** | **Voluntary Corporate Covenants & Binding Arms Treaties** | Combines corporate design covenants (Microsoft, IBM) with demands for binding multilateral treaties banning autonomous lethal machines. |
+| **4. Stance on Human Agency & Labor** | **Non-Delegable Human Conscience & Labor Dignity** | Prohibits offloading moral responsibility to algorithms; machines must never possess sovereign authority over human life or livelihoods. |
+| **5. Openness & Distributive Commitments** | **Universal Inclusion & Digital Solidarity** | Mandates non-discriminatory access to technology for marginalized communities under the principle of the common good. |
 
 ---
 
-## 5. Comparative Alignment: Interfaith Algor-Ethics vs. DELTA & Magnifica Humanitas
+## 5. Comparative Alignment Analysis
 
-The Rome Call coalition reinforces and enriches our internal ethical benchmarks:
-
-| Algor-Ethics Principle | Catholic Social Teaching ([*Magnifica Humanitas*](/ecosystem/magnifica-humanitas.md)) | The DELTA Framework ([DELTA Framework](/ecosystem/delta-framework.md)) | Eastern Spiritual Insights (Hiroshima 2024) |
+| Comparative Dimension | Rome Call Interfaith Alliance | DELTA Framework (Univ. of Notre Dame) | Magnifica Humanitas (The Holy See) |
 | :--- | :--- | :--- | :--- |
-| **Human Dignity** | Man as *Imago Dei*; transcendent worth beyond economic productivity. | **Dignity (D)**: Resistance to algorithmic reductionism and token commodification. | Interdependence (*Pratītyasamutpāda*); reverence for the spark of universal consciousness. |
-| **Responsibility / Agency** | Non-delegable human moral responsibility in high-stakes discernment. | **Agency (A)**: Conscience in the loop; rejection of automated cognitive deskilling. | *Karma* (volitional action and moral consequence); actions cannot be offloaded to software. |
-| **Inclusion / Common Good** | Universal Destination of Goods; technology belongs to all humankind. | **Love (L)**: Radical self-giving (*agape*) prioritizing the vulnerable. | Compassion (*Karuṇā*) and universal welfare (*Sarvodaya*). |
-| **Embodiment / Sacred Presence** | Mystery of the Incarnation; bodily presence is sacred. | **Embodiment (E)**: Safeguarding physical encounter over synthetic simulation. | Respect for physical reality, nature, and the balance of the material cosmos (*Dharma*). |
+| **Primary Moral Anchor** | Algor-Ethics, Universal Peace & Human Fraternity | Christian Virtue Ethics (*Dignity, Embodiment, Love, Transcendence, Agency*) | Inalienable Worth (*Imago Dei*) & Universal Destination of Goods |
+| **Autonomous Weapons** | Categorical ban via the **Hiroshima Appeal**: *"No machine must ever take human life"* | High-stakes ethical choices must remain strictly in human hands (**Agency**) | Absolute moral prohibition on LAWS; delegating lethal force is an affront to humanity (§5) |
+| **Human Personhood** | Inherent sacredness; consciousness cannot be reduced to statistical prediction | **Dignity (D)**: Resistance to algorithmic reductionism; person is not a data commodity | Rebukes algorithmic reductionism: *"The person is not a system of algorithms"* (§1, §49) |
+| **Relational Care** | Authentic compassion requires spiritual presence and moral conscience | **Love (L)**: *Agape* vs. simulated empathy; protecting youth from deceptive chatbots | Rejects synthetic intimacy masquerading as human affection |
 
 ---
 
-## 6. Strategic & Operational Engineering Mandates
+## 6. Strategic Implications for System Architecture & Team Operations
 
-Organizations building AI agents, educational software, or administrative platforms must uphold the Rome Call standards:
-
-1. **Mandatory Human Veto on Critical Decisions**: No student disciplinary measure, academic failure, medical diagnosis, or employee termination may be executed solely by an algorithm without a required human-in-the-loop sovereign veto.
-2. **Refusal of Autonomous Lethal Contracting**: Strict engineering refusal to develop, maintain, or integrate software components into autonomous lethal weapon systems or targeting pipelines lacking real-time human control.
-3. **Bias Mitigation & Algorithmic Inclusion**: Regular auditing of instructional algorithms to ensure diverse cultural representation and prevent historical biases from limiting student opportunities.
+* **Mandatory Sovereign Human Veto**: Systems handling student grading, discipline, financial aid, or personnel review must enforce an architectural hard stop requiring a human operator's confirmed signature before execution.
+* **Refusal of Autonomous Military Contracting**: Strict institutional refusal to build or integrate algorithms into lethal targeting pipelines or autonomous weapon systems.
+* **Continuous Algorithmic Auditing**: Multi-agent pipelines and recommendation engines must undergo recurring bias and fairness audits to prevent historical discrimination.
 
 ---
 
-## 7. Related Knowledge Base Documents
+## 7. Related Knowledge Base Documents & Citations
 
-* [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md) — Canonical papal encyclical by Pope Leo XIV on AI, labor dignity, and autonomous weapons.
-* [The DELTA Framework: Faith-Informed Virtue Ethics for AI](/ecosystem/delta-framework.md) — Five core normative pillars: Dignity, Embodiment, Love, Transcendence, and Agency.
-* [Global AI Institutions Observatory](/ecosystem/institutions/overview.md) — Master catalog of AI research institutes, standards bodies, and moral authorities.
-* [UN High-Level Advisory Body on AI](/ecosystem/institutions/un-ai-advisory-body.md) — Multilateral framework for global AI governance and equitable compute distribution.
+* [Global AI Institutions & Research Labs Observatory](/ecosystem/institutions/overview.md) — Canonical matrix tracking global AI labs, institutes, and regulators.
+* [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md) — Pope Leo XIV's papal encyclical on artificial intelligence and human dignity.
+* [The DELTA Framework: Faith-Informed Virtue Ethics for AI](/ecosystem/delta-framework.md) — Five normative pillars for human flourishing.
 * [Council of Europe AI Framework Convention](/ecosystem/institutions/council-of-europe-ai.md) — The world's first legally binding international treaty on AI and human rights.
+* [Knowledge-Driven Engineering Playbook](/playbooks/knowledge-driven-engineering.md) — Operational integration of institutional constraints into engineering sprints.
