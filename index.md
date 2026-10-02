@@ -112,5 +112,6 @@ Knowledge in this bundle is organized with clear demarcation between:
 ## General Documents
 
 * [AI Agent Guidelines & Operating Contract](/AGENTS.md) - Repository-level operating rules and architectural constraints for AI agents interacting with this codebase and knowledge base.
+* [DELTA Guide: Visual Design System & UI Specification](/DESIGN.md) - The **DELTA Guide Concept Mind Map Browser** embodies a synthesis of two foundational traditions:
 * [Knowledge Guide Starter Template (Google OKF v0.2)](/README.md) - A turnkey, self-contained, and self-maintaining knowledge base template for engineering, product, and operational teams.
 * [Knowledge Guide Setup & Onboarding Guide (Human & AI Agent Instructions)](/SETUP.md) - Idempotent, step-by-step instructions for humans and autonomous AI agents to clone, configure, personalize, and verify the OKF v0.2 knowledge base.
