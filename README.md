@@ -38,6 +38,9 @@ This template solves that by implementing the **Open Knowledge Format (OKF v0.2)
    * **`ask-kb`**: Instant architectural and domain consulting (`/ask-kb <query>` or CLI `python3 scripts/query_kb.py "<query>"`).
    * **`manage-knowledge-base`**: Standardized protocols for AI agents to navigate, author, update, and audit knowledge.
    * **`ingest`**: Command any AI agent to `ingest <URL>`—it fetches the page, consults with you on placement, formats an OKF v0.2 document, and validates the bundle.
+   * **`backout-source` & `backout-institution`**: Safely retract, substitute, or archive any external source, paper, or institutional container, evaluating concept grounding blast radius and cleaning reciprocal edges.
+   * **`generate-storyboards`**: Author multi-panel visual storyboards and product concept specifications with export tools.
+7. **Concept Graph & Relational Edge Validation**: Pre-configured presubmit hooks validate thematic cluster membership, typed relational edge matrices (*Grounds*, *Requires*, *Opposes*, *Operationalized as*, etc.), and primary external source provenance.
 
 ---
 
@@ -78,13 +81,19 @@ knowledge-guide/
 ├── SETUP.md                 # Autonomous AI agent and human onboarding runbook
 │
 ├── 🏛️ ecosystem/            # "WHAT IS" - External Reality, Regulators & Partner Rails
+│   ├── institutions/        # External research institutes, frontier labs & standards bodies
 │   └── industry-landscape.md
 │
 ├── 💻 systems/              # "WHAT IS" - Active Production Architecture & Services
 │   └── core-architecture.md
 │
-├── 💡 concepts/             # "WHAT COULD BE" - Feature Proposals & Architectural RFCs
+├── 💡 concepts/             # Theoretical Concepts, Architectural Models & Thematic Clusters
 │   └── future-initiative.md
+│
+├── 🚀 frontier/             # "WHAT COULD BE" - Horizon Scanning, Emerging Prototypes & Experiments
+│   └── .gitkeep
+│
+├── 🎨 storyboards/          # "WHAT COULD BE" - Visual Storyboards & Sequential User Journeys
 │
 ├── 📋 playbooks/            # Operational Runbooks, Setup Guides & SOPs
 │   ├── onboarding-guide.md
@@ -103,28 +112,25 @@ knowledge-guide/
 │   ├── presubmit.py         # Pre-commit & pre-push hook gatekeeper
 │   ├── update_index.py      # Dynamic category-aware index generator
 │   ├── query_kb.py          # Fast CLI keyword & relevance search tool
-│   └── validate.py          # OKF v0.2 schema, link & trust tier validator
+│   ├── validate.py          # OKF v0.2 schema, graph integrity & provenance validator
+│   ├── backout_source.py    # Universal source retraction & archival engine
+│   ├── backout_institution.py # Institutional container backout wrapper
+│   └── reincorporate_source.py # Archive inspection & reincorporation engine
 │
 ├── 🤖 skills/               # Reusable AI Agent Skills (.agents/skills)
-│   ├── ask-kb/
-│   │   ├── SKILL.md         # /ask-kb instant domain & architectural consulting
-│   │   └── scripts/         # query_kb.py search tool
-│   ├── manage-knowledge-base/
-│   │   ├── SKILL.md         # Instructions for AI agents managing the repository
-│   │   ├── references/      # OKF quick-reference cheat sheet
-│   │   └── templates/       # Skill templates
-│   ├── ingest/
-│   │   ├── SKILL.md         # Instructions for ingesting external URLs
-│   │   ├── scripts/         # Lightweight urllib/html.parser fetcher
-│   │   └── templates/       # Ingested source template
-│   └── generate-storyboards/
-│       ├── SKILL.md         # Visual narrative storyboards for product concepts
-│       ├── scripts/         # DOCX & HTML export script
-│       └── templates/       # Storyboard document template
+│   ├── ask-kb/              # /ask-kb instant domain & architectural consulting
+│   ├── manage-knowledge-base/ # Maintenance, authoring, and concept cluster management
+│   ├── ingest/              # /ingest external URLs and institutional portals
+│   ├── generate-storyboards/ # Visual storyboards and product concept specifications
+│   ├── backout-source/      # /backout-source retraction, archival & substitution
+│   └── backout-institution/ # /backout-institution institutional decoupling
 │
 ├── 🧩 templates/            # Authoring starter templates
 │   ├── concept-template.md
+│   ├── concept-cluster-template.md
 │   ├── ecosystem-template.md
+│   ├── frontier-template.md
+│   ├── institution-template.md
 │   ├── playbook-template.md
 │   ├── reference-template.md
 │   ├── research-template.md
@@ -150,10 +156,20 @@ python3 scripts/query_kb.py "caching architecture"
 # 3. Run Validator directly (with --fix to auto-repair issues)
 python3 scripts/validate.py --fix
 
-# 4. Synchronize Root index.md from all concept files
+# 4. Retract a source and archive ungrounded concepts
+python3 scripts/backout_source.py --target "source:paper-id" --action prune
+
+# 5. Audit grounding blast radius without mutating files
+python3 scripts/backout_source.py --target "source:paper-id" --dry-run
+
+# 6. List and reincorporate archived sources
+python3 scripts/reincorporate_source.py --list
+python3 scripts/reincorporate_source.py --archive <archive-id>
+
+# 7. Synchronize Root index.md from all concept files
 python3 scripts/update_index.py
 
-# 5. Ingest external documentation via AI agent
+# 8. Ingest external documentation via AI agent
 # In chat: "ingest https://example.com/api-spec"
 ```
 

@@ -60,8 +60,9 @@ When a query is received, consult the authoritative OKF documents across the rep
 | Domain Area | Key Questions Addressed | Authoritative KB Categories |
 | :--- | :--- | :--- |
 | **Production Systems** | Active services, schemas, tech stack, APIs, datastores | [`/systems/`](/systems/) |
-| **External Ecosystem** | Regulatory frameworks, partner APIs, statutory mandates | [`/ecosystem/`](/ecosystem/) |
-| **Product Concepts** | Proposed features, architectural RFCs, exploratory initiatives | [`/concepts/`](/concepts/) |
+| **External Ecosystem & Institutions** | Regulatory frameworks, partner APIs, statutory mandates, frontier labs, research institutes, standards bodies | [`/ecosystem/`](/ecosystem/) |
+| **Product Concepts & Clusters** | Proposed features, architectural RFCs, foundational models, concept clusters | [`/concepts/`](/concepts/) |
+| **Frontier Explorations** | Nascent initiatives, exploratory prototypes, horizon scanning | [`/frontier/`](/frontier/) |
 | **Operational SOPs** | Onboarding, incident runbooks, engineering workflows | [`/playbooks/`](/playbooks/) |
 | **Field Research** | Customer interviews, qualitative observations, pain points | [`/research/`](/research/) |
 | **Standards & Specs** | Data dictionaries, protocol schemas, provenance rules | [`/references/`](/references/) |
@@ -70,7 +71,7 @@ When a query is received, consult the authoritative OKF documents across the rep
 
 ## 3. Response Generation Guidelines
 
-When responding to developer queries, always follow this **4-part structured response format**:
+When responding to developer queries, always follow this **5-part structured response format**:
 
 ### Part 1: Direct Technical & Domain Answer
 * Provide a concise, definitive answer directly addressing the question.
@@ -88,8 +89,14 @@ When responding to developer queries, always follow this **4-part structured res
   * Idempotency requirements on mutating endpoints.
   * Statutory compliance or audit logging obligations.
 
-### Part 4: Knowledge Base Provenance Links
-* Always cite clickable links to the relevant OKF documents in the knowledge base using bundle-relative paths (e.g. [`/systems/core-architecture.md`](/systems/core-architecture.md)).
+### Part 4: Conceptual Graph & Multi-Hop Traversal
+* When addressing architectural, conceptual, or policy questions, traverse the concept graph under [`/concepts/`](/concepts/):
+  * **Identify Anchor Node**: Locate the primary concept or component document (e.g. [`future-initiative.md`](/concepts/future-initiative.md)).
+  * **Traverse Relational Edges**: Follow typed edges to related concepts and clusters (e.g. *Requires*, *Opposes*, *Operationalized as*, *Remedied by*).
+  * **Ground in Axioms**: Connect the design decision back to foundational architectural standards, statutory requirements, or primary literature.
+
+### Part 5: Knowledge Base Provenance Links
+* Always cite clickable links to the relevant OKF documents in the knowledge base using bundle-relative paths (e.g. [`/systems/core-architecture.md`](/systems/core-architecture.md), [`/ecosystem/industry-landscape.md`](/ecosystem/industry-landscape.md)).
 
 ---
 
