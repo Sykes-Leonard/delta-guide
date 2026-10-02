@@ -66,9 +66,9 @@ Detail all concepts belonging directly to this cluster:
 
 | Concept Document | Core Thesis & Definition | Primary Normative Anchor | Lifecycle Status |
 | :--- | :--- | :--- | :--- |
-| **[Concept 1 Title](/concepts/concept-1-slug.md)** | Brief 1-2 sentence description of the concept's core thesis. | *e.g., Aristotelian Eudaimonia, Christian Personalism* | `stable` |
-| **[Concept 2 Title](/concepts/concept-2-slug.md)** | Brief 1-2 sentence description of the concept's core thesis. | *e.g., Sociotechnical Alignment, Human Rights* | `draft` |
-| **[Concept 3 Title](/concepts/concept-3-slug.md)** | Brief 1-2 sentence description of the concept's core thesis. | *e.g., Catholic Social Teaching, CST* | `stable` |
+| **[Human Flourishing (Eudaimonia)](/concepts/eudaimonia.md)** | Brief 1-2 sentence description of the concept's core thesis. | *e.g., Aristotelian Eudaimonia, Christian Personalism* | `stable` |
+| **[Positive Alignment](/concepts/positive-alignment.md)** | Brief 1-2 sentence description of the concept's core thesis. | *e.g., Sociotechnical Alignment, Human Rights* | `draft` |
+| **[Phronesis (Practical Wisdom)](/concepts/phronesis.md)** | Brief 1-2 sentence description of the concept's core thesis. | *e.g., Classical Philosophy, Virtue Ethics* | `stable` |
 
 ---
 
@@ -78,9 +78,9 @@ Analyze how this cluster interacts with neighboring conceptual domains:
 
 | Source Node in Cluster | Relationship Type | Target Concept / Cluster | Detailed Description of Edge |
 | :--- | :--- | :--- | :--- |
-| **[Concept 1](/concepts/concept-1-slug.md)** | *Grounds* | [Human Dignity](/concepts/human-dignity.md) | How this concept establishes or depends upon foundational human worth. |
-| **[Concept 2](/concepts/concept-2-slug.md)** | *Tension with* | [External Concept](/concepts/external-concept-slug.md) | The dialectical friction between technological convenience and human agency. |
-| **[Concept 3](/concepts/concept-3-slug.md)** | *Remedied by* | [Remedy Concept](/concepts/remedy-concept-slug.md) | How pedagogical or architectural design resolves systemic failure modes. |
+| **[Positive Alignment](/concepts/positive-alignment.md)** | *Grounds* | [Human Dignity](/concepts/human-dignity.md) | How this concept establishes or depends upon foundational human worth. |
+| **[Phronesis](/concepts/phronesis.md)** | *Tension with* | [Cognitive Deskilling & Moral Atrophy](/concepts/cognitive-deskilling.md) | The dialectical friction between technological convenience and human agency. |
+| **[Cognitive Deskilling](/concepts/cognitive-deskilling.md)** | *Remedied by* | [Cognitive Friction & Productive Struggle](/concepts/cognitive-friction.md) | How pedagogical or architectural design resolves systemic failure modes. |
 
 ---
 
