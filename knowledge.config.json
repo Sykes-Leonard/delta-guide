@@ -18,9 +18,15 @@
     },
     {
       "id": "concepts",
-      "title": "Product Concepts & Explorations ('What Could Be')",
+      "title": "Concepts, Thematic Clusters & Proposals",
       "path_prefix": "concepts/",
-      "description": "Proposed features, architectural RFCs, exploratory initiatives, and future innovations."
+      "description": "Theoretical constructs, architectural RFCs, foundational models, thematic concept clusters, and exploratory initiatives."
+    },
+    {
+      "id": "frontier",
+      "title": "Frontier & Emerging Ideas ('What Could Be')",
+      "path_prefix": "frontier/",
+      "description": "Exploratory horizon-scanning initiatives, emerging prototypes, experimental ideas, and nascent proposals."
     },
     {
       "id": "storyboards",

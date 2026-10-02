@@ -9,9 +9,10 @@ description: "Canonical Open Knowledge Format (OKF v0.2) repository: separating 
 Canonical Open Knowledge Format (OKF v0.2) repository: separating operational & system reality ('What Is') from proposed product innovations ('What Could Be').
 
 Knowledge in this bundle is organized with clear demarcation between:
-1. **"What Is"**: Operational realities, external ecosystem context (`/ecosystem/`), and active production systems (`/systems/`).
-2. **"What Could Be"**: Future proposals, feature specifications, and architectural explorations (`/concepts/`).
-3. **"How To" & Provenance**: Operational runbooks (`/playbooks/`), field research (`/research/`), and standards (`/references/`).
+1. **"What Is"**: Operational realities, external ecosystem context (`/ecosystem/`), key institutions (`/ecosystem/institutions/`), and active production systems (`/systems/`).
+2. **Theoretical Concepts & Architectural Models**: Foundational concepts, thematic clusters, and relational graphs (`/concepts/`).
+3. **"What Could Be"**: Visual storyboards (`/storyboards/`), emerging innovations, exploratory prototypes, and horizon scanning (`/frontier/`).
+4. **"How To" & Provenance**: Operational runbooks (`/playbooks/`), field research (`/research/`), and standards (`/references/`).
 
 ---
 
@@ -23,7 +24,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 
 * [External Ecosystem & Industry Landscape](/ecosystem/industry-landscape.md) - Canonical reference for external regulatory standards, third-party payment/data rails, and partner interfaces ('What Is').
 
-## Product Concepts & Explorations ('What Could Be')
+## Concepts, Thematic Clusters & Proposals
 
 * [Next-Generation Intelligent Queue & Auto-Routing](/concepts/future-initiative.md) - Proposed product RFC for real-time automated workflow routing, predictive wait times, and smart dispatching ('What Could Be').
 
@@ -40,13 +41,18 @@ Knowledge in this bundle is organized with clear demarcation between:
 ## Agent Skills & Automation Capabilities
 
 * [Knowledge Base Advisor (/ask-kb)](/skills/ask-kb/SKILL.md) - Provides instant, authoritative domain and architectural consulting across production systems, external ecosystems, and product concepts. Use when developers or AI agents need domain context, schema contracts, or compliance guidance.
+* [Backout Institution & Decouple Grounding (OKF v0.2)](/skills/backout-institution/SKILL.md) - Audits, retracts, and safely decouples an external institution, its sources, and dependent concepts from the OKF knowledge graph.
+* [Universal Source Retraction & Epistemic Grounding Decoupler (OKF v0.2)](/skills/backout-source/SKILL.md) - Audits, retracts, substitutes, and safely decouples any external source, research paper, URL, or institutional container from the OKF knowledge graph.
 * [Generate Storyboards for Product Concepts](/skills/generate-storyboards/SKILL.md) - Generate high-impact sequential visual storyboards and accompanying product specifications for product concepts, user journeys, and ecosystem integrations.
 * [Product Concept Display Title](/skills/generate-storyboards/templates/storyboard-template.md) - Single-sentence executive summary of the storyboard and product concept.
 * [Ingest URL Content into Knowledge Base](/skills/ingest/SKILL.md) - Downloads external web content from a URL, analyzes its relevance to the organization, asks the user for placement confirmation, and synthesizes it into an OKF v0.2 knowledge document.
 * [Article or Policy Title](/skills/ingest/templates/ingested-source-template.md) - Single-sentence executive summary of the ingested document and its organizational relevance.
 * [Manage Knowledge Base (OKF v0.2)](/skills/manage-knowledge-base/SKILL.md) - Navigate, read, author, update, and validate the markdown knowledge base according to Google OKF v0.2.
 * [Google OKF v0.2 Quick Reference Cheat Sheet](/skills/manage-knowledge-base/references/okf_cheat_sheet.md) - Reference cheat sheet for Open Knowledge Format frontmatter fields and conventions.
+* [Concept Cluster Template](/skills/manage-knowledge-base/templates/concept_cluster_template.md) - Starter template for organizing a thematic cluster of interrelated concepts, their constituent nodes, cross-cutting edges, and institutional groundings.
 * [Concept Template](/skills/manage-knowledge-base/templates/concept_template.md) - Starter template for proposing a new feature or architectural RFC.
+* [Frontier Idea Starter Template](/skills/manage-knowledge-base/templates/frontier_template.md) - Standardized starter template for authoring emerging ideas, exploratory prototypes, and horizon-scanning initiatives ('What Could Be').
+* [Institution Dossier Template](/skills/manage-knowledge-base/templates/institution_template.md) - Starter template for profiling external research institutes, frontier labs, university centers, and standards bodies ('What Is').
 * [Interview / Field Notes Template](/skills/manage-knowledge-base/templates/interview_template.md) - Starter template for recording qualitative customer research and provenance.
 * [Playbook Template](/skills/manage-knowledge-base/templates/playbook_template.md) - Starter template for an operational runbook or SOP.
 
@@ -58,8 +64,11 @@ Knowledge in this bundle is organized with clear demarcation between:
 
 ## Knowledge Document Starter Templates
 
+* [Concept Cluster Template](/templates/concept-cluster-template.md) - Starter template for organizing a thematic cluster of interrelated concepts, their constituent nodes, cross-cutting edges, and institutional groundings.
 * [Concept Template](/templates/concept-template.md) - Starter template for proposing a new product feature, architectural RFC, or exploratory innovation ('What Could Be').
 * [Ecosystem Context Template](/templates/ecosystem-template.md) - Starter template for documenting external infrastructure, regulatory requirements, partner platforms, and market realities ('What Is').
+* [Frontier Idea Starter Template](/templates/frontier-template.md) - Standardized starter template for authoring emerging ideas, exploratory prototypes, and horizon-scanning initiatives ('What Could Be').
+* [Institution Dossier Template](/templates/institution-template.md) - Starter template for profiling external research institutes, frontier labs, university centers, and standards bodies ('What Is').
 * [Playbook Template](/templates/playbook-template.md) - Starter template for standard operating procedures, developer setups, incident guides, and team runbooks.
 * [Technical Reference Template](/templates/reference-template.md) - Starter template for specifications, protocol data dictionaries, and architectural standards.
 * [Research Notes Template](/templates/research-template.md) - Starter template for customer interviews, field observations, and user research.

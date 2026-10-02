@@ -41,6 +41,12 @@ DEFAULT_CONFIG = {
             "description": "Proposed features, architectural RFCs, exploratory initiatives, and future innovations."
         },
         {
+            "id": "frontier",
+            "title": "Frontier & Emerging Ideas ('What Could Be')",
+            "path_prefix": "frontier/",
+            "description": "Exploratory horizon-scanning initiatives, emerging prototypes, experimental ideas, and nascent proposals."
+        },
+        {
             "id": "storyboards",
             "title": "Visual Storyboards & User Journeys ('What Could Be')",
             "path_prefix": "storyboards/",
@@ -100,8 +106,10 @@ def generate_index(bundle_dir: Path):
     category_buckets = {c["id"]: [] for c in categories_cfg}
     unmapped_items = []
     
-    # Scan all markdown files
+    # Scan all markdown files (exempting archive and hidden files)
     for file_path in sorted(bundle_dir.rglob("*.md")):
+        if "archive" in file_path.parts or file_path.name.startswith("."):
+            continue
         if file_path.name in ["index.md", "log.md"]:
             continue
             
@@ -160,9 +168,10 @@ def generate_index(bundle_dir: Path):
         f"{desc}",
         "",
         "Knowledge in this bundle is organized with clear demarcation between:",
-        "1. **\"What Is\"**: Operational realities, external ecosystem context (`/ecosystem/`), and active production systems (`/systems/`).",
-        "2. **\"What Could Be\"**: Future proposals, feature specifications, and architectural explorations (`/concepts/`).",
-        "3. **\"How To\" & Provenance**: Operational runbooks (`/playbooks/`), field research (`/research/`), and standards (`/references/`).",
+        "1. **\"What Is\"**: Operational realities, external ecosystem context (`/ecosystem/`), key institutions (`/ecosystem/institutions/`), and active production systems (`/systems/`).",
+        "2. **Theoretical Concepts & Architectural Models**: Foundational concepts, thematic clusters, and relational graphs (`/concepts/`).",
+        "3. **\"What Could Be\"**: Visual storyboards (`/storyboards/`), emerging innovations, exploratory prototypes, and horizon scanning (`/frontier/`).",
+        "4. **\"How To\" & Provenance**: Operational runbooks (`/playbooks/`), field research (`/research/`), and standards (`/references/`).",
         "",
         "---",
         ""
@@ -177,9 +186,30 @@ def generate_index(bundle_dir: Path):
             total_indexed += len(items)
             lines.append(f"## {cat_title}")
             lines.append("")
-            for it in items:
-                lines.append(it)
-            lines.append("")
+            if cat_id == "concepts":
+                clusters = [it for it in items if "/cluster-" in it]
+                nodes = [it for it in items if "/cluster-" not in it]
+                
+                if clusters:
+                    lines.append("### Thematic Concept Clusters & Mind Maps")
+                    lines.append("")
+                    for it in clusters:
+                        lines.append(it)
+                    lines.append("")
+                    if nodes:
+                        lines.append("### Constituent Concept Nodes & Relational Edges")
+                        lines.append("")
+                        for it in nodes:
+                            lines.append(it)
+                        lines.append("")
+                else:
+                    for it in items:
+                        lines.append(it)
+                    lines.append("")
+            else:
+                for it in items:
+                    lines.append(it)
+                lines.append("")
             
     if unmapped_items:
         total_indexed += len(unmapped_items)

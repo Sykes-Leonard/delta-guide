@@ -61,9 +61,11 @@ Evaluate the content against the knowledge base taxonomy:
 
 | Destination Category | Scope & Criteria | Typical Document Types |
 | :--- | :--- | :--- |
+| **`ecosystem/institutions/`** | **"What Is" (External Institutions)**: Key external research institutes, frontier labs, university centers, and standards bodies. | Institutional profiles, governance charters, multi-paper dossiers, lab roadmaps. |
 | **`ecosystem/`** | **"What Is" (External Reality)**: External laws, statutory regulations, partner platforms, payment rails, industry standards. | Government policies, partner API releases, compliance regulations. |
 | **`systems/`** | **"What Is" (Internal Reality)**: Active production architecture, codebases, data models, or service documentation. | Service specs, API endpoints, schema definitions, internal workflows. |
-| **`concepts/`** | **"What Could Be" (Innovation)**: Proposed features, architectural RFCs, exploratory prototypes. | Product RFCs, new feature proposals, feasibility studies. |
+| **`concepts/`** | **Foundational Concepts & Proposals**: Theoretical constructs, architectural RFCs, foundational models, concept clusters. | Product RFCs, new feature proposals, concept clusters, feasibility studies. |
+| **`frontier/`** | **"What Could Be" (Frontier Explorations)**: Nascent initiatives, exploratory prototypes, and horizon scanning. | Horizon scan notes, prototype specs, emerging technology evaluations. |
 | **`playbooks/`** | **Operational SOPs**: Step-by-step human or agent runbooks. | Setup checklists, incident playbooks, deployment runbooks. |
 | **`research/`** | **Field Research**: Qualitative research, user interviews, surveys. | Transcripts, user observation notes, customer feedback. |
 | **`references/`** | **Specifications & Standards**: Foundational reference specifications. | Data dictionaries, protocol standards, format guidelines. |
@@ -101,6 +103,21 @@ Formulate an interactive multiple-choice question using `ask_question`:
 
 ---
 
+### Step 3b: Special Workflow — Ingesting Institutional Portals & Publication Hubs
+When ingesting an institution's public portal or research hub (e.g. university research centers, industry labs, or standards bodies):
+
+1. **Child Publication Discovery**:
+   * Inspect the hub page for linked articles, white papers, or technical essays.
+   * Extract key metadata (titles, authors, dates, abstracts, and canonical URLs) across the entire series.
+2. **Interactive Structural Choice**:
+   * Use `ask_question` to offer the user a clear structural choice:
+     * **Unified Institutional Dossier** (`ecosystem/institutions/<slug>.md`): A comprehensive document capturing the institutional profile, leadership, mission, and synthesizing the publication series with dedicated subsections.
+     * **Subfolder Structure** (`ecosystem/institutions/<slug>/`): Dedicated subfolder containing an overview file plus individual standalone markdown files for each publication.
+3. **Comparative Alignment Analysis**:
+   * Include a comparative synthesis section relating the institution's stances to existing organizational principles and systems architecture.
+
+---
+
 ### Step 4: Synthesize the OKF v0.2 Document
 Never do a raw copy-paste dump of the webpage text. Thoughtfully synthesize the content into an executive-grade OKF document:
 
@@ -133,8 +150,22 @@ Never do a raw copy-paste dump of the webpage text. Thoughtfully synthesize the 
 
 ---
 
-### Step 5: Synchronize Index, Log, and Validate
-Once the document is saved:
+### Step 5: Concept Graph Extraction & Mind Map Linkage
+After synthesizing the primary ecosystem or institution document:
+1. **Extract Core Concepts**:
+   * Identify 1–3 novel conceptual claims, architectural patterns, or governance tensions introduced by the source.
+2. **Cross-Link Existing Concepts**:
+   * Inspect [`/concepts/`](/concepts/) to see if related concepts already exist.
+   * Add citations and cross-links from those existing concept documents back to the newly ingested source.
+3. **Author New Concept Nodes**:
+   * If the ingested material introduces a novel concept not yet captured, author a new concept document under `/concepts/` using [`templates/concept-template.md`](/templates/concept-template.md).
+   * Assign the new concept to its appropriate thematic cluster in [`/concepts/`](/concepts/) and update the cluster's Constituent Concepts Matrix.
+   * Add inbound and outbound edges in the concept's `Relational Edge Index` table and Mermaid diagram.
+
+---
+
+### Step 6: Synchronize Index, Log, and Validate
+Once the document and concept linkages are saved:
 1. **Regenerate Index**:
    ```bash
    python3 scripts/update_index.py

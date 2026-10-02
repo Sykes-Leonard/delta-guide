@@ -39,13 +39,17 @@ The knowledge bundle organizes information with a clean architectural demarcatio
 ├── knowledge.config.json    # Org metadata and categorized section configuration
 │
 ├── ecosystem/               # "WHAT IS" - External Reality & Regulatory Infrastructure
+│   ├── institutions/        # External research institutes, frontier labs & standards bodies
 │   └── ...                  # Partner APIs, external laws, industry standards
 │
 ├── systems/                 # "WHAT IS" - Current Production Systems & Workflows
 │   └── ...                  # Production services, databases, data models, APIs
 │
-├── concepts/                # "WHAT COULD BE" - Product Concepts, Proposals & Ideas
-│   └── ...                  # Future features, RFCs, and architectural explorations
+├── concepts/                # Theoretical Concepts, Architectural Models & Clusters
+│   └── ...                  # Foundational models, architectural RFCs, thematic clusters
+│
+├── frontier/                # "WHAT COULD BE" - Emerging Ideas, Prototypes & Horizon Scanning
+│   └── ...                  # Nascent initiatives, exploratory prototypes, and emerging proposals
 │
 ├── playbooks/               # Operational guides, developer setups, and runbooks
 ├── research/                # Raw field research notes, customer interviews & qualitative findings
@@ -66,7 +70,8 @@ The knowledge bundle organizes information with a clean architectural demarcatio
    * Links starting with `/` (e.g., `[Core Architecture](/systems/core-architecture.md)`) are bundle-relative, anchored to the repository root.
 3. **Distinguish "What Is" vs "What Could Be"**:
    * `/ecosystem/` and `/systems/`: Represents current reality (`status: stable`).
-   * `/concepts/`: Represents future product proposals and exploratory features (`status: draft`).
+   * `/concepts/`: Represents foundational theoretical models and concept clusters.
+   * `/frontier/`: Represents future exploratory proposals and emerging prototypes (`status: draft`).
 4. **Evaluate Trust & Freshness**:
    * Check `stale_after`: If `now >= stale_after`, treat information as potentially outdated.
    * Check `verified`: Entries containing `human:<id>` represent human-certified ground truth.
@@ -76,17 +81,20 @@ The knowledge bundle organizes information with a clean architectural demarcatio
 ### Procedure B: Authoring a New Concept vs. System Fact
 1. **Choose the appropriate subdirectory**:
    * **Is it "What Is"?**
+     * External research institutes, frontier labs, or standards bodies $\rightarrow$ `ecosystem/institutions/` (`status: stable`, use [`templates/institution-template.md`](/templates/institution-template.md))
      * External environment, statutory regulations, or partner platforms $\rightarrow$ `ecosystem/` (`status: stable`)
      * Existing production software, APIs, or database schemas $\rightarrow$ `systems/` (`status: stable`)
      * Operational runbook or incident response guide $\rightarrow$ `playbooks/` (`status: stable`)
      * Customer interview or observation transcript $\rightarrow$ `research/` (`status: stable`)
-   * **Is it "What Could Be"?**
-     * Product concept, proposed feature, or architectural RFC $\rightarrow$ `concepts/` (`status: draft`)
+   * **Theoretical Concept or Architectural Model?**
+     * Foundational theoretical construct, architectural RFC, or concept cluster $\rightarrow$ `concepts/` (`status: stable` or `draft`, use [`templates/concept-template.md`](/templates/concept-template.md) or [`templates/concept-cluster-template.md`](/templates/concept-cluster-template.md))
+   * **Emerging New Idea or Prototype?**
+     * Emerging innovation, exploratory prototype, or horizon-scanning proposal $\rightarrow$ `frontier/` (`status: draft`, use [`templates/frontier-template.md`](/templates/frontier-template.md))
 2. **Add Strict OKF v0.2 Frontmatter**:
    Every concept document MUST begin with YAML frontmatter:
    ```yaml
    ---
-   type: <System Component | Ecosystem Context | Concept | Playbook | Research Notes | Reference>
+   type: <System Component | Ecosystem Context | Concept | Concept Cluster | Frontier Exploration | Playbook | Research Notes | Reference>
    title: "Display Title"
    description: "Single-sentence summary of the document."
    tags: [tag1, tag2]
@@ -126,7 +134,23 @@ Whenever a concept is added, updated, or deprecated:
 
 ---
 
-### Procedure D: Bundle Validation & Auto-Fixing
+### Procedure D: Managing Concept Clusters & Mind Map Edges
+When authoring or modifying documents under `/concepts/`:
+1. **Never Create Orphan Concepts**:
+   * When concept clusters are established, every new concept must be registered in at least one thematic cluster matrix or define a new cluster using [`templates/concept-cluster-template.md`](/templates/concept-cluster-template.md).
+   * Update the cluster's `## 3. Constituent Concepts Matrix` to register the new concept.
+2. **Build and Maintain Relational Edges**:
+   * Concepts should include a `## Relational Edge Index` with a Markdown table defining typed inbound/outbound relationships.
+   * Use canonical relationship verbs (*Grounds*, *Requires*, *Opposes*, *Operationalized as*, *Threatened by*, *Remedied by*, *Cultivated via*, *Mandates*, *Enforces*, *Bridges*, *Critiques*).
+   * When adding an edge between Concept A and Concept B, update *both* files' edge tables and Mermaid diagrams to maintain graph reciprocity.
+3. **Mandatory External Source Provenance**:
+   * In frontmatter, populate the `sources:` block with stable external identifiers (`id`, `resource` URL, `title`) citing foundational literature, technical standards, or regulatory specifications.
+4. **Preserve Mermaid Mind Map Syntax**:
+   * Keep the `## Conceptual Mind Map & Relational Edges` Mermaid diagram synchronized with the edge index table.
+
+---
+
+### Procedure E: Bundle Validation & Auto-Fixing
 Before concluding any task that touches documentation, run the bundle's self-contained presubmit hook or validator:
 
 ```bash
