@@ -8,6 +8,7 @@ by categorized paths and frontmatter, producing a clean progressive-disclosure i
 
 import sys
 import json
+import argparse
 from pathlib import Path
 
 # Add script dir to path to import validate's frontmatter parser
@@ -225,7 +226,17 @@ def generate_index(bundle_dir: Path):
 
 
 if __name__ == "__main__":
-    bundle_root = Path(__file__).resolve().parent.parent
-    if len(sys.argv) > 1:
-        bundle_root = Path(sys.argv[1]).resolve()
-    generate_index(bundle_root)
+    default_bundle_root = SCRIPT_DIR.parent
+    parser = argparse.ArgumentParser(
+        description="Dynamic generator and synchronizer for the OKF root index.md."
+    )
+    parser.add_argument(
+        "bundle_root",
+        nargs="?",
+        default=default_bundle_root,
+        type=Path,
+        help="Path to the OKF bundle root directory (default: repository root)",
+    )
+    args = parser.parse_args()
+    generate_index(args.bundle_root.resolve())
+
