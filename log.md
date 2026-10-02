@@ -22,6 +22,12 @@
   * [European AI Office](/ecosystem/institutions/european-ai-office.md): European Commission statutory regulator enforcing the EU AI Act (Regulation 2024/1689), GPAI codes of practice, and prohibited practices.
   * [OECD.AI Policy Observatory](/ecosystem/institutions/oecd-ai.md): Directorate for Science, Technology & Innovation; revised 2024 AI Principles on inclusive growth, well-being, and trustworthy AI.
   * [Institute for Human Flourishing (IHF)](/ecosystem/institutions/institute-for-human-flourishing.md): Rockefeller and Schmidt backed research-action lab on labor-using AI, frontline worker agency, and agrarian data sovereignty.
+  * [Harvard University Overview](/ecosystem/institutions/harvard-university.md): Overarching profile uniting empirical flourishing research and Socratic pedagogical engineering.
+  * [Harvard AI Pedagogy & Socratic Learning](/ecosystem/institutions/harvard-ai-pedagogy.md): Derek Bok Center frameworks, CS50 Socratic assistant (*cs50.ai*), and negative constraints against direct answer generation.
+  * [Carnegie Mellon University Simon Initiative](/ecosystem/institutions/cmu-simon-initiative.md): Learning engineering, cognitive load modeling, GAITAR empirical classroom studies, and faded scaffolding.
+  * [The Russell Group](/ecosystem/institutions/russell-group-ai.md): Joint 5-principle accord across 24 leading UK research universities on AI literacy, assessment adaptation, and academic integrity.
+  * [Stanford University & HAI](/ecosystem/institutions/stanford-hai.md): Enriched with Stanford Accelerator for Learning & ETS 2026 white paper *Responsible Assessment in the AI Era* (process data over product grading).
+  * [UNESCO AI Ethics Sector](/ecosystem/institutions/unesco-ai-ethics.md): Enriched with *Guidance for Generative AI in Education and Research* (age boundaries, teacher sovereignty).
 * **Template Cleanup**: Removed obsolete starter template files (`concepts/future-initiative.md`, `systems/core-architecture.md`, `ecosystem/industry-landscape.md`), personalized `knowledge.config.json` for St. Francis High School's AI Initiative, and retained `research/user-interview-example.md` as an exemplar for Human-Centered Design (HCD) research.
 
 ## 2026-09-26

@@ -55,7 +55,8 @@ Target Horizon:   Universal Human Dignity, Cultural Pluralism, Education & Envir
 | :- | :--- | :--- | :--- | :--- |
 | **1** | [Recommendation on the Ethics of AI](https://www.unesco.org/en/artificial-intelligence/recommendation-ethics) | 2021-11-23 | UNESCO General Conference (193 Nations) | Universal moral and policy blueprint; explicitly prohibits AI systems for social scoring and mass surveillance; mandates gender parity and environmental sustainability assessments. |
 | **2** | [Readiness Assessment Methodology (RAM)](https://www.unesco.org/en/artificial-intelligence/readiness-assessment-methodology) | 2023–2025 | UNESCO Social & Human Sciences Sector | Diagnostic diagnostic toolkit deployed across 50+ countries measuring national institutional, legal, social, educational, and infrastructural readiness for ethical AI. |
-| **3** | [Ethical Impact Assessment (EIA) for AI](https://www.unesco.org/en/artificial-intelligence/ethical-impact-assessment) | 2024 | High-Level Expert Panel on AI Ethics | Procurement and evaluation guidelines for public institutions and developers to assess human rights and cultural risks prior to deploying AI solutions. |
+| **3** | [Guidance for Generative AI in Education and Research](https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research) | 2023–2025 | UNESCO Education & Communication Sectors | Global policy framework mandating strict age limits (13–16) for autonomous AI use, protecting teacher sovereignty, and preserving cognitive and social development against synthetic substitution. |
+| **4** | [Ethical Impact Assessment (EIA) for AI](https://www.unesco.org/en/artificial-intelligence/ethical-impact-assessment) | 2024 | High-Level Expert Panel on AI Ethics | Procurement and evaluation guidelines for public institutions and developers to assess human rights and cultural risks prior to deploying AI solutions. |
 
 ---
 

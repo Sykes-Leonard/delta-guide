@@ -45,7 +45,7 @@ Target Horizon:   Human Augmentation, Foundation Model Transparency & Democratic
 ### Core Research & Policy Pillars:
 * **Pillar 1: Human Augmentation over Substitution**: Developing collaborative intelligence models where algorithms perform perceptual or cognitive sub-tasks while leaving strategic intent, moral judgment, and creative leadership to humans.
 * **Pillar 2: Foundation Model Transparency & Benchmarking**: Auditing commercial and open-weights models through the *Center for Research on Foundation Models (CRFM)*, establishing empirical baselines for bias, copyright infringement, toxicity, and reasoning depth.
-* **Pillar 3: AI in Education & Cognitive Agency**: Formulating pedagogical guidelines that prevent cognitive atrophy in student learning, treating AI as a reflective inquiry partner rather than a shortcut generator.
+* **Pillar 3: AI in Education & Cognitive Agency**: Advancing human-centered learning through the **Stanford Accelerator for Learning**, developing the CRAFT curriculum (Classroom-Ready Resources About AI for Teaching), and pioneering the shift from grading "ghostwritten" final products to harvesting real-time "process data."
 
 ---
 
@@ -55,7 +55,8 @@ Target Horizon:   Human Augmentation, Foundation Model Transparency & Democratic
 | :- | :--- | :--- | :--- | :--- |
 | **1** | [The AI Index Report](https://aiindex.stanford.edu/) | Annual (2024–2026) | Stanford HAI Steering Committee | The canonical worldwide benchmark tracking technical capabilities, geopolitical compute investments, workforce transition dynamics, and public sentiment on AI. |
 | **2** | [Holistic Evaluation of Language Models (HELM)](https://crfm.stanford.edu/helm/) | 2023–2026 | Percy Liang, Rishi Bommasani et al. | Multi-metric evaluation protocol testing foundation models across accuracy, calibration, robustness, fairness, bias, toxicity, and computational efficiency. |
-| **3** | [Human-Centered AI: A Multidisciplinary Perspective](https://hai.stanford.edu/research) | 2024–2025 | Fei-Fei Li, John Etchemendy | Lays out the philosophical and engineering roadmap for human-centric computing, arguing that intelligence without human empathy and purpose is fundamentally incomplete. |
+| **3** | [Responsible Assessment in the AI Era](https://acceleratelearning.stanford.edu/story/white-paper-responsible-student-assessments-in-the-ai-era/) | 2026 | Candace Thille, Nneka McGee et al. | Landmark white paper (with ETS) arguing that static take-home products are obsolete; calls for evaluating "process data" across interactive simulations, dialogues, and socially situated performance over time. |
+| **4** | [Human-Centered AI: A Multidisciplinary Perspective](https://hai.stanford.edu/research) | 2024–2025 | Fei-Fei Li, John Etchemendy | Lays out the philosophical and engineering roadmap for human-centric computing, arguing that intelligence without human empathy and purpose is fundamentally incomplete. |
 
 ---
 
