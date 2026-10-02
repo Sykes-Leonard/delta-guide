@@ -1,9 +1,17 @@
 # Knowledge Base Changelog
 
 ## 2026-10-02
+* **Frontier Exploration Added**: Authored [`frontier/secondary-school-ai-pedagogy.md`](/frontier/secondary-school-ai-pedagogy.md) defining the *Secondary School AI Pedagogy & Assessment Blueprint* for St. Francis High School.
+  - **3-Zone Classroom Model**: Established Zone 1 (Unassisted Formation / The Cognitive Gym), Zone 2 (Socratic Exploration / The Sparring Partner), and Zone 3 (Augmented Creation / The Professional Studio).
+  - **Department Syllabus Clauses**: Concrete boilerplate for Humanities/English, Mathematics/Science, and Computer Science, with an institutional in-person *Oral Defense (Viva Voce)* protocol.
+  - **Process Trail Rubric**: 4-domain authentic evaluation rubric balancing final deliverables against prompt logs, error corrections, and metacognitive reflection.
+  - **DELTA & Franciscan Alignment**: Stress-tested against the five DELTA pillars and Franciscan humanism.
+* **Interactive Concept Graph Viewer & UI Design System**: Deployed standalone interactive web viewer in [`viewer/index.html`](/viewer/index.html) and visual design specification in [`DESIGN.md`](/DESIGN.md).
+  - **Dynamic Graph Compilation**: Added [`scripts/compile_graph.py`](/scripts/compile_graph.py) and [`scripts/build_viewer.py`](/scripts/build_viewer.py) compiling cluster matrices, 27 concept nodes, and 95 typed relational edges into [`viewer/graph-data.json`](/viewer/graph-data.json).
+  - **Presubmit Integration**: Integrated automated graph compilation into [`scripts/presubmit.py`](/scripts/presubmit.py) to keep the visual browser synchronized on every validation run.
 * **Bulk Institutional Retraction & Core Preservation**: Retracted and archived 17 external institution profiles into `archive/2026-10-02_041818_bulk_institutional_backout/`, establishing a streamlined normative core anchored by the **DeepMind Institute**, **The Rome Call & Hiroshima Appeal**, **The DELTA Framework**, and **Encyclical Letter Magnifica Humanitas**.
   - **Archived & Pruned Concepts**: `concepts/six-domains-wellbeing.md` (epistemic grounding depleted with Harvard profile retraction).
-  - **Re-Grounded Concepts**: `concepts/eudaimonia.md` legitimately anchored in the DELTA Framework and DeepMind Institute's *Global Benefit from AI*.
+  - **Re-Grounded Concepts**: `concepts/eudaimonia.md` legitimately anchored in the DELTA Framework and DeepMind Institute's *Global Benefit from AI*; `concepts/phronesis.md` reinforced with *Magnifica Humanitas*.
   - **Surviving Grounding**: 26 concept nodes maintained authentic source provenance from the 4 core pillars.
 
 

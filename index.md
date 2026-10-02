@@ -66,6 +66,10 @@ Knowledge in this bundle is organized with clear demarcation between:
 * [Synthetic Intimacy & Parasocial Harm](/concepts/synthetic-intimacy.md) - The emotional and psychological substitution of artificial conversational companionship for authentic, vulnerable human relationships, exploiting loneliness for engagement.
 * [Virtue Formation & Character](/concepts/virtue-formation.md) - The deliberate pedagogical and personal habituation of moral and intellectual excellences, requiring intentional friction, mentorship, and lived practice.
 
+## Frontier & Emerging Ideas ('What Could Be')
+
+* [Secondary School AI Pedagogy & Assessment Blueprint](/frontier/secondary-school-ai-pedagogy.md) - Emerging pedagogical architecture and course-policy blueprint for St. Francis High School, establishing a 3-zone classroom model, department syllabus clauses, and process-trail assessment grounded in the DELTA Framework.
+
 ## Operational Playbooks & Runbooks
 
 * [Knowledge-Driven Engineering & Spec-Driven Development](/playbooks/knowledge-driven-engineering.md) - Comprehensive operational playbook for integrating the knowledge base into sprint planning, coding, AI pair programming, pull request compliance reviews, and living documentation graduation.
