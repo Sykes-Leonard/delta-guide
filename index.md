@@ -18,8 +18,13 @@ Knowledge in this bundle is organized with clear demarcation between:
 ## External Ecosystem & Industry Reality ('What Is')
 
 * [The DELTA Framework: Faith-Informed Virtue Ethics for Artificial Intelligence](/ecosystem/delta-framework.md) - Notre Dame's virtue-ethics framework establishing five core normative pillars—Dignity, Embodiment, Love, Transcendence, and Agency—and practical tools for human formation in the AI era.
+* [Council of Europe: Framework Convention on Artificial Intelligence and Human Rights](/ecosystem/institutions/council-of-europe-ai.md) - Institutional profile of the Council of Europe's landmark Framework Convention on AI (CETS No. 225)—the world's first legally binding international treaty on AI, democracy, human rights, and the rule of law.
 * [The DeepMind Institute: Foundational Research, AGI Governance & Inaugural Essays](/ecosystem/institutions/deepmind-institute.md) - Institutional profile of the DeepMind Institute, synthesizing its founding charter, governance model, and the eight inaugural essays on agent swarms, symbiotic intelligence, reasoning transparency, global benefit, and economic policy.
+* [Harvard Human Flourishing Program: AI, Character & Eudaimonia](/ecosystem/institutions/harvard-human-flourishing.md) - Institutional profile of Harvard's Human Flourishing Program, synthesizing its six-domain framework, research on AI's impact on human flourishing, critique of synthetic intimacy, and educational formation.
 * [Global AI Institutions & Research Labs Observatory](/ecosystem/institutions/overview.md) - Systematic observatory tracking key global research institutes, frontier AI labs, standards bodies, and moral authorities shaping AI governance, ethics, and capability frontiers.
+* [Oxford Institute for Ethics in AI: Positive Alignment & Aristotelian Virtue](/ecosystem/institutions/oxford-ethics-ai.md) - Institutional profile of the Oxford Institute for Ethics in AI, capturing its Aristotelian virtue-ethics grounding, the Human-Centered AI Lab, and the seminal 'Positive Alignment' research agenda for human flourishing.
+* [The Rome Call for AI Ethics & The Hiroshima Appeal: Global Interfaith Algor-Ethics](/ecosystem/institutions/rome-call-hiroshima.md) - Institutional profile of the Rome Call for AI Ethics and the July 2024 Hiroshima Appeal, capturing the interfaith consensus across Western monotheisms and Eastern religions on algor-ethics and the ban on autonomous weapons.
+* [United Nations High-Level Advisory Body on AI: Governing AI for Humanity](/ecosystem/institutions/un-ai-advisory-body.md) - Institutional profile of the UN High-Level Advisory Body on AI, detailing its September 2024 landmark final report 'Governing AI for Humanity', seven structural governance pillars, and global equity mandates.
 * [Encyclical Letter Magnifica Humanitas: Safeguarding the Human Person in the Time of Artificial Intelligence](/ecosystem/magnifica-humanitas.md) - Pope Leo XIV's landmark 2026 social encyclical on artificial intelligence, addressing private technocratic dominance, algorithmic reductionism, the dignity of labor, and autonomous warfare.
 
 ## Operational Playbooks & Runbooks
@@ -39,6 +44,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 * [Manage Knowledge Base (OKF v0.2)](/skills/manage-knowledge-base/SKILL.md) - Navigate, read, author, update, and validate the markdown knowledge base according to Google OKF v0.2.
 * [Google OKF v0.2 Quick Reference Cheat Sheet](/skills/manage-knowledge-base/references/okf_cheat_sheet.md) - Reference cheat sheet for Open Knowledge Format frontmatter fields and conventions.
 * [Concept Template](/skills/manage-knowledge-base/templates/concept_template.md) - Starter template for proposing a new feature or architectural RFC.
+* [Institution Dossier Template](/skills/manage-knowledge-base/templates/institution_template.md) - Starter template for profiling external research institutes, frontier AI labs, university centers, and moral authorities ('What Is').
 * [Interview / Field Notes Template](/skills/manage-knowledge-base/templates/interview_template.md) - Starter template for recording qualitative customer research and provenance.
 * [Playbook Template](/skills/manage-knowledge-base/templates/playbook_template.md) - Starter template for an operational runbook or SOP.
 
@@ -52,6 +58,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 
 * [Concept Template](/templates/concept-template.md) - Starter template for proposing a new product feature, architectural RFC, or exploratory innovation ('What Could Be').
 * [Ecosystem Context Template](/templates/ecosystem-template.md) - Starter template for documenting external infrastructure, regulatory requirements, partner platforms, and market realities ('What Is').
+* [Institution Dossier Template](/templates/institution-template.md) - Starter template for profiling external research institutes, frontier AI labs, university centers, and moral authorities ('What Is').
 * [Playbook Template](/templates/playbook-template.md) - Starter template for standard operating procedures, developer setups, incident guides, and team runbooks.
 * [Technical Reference Template](/templates/reference-template.md) - Starter template for specifications, protocol data dictionaries, and architectural standards.
 * [Research Notes Template](/templates/research-template.md) - Starter template for customer interviews, field observations, and user research.
