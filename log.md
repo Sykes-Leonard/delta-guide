@@ -1,6 +1,9 @@
 # Knowledge Base Changelog
 
 ## 2026-10-01
+* **Source Retraction & Epistemic Decoupler**: Added [`scripts/backout_source.py`](/scripts/backout_source.py) and `/backout-source` skill to safely retract, substitute, and decouple external sources, papers, URLs, and institutional containers with dry-run blast radius auditing.
+* **Archive & Reincorporation System**: Added [`scripts/reincorporate_source.py`](/scripts/reincorporate_source.py) to preserve backed-out assets in `archive/` with structured manifests and restore files, source citations, and reciprocal graph edges.
+* **Presubmit & Validation Updates**: Updated [`scripts/validate.py`](/scripts/validate.py) and [`scripts/update_index.py`](/scripts/update_index.py) to exempt `archive/` packages from active validation and root index generation.
 * **Ingestion**: Ingested [The DELTA Framework: Faith-Informed Virtue Ethics for Artificial Intelligence](/ecosystem/delta-framework.md) from [What is DELTA?](https://delta.nd.edu/what-is-delta/) and [DELTA Resources](https://delta.nd.edu/resources/) covering Notre Dame's virtue-ethics framework (Dignity, Embodiment, Love, Transcendence, Agency) and pedagogical/pastoral toolkits.
 * **Ingestion**: Ingested [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md) from [The Holy See](https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html) covering Pope Leo XIV's magisterial teaching on artificial intelligence, technocratic dominance, the dignity of labor, and the ban on autonomous weapons.
 * **Institutions Area**: Established the Global AI Institutions & Research Labs Observatory in [/ecosystem/institutions/overview.md](/ecosystem/institutions/overview.md) to systematically track external AI research institutes, university ethics centers, standards bodies, and moral authorities.

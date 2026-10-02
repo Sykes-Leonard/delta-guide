@@ -96,6 +96,8 @@ Knowledge in this bundle is organized with clear demarcation between:
 ## Agent Skills & Automation Capabilities
 
 * [Knowledge Base Advisor (/ask-kb)](/skills/ask-kb/SKILL.md) - Provides instant, authoritative domain and architectural consulting across production systems, external ecosystems, and product concepts. Use when developers or AI agents need domain context, schema contracts, or compliance guidance.
+* [Backout Institution & Decouple Grounding (OKF v0.2)](/skills/backout-institution/SKILL.md) - Audits, retracts, and safely decouples an external institution, its sources, and dependent concepts from the OKF knowledge graph.
+* [Universal Source Retraction & Epistemic Grounding Decoupler (OKF v0.2)](/skills/backout-source/SKILL.md) - Audits, retracts, substitutes, and safely decouples any external source, research paper, URL, or institutional container from the OKF knowledge graph.
 * [Ingest URL Content into Knowledge Base](/skills/ingest/SKILL.md) - Downloads external web content from a URL, analyzes its relevance to the organization, asks the user for placement confirmation, and synthesizes it into an OKF v0.2 knowledge document.
 * [Article or Policy Title](/skills/ingest/templates/ingested-source-template.md) - Single-sentence executive summary of the ingested document and its organizational relevance.
 * [Manage Knowledge Base (OKF v0.2)](/skills/manage-knowledge-base/SKILL.md) - Navigate, read, author, update, and validate the markdown knowledge base according to Google OKF v0.2.

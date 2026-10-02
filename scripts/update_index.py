@@ -94,8 +94,10 @@ def generate_index(bundle_dir: Path):
     category_buckets = {c["id"]: [] for c in categories_cfg}
     unmapped_items = []
     
-    # Scan all markdown files
+    # Scan all markdown files (exempting archive and hidden files)
     for file_path in sorted(bundle_dir.rglob("*.md")):
+        if "archive" in file_path.parts or file_path.name.startswith("."):
+            continue
         if file_path.name in ["index.md", "log.md"]:
             continue
             

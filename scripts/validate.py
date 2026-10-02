@@ -321,8 +321,10 @@ def fix_bundle(bundle_dir: Path) -> list:
     except Exception as ex:
         fixes.append(f"[index.md] Failed to update index: {ex}")
         
-    # 2. Iterate all markdown files
+    # 2. Iterate all markdown files (exempting archive and hidden files)
     for file_path in sorted(bundle_dir.rglob("*.md")):
+        if "archive" in file_path.parts or file_path.name.startswith("."):
+            continue
         rel = file_path.relative_to(bundle_dir)
         try:
             content = file_path.read_text(encoding="utf-8")
@@ -479,8 +481,8 @@ def validate_bundle(bundle_dir: Path, fix: bool = False):
     concepts_count = 0
     trust_tiers = {"human-reviewed": 0, "machine-confirmed": 0, "unverified": 0}
 
-    md_files = list(bundle_dir.rglob("*.md"))
-    print(f"🔍 Validating self-contained OKF bundle at: {bundle_dir} ({len(md_files)} markdown files)\n")
+    md_files = [f for f in bundle_dir.rglob("*.md") if "archive" not in f.parts and not f.name.startswith(".")]
+    print(f"🔍 Validating self-contained OKF bundle at: {bundle_dir} ({len(md_files)} active markdown files)\n")
 
     for file_path in md_files:
         rel_path = file_path.relative_to(bundle_dir)
