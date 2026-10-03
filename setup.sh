@@ -64,39 +64,29 @@ else
     echo -e "      ${YELLOW}!${NC} Jujutsu (jj) optional modern VCS not detected."
 fi
 
-# 4. Check for Google Antigravity (Free Agentic Development Platform)
-echo -e "\n${BLUE}[4/7]${NC} Checking for Google Antigravity (CLI / IDE)..."
+# 4. Check for Google Antigravity (Free Desktop Application)
+echo -e "\n${BLUE}[4/7]${NC} Checking for Google Antigravity application..."
 AGY_DETECTED=0
-if command -v agy &>/dev/null; then
-    AGY_VER="$(agy --version 2>/dev/null || echo "detected")"
-    echo -e "      ${GREEN}✓${NC} Antigravity CLI (agy) found: ${GREEN}$AGY_VER${NC}"
-    AGY_DETECTED=1
-elif [ -f "$HOME/.local/bin/agy" ]; then
-    echo -e "      ${GREEN}✓${NC} Antigravity CLI (agy) found at ${GREEN}$HOME/.local/bin/agy${NC}"
-    AGY_DETECTED=1
-fi
-
 if [ -d "/Applications/Antigravity.app" ] || [ -d "$HOME/Applications/Antigravity.app" ]; then
-    echo -e "      ${GREEN}✓${NC} Antigravity Desktop IDE found in Applications"
+    echo -e "      ${GREEN}✓${NC} Antigravity application found in /Applications"
     AGY_DETECTED=1
 elif command -v antigravity &>/dev/null; then
-    echo -e "      ${GREEN}✓${NC} Antigravity IDE found in PATH"
+    echo -e "      ${GREEN}✓${NC} Antigravity application found in PATH"
     AGY_DETECTED=1
 fi
 
 if [ "$AGY_DETECTED" -eq 0 ]; then
-    echo -e "      ${YELLOW}!${NC} Antigravity not detected (optional, but recommended to interact with this guide)."
-    echo -e "        • Install CLI (Free):      ${BOLD}curl -fsSL https://antigravity.google/cli/install.sh | bash${NC}"
-    echo -e "        • Download IDE (Free):     ${BOLD}https://antigravity.google/download${NC}"
-    if [ -t 0 ] && [ "${CI:-false}" != "true" ]; then
-        echo -ne "        Would you like to install Antigravity CLI now? [y/N]: "
+    echo -e "      ${YELLOW}!${NC} Antigravity application not detected."
+    echo -e "        • Download Free App (.dmg): ${BOLD}https://antigravity.google/download${NC}"
+    echo -e "        • macOS Homebrew:          ${BOLD}brew install --cask antigravity${NC}"
+    if [ -t 0 ] && [ "${CI:-false}" != "true" ] && command -v brew &>/dev/null; then
+        echo -ne "        Would you like to install Antigravity via Homebrew now? [y/N]: "
         read -r install_agy || install_agy="n"
         if [[ "$install_agy" =~ ^[Yy]$ ]]; then
-            echo -e "        Installing Antigravity CLI..."
-            curl -fsSL https://antigravity.google/cli/install.sh | bash || true
-            if [ -f "$HOME/.local/bin/agy" ]; then
-                export PATH="$HOME/.local/bin:$PATH"
-                echo -e "        ${GREEN}✓${NC} Antigravity CLI installed successfully!"
+            echo -e "        Installing Antigravity via Homebrew..."
+            brew install --cask antigravity || true
+            if [ -d "/Applications/Antigravity.app" ]; then
+                echo -e "        ${GREEN}✓${NC} Antigravity installed successfully!"
             fi
         fi
     fi
@@ -190,7 +180,7 @@ if $PYTHON_BIN scripts/presubmit.py; then
     echo -e "${BOLD}${GREEN}  Setup Complete! Knowledge Base is Operational & Verified   ${NC}"
     echo -e "${BOLD}${GREEN}============================================================${NC}"
     echo -e "\nQuick Run Commands:"
-    echo -e "  • Launch Antigravity:  ${BOLD}agy${NC} (or open folder in Antigravity IDE)"
+    echo -e "  • Launch Antigravity:  ${BOLD}open -a Antigravity .${NC} (or open folder in Antigravity app)"
     echo -e "  • Test Drive Prompts:  ${BOLD}cat playbooks/antigravity-test-drive.md${NC}"
     echo -e "  • Personalize / Brand: ${BOLD}./init.sh --org \"My Org\"${NC}"
     echo -e "  • Presubmit Check:     ${BOLD}./scripts/presubmit.py${NC} (auto-fix + validate)"

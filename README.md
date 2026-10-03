@@ -43,26 +43,27 @@ This template solves that by implementing the **Open Knowledge Format (OKF v0.2)
 
 ## ⚡ 3-Minute Antigravity Quickstart & Test Drive
 
-Get up and running with the free edition of **Google Antigravity** and start interacting with the knowledge base in seconds:
+Interact with the knowledge base inside the free **Google Antigravity** desktop application:
 
-### Option A: Terminal / CLI (`agy`) — Fastest
+### 1. Install Google Antigravity (Free Desktop App)
+* **Direct Download**: Download the installer from [antigravity.google/download](https://antigravity.google/download) and sign in with any Google account.
+* **Or via Homebrew (macOS)**:
+  ```bash
+  brew install --cask antigravity
+  ```
+
+### 2. Clone & Open Repository
 ```bash
-# 1. Install Antigravity CLI (Free)
-curl -fsSL https://antigravity.google/cli/install.sh | bash
-
-# 2. Clone repository & run automated quickstart
 git clone https://github.com/Sykes-Leonard/delta-guide.git
 cd delta-guide && ./quickstart.sh
 ```
+*(Or open the Antigravity desktop app and select **Open Project** $\rightarrow$ `delta-guide`)*
 
-### Option B: Visual Desktop IDE (Antigravity IDE / 2.0)
-1. **Download**: Install Antigravity IDE (Free) from [antigravity.google/download](https://antigravity.google/download) and sign in with any Google account.
-2. **Open Workspace**: Clone or open `delta-guide` in Antigravity (`File -> Open Folder`).
-3. **Chat**: Antigravity automatically detects the mounted agent skills in `.agents/skills` and guidelines in [`AGENTS.md`](file:///AGENTS.md).
+Antigravity automatically discovers the registered agent skills in `.agents/skills` and the operating contract in [`AGENTS.md`](file:///AGENTS.md).
 
 ### 🎯 4 Golden Prompts to Test the Skills & Knowledge
 
-Once Antigravity is open in your terminal or IDE, test out the capabilities by pasting these prompts:
+In your Antigravity chat window, paste any of these prompts to test the agent capabilities:
 
 | Capability | Prompt to Send Antigravity | What It Tests |
 | :--- | :--- | :--- |

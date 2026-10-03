@@ -25,18 +25,19 @@ echo -e "${BOLD}${CYAN}=========================================================
 # 1. Run standard idempotent setup (environment, permissions, hooks, bundle test)
 ./setup.sh
 
-# 2. Check if agy binary is in PATH or standard user install paths
-if ! command -v agy &>/dev/null; then
-    if [ -f "$HOME/.local/bin/agy" ]; then
-        export PATH="$HOME/.local/bin:$PATH"
-    fi
+# 2. Check for Antigravity desktop application
+HAS_ANTIGRAVITY=0
+if [ -d "/Applications/Antigravity.app" ] || [ -d "$HOME/Applications/Antigravity.app" ]; then
+    HAS_ANTIGRAVITY=1
+elif command -v antigravity &>/dev/null; then
+    HAS_ANTIGRAVITY=1
 fi
 
 # 3. Present the 4 Golden Test-Drive Prompts
 echo -e "\n${BOLD}${CYAN}============================================================${NC}"
 echo -e "${BOLD}${CYAN}   Ready for Testing! 4 Golden Prompts to Try               ${NC}"
 echo -e "${BOLD}${CYAN}============================================================${NC}\n"
-echo -e "Once Antigravity starts, paste any of these prompts into the chat:\n"
+echo -e "In your Antigravity chat canvas, paste any of these prompts:\n"
 echo -e "  ${BOLD}1. Domain Knowledge Retrieval:${NC}"
 echo -e "     ${CYAN}/ask-kb What is the DELTA framework and what virtues does it evaluate?${NC}\n"
 echo -e "  ${BOLD}2. Progressive Disclosure Exploration:${NC}"
@@ -47,20 +48,23 @@ echo -e "  ${BOLD}4. Self-Healing Quality Gatekeeper:${NC}"
 echo -e "     ${CYAN}Draft a new concept for an Autonomous Compliance Auditor and verify with presubmit${NC}\n"
 echo -e "------------------------------------------------------------"
 
-if command -v agy &>/dev/null; then
+if [ "$HAS_ANTIGRAVITY" -eq 1 ]; then
     if [ -t 0 ] && [ "${CI:-false}" != "true" ]; then
-        echo -ne "\n${BOLD}Would you like to launch Antigravity CLI (agy) now? [Y/n]: ${NC}"
-        read -r launch_agy || launch_agy="y"
-        if [[ "$launch_agy" =~ ^[Yy]$ ]] || [ -z "$launch_agy" ]; then
-            echo -e "\n${GREEN}Starting Antigravity CLI... (Type /exit or Ctrl+D Ctrl+D to quit)${NC}\n"
-            exec agy
+        echo -ne "\n${BOLD}Would you like to open this project in Antigravity now? [Y/n]: ${NC}"
+        read -r launch_app || launch_app="y"
+        if [[ "$launch_app" =~ ^[Yy]$ ]] || [ -z "$launch_app" ]; then
+            echo -e "\n${GREEN}Opening Antigravity desktop application...${NC}\n"
+            if [ -d "/Applications/Antigravity.app" ]; then
+                open -a Antigravity "$SCRIPT_DIR"
+            elif command -v antigravity &>/dev/null; then
+                antigravity "$SCRIPT_DIR" &
+            fi
         fi
     else
-        echo -e "\nLaunch the Antigravity CLI at any time with: ${BOLD}agy${NC}"
+        echo -e "\nOpen this workspace in Antigravity with: ${BOLD}open -a Antigravity .${NC}"
     fi
 else
-    echo -e "\nTo launch the Antigravity Desktop IDE, open this directory:"
-    echo -e "  ${BOLD}$SCRIPT_DIR${NC} in Antigravity IDE (download: https://antigravity.google/download)"
-    echo -e "Or install the lightweight CLI via:"
-    echo -e "  ${BOLD}curl -fsSL https://antigravity.google/cli/install.sh | bash${NC}\n"
+    echo -e "\n${YELLOW}To install the free Antigravity desktop app:${NC}"
+    echo -e "  • Download (.dmg):      ${BOLD}https://antigravity.google/download${NC}"
+    echo -e "  • Or macOS Homebrew:    ${BOLD}brew install --cask antigravity${NC}\n"
 fi

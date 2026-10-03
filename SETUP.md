@@ -111,9 +111,9 @@ If you are a human setting up the repository manually:
 Ensure you have the following installed on your machine:
 * **Python 3.8+** (`python3 --version`)
 * **Git 2.20+** (`git --version`)
-* *(Recommended)* **Google Antigravity (Free Edition)**:
-  * CLI (`agy`): `curl -fsSL https://antigravity.google/cli/install.sh | bash`
-  * IDE / Desktop: [antigravity.google/download](https://antigravity.google/download)
+* *(Recommended)* **Google Antigravity (Free Desktop Application)**:
+  * Direct installer: [antigravity.google/download](https://antigravity.google/download)
+  * macOS Homebrew: `brew install --cask antigravity`
 * *(Optional)* **Jujutsu (jj)**: A modern Git-compatible version control tool (`brew install jj` or `cargo install jujutsu`).
 * *(Optional)* **Obsidian**: For rich graph visualization and knowledge browsing.
 
@@ -123,7 +123,7 @@ git clone https://github.com/Sykes-Leonard/delta-guide.git
 cd delta-guide
 ./quickstart.sh
 ```
-*(Or run `./setup.sh` for non-interactive setup without launching `agy`)*
+*(Or open the Antigravity desktop app and choose **Open Project** $\rightarrow$ `delta-guide`)*
 
 ---
 

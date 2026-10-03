@@ -23,50 +23,44 @@ This playbook guides engineers, architects, and researchers through installing t
 
 ---
 
-## 2. Choosing Your Antigravity Surface
+## 2. Installing Google Antigravity (Free Desktop Application)
 
-Antigravity is available in two primary formats with identical free Gemini-backed capabilities:
+The **Google Antigravity** desktop application is an agent-first platform that lets you pair-program with AI agents to orchestrate multi-step tasks, execute terminal commands, view interactive artifacts, and maintain repository integrity.
 
-| Feature | Antigravity CLI (`agy`) | Antigravity IDE / Desktop |
-| :--- | :--- | :--- |
-| **Form Factor** | Lightweight terminal TUI | Standalone AI-first VS Code fork / Electron app |
-| **Best For** | Fast terminal workflows, remote servers, quick scripting | Full-screen visual diffs, multi-file inspection, chat canvas |
-| **Installation** | 1-line shell script (macOS, Linux, Windows) | Native installer package (.dmg, .deb/.rpm, .exe) |
-| **Startup Time** | Instant (<1 second) | Standard desktop application |
+### Installation Steps
 
----
+1. **Download the Application**:
+   * **Direct Installer**: Download the installer for your OS from [antigravity.google/download](https://antigravity.google/download).
+   * **macOS Homebrew**:
+     ```bash
+     brew install --cask antigravity
+     ```
 
-## 3. Installation & Authentication (Free Tier)
+2. **Authenticate with Google (Free)**:
+   Launch Antigravity from `/Applications/Antigravity.app`. Sign in with your standard Google account (no paid Vertex AI project or credit card required for the free tier).
 
-### Path A: Antigravity CLI (`agy`)
-
-1. **Install via terminal**:
-   ```bash
-   # macOS / Linux
-   curl -fsSL https://antigravity.google/cli/install.sh | bash
-
-   # Windows (PowerShell)
-   irm https://antigravity.google/cli/install.ps1 | iex
-   ```
-
-2. **Authenticate**:
-   Run `agy` for the first time. It will open your default browser to authenticate using your standard Google account (no paid Vertex AI project or billing required for the free tier).
-
-3. **Verify Installation**:
-   ```bash
-   agy --version
-   ```
+3. **Open this Repository as a Project**:
+   * In Antigravity's left-hand sidebar, click **Projects** $\rightarrow$ **Open Project** (or use `File -> Open Folder`) and choose `delta-guide`.
+   * Or from the terminal:
+     ```bash
+     open -a Antigravity /path/to/delta-guide
+     ```
 
 ---
 
-### Path B: Antigravity Desktop IDE
+## 3. The Antigravity Desktop Interface Surfaces
 
-1. **Download**:
-   Visit [antigravity.google/download](https://antigravity.google/download) and download the appropriate installer for macOS, Linux, or Windows.
-2. **Launch & Sign In**:
-   Open the application and sign in with your Google account.
-3. **Open Workspace**:
-   Use `File -> Open Folder` or `File -> Clone Repository` to open `delta-guide`.
+When you open this repository in Antigravity, you interact through three unified surfaces:
+
+1. **Left-hand Sidebar**:
+   * **New Conversation**: Start a fresh agent chat session.
+   * **Projects**: Switch between workspaces.
+   * **Skills & Customizations**: View the active workspace skills mounted from `.agents/skills`.
+2. **Chat Canvas (Center)**:
+   * The primary interaction canvas where you type instructions or invoke slash commands (e.g., `/ask-kb`).
+   * Type `@` to attach specific files, folders, or terminal context.
+3. **Auxiliary Pane (Right)**:
+   * Displays live **Artifacts**, diff views, terminal executions, and subagent transcripts as the agent works.
 
 ---
 
