@@ -106,6 +106,7 @@
         "epistemic-integrity",
         "contemplation-sabbath",
         "autonomous-weapons-ban",
+        "integral-ecology-ai",
         "private-technocratic-dominance",
         "human-dignity",
         "moral-agency",
@@ -1320,6 +1321,13 @@
           "target_title": "Categorical Ban on Autonomous Weapons",
           "verb": "Mandates",
           "description": "A machine taking human life is the ultimate violation of human dignity."
+        },
+        {
+          "direction": "Outbound",
+          "target_slug": "integral-ecology-ai",
+          "target_title": "Integral Ecology in AI",
+          "verb": "Extends to",
+          "description": "Dignity encompasses not only human persons but stewardship over the physical creation that sustains them."
         }
       ],
       "color": {
@@ -1523,6 +1531,109 @@
       "shadow": {
         "enabled": true,
         "color": "#38A169",
+        "size": 10,
+        "x": 0,
+        "y": 0
+      }
+    },
+    "integral-ecology-ai": {
+      "id": "integral-ecology-ai",
+      "slug": "integral-ecology-ai",
+      "label": "Integral Ecology in AI",
+      "full_title": "Integral Ecology in AI (Dignity Includes the Earth)",
+      "description": "The theological and ethical expansion of the DELTA Dignity pillar to encompass planetary stewardship, connecting AI compute infrastructure, energy, and water to moral responsibility.",
+      "cluster_slug": "cluster-transcendence-truth",
+      "cluster_name": "Transcendence & Truth",
+      "is_anchor": false,
+      "tags": [
+        "integral-ecology",
+        "laudato-si",
+        "delta-framework",
+        "dignity",
+        "environmental-stewardship",
+        "compute-footprint",
+        "green-ai"
+      ],
+      "status": "stable",
+      "sources": [
+        {
+          "id": "source:vatican-laudato-si",
+          "resource": "https://www.vatican.va/content/francesco/en/encyclicals/documents/papa-francesco_20150524_enciclica-laudato-si.html",
+          "title": "Encyclical Letter Laudato Si' (Pope Francis, 2015)"
+        },
+        {
+          "id": "source:notre-dame-delta",
+          "resource": "https://delta.nd.edu/what-is-delta/",
+          "title": "The DELTA Framework - University of Notre Dame"
+        },
+        {
+          "id": "source:mit-day-of-ai",
+          "resource": "https://www.dayofai.org",
+          "title": "Day of AI Curriculum & Climate Impact (MIT RAISE)"
+        }
+      ],
+      "summary": "",
+      "grounding": "* **[Encyclical Letter Laudato Si' (Pope Francis)](/ecosystem/laudato-si.md)**: Establishes the theological foundation of integral ecology and delivers a profound critique of the *Technocratic Paradigm*—the illusion that technological power can proceed without moral, physical, or planetary limits.\n* **[The DELTA Framework (University of Notre Dame)](/ecosystem/delta-framework.md)**: Expanded from its baseline five virtues (Dignity, Embodiment, Love, Transcendence, Agency) to recognize that human embodiment is grounded in a physical biosphere. To protect human dignity, institutions must protect the material world that sustains human life.\n* **[MIT RAISE Day of AI Curriculum](/ecosystem/institutions/mit-day-of-ai.md)**: Provides the empirical pedagogical link, educating secondary school students on the tangible carbon, energy, and water footprint required to train and run modern foundation models.",
+      "tensions": "",
+      "implications": "",
+      "edges": [
+        {
+          "direction": "Outbound",
+          "target_slug": "human-dignity",
+          "target_title": "Human Dignity (Imago Dei & Inalienable Worth)",
+          "verb": "Extends",
+          "description": "Expands dignity from individual human worth to encompass stewardship over the creation that sustains all life."
+        },
+        {
+          "direction": "Outbound",
+          "target_slug": "private-technocratic-dominance",
+          "target_title": "Private Technocratic Dominance",
+          "verb": "Critiques",
+          "description": "Exposes how private compute monopolies externalize ecological costs (power grids, water, e-waste) onto public communities."
+        },
+        {
+          "direction": "Outbound",
+          "target_slug": "algorithmic-reductionism",
+          "target_title": "Algorithmic Reductionism",
+          "verb": "Opposes",
+          "description": "Rejects the premise that digital efficiency excuses physical environmental degradation."
+        },
+        {
+          "direction": "Outbound",
+          "target_slug": "contemplation-sabbath",
+          "target_title": "Contemplation & Sabbath Rest",
+          "verb": "Reinforces",
+          "description": "Reclaiming non-digital, un-optimized physical space for communion with nature and the Creator."
+        },
+        {
+          "direction": "Outbound",
+          "target_slug": "global-benefit",
+          "target_title": "Global Benefit & Distributive Justice",
+          "verb": "Mandates",
+          "description": "Ensures vulnerable global populations who suffer first from climate change are not exploited by AI infrastructure."
+        }
+      ],
+      "color": {
+        "background": "#DD6B20",
+        "border": "#C05621",
+        "highlight": {
+          "background": "#FBD38D",
+          "border": "#FFFFFF"
+        },
+        "hover": {
+          "background": "#FBD38D",
+          "border": "#DD6B20"
+        }
+      },
+      "font": {
+        "color": "#F7F4EE",
+        "size": 12,
+        "face": "Inter, system-ui, sans-serif"
+      },
+      "size": 22,
+      "shadow": {
+        "enabled": true,
+        "color": "#DD6B20",
         "size": 10,
         "x": 0,
         "y": 0
@@ -3686,6 +3797,13 @@
           "target_title": "Categorical Ban on Autonomous Weapons",
           "verb": "Mandates",
           "description": "A machine taking human life is the ultimate violation of human dignity."
+        },
+        {
+          "direction": "Outbound",
+          "target_slug": "integral-ecology-ai",
+          "target_title": "Integral Ecology in AI",
+          "verb": "Extends to",
+          "description": "Dignity encompasses not only human persons but stewardship over the physical creation that sustains them."
         }
       ],
       "color": {
@@ -3889,6 +4007,109 @@
       "shadow": {
         "enabled": true,
         "color": "#38A169",
+        "size": 10,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "integral-ecology-ai",
+      "slug": "integral-ecology-ai",
+      "label": "Integral Ecology in AI",
+      "full_title": "Integral Ecology in AI (Dignity Includes the Earth)",
+      "description": "The theological and ethical expansion of the DELTA Dignity pillar to encompass planetary stewardship, connecting AI compute infrastructure, energy, and water to moral responsibility.",
+      "cluster_slug": "cluster-transcendence-truth",
+      "cluster_name": "Transcendence & Truth",
+      "is_anchor": false,
+      "tags": [
+        "integral-ecology",
+        "laudato-si",
+        "delta-framework",
+        "dignity",
+        "environmental-stewardship",
+        "compute-footprint",
+        "green-ai"
+      ],
+      "status": "stable",
+      "sources": [
+        {
+          "id": "source:vatican-laudato-si",
+          "resource": "https://www.vatican.va/content/francesco/en/encyclicals/documents/papa-francesco_20150524_enciclica-laudato-si.html",
+          "title": "Encyclical Letter Laudato Si' (Pope Francis, 2015)"
+        },
+        {
+          "id": "source:notre-dame-delta",
+          "resource": "https://delta.nd.edu/what-is-delta/",
+          "title": "The DELTA Framework - University of Notre Dame"
+        },
+        {
+          "id": "source:mit-day-of-ai",
+          "resource": "https://www.dayofai.org",
+          "title": "Day of AI Curriculum & Climate Impact (MIT RAISE)"
+        }
+      ],
+      "summary": "",
+      "grounding": "* **[Encyclical Letter Laudato Si' (Pope Francis)](/ecosystem/laudato-si.md)**: Establishes the theological foundation of integral ecology and delivers a profound critique of the *Technocratic Paradigm*—the illusion that technological power can proceed without moral, physical, or planetary limits.\n* **[The DELTA Framework (University of Notre Dame)](/ecosystem/delta-framework.md)**: Expanded from its baseline five virtues (Dignity, Embodiment, Love, Transcendence, Agency) to recognize that human embodiment is grounded in a physical biosphere. To protect human dignity, institutions must protect the material world that sustains human life.\n* **[MIT RAISE Day of AI Curriculum](/ecosystem/institutions/mit-day-of-ai.md)**: Provides the empirical pedagogical link, educating secondary school students on the tangible carbon, energy, and water footprint required to train and run modern foundation models.",
+      "tensions": "",
+      "implications": "",
+      "edges": [
+        {
+          "direction": "Outbound",
+          "target_slug": "human-dignity",
+          "target_title": "Human Dignity (Imago Dei & Inalienable Worth)",
+          "verb": "Extends",
+          "description": "Expands dignity from individual human worth to encompass stewardship over the creation that sustains all life."
+        },
+        {
+          "direction": "Outbound",
+          "target_slug": "private-technocratic-dominance",
+          "target_title": "Private Technocratic Dominance",
+          "verb": "Critiques",
+          "description": "Exposes how private compute monopolies externalize ecological costs (power grids, water, e-waste) onto public communities."
+        },
+        {
+          "direction": "Outbound",
+          "target_slug": "algorithmic-reductionism",
+          "target_title": "Algorithmic Reductionism",
+          "verb": "Opposes",
+          "description": "Rejects the premise that digital efficiency excuses physical environmental degradation."
+        },
+        {
+          "direction": "Outbound",
+          "target_slug": "contemplation-sabbath",
+          "target_title": "Contemplation & Sabbath Rest",
+          "verb": "Reinforces",
+          "description": "Reclaiming non-digital, un-optimized physical space for communion with nature and the Creator."
+        },
+        {
+          "direction": "Outbound",
+          "target_slug": "global-benefit",
+          "target_title": "Global Benefit & Distributive Justice",
+          "verb": "Mandates",
+          "description": "Ensures vulnerable global populations who suffer first from climate change are not exploited by AI infrastructure."
+        }
+      ],
+      "color": {
+        "background": "#DD6B20",
+        "border": "#C05621",
+        "highlight": {
+          "background": "#FBD38D",
+          "border": "#FFFFFF"
+        },
+        "hover": {
+          "background": "#FBD38D",
+          "border": "#DD6B20"
+        }
+      },
+      "font": {
+        "color": "#F7F4EE",
+        "size": 12,
+        "face": "Inter, system-ui, sans-serif"
+      },
+      "size": 22,
+      "shadow": {
+        "enabled": true,
+        "color": "#DD6B20",
         "size": 10,
         "x": 0,
         "y": 0
@@ -5499,6 +5720,19 @@
       }
     },
     {
+      "from": "human-dignity",
+      "to": "integral-ecology-ai",
+      "label": "Extends to",
+      "verb": "Extends to",
+      "title": "<b>Extends to</b>: Dignity encompasses not only human persons but stewardship over the physical creation that sustains them.",
+      "description": "Dignity encompasses not only human persons but stewardship over the physical creation that sustains them.",
+      "color": {
+        "color": "rgba(229, 168, 35, 0.4)",
+        "highlight": "#F26430",
+        "hover": "#FBD38D"
+      }
+    },
+    {
       "from": "moral-agency",
       "to": "human-in-the-loop",
       "label": "Mandates",
@@ -5570,6 +5804,71 @@
       "verb": "Rejects",
       "title": "<b>Rejects</b>: Rejects reducing embodied human beings to abstract predictive tokens.",
       "description": "Rejects reducing embodied human beings to abstract predictive tokens.",
+      "color": {
+        "color": "rgba(229, 168, 35, 0.4)",
+        "highlight": "#F26430",
+        "hover": "#FBD38D"
+      }
+    },
+    {
+      "from": "integral-ecology-ai",
+      "to": "human-dignity",
+      "label": "Extends",
+      "verb": "Extends",
+      "title": "<b>Extends</b>: Expands dignity from individual human worth to encompass stewardship over the creation that sustains all life.",
+      "description": "Expands dignity from individual human worth to encompass stewardship over the creation that sustains all life.",
+      "color": {
+        "color": "rgba(229, 168, 35, 0.4)",
+        "highlight": "#F26430",
+        "hover": "#FBD38D"
+      }
+    },
+    {
+      "from": "integral-ecology-ai",
+      "to": "private-technocratic-dominance",
+      "label": "Critiques",
+      "verb": "Critiques",
+      "title": "<b>Critiques</b>: Exposes how private compute monopolies externalize ecological costs (power grids, water, e-waste) onto public communities.",
+      "description": "Exposes how private compute monopolies externalize ecological costs (power grids, water, e-waste) onto public communities.",
+      "color": {
+        "color": "rgba(229, 168, 35, 0.4)",
+        "highlight": "#F26430",
+        "hover": "#FBD38D"
+      }
+    },
+    {
+      "from": "integral-ecology-ai",
+      "to": "algorithmic-reductionism",
+      "label": "Opposes",
+      "verb": "Opposes",
+      "title": "<b>Opposes</b>: Rejects the premise that digital efficiency excuses physical environmental degradation.",
+      "description": "Rejects the premise that digital efficiency excuses physical environmental degradation.",
+      "color": {
+        "color": "rgba(229, 168, 35, 0.4)",
+        "highlight": "#F26430",
+        "hover": "#FBD38D"
+      }
+    },
+    {
+      "from": "integral-ecology-ai",
+      "to": "contemplation-sabbath",
+      "label": "Reinforces",
+      "verb": "Reinforces",
+      "title": "<b>Reinforces</b>: Reclaiming non-digital, un-optimized physical space for communion with nature and the Creator.",
+      "description": "Reclaiming non-digital, un-optimized physical space for communion with nature and the Creator.",
+      "color": {
+        "color": "rgba(229, 168, 35, 0.4)",
+        "highlight": "#F26430",
+        "hover": "#FBD38D"
+      }
+    },
+    {
+      "from": "integral-ecology-ai",
+      "to": "global-benefit",
+      "label": "Mandates",
+      "verb": "Mandates",
+      "title": "<b>Mandates</b>: Ensures vulnerable global populations who suffer first from climate change are not exploited by AI infrastructure.",
+      "description": "Ensures vulnerable global populations who suffer first from climate change are not exploited by AI infrastructure.",
       "color": {
         "color": "rgba(229, 168, 35, 0.4)",
         "highlight": "#F26430",
@@ -6086,7 +6385,7 @@
   ],
   "stats": {
     "cluster_count": 5,
-    "concept_count": 27,
-    "edge_count": 95
+    "concept_count": 28,
+    "edge_count": 101
   }
 }

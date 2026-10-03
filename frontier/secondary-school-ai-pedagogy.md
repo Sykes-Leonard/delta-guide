@@ -44,7 +44,10 @@ In response to this disruption, educational institutions face a profound moral a
 ### External Reference Points
 * **[The DELTA Framework (University of Notre Dame)](/ecosystem/delta-framework.md)**: Julia Stull's K-12 education initiatives, the *Teacher's Examen*, and the *AI Assignment Decision Tree* provide the normative foundation for distinguishing between tasks requiring unassisted human friction and tasks suited for supervised augmentation.
 * **Pope Leo XIV's Encyclical *[Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)***: Provides the overarching theological imperative: *"The person is not a system of algorithms."* The encyclical insists on the preservation of [Incarnational Presence](/concepts/incarnational-presence.md), the dignity of human labor, and the non-delegable nature of human conscience.
-* **Franciscan Pedagogical Tradition**: Rooted in relational fraternity, contemplation, reverence for creation, and radical humility—directly countering the technocratic pride and centralized monoculture of [Babel vs. Jerusalem](/concepts/babel-vs-jerusalem.md).
+* **[Congregation of Holy Cross Educational Tradition](/ecosystem/institutions/holy-cross-tradition.md)**: Rooted in Blessed Basil Moreau's founding charism—*educating the mind without neglecting the heart*, family spirit, patience, and educators acting as ministers of grace rather than adversarial plagiarism detectives.
+* **[Encyclical Letter Laudato Si'](/ecosystem/laudato-si.md) & [Integral Ecology in AI](/concepts/integral-ecology-ai.md)**: Expanding the DELTA Dignity pillar so that *Dignity includes the earth*, cultivating adolescent computational stewardship regarding the physical energy and water costs of AI generation.
+* **[MIT AI in Education](/ecosystem/institutions/mit-ai-education.md) & [MIT RAISE Day of AI](/ecosystem/institutions/mit-day-of-ai.md)**: Secular human-centered models countering *Cognitive Surrender*, scaffolding foundational K-12 AI awareness, and transitioning from take-home assessments to oral viva defense.
+* **Franciscan Pedagogical Heritage**: Relational fraternity, contemplation, and radical humility—countering the technocratic pride of [Babel vs. Jerusalem](/concepts/babel-vs-jerusalem.md).
 
 ---
 
@@ -250,3 +253,7 @@ To maintain structural integrity within the Open Knowledge Format (OKF v0.2) bun
 | **Outbound** | **[Incarnational Presence](/concepts/incarnational-presence.md)** | *reclaims* | Restores the physical high school classroom, face-to-face oral dialogue, and handwritten craft as sacred counters to disembodied simulation. |
 | **Outbound** | **[Ethical Floor vs. Moral Ceiling](/concepts/ethical-floor-moral-ceiling.md)** | *elevates* | Shifts secondary school course policy from baseline anti-cheating prohibitions (floor) to character and virtue formation (ceiling). |
 | **Outbound** | **[Human Dignity (Imago Dei)](/concepts/human-dignity.md)** | *anchors* | Affirms that every student possesses sacred, inalienable worth independent of their computational throughput or technical speed. |
+| **Outbound** | **[Congregation of Holy Cross: Educational Charism](/ecosystem/institutions/holy-cross-tradition.md)** | *embodies* | Formulates minds and hearts in hope, moving from punitive policing to relational mentorship. |
+| **Outbound** | **[MIT AI and Education Initiative](/ecosystem/institutions/mit-ai-education.md)** | *adopts* | Integrates assessment redesign countering cognitive surrender with oral vivas and process trails. |
+| **Outbound** | **[MIT RAISE: Day of AI](/ecosystem/institutions/mit-day-of-ai.md)** | *implements* | Supplies modular K-12 curriculum units for foundational student AI awareness and environmental literacy. |
+| **Outbound** | **[Integral Ecology in AI](/concepts/integral-ecology-ai.md)** | *inculcates* | Teaches students computational conscience and stewardship over the physical resources of AI. |

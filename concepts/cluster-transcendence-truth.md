@@ -53,6 +53,8 @@ Sabbath Rest"]
 & Truth"]
     LAWS_BAN["Categorical Ban on
 Autonomous Weapons"]
+    IE["Integral Ecology in AI
+('Dignity Includes Earth')"]
 
     %% Gravitational Center
     HD["🔴 Human Dignity
@@ -63,6 +65,7 @@ Autonomous Weapons"]
     HUB --> CONTEMP
     HUB --> TRUTH
     HUB --> LAWS_BAN
+    HUB --> IE
 
     HD -->|Transcends Optimization| ALGO_RED
     BABEL -->|Contrasts Technocracy with| CONTEMP
@@ -70,6 +73,7 @@ Autonomous Weapons"]
     TRUTH -->|Anchors Public Discourse in| HD
     LAWS_BAN -->|Absolute Red Line for| HD
     CONTEMP -->|Nourishes Resistance to| BABEL
+    IE -->|Expands Dignity to Creation| HD
 ```
 
 ---
@@ -85,6 +89,7 @@ This cluster encompasses five vital concepts:
 | **[Contemplation & Sabbath Rest](/concepts/contemplation-sabbath.md)** | The intentional preservation of non-digital, non-productive time dedicated to silence, wonder, prayer, and transcendent communion. | DELTA (Transcendence) & Catholic Social Teaching | `stable` |
 | **[Epistemic Integrity & Truth](/concepts/epistemic-integrity.md)** | Defending the public epistemological commons against synthetic disinformation, algorithmic distortion, and communicative pollution. | Magnifica Humanitas (Ch. 4) & Council of Europe | `stable` |
 | **[Categorical Ban on Autonomous Weapons (LAWS)](/concepts/autonomous-weapons-ban.md)** | The absolute moral and legal prohibition against delegating the sovereign authority of lethal force to automated software. | Hiroshima Appeal, Vatican & Rome Call | `stable` |
+| **[Integral Ecology in AI (Dignity Includes the Earth)](/concepts/integral-ecology-ai.md)** | Expanding DELTA's Dignity pillar to planetary stewardship and connecting AI compute energy and water to moral responsibility. | Laudato Si' & DELTA (Dignity) | `stable` |
 
 ---
 
@@ -97,6 +102,7 @@ This cluster encompasses five vital concepts:
 | **[Contemplation & Sabbath Rest](/concepts/contemplation-sabbath.md)** | *Protects* | [Moral Agency & Conscience](/concepts/moral-agency.md) | Silence and unhurried contemplation are necessary preconditions for the formation of conscience. |
 | **[Epistemic Integrity](/concepts/epistemic-integrity.md)** | *Requires* | [Reasoning Transparency (Chain-of-Thought)](/concepts/reasoning-transparency.md) | Truth in AI outputs requires auditable reasoning traces rather than black-box pronouncements. |
 | **[Ban on Autonomous Weapons](/concepts/autonomous-weapons-ban.md)** | *Enforced through* | [Multilateral AI Governance](/concepts/multilateral-governance.md) | Requires binding international treaties under the UN and Geneva Conventions. |
+| **[Integral Ecology in AI](/concepts/integral-ecology-ai.md)** | *Extends* | [Human Dignity](/concepts/human-dignity.md) | Expands human dignity beyond anthropocentrism to include reverence for the physical earth. |
 
 ---
 

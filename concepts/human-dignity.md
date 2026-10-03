@@ -78,6 +78,10 @@ Autonomous Weapons"]
 * **Technocratic Fallacy**: Silicon Valley optimization functions benchmark value on productivity, problem-solving speed, and economic return.
 * **Dignitarian Counter-Thesis**: A person with severe cognitive disabilities or an elderly patient holds identical and absolute dignity compared to the most elite software engineer. Systems designed purely for functional utility inevitably marginalize the vulnerable.
 
+### Ecological Dignity: Dignity Includes the Earth
+* **Anthropocentric Isolation**: Treating human dignity as detached from the natural world leads to unconstrained resource extraction and disregard for the physical footprint of computing.
+* **Integral Dignity**: Rooted in Pope Francis's *[Laudato Si'](/ecosystem/laudato-si.md)* and the expansion of the DELTA Framework, human dignity is situated within God's broader creation. Respecting human persons requires safeguarding the physical biosphere—energy grids, potable water, and habitable ecosystems—threatened by hyper-scale AI computation.
+
 ---
 
 ## 5. Pedagogical, Architectural & Operational Implications
@@ -85,6 +89,7 @@ Autonomous Weapons"]
 1. **Anti-Subsumption Software Design**: Educational software at St. Francis High School must never assign immutable academic "aptitude tracks" or behavioral scores derived from automated monitoring.
 2. **Student as Subject, Not Data Commodity**: Classroom technologies must strictly prohibit monetization or commercial exploitation of student cognitive telemetry.
 3. **Preservation of the Vulnerable**: AI deployment in grading, counseling, or financial aid must guarantee unconditional human accompaniment.
+4. **Computational Stewardship**: Educate students that computation is not ethereal; queries possess real-world material and energetic consequences.
 
 ---
 
@@ -97,6 +102,7 @@ Autonomous Weapons"]
 | **Outbound** | **[Algorithmic Reductionism](/concepts/algorithmic-reductionism.md)** | *Opposes* | Dignity explicitly rejects modeling the human soul as a closed system of statistical weights. |
 | **Outbound** | **[Incarnational Presence](/concepts/incarnational-presence.md)** | *Affirms* | Dignity is lived in physical bodies, not in digital disembodiment. |
 | **Outbound** | **[Categorical Ban on Autonomous Weapons](/concepts/autonomous-weapons-ban.md)** | *Mandates* | A machine taking human life is the ultimate violation of human dignity. |
+| **Outbound** | **[Integral Ecology in AI](/concepts/integral-ecology-ai.md)** | *Extends to* | Dignity encompasses not only human persons but stewardship over the physical creation that sustains them. |
 
 ---
 
@@ -104,11 +110,14 @@ Autonomous Weapons"]
 
 ### Internal Knowledge Base Links
 * [Concept Cluster: Human Flourishing & Virtue Formation](/concepts/cluster-human-flourishing.md)
+* [Integral Ecology in AI (Dignity Includes the Earth)](/concepts/integral-ecology-ai.md)
+* [Encyclical Letter Laudato Si'](/ecosystem/laudato-si.md)
 * [The DELTA Framework: Faith-Informed Virtue Ethics](/ecosystem/delta-framework.md)
 * [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)
 * **Council of Europe AI Treaty Dossier**
 
 ### External Primary Sources
 * Pope Leo XIV (2026). *Magnifica Humanitas*, Holy See.
+* Pope Francis (2015). *Laudato Si'*, Holy See.
 * University of Notre Dame (2026). *DELTA Framework Charter*, Institute for Ethics and the Common Good.
 * United Nations (1948). *Universal Declaration of Human Rights*, Article 1.

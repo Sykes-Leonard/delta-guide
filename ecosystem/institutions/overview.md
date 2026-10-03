@@ -52,6 +52,9 @@ The table below catalogs active key institutions across the global ecosystem, th
 | **The Rome Call for AI Ethics & Hiroshima Appeal** *(RenAIssance Foundation)* | Global Interfaith Alliance | Universal ethical principles (algor-ethics), ethics by design, and categorical prohibition of autonomous weapons. | [Rome Call & Hiroshima Appeal Dossier](/ecosystem/institutions/rome-call-hiroshima.md). | [Rome Call & Hiroshima Appeal](/ecosystem/institutions/rome-call-hiroshima.md) |
 | **Institute for Ethics and the Common Good** *(Univ. of Notre Dame)* | Higher Education / Academic Institute | Christian virtue ethics, human dignity, pedagogical formation, and tech leadership. | [The DELTA Framework](/ecosystem/delta-framework.md) *(Dignity, Embodiment, Love, Transcendence, Agency)*. | [DELTA Framework](/ecosystem/delta-framework.md) |
 | **The Holy See (Vatican)** *(Dicastery for Culture & Education)* | Supranational Moral Authority | Protection of the human person, dignity of labor, prohibition of lethal autonomous weapons. | [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md). | [Magnifica Humanitas](/ecosystem/magnifica-humanitas.md) |
+| **MIT AI & Education Initiative** *(MIT Ad Hoc Committee)* | Tier-1 Research University | Cognitive surrender, productive struggle, assessment collapse, and human-centered STEM formation. | [MIT AI & Education Report (2026)](/ecosystem/institutions/mit-ai-education.md). | [MIT AI & Education](/ecosystem/institutions/mit-ai-education.md) |
+| **MIT RAISE & Day of AI** *(MIT Media Lab / Open Learning)* | University Research & Global K-12 Initiative | Foundational AI awareness, open K-12 AI literacy, ethical agency, and computational environmental impact. | [Day of AI Curriculum Framework](/ecosystem/institutions/mit-day-of-ai.md). | [MIT Day of AI](/ecosystem/institutions/mit-day-of-ai.md) |
+| **Congregation of Holy Cross** *(Brothers & Priests of Holy Cross)* | Catholic Religious Institute / Sponsoring Body | Holistic education of minds and hearts, family spirit, educators as ministers of grace, and hope through struggle. | [Holy Cross Educational Tradition](/ecosystem/institutions/holy-cross-tradition.md). | [Holy Cross Tradition](/ecosystem/institutions/holy-cross-tradition.md) |
 
 ---
 
@@ -125,5 +128,9 @@ To add an institution or its published policy/research documents to this knowled
 * **Oxford Institute for Ethics in AI** — Aristotelian virtue ethics, the HAI Lab, and the Positive Alignment research agenda.
 * [The DELTA Framework: Faith-Informed Virtue Ethics for AI](/ecosystem/delta-framework.md) — University of Notre Dame's five-pillar virtue ethics framework.
 * [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md) — Pope Leo XIV's papal encyclical on artificial intelligence and human dignity.
+* [Encyclical Letter Laudato Si'](/ecosystem/laudato-si.md) — Pope Francis's foundational social encyclical on integral ecology and care for our common home.
+* [MIT AI and Education Initiative](/ecosystem/institutions/mit-ai-education.md) — MIT higher-education report on cognitive surrender, productive struggle, and assessment vivas.
+* [MIT RAISE: Day of AI Curriculum & K-12 AI Literacy](/ecosystem/institutions/mit-day-of-ai.md) — Global open K-12 AI literacy curriculum, student awareness, and environmental impact.
+* [Congregation of Holy Cross: Educational Charism](/ecosystem/institutions/holy-cross-tradition.md) — Blessed Basil Moreau's pedagogy of educating hearts and minds and family spirit.
 * [Knowledge-Driven Engineering Playbook](/playbooks/knowledge-driven-engineering.md) — Operational integration of external institutional constraints into SDD sprints.
 * [Knowledge Base Advisor Skill](/skills/ask-kb/SKILL.md) — Reusable agent capability for querying ecosystem institutions and compliance rules.
