@@ -12,6 +12,9 @@ sources:
   - id: source:sfhs-sustainability-portal
     resource: https://www.sfhs.com/sustainability
     title: "Saint Francis High School Sustainability Portal & Framework"
+  - id: source:sfhs-mission-related-sites-docx
+    resource: "/references/Saint Francis Mission Related sites.docx"
+    title: "Saint Francis Mission Related Sites (Faculty Working Document)"
 ---
 
 # Saint Francis High School: Framework for Sustainability & Spiritual Ecology

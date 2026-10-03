@@ -9,12 +9,18 @@ generated:
   at: 2026-10-03T16:00:00Z
 verified: []
 sources:
-  - id: source:moreau-quotes
+  - id: source:moreau-quotes-docx
+    resource: "/references/Significant Holy Cross Quotes.docx"
+    title: "Significant Holy Cross Quotes (Faculty Working Document)"
+  - id: source:holy-cross-christian-education-pdf
+    resource: "/references/Holy Cross Documents, in full/Holy Cross and Christian Education eCopy.pdf"
+    title: "Holy Cross and Christian Education (eCopy)"
+  - id: source:holy-cross-constitutions-pdf
+    resource: "/references/Holy Cross Documents, in full/The Constitutions of the Congregation of Holy Cross.pdf"
+    title: "The Constitutions of the Congregation of Holy Cross (Full Text)"
+  - id: source:moreau-quotes-portal
     resource: https://holycrosscongregation.org/spirituality/blessed-basil-moreau/
-    title: "Significant Holy Cross Quotes & Circular Letters (Blessed Basil Moreau, C.S.C.)"
-  - id: source:holy-cross-constitutions
-    resource: https://holycrosscongregation.org/
-    title: "Constitutions of the Congregation of Holy Cross"
+    title: "Congregation of Holy Cross: Spirituality & Heritage"
 ---
 
 # Curated Holy Cross Quotations & Foundational Maxims

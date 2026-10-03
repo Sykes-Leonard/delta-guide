@@ -9,9 +9,15 @@ generated:
   at: 2026-10-03T16:00:00Z
 verified: []
 sources:
-  - id: source:catholic-companion-framework
-    resource: https://www.lmu.edu/ideal
-    title: "Catholic Companion Framework for Technology and Innovation (Meaghan Crowley-Sullivan, 2025)"
+  - id: source:catholic-companion-full-pdf
+    resource: "/references/Catholic Companion Framework/Catholic Companion Framework for Technology and Innovation_Crowley-Sullivan.pdf"
+    title: "Catholic Companion Framework for Technology and Innovation (Full Text, Meaghan Crowley-Sullivan)"
+  - id: source:catholic-companion-excerpt-pdf
+    resource: "/references/Catholic Companion Framework/Excerpted Catholic Companion Framework for Technology and Innovation_Crowley-Sullivan.pdf"
+    title: "Excerpted Catholic Companion Framework for Technology and Innovation"
+  - id: source:catholic-companion-readme-docx
+    resource: "/references/Catholic Companion Framework/Read Me.docx"
+    title: "Catholic Companion Framework Overview & Readme"
   - id: source:ideal-institute-lmu
     resource: https://soe.lmu.edu/centers/ideal/
     title: "Loyola Marymount University iDEAL Institute"

@@ -9,9 +9,12 @@ generated:
   at: 2026-10-03T16:00:00Z
 verified: []
 sources:
+  - id: source:sfhs-mission-internal-pdf
+    resource: "/references/Mission, Vision and Grad Outcomes - Google Docs.pdf"
+    title: "Saint Francis High School: Mission, Vision, and Graduation Outcomes (Internal Source Document)"
   - id: source:sfhs-mission-doc
     resource: https://www.sfhs.com/about/mission
-    title: "Saint Francis High School Mission, Vision, and Graduation Outcomes"
+    title: "Saint Francis High School Mission & Vision Web Portal"
 ---
 
 # Saint Francis High School: Mission, Vision & Graduation Outcomes

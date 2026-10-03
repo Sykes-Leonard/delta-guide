@@ -24,5 +24,3 @@ venv/
 *.swp
 *.swo
 
-# Raw Intake / Staging
-incoming/
