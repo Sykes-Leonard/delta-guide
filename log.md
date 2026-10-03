@@ -1,6 +1,11 @@
 # Knowledge Base Changelog
 
 ## 2026-10-02
+* **Concept Pages, Linking & Interactive Graph Engine**:
+  - **Relational Edge Architecture**: Enhanced [`templates/concept-template.md`](/templates/concept-template.md) and [`skills/manage-knowledge-base/templates/concept_template.md`](/skills/manage-knowledge-base/templates/concept_template.md) with standardized `## 2. Conceptual Mind Map & Relational Edges` (Mermaid) and `## 6. Relational Edge Index` tables.
+  - **Thematic Cluster Matrix**: Created exemplary cluster [`concepts/cluster-intelligent-automation.md`](/concepts/cluster-intelligent-automation.md) and linked concept nodes [`concepts/future-initiative.md`](/concepts/future-initiative.md) and [`concepts/predictive-dispatch.md`](/concepts/predictive-dispatch.md).
+  - **Graph Compiler**: Added [`scripts/compile_graph.py`](/scripts/compile_graph.py) to compile concept nodes, clusters, and typed relational edges into [`viewer/graph-data.json`](/viewer/graph-data.json), integrated directly into presubmit.
+  - **Interactive SPA Viewer & Design Spec**: Added [`scripts/build_viewer.py`](/scripts/build_viewer.py), standalone [`viewer/index.html`](/viewer/index.html), and [`DESIGN.md`](/DESIGN.md) visual design specification.
 * **Antigravity Quickstart & Test Drive**: Added automated [`quickstart.sh`](/quickstart.sh), enhanced [`setup.sh`](/setup.sh) with Antigravity desktop application detection and installation prompts, authored [`playbooks/antigravity-test-drive.md`](/playbooks/antigravity-test-drive.md), and expanded [`README.md`](/README.md) and [`SETUP.md`](/SETUP.md) with 3-minute test drive guides and the 4 Golden Prompts.
 
 ## 2026-10-01

@@ -1,0 +1,1309 @@
+#!/usr/bin/env python3
+"""
+build_viewer.py - Builds the self-contained DELTA Guide Concept Mind Map SPA in viewer/index.html.
+Embeds graph-data.json for zero-configuration, 100% offline file:// compatibility.
+"""
+
+import json
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+DATA_FILE = ROOT_DIR / "viewer" / "graph-data.json"
+HTML_FILE = ROOT_DIR / "viewer" / "index.html"
+
+HTML_TEMPLATE = r"""<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DELTA Guide — Concept Mind Map & Knowledge Graph</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            canvas: '#0E1118',
+            surface: {
+              panel: 'rgba(20, 24, 35, 0.85)',
+              drawer: 'rgba(18, 22, 32, 0.96)',
+              card: 'rgba(27, 32, 48, 0.65)',
+            },
+            stfrancis: {
+              leather: '#2B1810',
+              sunlight: '#E5A823',
+              cedar: '#8D4327',
+              dove: '#FAF7F2'
+            },
+            delta: {
+              navy: '#0C2340',
+              gold: '#C99700',
+              ember: '#F26430'
+            },
+            cluster: {
+              anchor: '#E53E3E',
+              flourishing: '#E5A823',
+              agency: '#3182CE',
+              power: '#805AD5',
+              embodiment: '#38A169',
+              transcendence: '#DD6B20'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Newsreader', 'Georgia', 'serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom Scrollbars */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: rgba(14, 17, 24, 0.6); }
+    ::-webkit-scrollbar-thumb { background: rgba(229, 168, 35, 0.25); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(229, 168, 35, 0.45); }
+
+    /* Canvas styling */
+    #graph-canvas {
+      cursor: grab;
+      touch-action: none;
+    }
+    #graph-canvas:active {
+      cursor: grabbing;
+    }
+
+    /* Glassmorphism */
+    .glass-panel {
+      background: rgba(18, 22, 32, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-drawer {
+      background: rgba(16, 20, 30, 0.96);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-left: 1px solid rgba(229, 168, 35, 0.2);
+    }
+    .glass-card {
+      background: rgba(24, 29, 42, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .glass-card:hover {
+      border-color: rgba(229, 168, 35, 0.35);
+      background: rgba(32, 38, 54, 0.85);
+    }
+
+    /* Breathing pulse for anchor node */
+    @keyframes anchor-pulse {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 14px rgba(229, 62, 62, 0.6)); }
+      50% { transform: scale(1.05); filter: drop-shadow(0 0 24px rgba(229, 62, 62, 0.9)); }
+    }
+  </style>
+</head>
+<body class="bg-canvas text-[#FAF7F2] font-sans antialiased overflow-hidden h-screen w-screen select-none">
+
+  <!-- ========================================================================= -->
+  <!-- TOP APP HEADER -->
+  <!-- ========================================================================= -->
+  <header class="h-14 border-b border-white/10 glass-panel px-4 flex items-center justify-between z-30 relative">
+    <!-- Brand Mark & Title -->
+    <div class="flex items-center space-x-3">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-delta-navy via-stfrancis-leather to-delta-ember flex items-center justify-center shadow-lg border border-stfrancis-sunlight/30">
+        <svg class="w-5 h-5 text-stfrancis-sunlight" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L1 21h22L12 2zm0 4.5l7.5 13h-15L12 6.5z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="flex items-center space-x-2">
+          <span class="font-bold tracking-tight text-base text-stfrancis-dove">DELTA Guide</span>
+          <span class="text-[10px] px-1.5 py-0.5 rounded font-mono font-medium bg-delta-gold/20 text-stfrancis-sunlight border border-delta-gold/30">OKF v0.2</span>
+        </div>
+        <div class="text-[11px] text-white/50 -mt-0.5">St. Francis High School • Concept Mind Map</div>
+      </div>
+    </div>
+
+    <!-- Omni-Search Bar -->
+    <div class="relative w-80 max-w-md hidden md:block">
+      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-white/40">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+      </div>
+      <input 
+        id="omni-search"
+        type="text" 
+        placeholder="Search concepts, tags, or sources... (Press '/' to focus)" 
+        class="w-full pl-9 pr-8 py-1.5 bg-black/40 border border-white/10 rounded-lg text-xs text-white placeholder-white/40 focus:outline-none focus:border-stfrancis-sunlight/60 transition"
+      >
+      <div id="search-clear" class="absolute inset-y-0 right-0 pr-2.5 flex items-center cursor-pointer text-white/40 hover:text-white hidden">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </div>
+    </div>
+
+    <!-- View Switcher Tabs & Links -->
+    <div class="flex items-center space-x-2">
+      <div class="flex p-0.5 bg-black/40 border border-white/10 rounded-lg">
+        <button id="view-tab-graph" onclick="switchView('graph')" class="flex items-center space-x-1.5 px-3 py-1 rounded-md text-xs font-medium bg-delta-ember text-white shadow transition">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span>Constellation</span>
+        </button>
+        <button id="view-tab-matrix" onclick="switchView('matrix')" class="flex items-center space-x-1.5 px-3 py-1 rounded-md text-xs font-medium text-white/60 hover:text-white transition">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          <span>Matrix Grid</span>
+        </button>
+      </div>
+
+      <a href="../index.md" class="p-1.5 text-white/60 hover:text-stfrancis-sunlight hover:bg-white/5 rounded-lg border border-transparent hover:border-white/10 transition" title="Open Root Index (OKF)">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN WORKSPACE -->
+  <!-- ========================================================================= -->
+  <main class="relative h-[calc(100vh-3.5rem)] w-full overflow-hidden flex">
+
+    <!-- LEFT CONTROL SIDEBAR -->
+    <aside id="left-sidebar" class="w-72 glass-panel border-r border-white/10 p-4 flex flex-col justify-between z-20 transition-all duration-300">
+      <div class="space-y-5 overflow-y-auto pr-1">
+        <!-- Clusters Filter -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold tracking-wider uppercase text-white/50 font-mono">Thematic Clusters</span>
+            <button onclick="resetClusterFilters()" class="text-[11px] text-stfrancis-sunlight hover:underline">Reset</button>
+          </div>
+          <div id="cluster-filter-list" class="space-y-1.5">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Relationship Category Filter -->
+        <div>
+          <div class="text-xs font-semibold tracking-wider uppercase text-white/50 font-mono mb-2">Relationship Verbs</div>
+          <div class="flex flex-wrap gap-1.5" id="verb-filter-pills">
+            <button onclick="filterByVerbCategory('all')" class="verb-filter-btn px-2 py-1 rounded text-[11px] font-mono bg-white/15 text-white font-medium">All</button>
+            <button onclick="filterByVerbCategory('foundational')" class="verb-filter-btn px-2 py-1 rounded text-[11px] font-mono bg-white/5 hover:bg-white/10 text-white/70">Foundational</button>
+            <button onclick="filterByVerbCategory('remedy')" class="verb-filter-btn px-2 py-1 rounded text-[11px] font-mono bg-white/5 hover:bg-white/10 text-white/70">Remedies</button>
+            <button onclick="filterByVerbCategory('threat')" class="verb-filter-btn px-2 py-1 rounded text-[11px] font-mono bg-white/5 hover:bg-white/10 text-white/70">Tensions</button>
+            <button onclick="filterByVerbCategory('governance')" class="verb-filter-btn px-2 py-1 rounded text-[11px] font-mono bg-white/5 hover:bg-white/10 text-white/70">Statutory</button>
+          </div>
+        </div>
+
+        <!-- Graph Metrics -->
+        <div class="p-3 rounded-lg bg-black/40 border border-white/10 text-xs space-y-1.5">
+          <div class="flex justify-between text-white/60">
+            <span>Thematic Clusters:</span>
+            <span id="stat-clusters" class="font-mono text-stfrancis-sunlight font-semibold">5</span>
+          </div>
+          <div class="flex justify-between text-white/60">
+            <span>Concept Nodes:</span>
+            <span id="stat-nodes" class="font-mono text-stfrancis-sunlight font-semibold">27</span>
+          </div>
+          <div class="flex justify-between text-white/60">
+            <span>Relational Edges:</span>
+            <span id="stat-edges" class="font-mono text-stfrancis-sunlight font-semibold">95</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Info -->
+      <div class="pt-3 border-t border-white/10 text-[11px] text-white/40 flex items-center justify-between">
+        <span>Click node to inspect</span>
+        <kbd class="px-1.5 py-0.5 rounded bg-white/10 text-white/60 font-mono text-[10px]">Esc to close</kbd>
+      </div>
+    </aside>
+
+    <!-- CENTRAL GRAPH CANVAS CONTAINER -->
+    <div id="graph-container" class="relative flex-1 h-full w-full overflow-hidden bg-[#0A0D14]">
+      <!-- Background Ambient Glow -->
+      <div class="absolute inset-0 pointer-events-none opacity-30 bg-[radial-gradient(circle_at_center,rgba(229,168,35,0.08)_0%,transparent_70%)]"></div>
+      
+      <!-- Interactive Canvas -->
+      <canvas id="graph-canvas" class="w-full h-full block"></canvas>
+
+      <!-- FLOATING HUD TOOLBAR -->
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 glass-panel rounded-full px-4 py-2 flex items-center space-x-3 shadow-2xl z-20 border border-white/15">
+        <button onclick="zoomIn()" class="p-1.5 text-white/70 hover:text-white hover:bg-white/10 rounded-full transition" title="Zoom In">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+        </button>
+        <button onclick="zoomOut()" class="p-1.5 text-white/70 hover:text-white hover:bg-white/10 rounded-full transition" title="Zoom Out">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6"/></svg>
+        </button>
+        <button onclick="centerGraph()" class="p-1.5 text-white/70 hover:text-white hover:bg-white/10 rounded-full transition" title="Center Camera">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+        </button>
+
+        <div class="h-4 w-px bg-white/20"></div>
+
+        <!-- Layout Mode Toggle (Free Force vs. Concentric) -->
+        <div class="flex items-center space-x-1 bg-black/40 rounded-full p-0.5 border border-white/10 text-xs">
+          <button id="mode-free" onclick="setLayoutMode('free')" class="px-2.5 py-1 rounded-full text-[11px] font-mono font-medium bg-delta-ember text-white shadow">Free</button>
+          <button id="mode-concentric" onclick="setLayoutMode('concentric')" class="px-2.5 py-1 rounded-full text-[11px] font-mono font-medium text-white/60 hover:text-white">Orbits</button>
+        </div>
+
+        <div class="h-4 w-px bg-white/20"></div>
+
+        <!-- Physics Pause/Resume -->
+        <button id="btn-physics" onclick="togglePhysics()" class="flex items-center space-x-1.5 px-3 py-1 rounded-full text-[11px] font-mono bg-white/10 hover:bg-white/15 text-white transition">
+          <span id="physics-dot" class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span id="physics-text">Live Physics</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ALTERNATIVE MATRIX GRID CONTAINER (Hidden by default) -->
+    <div id="matrix-container" class="relative flex-1 h-full w-full overflow-y-auto p-8 bg-[#0A0D14] hidden z-10">
+      <div class="max-w-6xl mx-auto space-y-8">
+        <div>
+          <h2 class="text-2xl font-serif font-bold text-stfrancis-dove">Thematic Concept Matrix</h2>
+          <p class="text-sm text-white/50 mt-1">Browse all 27 concepts categorized by ethical, philosophical, and architectural clusters.</p>
+        </div>
+        <div id="matrix-sections" class="space-y-8">
+          <!-- Dynamically populated cluster cards -->
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT SLIDE-OVER DETAIL DRAWER -->
+    <aside 
+      id="right-drawer" 
+      class="fixed top-14 right-0 bottom-0 w-full sm:w-[480px] glass-drawer shadow-2xl z-40 transform translate-x-full transition-transform duration-300 ease-out flex flex-col"
+    >
+      <!-- Drawer Header -->
+      <div class="p-5 border-b border-white/10 flex items-start justify-between bg-black/20">
+        <div>
+          <div class="flex items-center space-x-2">
+            <span id="drawer-cluster-pill" class="text-[10px] font-mono uppercase px-2 py-0.5 rounded-full font-semibold bg-delta-gold/20 text-stfrancis-sunlight border border-delta-gold/30">
+              Human Flourishing
+            </span>
+            <span id="drawer-status" class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+              stable
+            </span>
+          </div>
+          <h2 id="drawer-title" class="font-serif font-bold text-xl text-stfrancis-dove mt-1.5 tracking-tight">
+            Concept Title
+          </h2>
+        </div>
+        <button onclick="closeDrawer()" class="p-1.5 text-white/50 hover:text-white hover:bg-white/10 rounded-lg transition" title="Close Drawer (Esc)">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Drawer Tabs -->
+      <div class="flex border-b border-white/10 bg-black/30 px-5 text-xs font-medium text-white/60">
+        <button id="tab-btn-overview" onclick="switchDrawerTab('overview')" class="py-2.5 px-3 border-b-2 border-stfrancis-sunlight text-stfrancis-sunlight font-semibold">Overview</button>
+        <button id="tab-btn-edges" onclick="switchDrawerTab('edges')" class="py-2.5 px-3 border-b-2 border-transparent hover:text-white">Edges (<span id="drawer-edge-count">0</span>)</button>
+        <button id="tab-btn-provenance" onclick="switchDrawerTab('provenance')" class="py-2.5 px-3 border-b-2 border-transparent hover:text-white">Provenance</button>
+        <button id="tab-btn-pedagogy" onclick="switchDrawerTab('pedagogy')" class="py-2.5 px-3 border-b-2 border-transparent hover:text-white">Pedagogy</button>
+      </div>
+
+      <!-- Drawer Content Scroll Area -->
+      <div class="flex-1 overflow-y-auto p-6 space-y-6 text-sm text-[#D6CEBE]">
+        
+        <!-- Tab 1: Overview -->
+        <div id="drawer-panel-overview" class="space-y-4">
+          <div>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-white/40 mb-1">Executive Thesis</h4>
+            <div id="drawer-summary" class="leading-relaxed text-sm bg-black/30 p-3.5 rounded-lg border border-white/5 text-white/90">
+              Summary text goes here.
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-white/40 mb-1.5">Conceptual Tags</h4>
+            <div id="drawer-tags" class="flex flex-wrap gap-1.5">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-white/40 mb-1">Dialectical Tensions & Challenges</h4>
+            <div id="drawer-tensions" class="text-xs leading-relaxed text-white/70 bg-white/[0.02] p-3 rounded-lg border border-white/5 space-y-1">
+              <!-- Tensions -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Relational Edges -->
+        <div id="drawer-panel-edges" class="space-y-4 hidden">
+          <div>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-stfrancis-sunlight mb-2 flex items-center justify-between">
+              <span>Outbound Connections</span>
+              <span id="drawer-outbound-count" class="text-[10px] text-white/40 font-normal">0 edges</span>
+            </h4>
+            <div id="drawer-outbound-list" class="space-y-2">
+              <!-- Outbound edge cards -->
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-white/10">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-blue-400 mb-2 flex items-center justify-between">
+              <span>Inbound Connections</span>
+              <span id="drawer-inbound-count" class="text-[10px] text-white/40 font-normal">0 edges</span>
+            </h4>
+            <div id="drawer-inbound-list" class="space-y-2">
+              <!-- Inbound edge cards -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Institutional Provenance -->
+        <div id="drawer-panel-provenance" class="space-y-4 hidden">
+          <div>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-white/40 mb-2">Grounding & Academic Lineage</h4>
+            <div id="drawer-grounding" class="text-xs leading-relaxed text-white/80 bg-black/30 p-3.5 rounded-lg border border-white/5 space-y-2">
+              <!-- Grounding text -->
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-white/40 mb-2">Primary Literature Sources</h4>
+            <div id="drawer-sources" class="space-y-2">
+              <!-- Source links -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: St. Francis Pedagogy & Architecture -->
+        <div id="drawer-panel-pedagogy" class="space-y-4 hidden">
+          <div>
+            <h4 class="text-xs font-mono uppercase tracking-wider text-stfrancis-sunlight mb-2 flex items-center space-x-1.5">
+              <svg class="w-3.5 h-3.5 text-stfrancis-sunlight" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/></svg>
+              <span>Classroom & Architectural Directives</span>
+            </h4>
+            <div id="drawer-implications" class="text-xs leading-relaxed text-white/80 bg-stfrancis-leather/30 p-3.5 rounded-lg border border-stfrancis-sunlight/20 space-y-2">
+              <!-- Pedagogical guidelines -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Drawer Footer -->
+      <div class="p-4 border-t border-white/10 bg-black/40 flex items-center justify-between">
+        <a 
+          id="drawer-open-file-btn" 
+          href="#" 
+          class="flex items-center space-x-2 text-xs font-medium text-stfrancis-sunlight hover:underline"
+        >
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          <span>View Markdown Source</span>
+        </a>
+        <button onclick="focusSelectedNode()" class="px-3 py-1.5 rounded-md text-xs font-medium bg-white/10 hover:bg-white/20 text-white transition">
+          Center on Canvas
+        </button>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- EMBEDDED GRAPH DATA & CLIENT JAVASCRIPT -->
+  <!-- ========================================================================= -->
+  <script>
+    // Embedded Graph Data
+    window.GRAPH_DATA = __GRAPH_DATA_PLACEHOLDER__;
+  </script>
+  <script>
+    /* =========================================================================
+       CANVAS GRAPH ENGINE WITH 60FPS PHYSICS & DUAL LAYOUT MODES
+       ========================================================================= */
+
+    let canvas, ctx;
+    let width = 0, height = 0;
+    let nodes = [];
+    let edges = [];
+    let clusters = {};
+    let concepts = {};
+
+    // Camera state
+    let camera = { x: 0, y: 0, zoom: 1 };
+    let isDragging = false;
+    let dragStart = { x: 0, y: 0 };
+    let hoveredNode = null;
+    let selectedNode = null;
+    let draggedNode = null;
+
+    // Simulation settings
+    let physicsActive = true;
+    let layoutMode = 'free'; // 'free' or 'concentric'
+    let activeVerbCategory = 'all';
+    let activeClusterFilter = new Set();
+    let currentSearchTerm = '';
+
+    // Initialize application on load
+    window.addEventListener('DOMContentLoaded', () => {
+      initData();
+      initUI();
+      initCanvas();
+      setupEvents();
+      centerGraph();
+      requestAnimationFrame(renderLoop);
+    });
+
+    function initData() {
+      const data = window.GRAPH_DATA;
+      clusters = data.clusters || {};
+      concepts = data.concepts || {};
+
+      // Build node objects
+      const clusterKeys = Object.keys(clusters);
+      nodes = (data.nodes || []).map((n, i) => {
+        // Initial radial placement around center
+        let angle = 0, radius = 0;
+        if (n.is_anchor) {
+          radius = 0;
+        } else {
+          const cIndex = clusterKeys.indexOf(n.cluster_slug);
+          const baseAngle = (cIndex >= 0 ? cIndex : i) * ((2 * Math.PI) / clusterKeys.length);
+          angle = baseAngle + ((Math.random() - 0.5) * 0.8);
+          radius = 260 + (Math.random() * 140);
+        }
+
+        return {
+          id: n.id,
+          slug: n.slug,
+          label: n.label,
+          full_title: n.full_title,
+          cluster_slug: n.cluster_slug,
+          cluster_name: n.cluster_name,
+          is_anchor: n.is_anchor,
+          x: Math.cos(angle) * radius,
+          y: Math.sin(angle) * radius,
+          vx: 0,
+          vy: 0,
+          radius: n.is_anchor ? 32 : 18,
+          color: n.color.background,
+          glow: n.color.highlight.background,
+          border: n.color.border,
+          visible: true
+        };
+      });
+
+      // Build edge objects
+      edges = (data.edges || []).map(e => ({
+        from: e.from,
+        to: e.to,
+        label: e.label,
+        verb: e.verb,
+        description: e.description,
+        sourceNode: null,
+        targetNode: null,
+        visible: true
+      }));
+
+      // Resolve edge node references
+      const nodeMap = new Map(nodes.map(n => [n.id, n]));
+      edges.forEach(e => {
+        e.sourceNode = nodeMap.get(e.from);
+        e.targetNode = nodeMap.get(e.to);
+      });
+
+      // Populate cluster filters
+      Object.keys(clusters).forEach(slug => activeClusterFilter.add(slug));
+      activeClusterFilter.add('central-anchor');
+    }
+
+    function initUI() {
+      // Cluster filter checkboxes
+      const container = document.getElementById('cluster-filter-list');
+      container.innerHTML = '';
+
+      // Central Anchor Filter
+      container.innerHTML += `
+        <label class="flex items-center justify-between p-2 rounded hover:bg-white/5 cursor-pointer text-xs transition">
+          <div class="flex items-center space-x-2">
+            <input type="checkbox" checked onchange="toggleCluster('central-anchor', this.checked)" class="rounded bg-black/40 border-white/20 text-cluster-anchor focus:ring-0">
+            <span class="w-2.5 h-2.5 rounded-full bg-cluster-anchor shadow-[0_0_8px_#E53E3E]"></span>
+            <span class="text-white/80 font-medium">Human Dignity</span>
+          </div>
+          <span class="font-mono text-[10px] text-white/40">1</span>
+        </label>
+      `;
+
+      // Thematic Clusters
+      Object.values(clusters).forEach(c => {
+        container.innerHTML += `
+          <label class="flex items-center justify-between p-2 rounded hover:bg-white/5 cursor-pointer text-xs transition">
+            <div class="flex items-center space-x-2">
+              <input type="checkbox" checked onchange="toggleCluster('${c.slug}', this.checked)" class="rounded bg-black/40 border-white/20 text-[${c.color}] focus:ring-0">
+              <span class="w-2.5 h-2.5 rounded-full shadow" style="background-color: ${c.color}; box-shadow: 0 0 8px ${c.glow}"></span>
+              <span class="text-white/80 font-medium">${c.name}</span>
+            </div>
+            <span class="font-mono text-[10px] text-white/40">${c.concepts.length}</span>
+          </label>
+        `;
+      });
+
+      // Populate Matrix Grid
+      populateMatrixGrid();
+    }
+
+    function populateMatrixGrid() {
+      const container = document.getElementById('matrix-sections');
+      container.innerHTML = '';
+
+      Object.values(clusters).forEach(c => {
+        const clusterConcepts = c.concepts.map(slug => concepts[slug]).filter(Boolean);
+        if (clusterConcepts.length === 0) return;
+
+        let cardsHtml = clusterConcepts.map(cNode => `
+          <div class="glass-card rounded-xl p-5 flex flex-col justify-between transition group cursor-pointer" onclick="selectAndFocusNode('${cNode.slug}')">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded-full font-semibold" style="background-color: ${c.color}20; color: ${c.glow}; border: 1px solid ${c.color}40">
+                  ${c.name}
+                </span>
+                <span class="text-[10px] font-mono text-white/40">
+                  ${(cNode.edges || []).length} Edges
+                </span>
+              </div>
+              <h3 class="font-serif font-bold text-base text-white group-hover:text-stfrancis-sunlight transition">${cNode.full_title}</h3>
+              <p class="text-xs text-white/60 mt-2 line-clamp-3 leading-relaxed">${cNode.description}</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+              <span class="text-[10px] text-white/40 font-mono">${(cNode.tags || []).slice(0, 2).join(' • ')}</span>
+              <button class="text-xs text-stfrancis-sunlight font-medium flex items-center space-x-1 group-hover:translate-x-0.5 transition">
+                <span>Inspect</span>
+                <span>→</span>
+              </button>
+            </div>
+          </div>
+        `).join('');
+
+        container.innerHTML += `
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <span class="w-3 h-3 rounded-full" style="background-color: ${c.color}; box-shadow: 0 0 10px ${c.glow}"></span>
+              <h3 class="font-serif font-bold text-lg text-stfrancis-dove">${c.name}</h3>
+              <span class="text-xs font-mono text-white/40">(${clusterConcepts.length} concepts)</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              ${cardsHtml}
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    function initCanvas() {
+      canvas = document.getElementById('graph-canvas');
+      ctx = canvas.getContext('2d');
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+    }
+
+    function resizeCanvas() {
+      const container = document.getElementById('graph-container');
+      width = container.clientWidth;
+      height = container.clientHeight;
+      canvas.width = width * window.devicePixelRatio;
+      canvas.height = height * window.devicePixelRatio;
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+    }
+
+    function setupEvents() {
+      // Pan & Zoom
+      canvas.addEventListener('mousedown', onMouseDown);
+      window.addEventListener('mousemove', onMouseMove);
+      window.addEventListener('mouseup', onMouseUp);
+      canvas.addEventListener('wheel', onWheel, { passive: false });
+
+      // Search input
+      const searchInput = document.getElementById('omni-search');
+      searchInput.addEventListener('input', (e) => {
+        currentSearchTerm = e.target.value.toLowerCase().trim();
+        document.getElementById('search-clear').classList.toggle('hidden', !currentSearchTerm);
+        filterNodes();
+      });
+
+      document.getElementById('search-clear').addEventListener('click', () => {
+        searchInput.value = '';
+        currentSearchTerm = '';
+        document.getElementById('search-clear').classList.add('hidden');
+        filterNodes();
+      });
+
+      // Keyboard shortcuts
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeDrawer();
+          selectedNode = null;
+        } else if (e.key === '/' && document.activeElement !== searchInput) {
+          e.preventDefault();
+          searchInput.focus();
+        } else if (e.key === 'f' && document.activeElement !== searchInput) {
+          togglePhysics();
+        } else if (e.key === 'c' && document.activeElement !== searchInput) {
+          centerGraph();
+        }
+      });
+    }
+
+    /* =========================================================================
+       PHYSICS SIMULATION & FORCES
+       ========================================================================= */
+
+    function updatePhysics() {
+      if (!physicsActive) return;
+
+      const clusterKeys = Object.keys(clusters);
+      const clusterAngleStep = (2 * Math.PI) / clusterKeys.length;
+
+      // Cluster centroid targets
+      const clusterCentroids = {};
+      clusterKeys.forEach((slug, i) => {
+        const ang = i * clusterAngleStep;
+        const rad = 280;
+        clusterCentroids[slug] = {
+          x: Math.cos(ang) * rad,
+          y: Math.sin(ang) * rad
+        };
+      });
+
+      // 1. Repulsion between all nodes
+      for (let i = 0; i < nodes.length; i++) {
+        const n1 = nodes[i];
+        if (!n1.visible) continue;
+
+        for (let j = i + 1; j < nodes.length; j++) {
+          const n2 = nodes[j];
+          if (!n2.visible) continue;
+
+          const dx = n2.x - n1.x;
+          const dy = n2.y - n1.y;
+          const distSq = dx * dx + dy * dy || 1;
+          const dist = Math.sqrt(distSq);
+
+          if (dist < 400) {
+            const force = (n1.is_anchor || n2.is_anchor ? 4200 : 1800) / distSq;
+            const fx = (dx / dist) * force;
+            const fy = (dy / dist) * force;
+
+            if (n1 !== draggedNode && !n1.is_anchor) { n1.vx -= fx; n1.vy -= fy; }
+            if (n2 !== draggedNode && !n2.is_anchor) { n2.vx += fx; n2.vy += fy; }
+          }
+        }
+      }
+
+      // 2. Spring attraction along edges
+      edges.forEach(e => {
+        if (!e.visible || !e.sourceNode || !e.targetNode) return;
+        const n1 = e.sourceNode;
+        const n2 = e.targetNode;
+
+        const dx = n2.x - n1.x;
+        const dy = n2.y - n1.y;
+        const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+        const targetDist = (n1.is_anchor || n2.is_anchor) ? 220 : 140;
+
+        const displacement = dist - targetDist;
+        const force = displacement * 0.0035;
+        const fx = (dx / dist) * force;
+        const fy = (dy / dist) * force;
+
+        if (n1 !== draggedNode && !n1.is_anchor) { n1.vx += fx; n1.vy += fy; }
+        if (n2 !== draggedNode && !n2.is_anchor) { n2.vx -= fx; n2.vy -= fy; }
+      });
+
+      // 3. Central Gravity & Cluster Attraction
+      nodes.forEach(n => {
+        if (n === draggedNode) return;
+
+        if (n.is_anchor) {
+          // Human Dignity gently anchors at origin
+          n.x += (0 - n.x) * 0.08;
+          n.y += (0 - n.y) * 0.08;
+          return;
+        }
+
+        if (layoutMode === 'concentric') {
+          // Pull toward exact concentric orbit around center
+          const target = clusterCentroids[n.cluster_slug] || { x: 0, y: 0 };
+          n.vx += (target.x - n.x) * 0.04;
+          n.vy += (target.y - n.y) * 0.04;
+        } else {
+          // Soft cluster clustering + weak center pull
+          const target = clusterCentroids[n.cluster_slug];
+          if (target) {
+            n.vx += (target.x - n.x) * 0.015;
+            n.vy += (target.y - n.y) * 0.015;
+          }
+          // Global damping center pull
+          n.vx -= n.x * 0.001;
+          n.vy -= n.y * 0.001;
+        }
+
+        // Apply velocities with friction damping
+        n.x += n.vx;
+        n.y += n.vy;
+        n.vx *= 0.82;
+        n.vy *= 0.82;
+      });
+    }
+
+    /* =========================================================================
+       CANVAS RENDERING LOOP
+       ========================================================================= */
+
+    function renderLoop() {
+      updatePhysics();
+      draw();
+      requestAnimationFrame(renderLoop);
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+
+      ctx.save();
+      // Apply camera transformation
+      ctx.translate(width / 2 + camera.x, height / 2 + camera.y);
+      ctx.scale(camera.zoom, camera.zoom);
+
+      // 1. Draw Edges
+      edges.forEach(drawEdge);
+
+      // 2. Draw Nodes
+      nodes.forEach(drawNode);
+
+      ctx.restore();
+    }
+
+    function drawEdge(e) {
+      if (!e.visible || !e.sourceNode || !e.targetNode) return;
+      const n1 = e.sourceNode;
+      const n2 = e.targetNode;
+
+      const isConnectedToSelected = selectedNode && (n1 === selectedNode || n2 === selectedNode);
+      const isConnectedToHovered = hoveredNode && (n1 === hoveredNode || n2 === hoveredNode);
+
+      ctx.save();
+
+      // Quadratic curve offset for curvature
+      const dx = n2.x - n1.x;
+      const dy = n2.y - n1.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist === 0) return;
+
+      const midX = (n1.x + n2.x) / 2 - (dy / dist) * 22;
+      const midY = (n1.y + n2.y) / 2 + (dx / dist) * 22;
+
+      // Edge style
+      if (selectedNode) {
+        ctx.strokeStyle = isConnectedToSelected ? '#F26430' : 'rgba(255, 255, 255, 0.06)';
+        ctx.lineWidth = isConnectedToSelected ? 2.5 : 1;
+      } else if (hoveredNode) {
+        ctx.strokeStyle = isConnectedToHovered ? '#FBD38D' : 'rgba(255, 255, 255, 0.1)';
+        ctx.lineWidth = isConnectedToHovered ? 2 : 1;
+      } else {
+        ctx.strokeStyle = 'rgba(229, 168, 35, 0.22)';
+        ctx.lineWidth = 1.2;
+      }
+
+      ctx.beginPath();
+      ctx.moveTo(n1.x, n1.y);
+      ctx.quadraticCurveTo(midX, midY, n2.x, n2.y);
+      ctx.stroke();
+
+      // Draw floating verb label if highlighted or zoomed in
+      if ((isConnectedToSelected || isConnectedToHovered || camera.zoom > 1.25) && dist > 70) {
+        ctx.save();
+        ctx.font = '10px "JetBrains Mono", monospace';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+
+        const labelText = e.verb || e.label || '';
+        const textWidth = ctx.measureText(labelText).width;
+
+        ctx.fillStyle = 'rgba(14, 17, 24, 0.9)';
+        ctx.fillRect(midX - textWidth / 2 - 4, midY - 7, textWidth + 8, 14);
+        ctx.strokeStyle = isConnectedToSelected ? '#F26430' : 'rgba(229, 168, 35, 0.4)';
+        ctx.lineWidth = 0.8;
+        ctx.strokeRect(midX - textWidth / 2 - 4, midY - 7, textWidth + 8, 14);
+
+        ctx.fillStyle = isConnectedToSelected ? '#FFF' : '#E5A823';
+        ctx.fillText(labelText, midX, midY);
+        ctx.restore();
+      }
+
+      ctx.restore();
+    }
+
+    function drawNode(n) {
+      if (!n.visible) return;
+
+      const isSelected = (selectedNode === n);
+      const isHovered = (hoveredNode === n);
+      const isDimmed = selectedNode && !isSelected && !areConnected(selectedNode, n);
+
+      ctx.save();
+      ctx.globalAlpha = isDimmed ? 0.18 : 1.0;
+
+      // 1. Radial Glow Halo
+      const glowRadius = n.radius * (isSelected ? 2.8 : (isHovered ? 2.2 : 1.6));
+      const grad = ctx.createRadialGradient(n.x, n.y, n.radius * 0.4, n.x, n.y, glowRadius);
+      grad.addColorStop(0, n.color + 'aa');
+      grad.addColorStop(1, 'transparent');
+
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, glowRadius, 0, Math.PI * 2);
+      ctx.fill();
+
+      // 2. Node Body
+      ctx.fillStyle = isSelected ? '#FFFFFF' : n.color;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
+      ctx.fill();
+
+      // 3. Node Border Ring
+      ctx.strokeStyle = isSelected ? n.color : (isHovered ? '#FFFFFF' : n.border);
+      ctx.lineWidth = isSelected ? 4 : (isHovered ? 2.5 : 1.5);
+      ctx.stroke();
+
+      // 4. Node Label
+      ctx.font = `${n.is_anchor ? 'bold 13px' : '11px'} "Inter", sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'top';
+
+      const labelY = n.y + n.radius + 6;
+      ctx.fillStyle = isSelected ? '#F26430' : (n.is_anchor ? '#FEB2B2' : '#FAF7F2');
+      ctx.fillText(n.label, n.x, labelY);
+
+      // Subtitle if anchor
+      if (n.is_anchor) {
+        ctx.font = '9px "JetBrains Mono", monospace';
+        ctx.fillStyle = 'rgba(254, 178, 178, 0.7)';
+        ctx.fillText("Imago Dei", n.x, labelY + 15);
+      }
+
+      ctx.restore();
+    }
+
+    function areConnected(n1, n2) {
+      return edges.some(e => 
+        (e.from === n1.id && e.to === n2.id) || 
+        (e.from === n2.id && e.to === n1.id)
+      );
+    }
+
+    /* =========================================================================
+       MOUSE / TOUCH INTERACTION & CAMERA
+       ========================================================================= */
+
+    function getCanvasCoordinates(e) {
+      const rect = canvas.getBoundingClientRect();
+      const clientX = e.clientX - rect.left;
+      const clientY = e.clientY - rect.top;
+      return {
+        x: (clientX - width / 2 - camera.x) / camera.zoom,
+        y: (clientY - height / 2 - camera.y) / camera.zoom
+      };
+    }
+
+    function findNodeAt(x, y) {
+      for (let i = nodes.length - 1; i >= 0; i--) {
+        const n = nodes[i];
+        if (!n.visible) continue;
+        const dx = n.x - x;
+        const dy = n.y - y;
+        if (dx * dx + dy * dy <= (n.radius + 6) * (n.radius + 6)) {
+          return n;
+        }
+      }
+      return null;
+    }
+
+    function onMouseDown(e) {
+      const pos = getCanvasCoordinates(e);
+      const clicked = findNodeAt(pos.x, pos.y);
+
+      if (clicked) {
+        draggedNode = clicked;
+        selectNode(clicked);
+      } else {
+        isDragging = true;
+        dragStart = { x: e.clientX - camera.x, y: e.clientY - camera.y };
+      }
+    }
+
+    function onMouseMove(e) {
+      if (draggedNode) {
+        const pos = getCanvasCoordinates(e);
+        draggedNode.x = pos.x;
+        draggedNode.y = pos.y;
+        draggedNode.vx = 0;
+        draggedNode.vy = 0;
+      } else if (isDragging) {
+        camera.x = e.clientX - dragStart.x;
+        camera.y = e.clientY - dragStart.y;
+      } else {
+        const pos = getCanvasCoordinates(e);
+        hoveredNode = findNodeAt(pos.x, pos.y);
+      }
+    }
+
+    function onMouseUp() {
+      isDragging = false;
+      draggedNode = null;
+    }
+
+    function onWheel(e) {
+      e.preventDefault();
+      const zoomFactor = e.deltaY < 0 ? 1.12 : 0.89;
+      const newZoom = Math.max(0.2, Math.min(3.5, camera.zoom * zoomFactor));
+
+      const rect = canvas.getBoundingClientRect();
+      const mouseX = e.clientX - rect.left - width / 2;
+      const mouseY = e.clientY - rect.top - height / 2;
+
+      camera.x -= (mouseX - camera.x) * (zoomFactor - 1);
+      camera.y -= (mouseY - camera.y) * (zoomFactor - 1);
+      camera.zoom = newZoom;
+    }
+
+    /* =========================================================================
+       NODE SELECTION & SLIDE-OVER DRAWER
+       ========================================================================= */
+
+    function selectNode(node) {
+      selectedNode = node;
+      const data = concepts[node.slug];
+      if (!data) return;
+
+      // Populate Drawer Header
+      document.getElementById('drawer-title').innerText = data.full_title;
+      document.getElementById('drawer-status').innerText = data.status || 'stable';
+      
+      const clusterPill = document.getElementById('drawer-cluster-pill');
+      clusterPill.innerText = data.cluster_name;
+      clusterPill.style.backgroundColor = node.color + '25';
+      clusterPill.style.color = node.glow;
+      clusterPill.style.borderColor = node.color + '40';
+
+      // Summary
+      document.getElementById('drawer-summary').innerText = data.summary || data.description;
+
+      // Tags
+      const tagsContainer = document.getElementById('drawer-tags');
+      tagsContainer.innerHTML = (data.tags || []).map(t => 
+        `<span class="text-[11px] font-mono px-2 py-0.5 rounded bg-white/5 border border-white/10 text-white/70">#${t}</span>`
+      ).join('');
+
+      // Tensions
+      document.getElementById('drawer-tensions').innerHTML = formatBulletList(data.tensions) || '<p class="text-white/40 italic">No specific tensions documented.</p>';
+
+      // Edges (Outbound & Inbound)
+      populateDrawerEdges(node);
+
+      // Provenance
+      document.getElementById('drawer-grounding').innerHTML = formatBulletList(data.grounding) || '<p class="text-white/40 italic">Derived from foundational OKF sources.</p>';
+      
+      const sourcesContainer = document.getElementById('drawer-sources');
+      const sources = data.sources || [];
+      if (sources.length > 0) {
+        sourcesContainer.innerHTML = sources.map(s => `
+          <a href="${s.resource}" target="_blank" rel="noopener" class="block p-2.5 rounded-lg bg-black/40 border border-white/10 hover:border-stfrancis-sunlight/50 transition group">
+            <div class="flex items-center justify-between">
+              <span class="font-medium text-xs text-white group-hover:text-stfrancis-sunlight">${s.title}</span>
+              <span class="text-[10px] text-white/40 group-hover:text-white">↗</span>
+            </div>
+            <div class="text-[10px] font-mono text-white/40 truncate mt-0.5">${s.resource}</div>
+          </a>
+        `).join('');
+      } else {
+        sourcesContainer.innerHTML = '<p class="text-xs text-white/40 italic">Internal knowledge base concept.</p>';
+      }
+
+      // Pedagogy & Architecture
+      document.getElementById('drawer-implications').innerHTML = formatBulletList(data.implications) || '<p class="text-white/40 italic">No classroom directives specified.</p>';
+
+      // Markdown Source Link
+      const openBtn = document.getElementById('drawer-open-file-btn');
+      openBtn.href = `../concepts/${data.slug}.md`;
+
+      // Open Drawer
+      document.getElementById('right-drawer').classList.remove('translate-x-full');
+    }
+
+    function populateDrawerEdges(node) {
+      const outbound = [];
+      const inbound = [];
+
+      edges.forEach(e => {
+        if (e.from === node.id && e.targetNode) {
+          outbound.push({ edge: e, otherNode: e.targetNode });
+        } else if (e.to === node.id && e.sourceNode) {
+          inbound.push({ edge: e, otherNode: e.sourceNode });
+        }
+      });
+
+      document.getElementById('drawer-edge-count').innerText = outbound.length + inbound.length;
+      document.getElementById('drawer-outbound-count').innerText = `${outbound.length} edges`;
+      document.getElementById('drawer-inbound-count').innerText = `${inbound.length} edges`;
+
+      const outboundContainer = document.getElementById('drawer-outbound-list');
+      outboundContainer.innerHTML = outbound.length ? outbound.map(item => `
+        <div 
+          onclick="selectAndFocusNode('${item.otherNode.slug}')"
+          class="p-2.5 rounded-lg bg-black/30 border border-white/10 hover:border-stfrancis-sunlight/40 transition cursor-pointer group"
+        >
+          <div class="flex items-center justify-between">
+            <span class="font-serif font-bold text-xs text-white group-hover:text-stfrancis-sunlight">${item.otherNode.full_title}</span>
+            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-stfrancis-sunlight/15 text-stfrancis-sunlight border border-stfrancis-sunlight/25">
+              ${item.edge.verb}
+            </span>
+          </div>
+          <div class="text-[11px] text-white/50 mt-1 line-clamp-1">${item.edge.description || ''}</div>
+        </div>
+      `).join('') : '<p class="text-xs text-white/40 italic">No outbound edges.</p>';
+
+      const inboundContainer = document.getElementById('drawer-inbound-list');
+      inboundContainer.innerHTML = inbound.length ? inbound.map(item => `
+        <div 
+          onclick="selectAndFocusNode('${item.otherNode.slug}')"
+          class="p-2.5 rounded-lg bg-black/30 border border-white/10 hover:border-blue-400/40 transition cursor-pointer group"
+        >
+          <div class="flex items-center justify-between">
+            <span class="font-serif font-bold text-xs text-white group-hover:text-blue-300">${item.otherNode.full_title}</span>
+            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-blue-500/15 text-blue-300 border border-blue-500/25">
+              ${item.edge.verb}
+            </span>
+          </div>
+          <div class="text-[11px] text-white/50 mt-1 line-clamp-1">${item.edge.description || ''}</div>
+        </div>
+      `).join('') : '<p class="text-xs text-white/40 italic">No inbound edges.</p>';
+    }
+
+    function closeDrawer() {
+      document.getElementById('right-drawer').classList.add('translate-x-full');
+    }
+
+    function selectAndFocusNode(slug) {
+      const node = nodes.find(n => n.slug === slug);
+      if (node) {
+        selectNode(node);
+        if (document.getElementById('graph-container').classList.contains('hidden')) {
+          switchView('graph');
+        }
+        focusNode(node);
+      }
+    }
+
+    function focusSelectedNode() {
+      if (selectedNode) focusNode(selectedNode);
+    }
+
+    function focusNode(node) {
+      const targetX = -node.x * camera.zoom;
+      const targetY = -node.y * camera.zoom;
+
+      // Smooth camera interpolation
+      const startTime = performance.now();
+      const startX = camera.x;
+      const startY = camera.y;
+      const duration = 600;
+
+      function anim(time) {
+        const elapsed = time - startTime;
+        const progress = Math.min(1, elapsed / duration);
+        const ease = 1 - Math.pow(1 - progress, 3); // cubic ease-out
+
+        camera.x = startX + (targetX - startX) * ease;
+        camera.y = startY + (targetY - startY) * ease;
+
+        if (progress < 1) requestAnimationFrame(anim);
+      }
+      requestAnimationFrame(anim);
+    }
+
+    function centerGraph() {
+      camera.x = 0;
+      camera.y = 0;
+      camera.zoom = 1.0;
+    }
+
+    function zoomIn() {
+      camera.zoom = Math.min(3.5, camera.zoom * 1.25);
+    }
+
+    function zoomOut() {
+      camera.zoom = Math.max(0.25, camera.zoom * 0.8);
+    }
+
+    function togglePhysics() {
+      physicsActive = !physicsActive;
+      const dot = document.getElementById('physics-dot');
+      const text = document.getElementById('physics-text');
+      if (physicsActive) {
+        dot.className = 'w-2 h-2 rounded-full bg-emerald-400 animate-pulse';
+        text.innerText = 'Live Physics';
+      } else {
+        dot.className = 'w-2 h-2 rounded-full bg-amber-400';
+        text.innerText = 'Frozen';
+      }
+    }
+
+    function setLayoutMode(mode) {
+      layoutMode = mode;
+      document.getElementById('mode-free').className = mode === 'free' 
+        ? 'px-2.5 py-1 rounded-full text-[11px] font-mono font-medium bg-delta-ember text-white shadow'
+        : 'px-2.5 py-1 rounded-full text-[11px] font-mono font-medium text-white/60 hover:text-white';
+      document.getElementById('mode-concentric').className = mode === 'concentric' 
+        ? 'px-2.5 py-1 rounded-full text-[11px] font-mono font-medium bg-delta-ember text-white shadow'
+        : 'px-2.5 py-1 rounded-full text-[11px] font-mono font-medium text-white/60 hover:text-white';
+    }
+
+    function switchDrawerTab(tab) {
+      ['overview', 'edges', 'provenance', 'pedagogy'].forEach(t => {
+        const btn = document.getElementById(`tab-btn-${t}`);
+        const panel = document.getElementById(`drawer-panel-${t}`);
+        if (t === tab) {
+          btn.className = 'py-2.5 px-3 border-b-2 border-stfrancis-sunlight text-stfrancis-sunlight font-semibold';
+          panel.classList.remove('hidden');
+        } else {
+          btn.className = 'py-2.5 px-3 border-b-2 border-transparent hover:text-white';
+          panel.classList.add('hidden');
+        }
+      });
+    }
+
+    function switchView(view) {
+      const graphContainer = document.getElementById('graph-container');
+      const matrixContainer = document.getElementById('matrix-container');
+      const tabGraph = document.getElementById('view-tab-graph');
+      const tabMatrix = document.getElementById('view-tab-matrix');
+
+      if (view === 'graph') {
+        graphContainer.classList.remove('hidden');
+        matrixContainer.classList.add('hidden');
+        tabGraph.className = 'flex items-center space-x-1.5 px-3 py-1 rounded-md text-xs font-medium bg-delta-ember text-white shadow transition';
+        tabMatrix.className = 'flex items-center space-x-1.5 px-3 py-1 rounded-md text-xs font-medium text-white/60 hover:text-white transition';
+        resizeCanvas();
+      } else {
+        graphContainer.classList.add('hidden');
+        matrixContainer.classList.remove('hidden');
+        tabGraph.className = 'flex items-center space-x-1.5 px-3 py-1 rounded-md text-xs font-medium text-white/60 hover:text-white transition';
+        tabMatrix.className = 'flex items-center space-x-1.5 px-3 py-1 rounded-md text-xs font-medium bg-delta-ember text-white shadow transition';
+      }
+    }
+
+    function toggleCluster(slug, checked) {
+      if (checked) activeClusterFilter.add(slug);
+      else activeClusterFilter.delete(slug);
+      filterNodes();
+    }
+
+    function resetClusterFilters() {
+      activeClusterFilter.clear();
+      Object.keys(clusters).forEach(slug => activeClusterFilter.add(slug));
+      activeClusterFilter.add('central-anchor');
+      document.querySelectorAll('#cluster-filter-list input[type="checkbox"]').forEach(cb => cb.checked = true);
+      filterNodes();
+    }
+
+    function filterByVerbCategory(cat) {
+      activeVerbCategory = cat;
+      document.querySelectorAll('.verb-filter-btn').forEach(btn => {
+        btn.className = 'verb-filter-btn px-2 py-1 rounded text-[11px] font-mono bg-white/5 hover:bg-white/10 text-white/70';
+      });
+      event.target.className = 'verb-filter-btn px-2 py-1 rounded text-[11px] font-mono bg-white/15 text-white font-medium';
+      filterNodes();
+    }
+
+    function filterNodes() {
+      nodes.forEach(n => {
+        const clusterMatch = n.is_anchor 
+          ? activeClusterFilter.has('central-anchor')
+          : activeClusterFilter.has(n.cluster_slug);
+
+        const searchMatch = !currentSearchTerm || 
+          n.label.toLowerCase().includes(currentSearchTerm) ||
+          n.full_title.toLowerCase().includes(currentSearchTerm) ||
+          (n.tags || []).some(t => t.toLowerCase().includes(currentSearchTerm));
+
+        n.visible = clusterMatch && searchMatch;
+      });
+
+      edges.forEach(e => {
+        const sourceVisible = e.sourceNode && e.sourceNode.visible;
+        const targetVisible = e.targetNode && e.targetNode.visible;
+
+        let verbMatch = true;
+        if (activeVerbCategory !== 'all') {
+          const v = (e.verb || '').toLowerCase();
+          if (activeVerbCategory === 'foundational') verbMatch = ['grounds', 'requires', 'affirms', 'vitalizes'].some(w => v.includes(w));
+          else if (activeVerbCategory === 'remedy') verbMatch = ['remedied', 'cultivated', 'forges', 'scaffolds'].some(w => v.includes(w));
+          else if (activeVerbCategory === 'threat') verbMatch = ['threatened', 'eroded', 'opposes', 'violates', 'subverts'].some(w => v.includes(w));
+          else if (activeVerbCategory === 'governance') verbMatch = ['mandates', 'enforces', 'codifies', 'constrains'].some(w => v.includes(w));
+        }
+
+        e.visible = sourceVisible && targetVisible && verbMatch;
+      });
+    }
+
+    function formatBulletList(text) {
+      if (!text) return '';
+      const lines = text.split('\n');
+      return lines.map(l => {
+        const trimmed = l.trim();
+        if (trimmed.startsWith('* ') || trimmed.startsWith('- ') || /^\d+\./.test(trimmed)) {
+          return `<div class="flex items-start space-x-2 my-1"><span class="text-stfrancis-sunlight font-bold">•</span><span>${trimmed.replace(/^(\*|-|\d+\.)\s*/, '')}</span></div>`;
+        }
+        return `<p class="my-1">${trimmed}</p>`;
+      }).join('');
+    }
+  </script>
+</body>
+</html>
+"""
+
+
+def build():
+    if not DATA_FILE.exists():
+        print(f"Error: {DATA_FILE} does not exist. Run compile_graph.py first.")
+        return
+
+    with open(DATA_FILE, "r", encoding="utf-8") as f:
+        graph_data = json.load(f)
+
+    kb_title = "Knowledge Guide"
+    config_file = ROOT_DIR / "knowledge.config.json"
+    if config_file.exists():
+        try:
+            with open(config_file, "r", encoding="utf-8") as cf:
+                cfg = json.load(cf)
+                kb_title = cfg.get("kb_title", kb_title)
+        except Exception:
+            pass
+
+    # Embed data cleanly into template and set branding
+    raw_json = json.dumps(graph_data, ensure_ascii=False)
+    html_content = HTML_TEMPLATE.replace("__GRAPH_DATA_PLACEHOLDER__", raw_json)
+    html_content = html_content.replace("DELTA Guide", kb_title)
+
+    HTML_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with open(HTML_FILE, "w", encoding="utf-8") as f:
+        f.write(html_content)
+
+    print(f"✅ Generated {kb_title} Concept SPA: {HTML_FILE}")
+    print(f"   • File Size: {len(html_content):,} bytes")
+    print(f"   • Embedded Nodes: {len(graph_data.get('nodes', []))}")
+    print(f"   • Embedded Edges: {len(graph_data.get('edges', []))}")
+
+
+if __name__ == "__main__":
+    build()

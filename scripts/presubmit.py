@@ -72,6 +72,13 @@ def run_presubmit(bundle_dir: Path, check_only: bool = False) -> int:
     fix_enabled = not check_only
     ret = validate_bundle(bundle_dir, fix=fix_enabled)
     
+    # Re-compile viewer graph data
+    try:
+        from compile_graph import compile_graph
+        compile_graph(bundle_dir, bundle_dir / "viewer" / "graph-data.json")
+    except Exception as e:
+        print(f"Warning: Failed to compile viewer graph data: {e}")
+
     # If in git and files were already staged for commit, stage any newly fixed files
     if in_git and staged_before and fix_enabled:
         modified_after = get_modified_files(bundle_dir)

@@ -26,7 +26,14 @@ Knowledge in this bundle is organized with clear demarcation between:
 
 ## Concepts, Thematic Clusters & Proposals
 
+### Thematic Concept Clusters & Mind Maps
+
+* [Intelligent Workflow Automation & Dispatch](/concepts/cluster-intelligent-automation.md) - Thematic cluster organizing real-time event-driven queueing, predictive operator dispatch, and automated workload re-balancing.
+
+### Constituent Concept Nodes & Relational Edges
+
 * [Next-Generation Intelligent Queue & Auto-Routing](/concepts/future-initiative.md) - Proposed product RFC for real-time automated workflow routing, predictive wait times, and smart dispatching ('What Could Be').
+* [Predictive Dispatch & Workload Balancing](/concepts/predictive-dispatch.md) - Statistical and machine-assisted task distribution balancing operator cognitive load with SLA response times ('What Could Be').
 
 ## Operational Playbooks & Runbooks
 
@@ -51,7 +58,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 * [Manage Knowledge Base (OKF v0.2)](/skills/manage-knowledge-base/SKILL.md) - Navigate, read, author, update, and validate the markdown knowledge base according to Google OKF v0.2.
 * [Google OKF v0.2 Quick Reference Cheat Sheet](/skills/manage-knowledge-base/references/okf_cheat_sheet.md) - Reference cheat sheet for Open Knowledge Format frontmatter fields and conventions.
 * [Concept Cluster Template](/skills/manage-knowledge-base/templates/concept_cluster_template.md) - Starter template for organizing a thematic cluster of interrelated concepts, their constituent nodes, cross-cutting edges, and institutional groundings.
-* [Concept Template](/skills/manage-knowledge-base/templates/concept_template.md) - Starter template for proposing a new feature or architectural RFC.
+* [Concept Title](/skills/manage-knowledge-base/templates/concept_template.md) - Single-sentence summary of this conceptual thesis, architectural RFC, or product exploration.
 * [Frontier Idea Starter Template](/skills/manage-knowledge-base/templates/frontier_template.md) - Standardized starter template for authoring emerging ideas, exploratory prototypes, and horizon-scanning initiatives ('What Could Be').
 * [Institution Dossier Template](/skills/manage-knowledge-base/templates/institution_template.md) - Starter template for profiling external research institutes, frontier labs, university centers, and standards bodies ('What Is').
 * [Interview / Field Notes Template](/skills/manage-knowledge-base/templates/interview_template.md) - Starter template for recording qualitative customer research and provenance.
@@ -66,7 +73,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 ## Knowledge Document Starter Templates
 
 * [Concept Cluster Template](/templates/concept-cluster-template.md) - Starter template for organizing a thematic cluster of interrelated concepts, their constituent nodes, cross-cutting edges, and institutional groundings.
-* [Concept Template](/templates/concept-template.md) - Starter template for proposing a new product feature, architectural RFC, or exploratory innovation ('What Could Be').
+* [Concept Template](/templates/concept-template.md) - Starter template for authoring a theoretical concept, architectural RFC, or product innovation ('What Could Be') with typed relational edges.
 * [Ecosystem Context Template](/templates/ecosystem-template.md) - Starter template for documenting external infrastructure, regulatory requirements, partner platforms, and market realities ('What Is').
 * [Frontier Idea Starter Template](/templates/frontier-template.md) - Standardized starter template for authoring emerging ideas, exploratory prototypes, and horizon-scanning initiatives ('What Could Be').
 * [Institution Dossier Template](/templates/institution-template.md) - Starter template for profiling external research institutes, frontier labs, university centers, and standards bodies ('What Is').
@@ -79,5 +86,6 @@ Knowledge in this bundle is organized with clear demarcation between:
 ## General Documents
 
 * [AI Agent Guidelines & Operating Contract](/AGENTS.md) - Repository-level operating rules and architectural constraints for AI agents interacting with this codebase and knowledge base.
+* [Visual Design System & Concept Mind Map Specification](/DESIGN.md) - Visual design system, UI layout specification, color tokens, and graph interaction contracts for the Concept Mind Map & Knowledge Graph browser.
 * [Knowledge Guide Starter Template (Google OKF v0.2)](/README.md) - A turnkey, self-contained, and self-maintaining knowledge base template for engineering, product, and operational teams.
 * [Knowledge Guide Setup & Onboarding Guide (Human & AI Agent Instructions)](/SETUP.md) - Idempotent, step-by-step instructions for humans and autonomous AI agents to clone, configure, personalize, and verify the OKF v0.2 knowledge base.
