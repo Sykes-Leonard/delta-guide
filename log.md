@@ -1,5 +1,8 @@
 # Knowledge Base Changelog
 
+## 2026-10-02
+* **Antigravity Quickstart & Test Drive**: Added automated [`quickstart.sh`](/quickstart.sh), enhanced [`setup.sh`](/setup.sh) with Antigravity desktop application detection and installation prompts, authored [`playbooks/antigravity-test-drive.md`](/playbooks/antigravity-test-drive.md), and expanded [`README.md`](/README.md) and [`SETUP.md`](/SETUP.md) with 3-minute test drive guides and the 4 Golden Prompts.
+
 ## 2026-10-01
 * **Source Retraction & Decoupler Engine**: Added [`scripts/backout_source.py`](/scripts/backout_source.py), [`scripts/backout_institution.py`](/scripts/backout_institution.py), [`scripts/reincorporate_source.py`](/scripts/reincorporate_source.py), and autonomous agent skills [`/backout-source`](/skills/backout-source/SKILL.md) and [`/backout-institution`](/skills/backout-institution/SKILL.md) for safely auditing, retracting, archiving, substituting, and restoring external sources and institutional containers.
 * **Concept Graph & Relational Edge Engine**: Enhanced [`scripts/validate.py`](/scripts/validate.py) with `validate_concept_graph()` to verify cluster membership, typed relational edges, and source provenance, while exempting `archive/` and hidden directories from presubmit.
