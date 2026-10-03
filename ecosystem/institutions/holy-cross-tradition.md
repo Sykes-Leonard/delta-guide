@@ -105,6 +105,14 @@ Holy Cross educators are not academic police officers managing plagiarism detect
 ### 4.4 Bringing Hope (*Ave Crux, Spes Unica*)
 The motto of the Congregation of Holy Cross—*Ave Crux, Spes Unica* ("Hail the Cross, Our Only Hope")—proclaims that hope is born through perseverance in the face of trial. In education, this directly aligns with the necessity of [Cognitive Friction & Productive Struggle](/concepts/cognitive-friction.md): true intellectual confidence and hope are forged when students wrestle through difficulty rather than surrendering to automated shortcuts.
 
+### 4.5 The Five Enduring Themes of Holy Cross Pedagogy
+As synthesized by Holy Cross educators and Notre Dame Campus Ministry, Moreau's philosophy organizes into five continuous themes:
+1. **Mind**: Seeking understanding through the integration of faith and reason; refusing unscientific limits (*"shrink from no sacrifice"*).
+2. **Heart**: Discerning personal vocation in service to the Church, community, and world.
+3. **Zeal**: Enkindling the desire to use one's gifts boldly; making God known, loved, and served.
+4. **Family**: Embracing Christian community as the context for lifelong human formation.
+5. **Hope**: Trusting that the Cross bears gift and transformation (*"competence to see and courage to act"* — Constitution 2.15).
+
 ---
 
 ## 5. Strategic Integration with St. Francis High School AI Pedagogy
@@ -117,10 +125,12 @@ flowchart TD
     HM["Educating Hearts & Minds"]
     FS["Family Spirit & Accompaniment"]
     HOPE["Cultivating Hope through Struggle"]
+    ACT["Competence to See & Courage to Act"]
 
     HC --> HM
     HC --> FS
     HC --> HOPE
+    HC --> ACT
 
     subgraph BLUEPRINT["St. Francis AI Pedagogy Blueprint"]
         Z1["Zone 1: Unassisted Formation\n(Cognitive Gym & Intellectual Stamina)"]
@@ -133,6 +143,7 @@ flowchart TD
     FS --> VIVA
     HOPE --> Z1
     FS --> Z2
+    ACT --> Z3
 ```
 
 1. **Zone 1 (Analog Gym)**: Protects the sacred formation of the mind and interior schema before students engage with external AI assistants.
@@ -157,6 +168,9 @@ flowchart TD
 ## 7. Related Knowledge Base Documents & Citations
 
 * [Global AI Institutions & Research Labs Observatory](/ecosystem/institutions/overview.md) — Landscape of global research institutes and moral authorities.
+* [Curated Holy Cross Quotations & Foundational Maxims](/references/holy-cross-quotes.md) — Canonical quotes on minds, hearts, science, and hope.
+* [Saint Francis High School Mission & Graduation Outcomes](/references/st-francis-mission-outcomes.md) — Canonical Saint Francis graduate profile.
+* [Catholic Companion Framework for Technology and Innovation](/ecosystem/catholic-companion-framework.md) — Digital discipleship framework by Meaghan Crowley-Sullivan.
 * [The DELTA Framework: Faith-Informed Virtue Ethics for AI](/ecosystem/delta-framework.md) — Notre Dame's virtue-ethics framework founded by the same Holy Cross tradition.
 * [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md) — Papal AI doctrine defending human dignity and labor.
 * [Encyclical Letter Laudato Si'](/ecosystem/laudato-si.md) — Pope Francis's foundational social encyclical on integral ecology.

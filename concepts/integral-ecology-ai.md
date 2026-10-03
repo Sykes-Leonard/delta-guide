@@ -127,6 +127,8 @@ For secondary education initiatives, integrating Integral Ecology transforms how
 
 ### Internal Knowledge Base Links
 * [Concept Cluster: Transcendence, Truth & The Limits of Optimization](/concepts/cluster-transcendence-truth.md)
+* [Saint Francis High School Sustainability Framework](/references/st-francis-sustainability.md)
+* [Catholic Companion Framework for Technology and Innovation](/ecosystem/catholic-companion-framework.md)
 * [Encyclical Letter Laudato Si'](/ecosystem/laudato-si.md)
 * [The DELTA Framework: Faith-Informed Virtue Ethics for AI](/ecosystem/delta-framework.md)
 * [MIT RAISE: Day of AI Curriculum & K-12 AI Literacy](/ecosystem/institutions/mit-day-of-ai.md)

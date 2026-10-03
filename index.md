@@ -17,6 +17,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 
 ## External Ecosystem & Industry Reality ('What Is')
 
+* [Catholic Companion Framework for Technology and Innovation](/ecosystem/catholic-companion-framework.md) - Comprehensive profile of Meaghan Crowley-Sullivan's Catholic Companion Framework, articulating five anchor strands uniting Catholic moral theology with K-12 AI and digital literacy.
 * [The DELTA Framework: Faith-Informed Virtue Ethics for Artificial Intelligence](/ecosystem/delta-framework.md) - Notre Dame's virtue-ethics framework establishing five core normative pillars—Dignity, Embodiment, Love, Transcendence, and Agency—and practical tools for human formation in the AI era.
 * [The DeepMind Institute: Foundational Research, AGI Governance & Inaugural Essays](/ecosystem/institutions/deepmind-institute.md) - Institutional profile of the DeepMind Institute, synthesizing its founding charter, governance model, and the eight inaugural essays on agent swarms, symbiotic intelligence, reasoning transparency, global benefit, and economic policy.
 * [Congregation of Holy Cross: Educational Charism & Pedagogy of Heart and Mind](/ecosystem/institutions/holy-cross-tradition.md) - Institutional profile of the Holy Cross educational tradition, articulating Blessed Basil Moreau's pedagogy of holistic formation, family spirit, and a hermeneutical filter for modern AI education.
@@ -106,8 +107,11 @@ Knowledge in this bundle is organized with clear demarcation between:
 
 ## Standards, Specifications & References
 
+* [Curated Holy Cross Quotations & Foundational Maxims](/references/holy-cross-quotes.md) - Curated canonical quotations and maxims from Blessed Basil Moreau, C.S.C., and the Constitutions of Holy Cross, emphasizing education of minds and hearts, competence, courage, and hope.
 * [Google Open Knowledge Format Specification](/references/okf-specification.md) - Canonical summary of the Google OKF v0.2 specification, trust tiers, and conventions.
 * [Knowledge Provenance & Lineage Guidelines](/references/provenance.md) - Guidelines and architecture for tracking source lineage, citations, and trust verification across the knowledge base.
+* [Saint Francis High School: Mission, Vision & Graduation Outcomes](/references/st-francis-mission-outcomes.md) - Foundational institutional reference defining Saint Francis High School's Mission, Vision, and Three Graduation Outcomes (Person of Faith, Intrinsically Motivated Scholar, Engaged Individual).
+* [Saint Francis High School: Framework for Sustainability & Spiritual Ecology](/references/st-francis-sustainability.md) - Institutional charter detailing Saint Francis High School's 3-pillar sustainability framework, 2025 CA Green Ribbon School designation, and Spiritual Ecology rooted in St. Francis of Assisi and Holy Cross.
 * [Bundle Update Log](/log.md) - Chronological record of additions, modifications, and verifications in this bundle.
 
 ## Knowledge Document Starter Templates

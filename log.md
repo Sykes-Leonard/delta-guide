@@ -1,5 +1,18 @@
 # Knowledge Base Changelog
 
+## 2026-10-03
+* **Local Institutional Grounding & References**:
+  - **SFHS Mission, Vision & Graduation Outcomes**: Authored [`references/st-francis-mission-outcomes.md`](/references/st-francis-mission-outcomes.md) capturing Saint Francis High School's foundational mission, vision, and three graduation outcomes (*Person of Faith*, *Intrinsically Motivated Scholar*, *Engaged Individual*) with explicit mappings to the 3-Zone classroom AI pedagogy model.
+  - **SFHS Sustainability Framework & Spiritual Ecology**: Authored [`references/st-francis-sustainability.md`](/references/st-francis-sustainability.md) codifying the school's 3-pillar sustainability framework (Resource Conservation, Health & Wellness, Ecological Education), 2025 CA Green Ribbon Green Achiever distinction, spiritual ecology combining St. Francis of Assisi's *Canticle of the Creatures* with the Holy Cross charism, and computational stewardship against generative AI energy and water footprints.
+  - **Curated Holy Cross Quotations & Maxims**: Authored [`references/holy-cross-quotes.md`](/references/holy-cross-quotes.md) compiling canonical maxims from Blessed Basil Moreau and the *Constitutions of the Congregation of Holy Cross* (the 5 pillars of Mind, Heart, Zeal, Family, and Hope; Constitution 2.15's "competence to see and courage to act"; science without prejudice; Bacon's virtue spice), applying an editorial filter for enduring pedagogical guidance.
+* **Ecosystem Expansion: Catholic Companion Framework**:
+  - **Catholic Companion Framework for Technology & Innovation**: Ingested [`ecosystem/catholic-companion-framework.md`](/ecosystem/catholic-companion-framework.md) detailing Meaghan Crowley-Sullivan's (SFHS alumna, LMU iDEAL Institute, DELTA Fellow) 5 anchor strands (*Imago Dei*, *Co-Creation & Stewardship*, *Moral Conscience*, *Communion & Solidarity*, *Wonder, Mystery & Awe*), providing grade-band developmental progressions and classroom exemplars bridging Catholic moral theology with digital discipleship.
+* **Knowledge Graph Synchronization**:
+  - Updated [`ecosystem/institutions/holy-cross-tradition.md`](/ecosystem/institutions/holy-cross-tradition.md) with Moreau's 5 pillars and direct references to the quotes registry.
+  - Connected [`concepts/integral-ecology-ai.md`](/concepts/integral-ecology-ai.md) to the SFHS sustainability charter and the Catholic Companion's *Co-Creation & Stewardship* strand.
+  - Augmented [`frontier/secondary-school-ai-pedagogy.md`](/frontier/secondary-school-ai-pedagogy.md) with direct relational citations to SFHS graduation outcomes and institutional sustainability guidelines.
+  - Synchronized [`index.md`](/index.md) and recompiled [`viewer/graph-data.json`](/viewer/graph-data.json) with 0 errors and 0 warnings.
+
 ## 2026-10-02
 * **Targeted Reintroductions & Ecological/Holy Cross Expansions**:
   - **MIT Pedagogical Anchor Restored & Expanded**: Restored [`ecosystem/institutions/mit-ai-education.md`](/ecosystem/institutions/mit-ai-education.md) from archive (August 2026 report on *Cognitive Surrender*, *Productive Struggle*, and assessment redesign) and authored [`ecosystem/institutions/mit-day-of-ai.md`](/ecosystem/institutions/mit-day-of-ai.md) covering MIT RAISE's K-12 *Day of AI* curriculum, foundational AI awareness, and compute climate impacts.
