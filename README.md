@@ -44,6 +44,41 @@ This template solves that by implementing the **Open Knowledge Format (OKF v0.2)
 
 ---
 
+## ⚡ 3-Minute Antigravity Quickstart & Test Drive
+
+Interact with the knowledge base inside the free **Google Antigravity** desktop application:
+
+### 1. Install Google Antigravity (Free Desktop App)
+* **Direct Download**: Download the installer from [antigravity.google/download](https://antigravity.google/download) and sign in with any Google account.
+* **Or via Homebrew (macOS)**:
+  ```bash
+  brew install --cask antigravity
+  ```
+
+### 2. Clone & Open Repository
+```bash
+git clone https://github.com/evanleonard/knowledge-guide.git my-guide
+cd my-guide && ./quickstart.sh
+```
+*(Or open the Antigravity desktop app and select **Open Project** $\rightarrow$ `my-guide`)*
+
+Antigravity automatically discovers the registered agent skills in `.agents/skills` and the operating contract in [`AGENTS.md`](file:///AGENTS.md).
+
+### 🎯 4 Golden Prompts to Test the Skills & Knowledge
+
+In your Antigravity chat window, paste any of these prompts to test the agent capabilities:
+
+| Capability | Prompt to Send Antigravity | What It Tests |
+| :--- | :--- | :--- |
+| **Domain Knowledge Retrieval** | `/ask-kb What is the core architecture and purpose of this knowledge base?` | Tests vectorless keyword search via `query_kb.py` and synthesis from `/systems/core-architecture.md`. |
+| **Progressive Disclosure** | `Summarize the high-level ecosystem realities and production systems in index.md` | Tests efficient navigation of the root OKF index without context bloating. |
+| **Autonomous Web Ingestion** | `/ingest https://en.wikipedia.org/wiki/Virtue_ethics` | Tests autonomous web fetching, interactive category placement, and OKF formatting. |
+| **Self-Healing Quality Gatekeeper** | `Draft a new concept for an Autonomous Quality Auditor and verify with presubmit` | Tests the `scripts/presubmit.py` gatekeeper, frontmatter generation, and graph validation. |
+
+*See [`playbooks/antigravity-test-drive.md`](file:///playbooks/antigravity-test-drive.md) for full walkthrough details.*
+
+---
+
 ## 🚀 Quickstart: Setting Up a New Organization in 30 Seconds
 
 ### 1. Clone or Template
