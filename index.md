@@ -72,6 +72,8 @@ Knowledge in this bundle is organized with clear demarcation between:
 
 ## Operational Playbooks & Runbooks
 
+* [Antigravity Onboarding & Test Drive Playbook](/playbooks/antigravity-test-drive.md) - Step-by-step instructions for installing Antigravity (Free), configuring the workspace, and testing agent skills and knowledge.
+* [Product Concept Storyboarding Playbook](/playbooks/generating-product-storyboards.md) - Standard operating procedure for authoring visual storyboards and product concept specifications for features, user journeys, and partner integrations.
 * [Knowledge-Driven Engineering & Spec-Driven Development](/playbooks/knowledge-driven-engineering.md) - Comprehensive operational playbook for integrating the knowledge base into sprint planning, coding, AI pair programming, pull request compliance reviews, and living documentation graduation.
 * [Developer & Contributor Onboarding Guide](/playbooks/onboarding-guide.md) - Step-by-step instructions for engineers and AI agents to set up local environments, verify builds, and run tests.
 
@@ -84,6 +86,8 @@ Knowledge in this bundle is organized with clear demarcation between:
 * [Knowledge Base Advisor (/ask-kb)](/skills/ask-kb/SKILL.md) - Provides instant, authoritative domain and architectural consulting across production systems, external ecosystems, and product concepts. Use when developers or AI agents need domain context, schema contracts, or compliance guidance.
 * [Backout Institution & Decouple Grounding (OKF v0.2)](/skills/backout-institution/SKILL.md) - Audits, retracts, and safely decouples an external institution, its sources, and dependent concepts from the OKF knowledge graph.
 * [Universal Source Retraction & Epistemic Grounding Decoupler (OKF v0.2)](/skills/backout-source/SKILL.md) - Audits, retracts, substitutes, and safely decouples any external source, research paper, URL, or institutional container from the OKF knowledge graph.
+* [Generate Storyboards for Product Concepts](/skills/generate-storyboards/SKILL.md) - Generate high-impact sequential visual storyboards and accompanying product specifications for product concepts, user journeys, and ecosystem integrations.
+* [Product Concept Display Title](/skills/generate-storyboards/templates/storyboard-template.md) - Single-sentence executive summary of the storyboard and product concept.
 * [Ingest URL Content into Knowledge Base](/skills/ingest/SKILL.md) - Downloads external web content from a URL, analyzes its relevance to the organization, asks the user for placement confirmation, and synthesizes it into an OKF v0.2 knowledge document.
 * [Article or Policy Title](/skills/ingest/templates/ingested-source-template.md) - Single-sentence executive summary of the ingested document and its organizational relevance.
 * [Manage Knowledge Base (OKF v0.2)](/skills/manage-knowledge-base/SKILL.md) - Navigate, read, author, update, and validate the markdown knowledge base according to Google OKF v0.2.
@@ -111,6 +115,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 * [Playbook Template](/templates/playbook-template.md) - Starter template for standard operating procedures, developer setups, incident guides, and team runbooks.
 * [Technical Reference Template](/templates/reference-template.md) - Starter template for specifications, protocol data dictionaries, and architectural standards.
 * [Research Notes Template](/templates/research-template.md) - Starter template for customer interviews, field observations, and user research.
+* [OKF Storyboard Template](/templates/storyboard-template.md) - Starter template for authoring a new visual storyboard and product concept specification in the Open Knowledge Format.
 * [System Component Template](/templates/system-template.md) - Starter template for documenting active production software, backend services, or data architectures ('What Is').
 
 ## General Documents

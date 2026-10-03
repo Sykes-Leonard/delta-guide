@@ -41,6 +41,40 @@ This template solves that by implementing the **Open Knowledge Format (OKF v0.2)
 
 ---
 
+## ⚡ 3-Minute Antigravity Quickstart & Test Drive
+
+Get up and running with the free edition of **Google Antigravity** and start interacting with the knowledge base in seconds:
+
+### Option A: Terminal / CLI (`agy`) — Fastest
+```bash
+# 1. Install Antigravity CLI (Free)
+curl -fsSL https://antigravity.google/cli/install.sh | bash
+
+# 2. Clone repository & run automated quickstart
+git clone https://github.com/Sykes-Leonard/delta-guide.git
+cd delta-guide && ./quickstart.sh
+```
+
+### Option B: Visual Desktop IDE (Antigravity IDE / 2.0)
+1. **Download**: Install Antigravity IDE (Free) from [antigravity.google/download](https://antigravity.google/download) and sign in with any Google account.
+2. **Open Workspace**: Clone or open `delta-guide` in Antigravity (`File -> Open Folder`).
+3. **Chat**: Antigravity automatically detects the mounted agent skills in `.agents/skills` and guidelines in [`AGENTS.md`](file:///AGENTS.md).
+
+### 🎯 4 Golden Prompts to Test the Skills & Knowledge
+
+Once Antigravity is open in your terminal or IDE, test out the capabilities by pasting these prompts:
+
+| Capability | Prompt to Send Antigravity | What It Tests |
+| :--- | :--- | :--- |
+| **Domain Knowledge Retrieval** | `/ask-kb What is the DELTA framework and what virtues does it evaluate?` | Tests vectorless keyword search via `query_kb.py` and synthesis from `/ecosystem/delta-framework.md`. |
+| **Progressive Disclosure** | `Summarize the high-level ecosystem realities and production systems in index.md` | Tests efficient navigation of the root OKF index without context bloating. |
+| **Autonomous Web Ingestion** | `/ingest https://en.wikipedia.org/wiki/Virtue_ethics` | Tests autonomous web fetching, interactive category placement, and OKF formatting. |
+| **Self-Healing Quality Gatekeeper** | `Draft a new concept for an Autonomous Compliance Auditor and verify with presubmit` | Tests the `scripts/presubmit.py` gatekeeper, frontmatter generation, and graph validation. |
+
+*See [`playbooks/antigravity-test-drive.md`](file:///playbooks/antigravity-test-drive.md) for full walkthrough details.*
+
+---
+
 ## 🚀 Quickstart: Setting Up a New Organization in 30 Seconds
 
 ### 1. Clone or Template
@@ -112,17 +146,25 @@ knowledge-guide/
 │   │   ├── SKILL.md         # Instructions for AI agents managing the repository
 │   │   ├── references/      # OKF quick-reference cheat sheet
 │   │   └── templates/       # Skill templates
-│   └── ingest/
-│       ├── SKILL.md         # Instructions for ingesting external URLs
-│       ├── scripts/         # Lightweight urllib/html.parser fetcher
-│       └── templates/       # Ingested source template
+│   ├── ingest/
+│   │   ├── SKILL.md         # Instructions for ingesting external URLs
+│   │   ├── scripts/         # Lightweight urllib/html.parser fetcher
+│   │   └── templates/       # Ingested source template
+│   └── generate-storyboards/
+│       ├── SKILL.md         # Visual storyboards and product concept specifications
+│       ├── scripts/         # export_storyboard_docx.py deliverable generator
+│       └── templates/       # Storyboard specification template
 │
 ├── 🧩 templates/            # Authoring starter templates
+│   ├── concept-cluster-template.md
 │   ├── concept-template.md
 │   ├── ecosystem-template.md
+│   ├── frontier-template.md
+│   ├── institution-template.md
 │   ├── playbook-template.md
 │   ├── reference-template.md
 │   ├── research-template.md
+│   ├── storyboard-template.md
 │   └── system-template.md
 │
 └── 🔮 .obsidian/            # Pre-configured Obsidian vault settings (Graph view)

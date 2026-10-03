@@ -69,6 +69,7 @@ When interacting with the user or executing complex tasks, use these registered 
 * `/ingest <url>`: Ingest external web content, specifications, or policies into OKF format.
 * `/backout-source <target>`: Audit, retract, substitute, or decouple any external source, paper, or institutional container.
 * `/backout-institution <name>`: Audit, retract, and safely decouple an institution, its sources, and dependent concepts.
+* `/generate-storyboards`: Author multi-panel visual storyboards and product concept specifications.
 
 ---
 

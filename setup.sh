@@ -25,10 +25,10 @@ cd "$SCRIPT_DIR"
 
 # 1. Detect Operating System
 OS="$(uname -s)"
-echo -e "${BLUE}[1/6]${NC} Detecting operating system: ${GREEN}$OS${NC}"
+echo -e "${BLUE}[1/7]${NC} Detecting operating system: ${GREEN}$OS${NC}"
 
 # 2. Check for Python 3 (Requirement: Python 3.8+)
-echo -e "\n${BLUE}[2/6]${NC} Checking for Python 3 (required: >= 3.8)..."
+echo -e "\n${BLUE}[2/7]${NC} Checking for Python 3 (required: >= 3.8)..."
 PYTHON_BIN=""
 if command -v python3 &>/dev/null; then
     PYTHON_BIN="python3"
@@ -51,7 +51,7 @@ if [ "$PY_CHECK" -ne 1 ]; then
 fi
 
 # 3. Check Version Control Tooling (Git / Jujutsu)
-echo -e "\n${BLUE}[3/6]${NC} Checking version control tooling..."
+echo -e "\n${BLUE}[3/7]${NC} Checking version control tooling..."
 if command -v git &>/dev/null; then
     GIT_VER="$(git --version)"
     echo -e "      ${GREEN}✓${NC} Git found: ${GREEN}$GIT_VER${NC}"
@@ -64,9 +64,48 @@ else
     echo -e "      ${YELLOW}!${NC} Jujutsu (jj) optional modern VCS not detected."
 fi
 
-# 4. Ensure Permissions on Maintenance and Skill Scripts & Install Git Hooks
-echo -e "\n${BLUE}[4/6]${NC} Setting script permissions and configuring presubmit hooks..."
+# 4. Check for Google Antigravity (Free Agentic Development Platform)
+echo -e "\n${BLUE}[4/7]${NC} Checking for Google Antigravity (CLI / IDE)..."
+AGY_DETECTED=0
+if command -v agy &>/dev/null; then
+    AGY_VER="$(agy --version 2>/dev/null || echo "detected")"
+    echo -e "      ${GREEN}✓${NC} Antigravity CLI (agy) found: ${GREEN}$AGY_VER${NC}"
+    AGY_DETECTED=1
+elif [ -f "$HOME/.local/bin/agy" ]; then
+    echo -e "      ${GREEN}✓${NC} Antigravity CLI (agy) found at ${GREEN}$HOME/.local/bin/agy${NC}"
+    AGY_DETECTED=1
+fi
+
+if [ -d "/Applications/Antigravity.app" ] || [ -d "$HOME/Applications/Antigravity.app" ]; then
+    echo -e "      ${GREEN}✓${NC} Antigravity Desktop IDE found in Applications"
+    AGY_DETECTED=1
+elif command -v antigravity &>/dev/null; then
+    echo -e "      ${GREEN}✓${NC} Antigravity IDE found in PATH"
+    AGY_DETECTED=1
+fi
+
+if [ "$AGY_DETECTED" -eq 0 ]; then
+    echo -e "      ${YELLOW}!${NC} Antigravity not detected (optional, but recommended to interact with this guide)."
+    echo -e "        • Install CLI (Free):      ${BOLD}curl -fsSL https://antigravity.google/cli/install.sh | bash${NC}"
+    echo -e "        • Download IDE (Free):     ${BOLD}https://antigravity.google/download${NC}"
+    if [ -t 0 ] && [ "${CI:-false}" != "true" ]; then
+        echo -ne "        Would you like to install Antigravity CLI now? [y/N]: "
+        read -r install_agy || install_agy="n"
+        if [[ "$install_agy" =~ ^[Yy]$ ]]; then
+            echo -e "        Installing Antigravity CLI..."
+            curl -fsSL https://antigravity.google/cli/install.sh | bash || true
+            if [ -f "$HOME/.local/bin/agy" ]; then
+                export PATH="$HOME/.local/bin:$PATH"
+                echo -e "        ${GREEN}✓${NC} Antigravity CLI installed successfully!"
+            fi
+        fi
+    fi
+fi
+
+# 5. Ensure Permissions on Maintenance and Skill Scripts & Install Git Hooks
+echo -e "\n${BLUE}[5/7]${NC} Setting script permissions and configuring presubmit hooks..."
 chmod +x init.sh 2>/dev/null || true
+chmod +x quickstart.sh 2>/dev/null || true
 if [ -d "scripts" ]; then
     chmod +x scripts/*.py 2>/dev/null || true
     echo -e "      ${GREEN}✓${NC} scripts/*.py are executable"
@@ -123,8 +162,8 @@ else
     echo -e "      ${YELLOW}!${NC} .git directory not found (hooks will install when git init is run)"
 fi
 
-# 5. Verify Agent Discovery Configuration
-echo -e "\n${BLUE}[5/6]${NC} Verifying AI agent workspace discovery configuration..."
+# 6. Verify Agent Discovery Configuration
+echo -e "\n${BLUE}[6/7]${NC} Verifying AI agent workspace discovery configuration..."
 mkdir -p .agents
 if [ ! -f ".agents/skills.json" ]; then
     cat << 'EOF' > .agents/skills.json
@@ -144,13 +183,15 @@ if [ -d "skills" ] && [ ! -e ".agents/skills" ]; then
     echo -e "      ${GREEN}✓${NC} Linked .agents/skills -> ../skills"
 fi
 
-# 6. Run Self-Test Validation & Re-indexing
-echo -e "\n${BLUE}[6/6]${NC} Running self-test presubmit validation on OKF bundle..."
+# 7. Run Self-Test Validation & Re-indexing
+echo -e "\n${BLUE}[7/7]${NC} Running self-test presubmit validation on OKF bundle..."
 if $PYTHON_BIN scripts/presubmit.py; then
     echo -e "${BOLD}${GREEN}============================================================${NC}"
     echo -e "${BOLD}${GREEN}  Setup Complete! Knowledge Base is Operational & Verified   ${NC}"
     echo -e "${BOLD}${GREEN}============================================================${NC}"
     echo -e "\nQuick Run Commands:"
+    echo -e "  • Launch Antigravity:  ${BOLD}agy${NC} (or open folder in Antigravity IDE)"
+    echo -e "  • Test Drive Prompts:  ${BOLD}cat playbooks/antigravity-test-drive.md${NC}"
     echo -e "  • Personalize / Brand: ${BOLD}./init.sh --org \"My Org\"${NC}"
     echo -e "  • Presubmit Check:     ${BOLD}./scripts/presubmit.py${NC} (auto-fix + validate)"
     echo -e "  • Validate Bundle:     ${BOLD}./scripts/validate.py${NC} (or ${BOLD}./scripts/validate.py --fix${NC})"

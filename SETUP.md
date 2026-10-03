@@ -111,17 +111,19 @@ If you are a human setting up the repository manually:
 Ensure you have the following installed on your machine:
 * **Python 3.8+** (`python3 --version`)
 * **Git 2.20+** (`git --version`)
-* *(Optional, recommended)* **Jujutsu (jj)**: A modern Git-compatible version control tool.
-  * macOS: `brew install jj`
-  * Linux / Cargo: `cargo install --locked jujutsu`
-* *(Optional)* **Obsidian**: For rich graph visualization and knowledge browsing. Install the community plugin **Obsidian Git** to auto-sync.
+* *(Recommended)* **Google Antigravity (Free Edition)**:
+  * CLI (`agy`): `curl -fsSL https://antigravity.google/cli/install.sh | bash`
+  * IDE / Desktop: [antigravity.google/download](https://antigravity.google/download)
+* *(Optional)* **Jujutsu (jj)**: A modern Git-compatible version control tool (`brew install jj` or `cargo install jujutsu`).
+* *(Optional)* **Obsidian**: For rich graph visualization and knowledge browsing.
 
-### 2. Single-Command Setup
+### 2. Single-Command Setup & Test Drive
 ```bash
-git clone <repository_url>
-cd knowledge-guide
-./setup.sh
+git clone https://github.com/Sykes-Leonard/delta-guide.git
+cd delta-guide
+./quickstart.sh
 ```
+*(Or run `./setup.sh` for non-interactive setup without launching `agy`)*
 
 ---
 

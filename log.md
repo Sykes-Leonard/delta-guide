@@ -1,6 +1,8 @@
 # Knowledge Base Changelog
 
 ## 2026-10-02
+* **Antigravity Quickstart & Test Drive**: Added automated [`quickstart.sh`](/quickstart.sh), enhanced [`setup.sh`](/setup.sh) with Antigravity CLI/IDE detection and installation prompts, authored [`playbooks/antigravity-test-drive.md`](/playbooks/antigravity-test-drive.md), and expanded [`README.md`](/README.md) and [`SETUP.md`](/SETUP.md) with 3-minute test drive guides and the 4 Golden Prompts.
+* **Storyboarding Capability Imported**: Pulled [`skills/generate-storyboards`](/skills/generate-storyboards/SKILL.md) skill, [`templates/storyboard-template.md`](/templates/storyboard-template.md), and [`playbooks/generating-product-storyboards.md`](/playbooks/generating-product-storyboards.md) from `knowledge-guide` to author multi-panel visual storyboards, system touchpoint diagrams, and executive deliverables. Registered `/generate-storyboards` in [`AGENTS.md`](/AGENTS.md).
 * **Frontier Exploration Added**: Authored [`frontier/secondary-school-ai-pedagogy.md`](/frontier/secondary-school-ai-pedagogy.md) defining the *Secondary School AI Pedagogy & Assessment Blueprint* for St. Francis High School.
   - **3-Zone Classroom Model**: Established Zone 1 (Unassisted Formation / The Cognitive Gym), Zone 2 (Socratic Exploration / The Sparring Partner), and Zone 3 (Augmented Creation / The Professional Studio).
   - **Department Syllabus Clauses**: Concrete boilerplate for Humanities/English, Mathematics/Science, and Computer Science, with an institutional in-person *Oral Defense (Viva Voce)* protocol.
