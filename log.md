@@ -1,5 +1,12 @@
 # Knowledge Base Changelog
 
+## 2026-10-02
+* **Concept Pages, Linking & Interactive Graph Engine**:
+  - **Relational Edge Architecture**: Enhanced [`templates/concept-template.md`](/templates/concept-template.md) and [`skills/manage-knowledge-base/templates/concept_template.md`](/skills/manage-knowledge-base/templates/concept_template.md) with standardized `## 2. Conceptual Mind Map & Relational Edges` (Mermaid) and `## 6. Relational Edge Index` tables.
+  - **Thematic Cluster Matrix**: Created exemplary cluster [`concepts/cluster-intelligent-automation.md`](/concepts/cluster-intelligent-automation.md) and linked concept nodes [`concepts/future-initiative.md`](/concepts/future-initiative.md) and [`concepts/predictive-dispatch.md`](/concepts/predictive-dispatch.md).
+  - **Graph Compiler**: Added [`scripts/compile_graph.py`](/scripts/compile_graph.py) to compile concept nodes, clusters, and typed relational edges into [`viewer/graph-data.json`](/viewer/graph-data.json), integrated directly into presubmit.
+  - **Interactive SPA Viewer & Design Spec**: Added [`scripts/build_viewer.py`](/scripts/build_viewer.py), standalone [`viewer/index.html`](/viewer/index.html), and [`DESIGN.md`](/DESIGN.md) visual design specification.
+
 ## 2026-10-01
 * **Source Retraction & Decoupler Engine**: Added [`scripts/backout_source.py`](/scripts/backout_source.py), [`scripts/backout_institution.py`](/scripts/backout_institution.py), [`scripts/reincorporate_source.py`](/scripts/reincorporate_source.py), and autonomous agent skills [`/backout-source`](/skills/backout-source/SKILL.md) and [`/backout-institution`](/skills/backout-institution/SKILL.md) for safely auditing, retracting, archiving, substituting, and restoring external sources and institutional containers.
 * **Concept Graph & Relational Edge Engine**: Enhanced [`scripts/validate.py`](/scripts/validate.py) with `validate_concept_graph()` to verify cluster membership, typed relational edges, and source provenance, while exempting `archive/` and hidden directories from presubmit.

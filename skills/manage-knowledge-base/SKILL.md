@@ -140,13 +140,16 @@ When authoring or modifying documents under `/concepts/`:
    * When concept clusters are established, every new concept must be registered in at least one thematic cluster matrix or define a new cluster using [`templates/concept-cluster-template.md`](/templates/concept-cluster-template.md).
    * Update the cluster's `## 3. Constituent Concepts Matrix` to register the new concept.
 2. **Build and Maintain Relational Edges**:
-   * Concepts should include a `## Relational Edge Index` with a Markdown table defining typed inbound/outbound relationships.
+   * Concepts must include a `## 6. Relational Edge Index` with a Markdown table defining typed inbound/outbound relationships.
    * Use canonical relationship verbs (*Grounds*, *Requires*, *Opposes*, *Operationalized as*, *Threatened by*, *Remedied by*, *Cultivated via*, *Mandates*, *Enforces*, *Bridges*, *Critiques*).
    * When adding an edge between Concept A and Concept B, update *both* files' edge tables and Mermaid diagrams to maintain graph reciprocity.
 3. **Mandatory External Source Provenance**:
    * In frontmatter, populate the `sources:` block with stable external identifiers (`id`, `resource` URL, `title`) citing foundational literature, technical standards, or regulatory specifications.
 4. **Preserve Mermaid Mind Map Syntax**:
-   * Keep the `## Conceptual Mind Map & Relational Edges` Mermaid diagram synchronized with the edge index table.
+   * Keep the `## 2. Conceptual Mind Map & Relational Edges` Mermaid diagram synchronized with the edge index table.
+5. **Interactive Graph Compilation**:
+   * `scripts/compile_graph.py` extracts clusters, concept nodes, and edges into `viewer/graph-data.json`.
+   * `scripts/build_viewer.py` generates the interactive browser in `viewer/index.html`.
 
 ---
 
@@ -154,10 +157,13 @@ When authoring or modifying documents under `/concepts/`:
 Before concluding any task that touches documentation, run the bundle's self-contained presubmit hook or validator:
 
 ```bash
-# 1. Run presubmit gatekeeper (auto-fixes frontmatter, links, and index, then validates)
+# 1. Run presubmit gatekeeper (auto-fixes frontmatter, links, compiles graph, and validates)
 python3 scripts/presubmit.py
 
-# 2. Or run validator directly with auto-fix flag
+# 2. Rebuild interactive concept graph viewer
+python3 scripts/build_viewer.py
+
+# 3. Or run validator directly with auto-fix flag
 python3 scripts/validate.py --fix
 ```
 

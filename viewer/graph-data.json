@@ -1,0 +1,324 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-10-02T00:00:00Z",
+  "clusters": {
+    "cluster-intelligent-automation": {
+      "slug": "cluster-intelligent-automation",
+      "title": "Intelligent Workflow Automation & Dispatch",
+      "description": "Thematic cluster organizing real-time event-driven queueing, predictive operator dispatch, and automated workload re-balancing.",
+      "name": "Intelligent Workflow Automation & Dispatch",
+      "color": "#3182CE",
+      "glow": "#90CDF4",
+      "border": "#2B6CB0",
+      "order": 1,
+      "concepts": [
+        "future-initiative",
+        "predictive-dispatch"
+      ],
+      "summary": ""
+    }
+  },
+  "concepts": {
+    "future-initiative": {
+      "id": "future-initiative",
+      "slug": "future-initiative",
+      "label": "Next-Generation Intelligent Queue & Auto-Routing",
+      "full_title": "Next-Generation Intelligent Queue & Auto-Routing",
+      "description": "Proposed product RFC for real-time automated workflow routing, predictive wait times, and smart dispatching ('What Could Be').",
+      "cluster_slug": "cluster-intelligent-automation",
+      "cluster_name": "Intelligent Workflow Automation & Dispatch",
+      "is_anchor": false,
+      "tags": [
+        "concepts",
+        "proposal",
+        "rfc",
+        "routing",
+        "automation"
+      ],
+      "status": "draft",
+      "sources": [
+        {
+          "id": "source:reactive-streams",
+          "resource": "https://www.reactive-streams.org/",
+          "title": "Reactive Streams Specification for Asynchronous Stream Processing"
+        }
+      ],
+      "summary": "",
+      "grounding": "",
+      "tensions": "",
+      "implications": "1. **Graceful Fallback**: If the auto-routing engine becomes unreachable, ingress traffic defaults immediately to a durable FIFO dead-letter queue.\n2. **Idempotency**: All routing decisions carry unique routing transaction IDs to prevent duplicate operator assignments.\n3. **Telemetry**: Real-time emission of queue dwell times and dispatch latency percentiles ($p50$, $p95$, $p99$).",
+      "edges": [
+        {
+          "direction": "Outbound",
+          "target_slug": "predictive-dispatch",
+          "target_title": "Predictive Dispatch",
+          "verb": "Requires",
+          "description": "The routing engine depends on predictive workload telemetry to calculate assignment targets."
+        }
+      ],
+      "color": {
+        "background": "#3182CE",
+        "border": "#2B6CB0",
+        "highlight": {
+          "background": "#90CDF4",
+          "border": "#FFFFFF"
+        },
+        "hover": {
+          "background": "#90CDF4",
+          "border": "#3182CE"
+        }
+      },
+      "font": {
+        "color": "#F7F4EE",
+        "size": 12,
+        "face": "Inter, system-ui, sans-serif"
+      },
+      "size": 22,
+      "shadow": {
+        "enabled": true,
+        "color": "#3182CE",
+        "size": 10,
+        "x": 0,
+        "y": 0
+      }
+    },
+    "predictive-dispatch": {
+      "id": "predictive-dispatch",
+      "slug": "predictive-dispatch",
+      "label": "Predictive Dispatch & Workload Balancing",
+      "full_title": "Predictive Dispatch & Workload Balancing",
+      "description": "Statistical and machine-assisted task distribution balancing operator cognitive load with SLA response times ('What Could Be').",
+      "cluster_slug": "cluster-intelligent-automation",
+      "cluster_name": "Intelligent Workflow Automation & Dispatch",
+      "is_anchor": false,
+      "tags": [
+        "concepts",
+        "proposal",
+        "dispatch",
+        "queueing",
+        "workload-balancing"
+      ],
+      "status": "draft",
+      "sources": [
+        {
+          "id": "source:queueing-theory",
+          "resource": "https://en.wikipedia.org/wiki/Queueing_theory",
+          "title": "Queueing Theory and Operational Research Fundamentals"
+        }
+      ],
+      "summary": "",
+      "grounding": "",
+      "tensions": "",
+      "implications": "1. **Concurrency Caps**: Hard limits preventing more than $N$ concurrent complex tasks from being routed to any single operator.\n2. **Opt-Out & Escalation**: Operators can reject or escalate dispatched tasks with a single keypress, immediately triggering automated re-routing.\n3. **Observability**: Live metrics tracking queue backpressure, operator load variance, and assignment fairness.",
+      "edges": [
+        {
+          "direction": "Outbound",
+          "target_slug": "future-initiative",
+          "target_title": "Intelligent Queue",
+          "verb": "Operationalizes",
+          "description": "Translates raw queue events into intelligent, equitable assignment decisions."
+        },
+        {
+          "direction": "Inbound",
+          "target_slug": "future-initiative",
+          "target_title": "Intelligent Queue",
+          "verb": "Requires",
+          "description": "Receives event streams and request payloads from the auto-routing ingress gateway."
+        }
+      ],
+      "color": {
+        "background": "#3182CE",
+        "border": "#2B6CB0",
+        "highlight": {
+          "background": "#90CDF4",
+          "border": "#FFFFFF"
+        },
+        "hover": {
+          "background": "#90CDF4",
+          "border": "#3182CE"
+        }
+      },
+      "font": {
+        "color": "#F7F4EE",
+        "size": 12,
+        "face": "Inter, system-ui, sans-serif"
+      },
+      "size": 22,
+      "shadow": {
+        "enabled": true,
+        "color": "#3182CE",
+        "size": 10,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": "future-initiative",
+      "slug": "future-initiative",
+      "label": "Next-Generation Intelligent Queue & Auto-Routing",
+      "full_title": "Next-Generation Intelligent Queue & Auto-Routing",
+      "description": "Proposed product RFC for real-time automated workflow routing, predictive wait times, and smart dispatching ('What Could Be').",
+      "cluster_slug": "cluster-intelligent-automation",
+      "cluster_name": "Intelligent Workflow Automation & Dispatch",
+      "is_anchor": false,
+      "tags": [
+        "concepts",
+        "proposal",
+        "rfc",
+        "routing",
+        "automation"
+      ],
+      "status": "draft",
+      "sources": [
+        {
+          "id": "source:reactive-streams",
+          "resource": "https://www.reactive-streams.org/",
+          "title": "Reactive Streams Specification for Asynchronous Stream Processing"
+        }
+      ],
+      "summary": "",
+      "grounding": "",
+      "tensions": "",
+      "implications": "1. **Graceful Fallback**: If the auto-routing engine becomes unreachable, ingress traffic defaults immediately to a durable FIFO dead-letter queue.\n2. **Idempotency**: All routing decisions carry unique routing transaction IDs to prevent duplicate operator assignments.\n3. **Telemetry**: Real-time emission of queue dwell times and dispatch latency percentiles ($p50$, $p95$, $p99$).",
+      "edges": [
+        {
+          "direction": "Outbound",
+          "target_slug": "predictive-dispatch",
+          "target_title": "Predictive Dispatch",
+          "verb": "Requires",
+          "description": "The routing engine depends on predictive workload telemetry to calculate assignment targets."
+        }
+      ],
+      "color": {
+        "background": "#3182CE",
+        "border": "#2B6CB0",
+        "highlight": {
+          "background": "#90CDF4",
+          "border": "#FFFFFF"
+        },
+        "hover": {
+          "background": "#90CDF4",
+          "border": "#3182CE"
+        }
+      },
+      "font": {
+        "color": "#F7F4EE",
+        "size": 12,
+        "face": "Inter, system-ui, sans-serif"
+      },
+      "size": 22,
+      "shadow": {
+        "enabled": true,
+        "color": "#3182CE",
+        "size": 10,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "predictive-dispatch",
+      "slug": "predictive-dispatch",
+      "label": "Predictive Dispatch & Workload Balancing",
+      "full_title": "Predictive Dispatch & Workload Balancing",
+      "description": "Statistical and machine-assisted task distribution balancing operator cognitive load with SLA response times ('What Could Be').",
+      "cluster_slug": "cluster-intelligent-automation",
+      "cluster_name": "Intelligent Workflow Automation & Dispatch",
+      "is_anchor": false,
+      "tags": [
+        "concepts",
+        "proposal",
+        "dispatch",
+        "queueing",
+        "workload-balancing"
+      ],
+      "status": "draft",
+      "sources": [
+        {
+          "id": "source:queueing-theory",
+          "resource": "https://en.wikipedia.org/wiki/Queueing_theory",
+          "title": "Queueing Theory and Operational Research Fundamentals"
+        }
+      ],
+      "summary": "",
+      "grounding": "",
+      "tensions": "",
+      "implications": "1. **Concurrency Caps**: Hard limits preventing more than $N$ concurrent complex tasks from being routed to any single operator.\n2. **Opt-Out & Escalation**: Operators can reject or escalate dispatched tasks with a single keypress, immediately triggering automated re-routing.\n3. **Observability**: Live metrics tracking queue backpressure, operator load variance, and assignment fairness.",
+      "edges": [
+        {
+          "direction": "Outbound",
+          "target_slug": "future-initiative",
+          "target_title": "Intelligent Queue",
+          "verb": "Operationalizes",
+          "description": "Translates raw queue events into intelligent, equitable assignment decisions."
+        },
+        {
+          "direction": "Inbound",
+          "target_slug": "future-initiative",
+          "target_title": "Intelligent Queue",
+          "verb": "Requires",
+          "description": "Receives event streams and request payloads from the auto-routing ingress gateway."
+        }
+      ],
+      "color": {
+        "background": "#3182CE",
+        "border": "#2B6CB0",
+        "highlight": {
+          "background": "#90CDF4",
+          "border": "#FFFFFF"
+        },
+        "hover": {
+          "background": "#90CDF4",
+          "border": "#3182CE"
+        }
+      },
+      "font": {
+        "color": "#F7F4EE",
+        "size": 12,
+        "face": "Inter, system-ui, sans-serif"
+      },
+      "size": 22,
+      "shadow": {
+        "enabled": true,
+        "color": "#3182CE",
+        "size": 10,
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "future-initiative",
+      "to": "predictive-dispatch",
+      "label": "Requires",
+      "verb": "Requires",
+      "title": "<b>Requires</b>: The routing engine depends on predictive workload telemetry to calculate assignment targets.",
+      "description": "The routing engine depends on predictive workload telemetry to calculate assignment targets.",
+      "color": {
+        "color": "rgba(229, 168, 35, 0.4)",
+        "highlight": "#F26430",
+        "hover": "#FBD38D"
+      }
+    },
+    {
+      "from": "predictive-dispatch",
+      "to": "future-initiative",
+      "label": "Operationalizes",
+      "verb": "Operationalizes",
+      "title": "<b>Operationalizes</b>: Translates raw queue events into intelligent, equitable assignment decisions.",
+      "description": "Translates raw queue events into intelligent, equitable assignment decisions.",
+      "color": {
+        "color": "rgba(229, 168, 35, 0.4)",
+        "highlight": "#F26430",
+        "hover": "#FBD38D"
+      }
+    }
+  ],
+  "stats": {
+    "cluster_count": 1,
+    "concept_count": 2,
+    "edge_count": 2
+  }
+}
