@@ -37,6 +37,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 
 ## Operational Playbooks & Runbooks
 
+* [Antigravity Onboarding & Test Drive Playbook](/playbooks/antigravity-test-drive.md) - Step-by-step instructions for installing Antigravity (Free), configuring the workspace, and testing agent skills and knowledge.
 * [Product Concept Storyboarding Playbook](/playbooks/generating-product-storyboards.md) - Standard operating procedure for authoring visual storyboards and product concept specifications for features, user journeys, and partner integrations.
 * [Knowledge-Driven Engineering & Spec-Driven Development](/playbooks/knowledge-driven-engineering.md) - Comprehensive operational playbook for integrating the knowledge base into sprint planning, coding, AI pair programming, pull request compliance reviews, and living documentation graduation.
 * [Developer & Contributor Onboarding Guide](/playbooks/onboarding-guide.md) - Step-by-step instructions for engineers and AI agents to set up local environments, verify builds, and run tests.

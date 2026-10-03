@@ -111,17 +111,19 @@ If you are a human setting up the repository manually:
 Ensure you have the following installed on your machine:
 * **Python 3.8+** (`python3 --version`)
 * **Git 2.20+** (`git --version`)
-* *(Optional, recommended)* **Jujutsu (jj)**: A modern Git-compatible version control tool.
-  * macOS: `brew install jj`
-  * Linux / Cargo: `cargo install --locked jujutsu`
-* *(Optional)* **Obsidian**: For rich graph visualization and knowledge browsing. Install the community plugin **Obsidian Git** to auto-sync.
+* *(Recommended)* **Google Antigravity (Free Desktop Application)**:
+  * Direct installer: [antigravity.google/download](https://antigravity.google/download)
+  * macOS Homebrew: `brew install --cask antigravity`
+* *(Optional)* **Jujutsu (jj)**: A modern Git-compatible version control tool (`brew install jj` or `cargo install jujutsu`).
+* *(Optional)* **Obsidian**: For rich graph visualization and knowledge browsing.
 
-### 2. Single-Command Setup
+### 2. Single-Command Setup & Test Drive
 ```bash
-git clone <repository_url>
+git clone https://github.com/evanleonard/knowledge-guide.git
 cd knowledge-guide
-./setup.sh
+./quickstart.sh
 ```
+*(Or open the Antigravity desktop app and choose **Open Project** $\rightarrow$ `knowledge-guide`)*
 
 ---
 
