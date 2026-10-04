@@ -1,6 +1,10 @@
 # Knowledge Base Changelog
 
 ## 2026-10-04
+* **Plain Language Publishing & Sharing ("Git Commit & Push")**:
+  - **Publish & Share Engine**: Developed [`scripts/publish_changes.py`](file:///scripts/publish_changes.py) to translate non-technical requests like *"share my changes"*, *"publish my updates"*, *"save and share"*, *"publish this page"*, and *"push my notes"* into verified Git workflows.
+  - **Full Safety Pipeline**: Automatically runs `./scripts/presubmit.py` (gatekeeper validation and `index.md` sync), smoothly rebases incoming teammate updates from `origin/main`, auto-generates intuitive commit summaries, pushes to GitHub, and reports back in plain English.
+  - **Skill Updated**: Added Procedure H and registered collaborative triggers in [`skills/manage-knowledge-base`](/skills/manage-knowledge-base/SKILL.md) and [`AGENTS.md`](/AGENTS.md).
 * **Skill Demarcation: Content Changes vs. Platform Upgrades**:
   - **Content & Team Updates Checker**: Added [`scripts/check_changes.py`](file:///scripts/check_changes.py) and updated [`skills/manage-knowledge-base`](/skills/manage-knowledge-base/SKILL.md) (Procedure G) to handle everyday non-technical queries like *"check for changes"*, *"what changed?"*, *"what's new?"*, and *"sync team notes"*. Checks collaborator commits on `origin/main`, local drafts, and `log.md` highlights without technical git jargon.
   - **Upgrade Scope Demarcation**: Clarified [`skills/upgrade-guide`](/skills/upgrade-guide/SKILL.md) to trigger strictly on platform software/tooling upgrades (*"upgrade the guide"*, *"upgrade version"*, *"update system"*, `/upgrade-guide`) from upstream `knowledge-guide`, preventing non-technical confusion.
