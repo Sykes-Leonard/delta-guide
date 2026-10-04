@@ -30,7 +30,7 @@ Housed at the University of Notre Dame’s **[Institute for Ethics and the Commo
 
 DELTA responds explicitly to the moral challenge articulated in Pope Leo XIV's encyclical *[Magnifica Humanitas](/ecosystem/magnifica-humanitas.md)*: *"In the era of artificial intelligence, when human dignity is threatened by new forms of dehumanization, ours is the pressing duty to remain profoundly human."* While contemporary AI safety and regulatory approaches typically construct an **"ethical floor"**—focusing narrowly on technical alignment, compliance, algorithmic bias, copyright protections, and data privacy—DELTA establishes a **"moral ceiling"** oriented toward integral human development, moral character, and human flourishing (*eudaimonia*).
 
-Born out of hundreds of consultative focus groups and structured dialogues with theologians, computer scientists, industry executives, educators, clergy, and parents, DELTA provides a shared normative grammar. It supplies practical operational frameworks across higher education, secondary schools, pastoral ministry, and engineering systems.
+Born out of hundreds of consultative focus groups and structured dialogues with theologians, computer scientists, industry executives, educators, clergy, and parents, DELTA provides a shared normative grammar. It supplies practical operational frameworks across higher education, secondary schools, pastoral ministry, and engineering systems. In September 2026, Notre Dame convened the second annual DELTA Summit on AI, Faith, and Human Flourishing, officially launching the [GenDELTA Network](/ecosystem/gendelta-network.md) to equip emerging leaders (ages 14–25) with moral agency in an AI-ubiquitous world.
 
 ---
 
@@ -148,6 +148,7 @@ flowchart TD
 ## 7. Related Knowledge Base Documents
 
 * [Encyclical Letter Magnifica Humanitas](/ecosystem/magnifica-humanitas.md) - Foundational Papal encyclical on AI, technocratic dominance, and human dignity.
+* [The GenDELTA Network](/ecosystem/gendelta-network.md) - Youth leadership network and DELTA Summit 2026 proceedings.
 * [Customer Discovery & Workflow Observations](/research/user-interview-example.md) - Qualitative research and Human-Centered Design notes.
 * [Knowledge-Driven Engineering & Spec-Driven Development](/playbooks/knowledge-driven-engineering.md) - Operational guidelines for integrating ethics into development.
 * [Knowledge Base Advisor (/ask-kb)](/skills/ask-kb/SKILL.md) - Agent skill for querying domain models and ethical standards.
