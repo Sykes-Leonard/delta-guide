@@ -55,6 +55,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 * [Product Concept Display Title](/skills/generate-storyboards/templates/storyboard-template.md) - Single-sentence executive summary of the storyboard and product concept.
 * [Ingest URL Content into Knowledge Base](/skills/ingest/SKILL.md) - Downloads external web content from a URL, analyzes its relevance to the organization, asks the user for placement confirmation, and synthesizes it into an OKF v0.2 knowledge document.
 * [Article or Policy Title](/skills/ingest/templates/ingested-source-template.md) - Single-sentence executive summary of the ingested document and its organizational relevance.
+* [YouTube Video or Presentation Title](/skills/ingest/templates/ingested-youtube-template.md) - Single-sentence executive summary of the video presentation, lecture, or interview.
 * [Manage Knowledge Base (OKF v0.2)](/skills/manage-knowledge-base/SKILL.md) - Navigate, read, author, update, and validate the markdown knowledge base according to Google OKF v0.2.
 * [Google OKF v0.2 Quick Reference Cheat Sheet](/skills/manage-knowledge-base/references/okf_cheat_sheet.md) - Reference cheat sheet for Open Knowledge Format frontmatter fields and conventions.
 * [Concept Cluster Template](/skills/manage-knowledge-base/templates/concept_cluster_template.md) - Starter template for organizing a thematic cluster of interrelated concepts, their constituent nodes, cross-cutting edges, and institutional groundings.

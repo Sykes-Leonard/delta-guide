@@ -1,5 +1,13 @@
 # Knowledge Base Changelog
 
+## 2026-10-04
+* **YouTube Video & Transcript Ingestion**:
+  - **Transcript Extraction Tooling**: Added [`skills/ingest/scripts/fetch_youtube_transcript.py`](/skills/ingest/scripts/fetch_youtube_transcript.py) powered by `youtube-transcript-api`, supporting full URL/ID parsing, public oEmbed metadata extraction (title, channel, URL, duration), language priority selection, and timestamped paragraph chunking.
+  - **Integrated Web & Video Fetcher**: Enhanced [`skills/ingest/scripts/fetch_content.py`](/skills/ingest/scripts/fetch_content.py) to automatically route YouTube URLs to the transcript extractor and format video metadata.
+  - **Ingest Skill Workflow**: Updated [`skills/ingest/SKILL.md`](/skills/ingest/SKILL.md) with YouTube invocation triggers, classification guidance (tech talks $\rightarrow$ concepts/systems, customer interviews $\rightarrow$ research, tutorials $\rightarrow$ playbooks), and structural guidelines.
+  - **Video Authoring Template**: Added [`skills/ingest/templates/ingested-youtube-template.md`](/skills/ingest/templates/ingested-youtube-template.md) for structuring video metadata, speaker attribution, agenda tables, and transcript excerpts.
+  - **Environment & Setup Verification**: Updated [`setup.sh`](/setup.sh) to detect `youtube-transcript-api`, and updated [`SETUP.md`](/SETUP.md) and [`README.md`](/README.md).
+
 ## 2026-10-02
 * **Concept Pages, Linking & Interactive Graph Engine**:
   - **Relational Edge Architecture**: Enhanced [`templates/concept-template.md`](/templates/concept-template.md) and [`skills/manage-knowledge-base/templates/concept_template.md`](/skills/manage-knowledge-base/templates/concept_template.md) with standardized `## 2. Conceptual Mind Map & Relational Edges` (Mermaid) and `## 6. Relational Edge Index` tables.

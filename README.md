@@ -37,7 +37,7 @@ This template solves that by implementing the **Open Knowledge Format (OKF v0.2)
 6. **Turnkey AI Agent Skills**: Ships with built-in agent capabilities:
    * **`ask-kb`**: Instant architectural and domain consulting (`/ask-kb <query>` or CLI `python3 scripts/query_kb.py "<query>"`).
    * **`manage-knowledge-base`**: Standardized protocols for AI agents to navigate, author, update, and audit knowledge.
-   * **`ingest`**: Command any AI agent to `ingest <URL>`—it fetches the page, consults with you on placement, formats an OKF v0.2 document, and validates the bundle.
+   * **`ingest`**: Command any AI agent to `ingest <URL>` or `ingest <YouTube_URL>`—it fetches web pages or YouTube video transcripts (via `youtube-transcript-api`), consults with you on placement, formats an OKF v0.2 document, and validates the bundle.
    * **`backout-source` & `backout-institution`**: Safely retract, substitute, or archive any external source, paper, or institutional container, evaluating concept grounding blast radius and cleaning reciprocal edges.
    * **`generate-storyboards`**: Author multi-panel visual storyboards and product concept specifications with export tools.
 7. **Concept Graph & Relational Edge Validation**: Pre-configured presubmit hooks validate thematic cluster membership, typed relational edge matrices (*Grounds*, *Requires*, *Opposes*, *Operationalized as*, etc.), and primary external source provenance.
@@ -155,7 +155,7 @@ knowledge-guide/
 ├── 🤖 skills/               # Reusable AI Agent Skills (.agents/skills)
 │   ├── ask-kb/              # /ask-kb instant domain & architectural consulting
 │   ├── manage-knowledge-base/ # Maintenance, authoring, and concept cluster management
-│   ├── ingest/              # /ingest external URLs and institutional portals
+│   ├── ingest/              # /ingest external URLs, YouTube transcripts & portals
 │   ├── generate-storyboards/ # Visual storyboards and product concept specifications
 │   ├── backout-source/      # /backout-source retraction, archival & substitution
 │   └── backout-institution/ # /backout-institution institutional decoupling

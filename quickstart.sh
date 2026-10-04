@@ -23,7 +23,7 @@ echo -e "${BOLD}${CYAN}   Google Antigravity + Knowledge Guide Quickstart 🚀  
 echo -e "${BOLD}${CYAN}============================================================${NC}\n"
 
 # 1. Run standard idempotent setup (environment, permissions, hooks, bundle test)
-./setup.sh
+./setup.sh "$@"
 
 # 2. Check for Antigravity desktop application
 HAS_ANTIGRAVITY=0
