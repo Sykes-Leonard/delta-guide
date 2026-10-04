@@ -13,6 +13,7 @@ or "save and publish" into the verified Git workflow:
 
 import sys
 import os
+import re
 import argparse
 import subprocess
 from pathlib import Path
@@ -135,7 +136,7 @@ def publish(repo_root: Path, message: Optional[str] = None, dry_run: bool = Fals
     if changes:
         if not commit_msg:
             commit_msg = generate_default_message(changes)
-        elif not any(commit_msg.startswith(prefix) for prefix in ["docs:", "feat:", "fix:", "chore:"]):
+        elif not re.match(r"^(docs|feat|fix|chore|refactor|test|style|ci|perf)(\([^)]+\))?:\s*", commit_msg):
             commit_msg = f"docs: {commit_msg}"
             
         print(f"📦 Saving changes: \"{commit_msg}\"")
