@@ -50,6 +50,60 @@ if [ "$PY_CHECK" -ne 1 ]; then
     exit 1
 fi
 
+# Parse optional flags
+INSTALL_DEPS=false
+for arg in "$@"; do
+    case "$arg" in
+        --install-deps|-y|--yes)
+            INSTALL_DEPS=true
+            ;;
+    esac
+done
+
+# Check optional libraries
+YT_API_CHECK="$($PYTHON_BIN -c 'import youtube_transcript_api; print(1)' 2>/dev/null || echo 0)"
+if [ "$YT_API_CHECK" -eq 1 ]; then
+    echo -e "      ${GREEN}✓${NC} youtube-transcript-api installed (YouTube video ingestion enabled)"
+else
+    echo -e "      ${YELLOW}!${NC} youtube-transcript-api library not installed."
+    DO_INSTALL=false
+    if [ "$INSTALL_DEPS" = "true" ]; then
+        DO_INSTALL=true
+    elif [ -t 0 ] && [ "${CI:-false}" != "true" ]; then
+        echo -ne "        Would you like to install youtube-transcript-api now? [Y/n]: "
+        read -r reply || reply="y"
+        if [[ "$reply" =~ ^[Yy]$ ]] || [ -z "$reply" ]; then
+            DO_INSTALL=true
+        fi
+    fi
+
+    if [ "$DO_INSTALL" = "true" ]; then
+        echo -e "        Installing youtube-transcript-api via pip..."
+        INSTALLED=0
+        if $PYTHON_BIN -m pip install -r requirements.txt &>/dev/null; then
+            INSTALLED=1
+        elif $PYTHON_BIN -m pip install --user --break-system-packages -r requirements.txt &>/dev/null; then
+            INSTALLED=1
+        elif $PYTHON_BIN -m pip install --break-system-packages -r requirements.txt &>/dev/null; then
+            INSTALLED=1
+        elif command -v uv &>/dev/null && uv pip install --system -r requirements.txt &>/dev/null; then
+            INSTALLED=1
+        fi
+
+        if [ "$INSTALLED" -eq 1 ]; then
+            echo -e "        ${GREEN}✓${NC} youtube-transcript-api installed successfully!"
+        else
+            echo -e "        ${YELLOW}!${NC} Automatic install failed. Install manually:"
+            echo -e "          • Standard pip:         ${BOLD}$PYTHON_BIN -m pip install -r requirements.txt${NC}"
+            echo -e "          • macOS / Homebrew pip: ${BOLD}$PYTHON_BIN -m pip install --break-system-packages -r requirements.txt${NC}"
+        fi
+    else
+        echo -e "        To enable YouTube video ingestion manually:"
+        echo -e "          • Standard pip:         ${BOLD}$PYTHON_BIN -m pip install -r requirements.txt${NC}"
+        echo -e "          • macOS / Homebrew pip: ${BOLD}$PYTHON_BIN -m pip install --break-system-packages -r requirements.txt${NC}"
+    fi
+fi
+
 # 3. Check Version Control Tooling (Git / Jujutsu)
 echo -e "\n${BLUE}[3/7]${NC} Checking version control tooling..."
 if command -v git &>/dev/null; then

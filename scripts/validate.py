@@ -112,6 +112,8 @@ def infer_doc_type(rel_path: Path) -> str:
     parts = rel_path.parts
     if len(parts) > 1:
         folder = parts[0]
+        if folder == "concepts" and rel_path.name.startswith("cluster-"):
+            return "Concept Cluster"
         mapping = {
             "systems": "System Component",
             "ecosystem": "Ecosystem Context",

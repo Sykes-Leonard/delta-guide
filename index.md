@@ -9,9 +9,10 @@ description: "Canonical Open Knowledge Format (OKF v0.2) knowledge base for the 
 Canonical Open Knowledge Format (OKF v0.2) knowledge base for the St. Francis High School AI Initiative, integrating the DELTA Framework, Magnifica Humanitas, and Human-Centered Design (HCD) research.
 
 Knowledge in this bundle is organized with clear demarcation between:
-1. **"What Is"**: Operational realities, external ecosystem context (`/ecosystem/`), and active production systems (`/systems/`).
-2. **"What Could Be"**: Future proposals, feature specifications, and architectural explorations (`/concepts/`).
-3. **"How To" & Provenance**: Operational runbooks (`/playbooks/`), field research (`/research/`), and standards (`/references/`).
+1. **"What Is"**: Operational realities, external ecosystem context (`/ecosystem/`), key institutions (`/ecosystem/institutions/`), and active production systems (`/systems/`).
+2. **Theoretical Concepts & Architectural Models**: Foundational concepts, thematic clusters, and relational graphs (`/concepts/`).
+3. **"What Could Be"**: Visual storyboards (`/storyboards/`), emerging innovations, exploratory prototypes, and horizon scanning (`/frontier/`).
+4. **"How To" & Provenance**: Operational runbooks (`/playbooks/`), field research (`/research/`), and standards (`/references/`).
 
 ---
 
@@ -35,6 +36,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 
 * [Concept Cluster: Embodiment, Presence & Relational Authenticity](/concepts/cluster-embodiment-presence.md) - Thematic cluster addressing synthetic intimacy, the theology of incarnational presence, and safeguards against anthropomorphic deception.
 * [Concept Cluster: Human Flourishing (Eudaimonia) & Virtue Formation](/concepts/cluster-human-flourishing.md) - Thematic cluster synthesizing Aristotelian eudaimonia, positive alignment, six-domain well-being, phronesis, and character formation in artificial intelligence.
+* [Intelligent Workflow Automation & Dispatch](/concepts/cluster-intelligent-automation.md) - Thematic cluster organizing real-time event-driven queueing, predictive operator dispatch, and automated workload re-balancing.
 * [Concept Cluster: Moral Agency, Conscience & The Dignity of Work](/concepts/cluster-moral-agency.md) - Thematic cluster examining moral agency, non-delegable human conscience, cognitive deskilling, intentional friction, and the preservation of human labor.
 * [Concept Cluster: Power Concentration, Governance & Distributive Justice](/concepts/cluster-power-governance.md) - Thematic cluster analyzing private technocratic dominance, global public benefit, multi-agent swarms, institutional realism, and macroeconomic policy for frontier AI.
 * [Concept Cluster: Transcendence, Truth & The Limits of Optimization](/concepts/cluster-transcendence-truth.md) - Thematic cluster addressing contemplation, algorithmic reductionism, epistemic integrity, the Babel vs. Jerusalem archetypes, and the ban on autonomous weapons.
@@ -66,6 +68,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 * [Multilateral AI Governance](/concepts/multilateral-governance.md) - The international institutional architecture—scientific panels, standards bodies, and binding treaties—required to govern artificial intelligence across sovereign borders.
 * [Phronesis (Practical Wisdom)](/concepts/phronesis.md) - The Aristotelian virtue of situational moral judgment, required to discern the right course of action amid complex, contingent, real-world human circumstances.
 * [Positive Alignment (AI for Human Flourishing)](/concepts/positive-alignment.md) - The research and engineering paradigm shifting AI alignment from passive harm prevention to the active cultivation of human flourishing, character, and polycentric values.
+* [Predictive Dispatch & Workload Balancing](/concepts/predictive-dispatch.md) - Statistical and machine-assisted task distribution balancing operator cognitive load with SLA response times ('What Could Be').
 * [Private Technocratic Dominance](/concepts/private-technocratic-dominance.md) - The unprecedented concentration of artificial intelligence capital, compute infrastructure, talent, and data within private transnational monopolies surpassing sovereign nation-states.
 * [Reasoning Transparency (Chain-of-Thought)](/concepts/reasoning-transparency.md) - The defense of legible, natural-language Chain-of-Thought reasoning traces as the essential anchor for verifying model intent and detecting deceptive alignment.
 * [Sovereign AI Wealth Funds & Economic Policy](/concepts/sovereign-wealth-funds-economic-policy.md) - Macroeconomic policy frameworks for frontier AI, including sovereign public equity, public compute commons, wage subsidies, shortened workweeks, and IP reform.
@@ -97,10 +100,11 @@ Knowledge in this bundle is organized with clear demarcation between:
 * [Product Concept Display Title](/skills/generate-storyboards/templates/storyboard-template.md) - Single-sentence executive summary of the storyboard and product concept.
 * [Ingest URL Content into Knowledge Base](/skills/ingest/SKILL.md) - Downloads external web content from a URL, analyzes its relevance to the organization, asks the user for placement confirmation, and synthesizes it into an OKF v0.2 knowledge document.
 * [Article or Policy Title](/skills/ingest/templates/ingested-source-template.md) - Single-sentence executive summary of the ingested document and its organizational relevance.
+* [YouTube Video or Presentation Title](/skills/ingest/templates/ingested-youtube-template.md) - Single-sentence executive summary of the video presentation, lecture, or interview.
 * [Manage Knowledge Base (OKF v0.2)](/skills/manage-knowledge-base/SKILL.md) - Navigate, read, author, update, and validate the markdown knowledge base according to Google OKF v0.2.
 * [Google OKF v0.2 Quick Reference Cheat Sheet](/skills/manage-knowledge-base/references/okf_cheat_sheet.md) - Reference cheat sheet for Open Knowledge Format frontmatter fields and conventions.
 * [Concept Cluster Template](/skills/manage-knowledge-base/templates/concept_cluster_template.md) - Starter template for organizing a thematic cluster of interrelated concepts, their constituent nodes, cross-cutting edges, and institutional groundings.
-* [Concept Template](/skills/manage-knowledge-base/templates/concept_template.md) - Starter template for proposing a new feature or architectural RFC.
+* [Concept Title](/skills/manage-knowledge-base/templates/concept_template.md) - Single-sentence summary of this conceptual thesis, architectural RFC, or product exploration.
 * [Frontier Idea Starter Template](/skills/manage-knowledge-base/templates/frontier_template.md) - Standardized starter template for authoring emerging ideas, exploratory prototypes, and horizon-scanning initiatives ('What Could Be').
 * [Institution Dossier Template](/skills/manage-knowledge-base/templates/institution_template.md) - Starter template for profiling external research institutes, frontier AI labs, university centers, and moral authorities ('What Is').
 * [Interview / Field Notes Template](/skills/manage-knowledge-base/templates/interview_template.md) - Starter template for recording qualitative customer research and provenance.
@@ -118,7 +122,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 ## Knowledge Document Starter Templates
 
 * [Concept Cluster Template](/templates/concept-cluster-template.md) - Starter template for organizing a thematic cluster of interrelated concepts, their constituent nodes, cross-cutting edges, and institutional groundings.
-* [Concept Template](/templates/concept-template.md) - Starter template for proposing a new product feature, architectural RFC, or exploratory innovation ('What Could Be').
+* [Concept Template](/templates/concept-template.md) - Starter template for authoring a theoretical concept, architectural RFC, or product innovation ('What Could Be') with typed relational edges.
 * [Ecosystem Context Template](/templates/ecosystem-template.md) - Starter template for documenting external infrastructure, regulatory requirements, partner platforms, and market realities ('What Is').
 * [Frontier Idea Starter Template](/templates/frontier-template.md) - Standardized starter template for authoring emerging ideas, exploratory prototypes, and horizon-scanning initiatives ('What Could Be').
 * [Institution Dossier Template](/templates/institution-template.md) - Starter template for profiling external research institutes, frontier AI labs, university centers, and moral authorities ('What Is').

@@ -70,7 +70,7 @@ When a query is received, consult the authoritative OKF documents across the rep
 
 ## 3. Response Generation Guidelines
 
-When responding to developer queries, always follow this **4-part structured response format**:
+When responding to developer queries, always follow this **5-part structured response format**:
 
 ### Part 1: Direct Technical & Domain Answer
 * Provide a concise, definitive answer directly addressing the question.

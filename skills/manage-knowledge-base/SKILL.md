@@ -70,7 +70,8 @@ The knowledge bundle organizes information with a clean architectural demarcatio
    * Links starting with `/` (e.g., `[DELTA Framework](/ecosystem/delta-framework.md)`) are bundle-relative, anchored to the repository root.
 3. **Distinguish "What Is" vs "What Could Be"**:
    * `/ecosystem/` and `/systems/`: Represents current reality (`status: stable`).
-   * `/concepts/`: Represents future product proposals and exploratory features (`status: draft`).
+   * `/concepts/`: Represents foundational theoretical models and concept clusters.
+   * `/frontier/`: Represents future exploratory proposals and emerging prototypes (`status: draft`).
 4. **Evaluate Trust & Freshness**:
    * Check `stale_after`: If `now >= stale_after`, treat information as potentially outdated.
    * Check `verified`: Entries containing `human:<id>` represent human-certified ground truth.
@@ -153,10 +154,13 @@ When authoring or modifying documents under `/concepts/`:
 Before concluding any task that touches documentation, run the bundle's self-contained presubmit hook or validator:
 
 ```bash
-# 1. Run presubmit gatekeeper (auto-fixes frontmatter, links, and index, then validates)
+# 1. Run presubmit gatekeeper (auto-fixes frontmatter, links, compiles graph, and validates)
 python3 scripts/presubmit.py
 
-# 2. Or run validator directly with auto-fix flag
+# 2. Rebuild interactive concept graph viewer
+python3 scripts/build_viewer.py
+
+# 3. Or run validator directly with auto-fix flag
 python3 scripts/validate.py --fix
 ```
 

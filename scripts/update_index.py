@@ -8,6 +8,7 @@ by categorized paths and frontmatter, producing a clean progressive-disclosure i
 
 import sys
 import json
+import argparse
 from pathlib import Path
 
 # Add script dir to path to import validate's frontmatter parser
@@ -39,6 +40,18 @@ DEFAULT_CONFIG = {
             "title": "Product Concepts & Explorations ('What Could Be')",
             "path_prefix": "concepts/",
             "description": "Proposed features, architectural RFCs, exploratory initiatives, and future innovations."
+        },
+        {
+            "id": "frontier",
+            "title": "Frontier & Emerging Ideas ('What Could Be')",
+            "path_prefix": "frontier/",
+            "description": "Exploratory horizon-scanning initiatives, emerging prototypes, experimental ideas, and nascent proposals."
+        },
+        {
+            "id": "storyboards",
+            "title": "Visual Storyboards & User Journeys ('What Could Be')",
+            "path_prefix": "storyboards/",
+            "description": "Sequential visual narrative storyboards illustrating product features, user journeys, and partner integrations."
         },
         {
             "id": "playbooks",
@@ -156,9 +169,10 @@ def generate_index(bundle_dir: Path):
         f"{desc}",
         "",
         "Knowledge in this bundle is organized with clear demarcation between:",
-        "1. **\"What Is\"**: Operational realities, external ecosystem context (`/ecosystem/`), and active production systems (`/systems/`).",
-        "2. **\"What Could Be\"**: Future proposals, feature specifications, and architectural explorations (`/concepts/`).",
-        "3. **\"How To\" & Provenance**: Operational runbooks (`/playbooks/`), field research (`/research/`), and standards (`/references/`).",
+        "1. **\"What Is\"**: Operational realities, external ecosystem context (`/ecosystem/`), key institutions (`/ecosystem/institutions/`), and active production systems (`/systems/`).",
+        "2. **Theoretical Concepts & Architectural Models**: Foundational concepts, thematic clusters, and relational graphs (`/concepts/`).",
+        "3. **\"What Could Be\"**: Visual storyboards (`/storyboards/`), emerging innovations, exploratory prototypes, and horizon scanning (`/frontier/`).",
+        "4. **\"How To\" & Provenance**: Operational runbooks (`/playbooks/`), field research (`/research/`), and standards (`/references/`).",
         "",
         "---",
         ""
@@ -215,7 +229,17 @@ def generate_index(bundle_dir: Path):
 
 
 if __name__ == "__main__":
-    bundle_root = Path(__file__).resolve().parent.parent
-    if len(sys.argv) > 1:
-        bundle_root = Path(sys.argv[1]).resolve()
-    generate_index(bundle_root)
+    default_bundle_root = SCRIPT_DIR.parent
+    parser = argparse.ArgumentParser(
+        description="Dynamic generator and synchronizer for the OKF root index.md."
+    )
+    parser.add_argument(
+        "bundle_root",
+        nargs="?",
+        default=default_bundle_root,
+        type=Path,
+        help="Path to the OKF bundle root directory (default: repository root)",
+    )
+    args = parser.parse_args()
+    generate_index(args.bundle_root.resolve())
+

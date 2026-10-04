@@ -1,0 +1,11 @@
+# ==============================================================================
+# Knowledge Guide (OKF v0.2) Requirements
+# ==============================================================================
+# Core maintenance scripts (presubmit.py, validate.py, update_index.py, query_kb.py)
+# run entirely on standard Python 3.8+ libraries with zero external dependencies.
+#
+# The dependencies below power optional advanced agent capabilities:
+# ------------------------------------------------------------------------------
+
+# Autonomous YouTube video transcript and metadata ingestion (/ingest)
+youtube-transcript-api>=1.2.0

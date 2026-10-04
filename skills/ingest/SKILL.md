@@ -24,6 +24,9 @@ Activate this skill whenever the user says:
 - `ingest <url>`
 - `ingest https://...`
 - `ingest this article: <url>`
+- `ingest https://www.youtube.com/watch?v=...` or `ingest https://youtu.be/...`
+- `ingest youtube video <url>`
+- `transcribe and ingest video <url>`
 - `add <url> to the knowledge base / wiki`
 - `import documentation from <url>`
 
@@ -33,26 +36,41 @@ Activate this skill whenever the user says:
 
 ```mermaid
 flowchart TD
-    A["1. User provides URL<br>('ingest <url>')"] --> B["2. Fetch Content<br>(read_url_content or fetch_content.py)"]
-    B --> C["3. Analyze & Classify<br>(Identify Core Domain & Org Impact)"]
-    C --> D{"4. Interactive Consultation<br>(ask_question: Confirm Destination)"}
-    D -->|User Selects Path| E["5. Synthesize & Author OKF Document<br>(Frontmatter, Summary, Implications, Cross-links)"]
-    E --> F["6. Sync & Audit<br>(update_index.py & validate.py)"]
+    A["1. User provides URL<br>('ingest <url>')"] --> B{"Web Page or YouTube Video?"}
+    B -->|Web Page| C["Fetch Web Content<br>(read_url_content or fetch_content.py)"]
+    B -->|YouTube Video| D["Fetch Transcript & Metadata<br>(fetch_youtube_transcript.py via youtube-transcript-api)"]
+    C --> E["2. Analyze & Classify<br>(Identify Domain & Org Impact)"]
+    D --> E
+    E --> F{"3. Interactive Consultation<br>(ask_question: Confirm Destination)"}
+    F -->|User Selects Path| G["4. Synthesize & Author OKF Document<br>(Frontmatter, Summary, Implications, Cross-links)"]
+    G --> H["5. Sync & Audit<br>(update_index.py & validate.py)"]
 ```
 
 ---
 
 ### Step 1: Fetch and Extract the URL Content
+
+#### A. Standard Web Pages & Articles:
 1. Use `read_url_content` with the provided URL to retrieve clean markdown text.
-2. If `read_url_content` is unavailable or returns an error, run the helper script:
+2. If `read_url_content` is unavailable or returns an error, run:
    ```bash
    python3 skills/ingest/scripts/fetch_content.py "<URL>"
    ```
-3. Extract metadata:
-   - **Document Title**: Official title from `<title>` or primary `h1`.
-   - **Source Organization / Publisher**: Authoritative agency, corporation, or standards body.
-   - **Publication Date**: If available.
-   - **Core Themes**: Regulation, API changes, competitor benchmarks, user research, architecture standards.
+
+#### B. YouTube Videos & Lectures:
+For YouTube URLs (`youtube.com/watch?v=...`, `youtu.be/...`, `youtube.com/shorts/...`, etc.), web scraping cannot extract video audio. Instead, run the transcript extractor powered by `youtube-transcript-api`:
+```bash
+python3 skills/ingest/scripts/fetch_content.py "<YOUTUBE_URL>"
+# Or for rich Markdown/JSON output with timestamps:
+python3 skills/ingest/scripts/fetch_youtube_transcript.py "<YOUTUBE_URL>" --format markdown
+```
+*(Prerequisite: `pip install youtube-transcript-api`)*
+
+#### Extracted Metadata:
+- **Document / Video Title**: Official title from `<title>`, oEmbed, or primary `h1`.
+- **Source Organization / Creator**: Authoritative agency, corporation, or YouTube channel/speaker.
+- **Publication / Upload Date**: If available.
+- **Core Themes / Agenda**: Regulation, architectural patterns, product benchmarks, tech talk takeaways.
 
 ---
 
@@ -64,7 +82,8 @@ Evaluate the content against the knowledge base taxonomy:
 | **`ecosystem/institutions/`** | **"What Is" (External Institutions)**: Key external research institutes, frontier AI labs, university centers, and moral authorities. | Institutional profiles, governance charters, multi-essay dossiers, lab roadmaps. |
 | **`ecosystem/`** | **"What Is" (External Reality)**: External laws, statutory regulations, partner platforms, payment rails, industry standards. | Government policies, partner API releases, compliance regulations. |
 | **`systems/`** | **"What Is" (Internal Reality)**: Active production architecture, codebases, data models, or service documentation. | Service specs, API endpoints, schema definitions, internal workflows. |
-| **`concepts/`** | **"What Could Be" (Innovation)**: Proposed features, architectural RFCs, exploratory prototypes. | Product RFCs, new feature proposals, feasibility studies. |
+| **`concepts/`** | **Foundational Concepts & Proposals**: Theoretical constructs, architectural RFCs, foundational models, concept clusters. | Product RFCs, new feature proposals, concept clusters, feasibility studies. |
+| **`frontier/`** | **"What Could Be" (Frontier Explorations)**: Nascent initiatives, exploratory prototypes, and horizon scanning. | Horizon scan notes, prototype specs, emerging technology evaluations. |
 | **`playbooks/`** | **Operational SOPs**: Step-by-step human or agent runbooks. | Setup checklists, incident playbooks, deployment runbooks. |
 | **`research/`** | **Field Research**: Qualitative research, user interviews, surveys. | Transcripts, user observation notes, customer feedback. |
 | **`references/`** | **Specifications & Standards**: Foundational reference specifications. | Data dictionaries, protocol standards, format guidelines. |

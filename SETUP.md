@@ -73,7 +73,7 @@ The repository includes an idempotent setup script that verifies prerequisites, 
 
 **What `./setup.sh` handles automatically:**
 1. **OS Detection**: Detects macOS or Linux.
-2. **Python 3 Check**: Confirms Python 3.8+ is installed.
+2. **Python 3 & Dependency Check**: Confirms Python 3.8+ is installed and prompts/installs optional dependencies from `requirements.txt` (including `youtube-transcript-api` for YouTube video transcript ingestion, with automatic PEP 668 `--break-system-packages` handling; pass `-y` to auto-install non-interactively).
 3. **VCS Tooling Audit**: Detects Git and Jujutsu (`jj`).
 4. **Permissions & Git Hooks**:
    * Sets executable permissions (`chmod +x`) on all maintenance and skill scripts.
@@ -163,7 +163,9 @@ Every concept document must reside in the correct folder:
 * Standard operating procedures & guides $\rightarrow$ `playbooks/` (`status: stable`)
 * User research notes & interviews $\rightarrow$ `research/` (`status: stable`)
 
-### 3. Ingesting Web Content
-To add external articles, regulatory documents, or API documentation:
-* Say to your agent: `ingest <URL>`
-* The agent fetches the page, asks you where to place it via an interactive prompt, formats an OKF v0.2 document, updates `index.md` and `log.md`, and validates the bundle!
+### 3. Ingesting Web Content & YouTube Videos
+To add external articles, regulatory documents, API documentation, or YouTube videos:
+* Say to your agent: `ingest <URL>` or `ingest <YouTube_URL>`
+* For standard web pages, the agent extracts clean markdown and metadata.
+* For YouTube videos (requires `pip install youtube-transcript-api`), the agent extracts timestamped transcripts, channel attribution, duration, and video descriptions.
+* The agent asks you where to place it via an interactive prompt, formats an OKF v0.2 document, updates `index.md` and `log.md`, and validates the bundle!
