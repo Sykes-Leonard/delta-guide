@@ -67,5 +67,4 @@ Analysis of how this material impacts our systems architecture, team operations,
 ---
 
 ## 7. Related Knowledge Base Documents
-* [Core Architecture](/systems/core-architecture.md) - Internal systems impacted or related.
-* [Industry Landscape](/ecosystem/industry-landscape.md) - Broader market and industry context.
+* [`/index.md`](/index.md) - Related ecosystem and domain context.

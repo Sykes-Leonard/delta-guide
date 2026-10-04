@@ -36,7 +36,6 @@ Knowledge in this bundle is organized with clear demarcation between:
 
 * [Concept Cluster: Embodiment, Presence & Relational Authenticity](/concepts/cluster-embodiment-presence.md) - Thematic cluster addressing synthetic intimacy, the theology of incarnational presence, and safeguards against anthropomorphic deception.
 * [Concept Cluster: Human Flourishing (Eudaimonia) & Virtue Formation](/concepts/cluster-human-flourishing.md) - Thematic cluster synthesizing Aristotelian eudaimonia, positive alignment, six-domain well-being, phronesis, and character formation in artificial intelligence.
-* [Intelligent Workflow Automation & Dispatch](/concepts/cluster-intelligent-automation.md) - Thematic cluster organizing real-time event-driven queueing, predictive operator dispatch, and automated workload re-balancing.
 * [Concept Cluster: Moral Agency, Conscience & The Dignity of Work](/concepts/cluster-moral-agency.md) - Thematic cluster examining moral agency, non-delegable human conscience, cognitive deskilling, intentional friction, and the preservation of human labor.
 * [Concept Cluster: Power Concentration, Governance & Distributive Justice](/concepts/cluster-power-governance.md) - Thematic cluster analyzing private technocratic dominance, global public benefit, multi-agent swarms, institutional realism, and macroeconomic policy for frontier AI.
 * [Concept Cluster: Transcendence, Truth & The Limits of Optimization](/concepts/cluster-transcendence-truth.md) - Thematic cluster addressing contemplation, algorithmic reductionism, epistemic integrity, the Babel vs. Jerusalem archetypes, and the ban on autonomous weapons.
@@ -68,7 +67,6 @@ Knowledge in this bundle is organized with clear demarcation between:
 * [Multilateral AI Governance](/concepts/multilateral-governance.md) - The international institutional architecture—scientific panels, standards bodies, and binding treaties—required to govern artificial intelligence across sovereign borders.
 * [Phronesis (Practical Wisdom)](/concepts/phronesis.md) - The Aristotelian virtue of situational moral judgment, required to discern the right course of action amid complex, contingent, real-world human circumstances.
 * [Positive Alignment (AI for Human Flourishing)](/concepts/positive-alignment.md) - The research and engineering paradigm shifting AI alignment from passive harm prevention to the active cultivation of human flourishing, character, and polycentric values.
-* [Predictive Dispatch & Workload Balancing](/concepts/predictive-dispatch.md) - Statistical and machine-assisted task distribution balancing operator cognitive load with SLA response times ('What Could Be').
 * [Private Technocratic Dominance](/concepts/private-technocratic-dominance.md) - The unprecedented concentration of artificial intelligence capital, compute infrastructure, talent, and data within private transnational monopolies surpassing sovereign nation-states.
 * [Reasoning Transparency (Chain-of-Thought)](/concepts/reasoning-transparency.md) - The defense of legible, natural-language Chain-of-Thought reasoning traces as the essential anchor for verifying model intent and detecting deceptive alignment.
 * [Sovereign AI Wealth Funds & Economic Policy](/concepts/sovereign-wealth-funds-economic-policy.md) - Macroeconomic policy frameworks for frontier AI, including sovereign public equity, public compute commons, wage subsidies, shortened workweeks, and IP reform.
@@ -79,6 +77,8 @@ Knowledge in this bundle is organized with clear demarcation between:
 ## Frontier & Emerging Ideas ('What Could Be')
 
 * [Secondary School AI Pedagogy & Assessment Blueprint](/frontier/secondary-school-ai-pedagogy.md) - Emerging pedagogical architecture and course-policy blueprint for St. Francis High School, establishing a 3-zone classroom model, department syllabus clauses, and process-trail assessment grounded in the DELTA Framework.
+* [GenDELTA Storyboard: Faith, AI in Education & The Future of Work](/frontier/storyboard-gendelta-faith-ai-future-of-work.md) - A 6-panel visual storyboard capturing Evan & Joy mentoring Meaghan Crowley-Sullivan in the delta-guide knowledge base, and Meaghan leading SFHS educators and GenDELTA students in co-creating human-centered AI storyboards for faith, learning, and the future of work.
+* [GenDELTA Storyboard: Teach the Teacher — Faith-Based AI Conversations with DELTA-Guide](/frontier/storyboard-gendelta-teach-the-teacher.md) - Two-act storyboard in which Evan and Joy teach Meighan to use the delta-guide knowledge base, and Meighan then teaches educators and students to bring their ideas to life with the storyboard feature to hold a faith-based GenDELTA conversation about AI in education and the future of work.
 
 ## Operational Playbooks & Runbooks
 
@@ -109,6 +109,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 * [Institution Dossier Template](/skills/manage-knowledge-base/templates/institution_template.md) - Starter template for profiling external research institutes, frontier AI labs, university centers, and moral authorities ('What Is').
 * [Interview / Field Notes Template](/skills/manage-knowledge-base/templates/interview_template.md) - Starter template for recording qualitative customer research and provenance.
 * [Playbook Template](/skills/manage-knowledge-base/templates/playbook_template.md) - Starter template for an operational runbook or SOP.
+* [Upgrade Knowledge Guide](/skills/upgrade-guide/SKILL.md) - Upgrades the local knowledge base software, skills, and tooling to the latest version from the upstream knowledge-guide repository without requiring git or github knowledge. Trigger on 'upgrade the guide', 'upgrade version', 'update system', 'update guide', or 'sync upstream'.
 
 ## Standards, Specifications & References
 
