@@ -112,6 +112,7 @@ Knowledge in this bundle is organized with clear demarcation between:
 
 ## Standards, Specifications & References
 
+* [DELTA Summit 2026 Opening Mass: Cardinal Cupich Homily on AI as a Mirror to Humanity](/references/events/delta-summit-2026/2026-09-21-opening-mass-homily.md) - Keynote homily delivered by Cardinal Blase J. Cupich at the Basilica of the Sacred Heart for the DELTA Summit on AI, Faith, and Human Flourishing, examining AI as an amplifier of human determinism and calling for an anthropological conversion rooted in grace and the logic of gift.
 * [Curated Holy Cross Quotations & Foundational Maxims](/references/holy-cross-quotes.md) - Curated canonical quotations and maxims from Blessed Basil Moreau, C.S.C., and the Constitutions of Holy Cross, emphasizing education of minds and hearts, competence, courage, and hope.
 * [Google Open Knowledge Format Specification](/references/okf-specification.md) - Canonical summary of the Google OKF v0.2 specification, trust tiers, and conventions.
 * [Knowledge Provenance & Lineage Guidelines](/references/provenance.md) - Guidelines and architecture for tracking source lineage, citations, and trust verification across the knowledge base.
