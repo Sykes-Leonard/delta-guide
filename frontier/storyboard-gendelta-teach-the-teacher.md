@@ -36,12 +36,15 @@ sources:
 
 * **Target Audience / Users**
   * **Evan & Joy**: People who build and maintain the delta-guide knowledge base and mentor new users.
+    * *Evan (visual reference)*: Caucasian man, brown hair, glasses, clean-shaven, navy quarter-zip.
+    * *Joy (visual reference)*: Caucasian woman, glasses, green cardigan.
   * **Meighan**: An educator who learns the tools and then leads a GenDELTA session for others.
+    * *Meighan (visual reference)*: Caucasian woman, long hair, glasses, cream blouse with school lanyard.
   * **Educators & Students**: Saint Francis High School teachers and students in the GenDELTA community. They bring their own ideas about AI, faith, school, and work.
 * **Core Problem**: Conversations about AI in schools tend to go one of two ways. Some stay abstract ("Is AI good or bad?"). Others become tool tutorials that skip the moral questions. Teachers rarely have an easy way to turn a student's intuition, such as "I'm worried AI will take my dad's job," into something concrete the group can discuss with the theological depth of the [DELTA Framework](/ecosystem/delta-framework.md) and [*Magnifica Humanitas*](/ecosystem/magnifica-humanitas.md).
 * **Solution Summary**: The proposal uses a **teach-the-teacher** model in two acts.
   * **Act I**: Evan and Joy walk Meighan through the knowledge base. She learns to orient at the index, ask grounded questions, and turn a hand-drawn idea into a validated storyboard.
-  * **Act II**: Meighan passes these skills on. Educators and students sketch their ideas on paper first, use the storyboard feature to make them visible, and then put the screens away for an embodied, faith-based conversation about which work will always need a human heart.
+  * **Act II**: Meighan passes these skills on. Educators and students sketch their ideas on paper first, use the storyboard feature to make them visible, and then gather in person, with laptops open or closed as needed, for an embodied, faith-based conversation about which work will always need a human heart.
 
 ---
 
@@ -83,7 +86,7 @@ sources:
 
 ### Panel 6: The GenDELTA Conversation
 * **Setting & Actors**: Teachers and students sit in a circle of chairs. The printed storyboards are pinned to a corkboard beneath a simple wooden cross, under a GenDELTA banner.
-* **Digital Touchpoint**: Printed storyboards. Screens are set aside for [Incarnational Presence](/concepts/incarnational-presence.md).
+* **Digital Touchpoint**: Printed storyboards, plus open laptops where groups want to show or refer back to their work. Devices may stay open; the focus is the face-to-face circle, in the spirit of [Incarnational Presence](/concepts/incarnational-presence.md).
 * **Key Action**: A student asks the question that anchors the session: ***"What work will always need a human heart?"*** The conversation draws on [Human Dignity (Imago Dei)](/concepts/human-dignity.md), [Dignity of Labor](/concepts/dignity-of-labor.md), and the [Catholic Companion Framework](/ecosystem/catholic-companion-framework.md) strands of *Co-Creation & Stewardship* and *Communion & Solidarity*. It also ties to SFHS's [Graduation Outcomes](/references/st-francis-mission-outcomes.md) of being a *Person of Faith* and an *Engaged Individual*. Students leave having named their own calling, not as consumers of AI but as people who will direct it toward the common good.
 
 ---
@@ -97,7 +100,7 @@ sources:
 | **3. First Storyboard** | Meighan | `/generate-storyboards`, `presubmit.py` | Sketch → graphic + OKF doc | Validated storyboard, 0 errors |
 | **4. Ideas on Paper** | Educators, Students | Notebooks (analog) | None (no data captured) | Original ideas in the participants' own words |
 | **5. Ideas Come to Life** | Mixed groups | `/generate-storyboards`, `/ask-kb` | Idea description (no PII) → storyboard | Ideas made visible and checked against DELTA |
-| **6. GenDELTA Conversation** | Whole circle | Printed storyboards | None (in-person dialogue) | Shared reflection on faith, work, and vocation |
+| **6. GenDELTA Conversation** | Whole circle | Printed storyboards, open laptops (optional) | Storyboards shown for reference (in-person dialogue) | Shared reflection on faith, work, and vocation |
 
 ```mermaid
 sequenceDiagram
@@ -121,7 +124,7 @@ sequenceDiagram
     Circle->>KB: Zone 2 Socratic questions via /ask-kb
     Circle->>SB: Zone 3 bring ideas to life
     SB-->>Circle: Storyboards with DELTA checklist
-    Circle->>Circle: Screens down, faith-based GenDELTA dialogue
+    Circle->>Circle: In-person, faith-based GenDELTA dialogue
 ```
 
 ---
@@ -131,13 +134,13 @@ sequenceDiagram
 | Pillar | How the Storyboard Honors It |
 | :--- | :--- |
 | **Dignity** | Every participant's idea counts. Storyboards show people as moral agents, never as costs to be automated away. |
-| **Embodiment** | The session starts and ends without screens: paper sketching in Panel 4 and an in-person circle in Panel 6. |
+| **Embodiment** | The session opens with screen-free paper sketching (Panel 4) and closes with a face-to-face circle (Panel 6). Laptops may stay open there, but they support the people in the room rather than replace them. |
 | **Love** | Mentorship passes from person to person (Evan & Joy → Meighan → community). The tool supports relationships; it does not stand in for them. |
 | **Transcendence** | The closing question about vocation and the heart deliberately points beyond what can be optimized. |
 | **Agency** | Students write and own their ideas. AI only illustrates them, and the moral discernment stays with the people in the room. |
 
 * **Privacy**: Storyboard prompts describe *ideas and roles*, never named students or personal details. Generated artifacts must not contain student PII.
-* **Graceful Degradation**: If the network fails, the workshop still works. Panels 4 and 6 are fully analog, and Panel 5 can fall back to hand-drawn storyboard templates.
+* **Graceful Degradation**: If the network fails, the workshop still works. Panel 4 is fully analog, Panel 6 works with printed storyboards alone, and Panel 5 can fall back to hand-drawn storyboard templates.
 
 ---
 
