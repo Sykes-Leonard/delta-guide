@@ -77,7 +77,6 @@ Knowledge in this bundle is organized with clear demarcation between:
 ## Frontier & Emerging Ideas ('What Could Be')
 
 * [Secondary School AI Pedagogy & Assessment Blueprint](/frontier/secondary-school-ai-pedagogy.md) - Emerging pedagogical architecture and course-policy blueprint for St. Francis High School, establishing a 3-zone classroom model, department syllabus clauses, and process-trail assessment grounded in the DELTA Framework.
-* [GenDELTA Storyboard: Faith, AI in Education & The Future of Work](/frontier/storyboard-gendelta-faith-ai-future-of-work.md) - A 6-panel visual storyboard capturing Evan & Joy mentoring Meaghan Crowley-Sullivan in the delta-guide knowledge base, and Meaghan leading SFHS educators and GenDELTA students in co-creating human-centered AI storyboards for faith, learning, and the future of work.
 * [GenDELTA Storyboard: Teach the Teacher — Faith-Based AI Conversations with DELTA-Guide](/frontier/storyboard-gendelta-teach-the-teacher.md) - Two-act storyboard in which Evan and Joy teach Meighan to use the delta-guide knowledge base, and Meighan then teaches educators and students to bring their ideas to life with the storyboard feature to hold a faith-based GenDELTA conversation about AI in education and the future of work.
 
 ## Operational Playbooks & Runbooks
