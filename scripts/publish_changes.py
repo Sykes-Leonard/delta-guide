@@ -19,15 +19,25 @@ import subprocess
 from pathlib import Path
 from typing import List, Tuple, Optional
 
-def run_cmd(cmd: List[str], cwd: Path) -> Tuple[int, str, str]:
-    res = subprocess.run(
-        cmd,
-        cwd=str(cwd),
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True
-    )
-    return res.returncode, res.stdout.strip(), res.stderr.strip()
+def run_cmd(cmd: List[str], cwd: Path, timeout: Optional[int] = 30) -> Tuple[int, str, str]:
+    env = os.environ.copy()
+    env["GIT_TERMINAL_PROMPT"] = "0"
+    try:
+        res = subprocess.run(
+            cmd,
+            cwd=str(cwd),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            stdin=subprocess.DEVNULL,
+            env=env,
+            text=True,
+            timeout=timeout
+        )
+        return res.returncode, res.stdout.strip(), res.stderr.strip()
+    except subprocess.TimeoutExpired:
+        return 124, "", "Command timed out"
+    except Exception as e:
+        return 1, "", str(e)
 
 def get_repo_root() -> Path:
     curr = Path(__file__).resolve().parent

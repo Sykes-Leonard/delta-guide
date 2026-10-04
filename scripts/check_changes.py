@@ -13,19 +13,29 @@ Differentiates between:
 import sys
 import json
 import datetime
-import subprocess
+import os
 from pathlib import Path
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Tuple, Optional
 
-def run_cmd(cmd: List[str], cwd: Path):
-    res = subprocess.run(
-        cmd,
-        cwd=str(cwd),
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True
-    )
-    return res.returncode, res.stdout.strip(), res.stderr.strip()
+def run_cmd(cmd: List[str], cwd: Path, timeout: Optional[int] = 30) -> Tuple[int, str, str]:
+    env = os.environ.copy()
+    env["GIT_TERMINAL_PROMPT"] = "0"
+    try:
+        res = subprocess.run(
+            cmd,
+            cwd=str(cwd),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            stdin=subprocess.DEVNULL,
+            env=env,
+            text=True,
+            timeout=timeout
+        )
+        return res.returncode, res.stdout.strip(), res.stderr.strip()
+    except subprocess.TimeoutExpired:
+        return 124, "", "Command timed out"
+    except Exception as e:
+        return 1, "", str(e)
 
 def get_repo_root() -> Path:
     curr = Path(__file__).resolve().parent
@@ -133,7 +143,16 @@ def main():
         print(json.dumps(report, indent=2))
         return
 
-    print("📚 Delta-Guide Content & Activity Report\n" + "="*50)
+    org_title = "Knowledge Base"
+    config_file = repo_root / "knowledge.config.json"
+    if config_file.exists():
+        try:
+            cfg = json.loads(config_file.read_text(encoding="utf-8"))
+            org_title = cfg.get("organization", {}).get("name", "Knowledge Base")
+        except Exception:
+            pass
+
+    print(f"📚 {org_title} Content & Activity Report\n" + "="*50)
     
     # Team remote updates
     if report["team_updates_available"]:
