@@ -1,6 +1,9 @@
 # Knowledge Base Changelog
 
 ## 2026-10-04
+* **Skill Demarcation: Content Changes vs. Platform Upgrades**:
+  - **Content & Team Updates Checker**: Added [`scripts/check_changes.py`](file:///scripts/check_changes.py) and updated [`skills/manage-knowledge-base`](/skills/manage-knowledge-base/SKILL.md) (Procedure G) to handle everyday non-technical queries like *"check for changes"*, *"what changed?"*, *"what's new?"*, and *"sync team notes"*. Checks collaborator commits on `origin/main`, local drafts, and `log.md` highlights without technical git jargon.
+  - **Upgrade Scope Demarcation**: Clarified [`skills/upgrade-guide`](/skills/upgrade-guide/SKILL.md) to trigger strictly on platform software/tooling upgrades (*"upgrade the guide"*, *"upgrade version"*, *"update system"*, `/upgrade-guide`) from upstream `knowledge-guide`, preventing non-technical confusion.
 * **Upstream Software Upgrade**: Synced latest platform software, skills, and tooling from [`knowledge-guide`](https://github.com/evanleonard/knowledge-guide.git). Applied 10 updates; validated 0 defects.
 * **Upstream Upgrade Engine & Skill Added**:
   - **Skill Created**: Implemented [`skills/upgrade-guide`](/skills/upgrade-guide/SKILL.md) enabling non-technical users to upgrade the knowledge base software, tooling, and skills by simply saying "upgrade the guide", "upgrade version", or "update system". Includes interactive confirmation modal (`ask_question`), zero-git-knowledge abstraction, automated dependency installation, and bundle re-verification. Registered `/upgrade-guide` in [`AGENTS.md`](/AGENTS.md) and [`SETUP.md`](/SETUP.md).

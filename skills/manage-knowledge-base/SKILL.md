@@ -2,7 +2,7 @@
 name: manage-knowledge-base
 type: Skill
 title: "Manage Knowledge Base (OKF v0.2)"
-description: "Navigate, read, author, update, and validate the markdown knowledge base according to Google OKF v0.2."
+description: "Navigate, read, author, update, validate, and check for recent team changes and content additions in the markdown knowledge base according to Google OKF v0.2. Trigger on 'check for changes', 'what changed', 'what's new', 'sync team notes', 'validate bundle', or when authoring and organizing markdown documentation."
 status: stable
 generated:
   by: agent:antigravity
@@ -20,7 +20,7 @@ This skill equips any AI agent to manage, traverse, extend, and audit this knowl
 
 ## 1. When to Use This Skill
 
-Activate this skill whenever you need to:
+* **Check for Changes & Team Updates**: When a user asks *"check for changes"*, *"what changed?"*, *"what's new in the guide?"*, or *"sync team notes"*, check recent additions in `log.md` and incoming collaborator commits on `origin/main` using `./scripts/check_changes.py`. (Note: For upgrading platform software/scripts from upstream `knowledge-guide`, use [`/upgrade-guide`](/skills/upgrade-guide/SKILL.md) instead).
 * **Discover & Research**: Find authoritative context on active production systems, architecture, external regulatory realities, or proposed product features.
 * **Author New Concepts**: Create new markdown documentation for features, APIs, system components, or operational runbooks.
 * **Maintain & Update**: Update existing concept files, increment trust events (`verified`), manage document lifecycles (`status`, `stale_after`), or record changes in `log.md`.
@@ -177,9 +177,29 @@ Ensure:
 
 ---
 
+### Procedure G: Checking for Content Changes & Team Updates
+When a user asks *"check for changes"*, *"what's new?"*, *"what changed?"*, or wants to see recent team additions in `delta-guide`:
+
+1. **Run the Content Changes Script**:
+   Execute the non-destructive inspection tool:
+   ```bash
+   python3 scripts/check_changes.py
+   ```
+2. **Explain in Plain English (No Git Jargon)**:
+   * State whether their local guide is up to date with teammates.
+   * If teammates pushed changes, summarize what was added or changed (from commit messages or document titles) and offer to pull them cleanly (`python3 scripts/check_changes.py --pull`).
+   * List any uncommitted local notes/drafts they are currently working on.
+   * Highlight the latest updates from `log.md` so they can see recent knowledge additions at a glance.
+3. **Keep Separate from Platform Upgrades**:
+   * If the user specifically asks to upgrade the underlying guide tooling/scripts or sync from upstream `knowledge-guide`, guide them to [`/upgrade-guide`](/skills/upgrade-guide/SKILL.md) instead.
+
+---
+
 ## 4. Self-Contained Maintenance Scripts
 
+* **Check Content Changes**: [`scripts/check_changes.py`](file:///scripts/check_changes.py) - Inspects team updates, local drafts, and recent `log.md` entries without technical jargon.
 * **Presubmit Hook**: [`scripts/presubmit.py`](file:///scripts/presubmit.py) - Gatekeeper running auto-fix and bundle validation before commit.
 * **Validator & Fixer**: [`scripts/validate.py`](file:///scripts/validate.py) - Validates bundle syntax, links, and trust tiers (`--fix` to auto-repair).
 * **Index Generator**: [`scripts/update_index.py`](file:///scripts/update_index.py) - Synchronizes `index.md` from concept frontmatter.
 * **Specification Reference**: [`references/okf_cheat_sheet.md`](file:///skills/manage-knowledge-base/references/okf_cheat_sheet.md) - Quick syntax reference for OKF fields.
+

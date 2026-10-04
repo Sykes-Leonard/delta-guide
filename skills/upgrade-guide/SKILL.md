@@ -2,7 +2,7 @@
 name: upgrade-guide
 type: Skill
 title: "Upgrade Knowledge Guide"
-description: "Upgrades the local knowledge base software, skills, and tooling to the latest version from the upstream knowledge-guide repository without requiring git or github knowledge. Trigger on 'upgrade the guide', 'upgrade version', 'update system', 'update guide', or 'sync upstream'."
+description: "Upgrades the underlying platform software, skills, and tooling from the upstream knowledge-guide repository without requiring git knowledge. Trigger ONLY on software upgrades like 'upgrade the guide', 'upgrade version', 'update system', or 'upgrade software'. Do NOT trigger on 'check for changes' or 'what changed' (use manage-knowledge-base for delta-guide content updates)."
 status: stable
 generated:
   by: agent:antigravity
@@ -14,20 +14,26 @@ verified:
 
 # Upgrade Knowledge Guide (Upstream Software Sync)
 
-This skill allows **non-technical users** and **AI agents** to upgrade the knowledge base software, tooling, skills, and dependencies from the upstream `knowledge-guide` repository without needing to know anything about Git or GitHub.
+This skill allows **non-technical users** and **AI agents** to upgrade the knowledge base platform software, tooling, skills, and dependencies from the upstream `knowledge-guide` template repository without needing to know anything about Git or GitHub.
 
 ---
 
-## 1. When to Use This Skill
+## 1. When to Use This Skill (Scope Demarcation)
 
-Activate this skill whenever a user says:
+### Activate this skill ONLY when upgrading platform software:
 * **"upgrade the guide"**
 * **"upgrade version"**
 * **"update system"**
-* **"update guide"**
-* **"check for updates"**
-* **"get the latest changes from upstream"**
+* **"upgrade software"**
+* **"upgrade knowledge guide software"**
+* **"get latest software from upstream"**
 * Slash command: `/upgrade-guide`
+
+### Do NOT activate this skill for content or team changes:
+> [!IMPORTANT]
+> **Content vs. Software Demarcation**:
+> * When a user says **"check for changes"**, **"what changed?"**, **"what's new?"**, or **"sync team notes"**, they are asking about **content, new notes, and collaborator updates within `delta-guide`**, NOT software upgrades!
+> * Handle those requests using [`skills/manage-knowledge-base`](/skills/manage-knowledge-base/SKILL.md) by running `./scripts/check_changes.py` or checking `log.md` and `git status`.
 
 ---
 

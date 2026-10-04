@@ -65,7 +65,7 @@ The single source of truth for all architectural, statutory, and operational req
 
 When interacting with the user or executing complex tasks, use these registered skills:
 * `/ask-kb <query>`: Instant architectural, statutory, and domain consulting.
-* `/manage-knowledge-base`: Validate, author, or update the OKF bundle.
+* `/manage-knowledge-base`: Validate, author, update the OKF bundle, or check for team updates and content changes.
 * `/ingest <url>`: Ingest external web content, specifications, or policies into OKF format.
 * `/backout-source <target>`: Audit, retract, substitute, or decouple any external source, paper, or institutional container.
 * `/backout-institution <name>`: Audit, retract, and safely decouple an institution, its sources, and dependent concepts.
